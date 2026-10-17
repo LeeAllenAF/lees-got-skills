@@ -10,7 +10,7 @@ import alienFishLogo from '../../../alienfish-logo-savage.png';
 import { articles } from './data/articles';
 import { skills } from './data/skills';
 
-const githubUrl = 'https://github.com/AlienFish/lees-got-skills';
+const githubUrl = 'https://github.com/LeeAllenAF/lees-got-skills';
 
 function Arrow() {
   return <span aria-hidden="true">→</span>;

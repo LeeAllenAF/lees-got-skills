@@ -20,7 +20,7 @@ export const skills: readonly Skill[] = [
     releaseStatus: 'development',
     agentCompatibility: ['Codex', 'Claude', 'Vendor-neutral'],
     docsUrl:
-      'https://github.com/AlienFish/lees-got-skills/tree/main/skills/repository-bootstrap',
+      'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/repository-bootstrap',
     installUrl: null,
     releaseUrl: null,
   },

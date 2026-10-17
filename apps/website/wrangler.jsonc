@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "lees-got-skills",
+  "compatibility_date": "2026-10-17",
+  "workers_dev": true,
+  "assets": {
+    "directory": "../../dist/apps/website",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [
+    {
+      "pattern": "lees-got-skills.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.lees-got-skills.com",
+      "custom_domain": true
+    }
+  ]
+}

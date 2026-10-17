@@ -12,12 +12,16 @@
   },
   "scripts": {
     "dev": "nx dev website",
+    "deploy": "nx run website:deploy",
     "agent:index": "node tools/agent/build-index.mjs",
     "agent:context": "node tools/agent/resolve-context.mjs",
     "agent:check": "node tools/agent/validate-scaffolding.mjs",
     "agent:adapters": "node tools/agent/generate-adapters.mjs",
     "website:dev": "nx dev website",
     "website:typecheck": "nx typecheck website",
-    "website:build": "nx build website"
+    "website:build": "nx build website",
+    "website:login": "corepack pnpm --filter @alienfish/website exec wrangler login",
+    "website:deploy:check": "nx run website:deploy:check",
+    "website:deploy": "nx run website:deploy"
   }
 }

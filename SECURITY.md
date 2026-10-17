@@ -12,7 +12,7 @@ Security fixes are generally prioritized for the latest published release of eac
 
 Use the repository's **Security → Advisories → Report a vulnerability** flow when private vulnerability reporting is enabled:
 
-https://github.com/AlienFish/lees-got-skills/security/advisories
+https://github.com/LeeAllenAF/lees-got-skills/security/advisories
 
 If that option is unavailable, open a public issue requesting a *private reporting contact*, **without including exploit details or sensitive information**. The maintainer can establish a secure communication channel.
 

@@ -13,6 +13,14 @@
     "build": {
       "command": "pnpm --filter @alienfish/website build",
       "outputs": ["{workspaceRoot}/dist/apps/website"]
+    },
+    "deploy:check": {
+      "command": "corepack pnpm --filter @alienfish/website run deploy:check",
+      "cache": false
+    },
+    "deploy": {
+      "command": "corepack pnpm --filter @alienfish/website run deploy",
+      "cache": false
     }
   }
 }

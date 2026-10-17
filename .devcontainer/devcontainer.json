@@ -4,13 +4,13 @@
   "features": {
     "ghcr.io/devcontainers/features/node:2.1.1": {
       "version": "24.22.0",
-      "pnpmVersion": "none",
+      "pnpmVersion": "12.14.0",
       "nodeGypDependencies": false
     },
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "remoteUser": "node",
-  "postCreateCommand": "sudo npm install --global corepack@0.36.0 && sudo corepack enable && corepack install && pnpm install --frozen-lockfile",
+  "postCreateCommand": "pnpm install --frozen-lockfile",
   "waitFor": "postCreateCommand",
   "customizations": {
     "vscode": {
@@ -18,7 +18,8 @@
         "nrwl.angular-console",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "GitHub.vscode-pull-request-github"
+        "GitHub.vscode-pull-request-github",
+        "openai.chatgpt"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"

@@ -11,7 +11,7 @@
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "remoteUser": "node",
-  "postCreateCommand": "pnpm install --frozen-lockfile",
+  "postCreateCommand": "pnpm install --frozen-lockfile && npm install --global @openai/codex",
   "waitFor": "postCreateCommand",
   "customizations": {
     "vscode": {

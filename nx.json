@@ -11,5 +11,6 @@
       "repository-bootstrap"
     ],
     "projectsRelationship": "independent"
-  }
+  },
+  "analytics": true
 }

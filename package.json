@@ -11,9 +11,13 @@
     "typescript": "7.0.2"
   },
   "scripts": {
+    "dev": "nx dev website",
     "agent:index": "node tools/agent/build-index.mjs",
     "agent:context": "node tools/agent/resolve-context.mjs",
     "agent:check": "node tools/agent/validate-scaffolding.mjs",
-    "agent:adapters": "node tools/agent/generate-adapters.mjs"
+    "agent:adapters": "node tools/agent/generate-adapters.mjs",
+    "website:dev": "nx dev website",
+    "website:typecheck": "nx typecheck website",
+    "website:build": "nx build website"
   }
 }

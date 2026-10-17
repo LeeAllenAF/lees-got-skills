@@ -232,9 +232,9 @@ h1 {
   width: min(72%, 340px);
   max-height: 385px;
   object-fit: contain;
-  opacity: 0.88;
-  filter: invert(85%) sepia(83%) saturate(985%) hue-rotate(88deg) brightness(103%) contrast(102%) drop-shadow(0 0 12px rgba(45, 255, 166, 0.38));
-  transform: rotate(3deg);
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(83%) saturate(985%) hue-rotate(88deg) brightness(103%) contrast(112%);
+  transform: none;
 }
 
 .terminal-note {
@@ -435,14 +435,8 @@ h1 {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .fish-art img { animation: logo-drift 8s ease-in-out infinite; }
   .orb--two { animation: blink 3.5s steps(2, end) infinite; }
   .button, .home-card { transition: color 150ms ease, border-color 150ms ease, background 150ms ease, transform 150ms ease; }
-}
-
-@keyframes logo-drift {
-  0%, 100% { transform: rotate(3deg) translateY(0); }
-  50% { transform: rotate(2deg) translateY(-6px); }
 }
 
 @keyframes blink {

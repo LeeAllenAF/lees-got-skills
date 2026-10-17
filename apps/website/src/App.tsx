@@ -6,7 +6,7 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom';
-import alienFishLogo from './assets/alienfish-logo.svg';
+import alienFishLogo from '../../../alienfish-logo-savage.png';
 import { articles } from './data/articles';
 import { skills } from './data/skills';
 

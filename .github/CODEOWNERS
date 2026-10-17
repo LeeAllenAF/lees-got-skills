@@ -1,0 +1,11 @@
+# GitHub ownership rules for lees-got-skills.
+
+* @LeeAllenAF
+/.github/ @LeeAllenAF
+/.agent/ @LeeAllenAF
+/skills/ @LeeAllenAF
+/tools/agent/ @LeeAllenAF
+/tools/skills/ @LeeAllenAF
+/apps/ @LeeAllenAF
+/LICENCE.md @LeeAllenAF
+/SECURITY.md @LeeAllenAF

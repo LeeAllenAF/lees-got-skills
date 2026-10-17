@@ -7,3 +7,9 @@ coverage/
 .env.*
 !.env.example
 .DS_Store
+
+# Codex credentials and local agent state
+.codex/
+.codex-persistent/
+**/.codex/auth.json
+**/.codex-persistent/

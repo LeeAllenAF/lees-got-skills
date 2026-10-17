@@ -1,0 +1,28 @@
+{
+  "name": "lees-got-skills",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:5.2.3-24-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2.1.1": {
+      "version": "24.22.0",
+      "pnpmVersion": "none",
+      "nodeGypDependencies": false
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "remoteUser": "node",
+  "postCreateCommand": "sudo npm install --global corepack@0.36.0 && sudo corepack enable && corepack install && pnpm install --frozen-lockfile",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "nrwl.angular-console",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.vscode-pull-request-github"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

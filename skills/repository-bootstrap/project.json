@@ -1,0 +1,19 @@
+{
+  "name": "repository-bootstrap",
+  "projectType": "library",
+  "root": "skills/repository-bootstrap",
+  "targets": {
+    "validate": {
+      "command": "node tools/agent/validate-scaffolding.mjs --all"
+    },
+    "build": {
+      "command": "node tools/skills/package-skill.mjs",
+      "outputs": [
+        "{workspaceRoot}/dist/skills/repository-bootstrap"
+      ]
+    },
+    "test": {
+      "command": "node tools/skills/test-bootstrap.mjs"
+    }
+  }
+}

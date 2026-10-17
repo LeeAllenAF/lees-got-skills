@@ -9,5 +9,11 @@
   "devDependencies": {
     "nx": "23.3.0",
     "typescript": "7.0.2"
+  },
+  "scripts": {
+    "agent:index": "node tools/agent/build-index.mjs",
+    "agent:context": "node tools/agent/resolve-context.mjs",
+    "agent:check": "node tools/agent/validate-scaffolding.mjs",
+    "agent:adapters": "node tools/agent/generate-adapters.mjs"
   }
 }

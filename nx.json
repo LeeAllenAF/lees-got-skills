@@ -5,5 +5,11 @@
     "libsDir": "packages"
   },
   "defaultBase": "main",
-  "neverConnectToCloud": true
+  "neverConnectToCloud": true,
+  "release": {
+    "projects": [
+      "repository-bootstrap"
+    ],
+    "projectsRelationship": "independent"
+  }
 }

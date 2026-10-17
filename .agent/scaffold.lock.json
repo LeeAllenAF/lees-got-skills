@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "files": {
+    ".agent/.gitignore": "2ca99dacdf8870024dce15908b589ab4af26e80f7e1235a6d0f274dc2891efe0",
+    ".agent/instructions/bootstrap.md": "0542079d99f232005d5d1a5f54a63163550a7cbb71a23c877884d9afcf968950",
+    ".agent/instructions/engineering.md": "4731a50600a63c9b5478b02eced1069995348ab549ecb470eec7887508775504",
+    ".agent/instructions/safety.md": "dbdf0a82e58e4196f811e93bc330508df5ef7d7c12a34906285d168bf75d8bce",
+    ".agent/instructions/validation.md": "24b808ba94709777a4233a00e3ca5b993a457a66096077bfb8cb0ba5ad80f715",
+    ".agent/registry/tags.json": "ac85fd7541cd63de762f225969ccc9a43cfb9e1c573cf4f386383f2830144026",
+    ".agent/registry/tools.json": "763216ea435f5a2fadcddecb18a49f2abb4c5e911b2272b539c0d4b553f96fc6",
+    ".agent/schemas/document.schema.json": "eefef5b00bc32f6a7f87fa0c41b72a88a70a4be2b952bdd7984cf2227702a3d0",
+    ".agent/skills/inspect-workspace/SKILL.md": "f827adf3052afb74891bb608ed30371fffbd7cb7c615fafde2d949e682e049ef",
+    ".agent/skills/resolve-context/SKILL.md": "769469c48761cd35591ddd8eb939cdab073b4853380ca643fc11dbfadc082e6c",
+    ".agent/skills/validate-change/SKILL.md": "df0cf355e3fb6cc274879cf6a7120dc0a71f5c6ec1fa9a87e4c72f4078214953",
+    ".github/workflows/agent-scaffolding.yml": "fc788a2c8b5d7ae2d39e373503bea8659bd0c014c6c304d60244ad6c6c8d0495",
+    "AGENTS.md": "ba8522ea14ad092b8f0bb0fda5a5cf697831cc88a3f69f88bf9068043a166eaf",
+    "CLAUDE.md": "01a25427c04eeb312e4f0ef8e776feaa4244b8e3a719599d0ac8055d30b00a81",
+    "skills/repository-bootstrap/SKILL.md": "c6610abfa7c7e75bffebc55b380d49d86a6a4ce75f0b38a4cabbcf17642c2afd",
+    "skills/repository-bootstrap/scripts/install.mjs": "ce5dad2710f4e6a25ff8e1b99c365c5b86b867e127a1e411f1b29ca0d85cb3e3",
+    "tools/agent/build-index.mjs": "f58b8db9e3c94cb0943557093c5ec6cff67e46a0aa6f71c4f8f050615879a820",
+    "tools/agent/core.mjs": "4edbf8b78bbccef068f6e0b23ff3820f7ed672979b2c86887aee1da27531e37b",
+    "tools/agent/generate-adapters.mjs": "4c6f8f3e44d98fa7d0aa9f357b828a8a23d7c0537ef034cef9b38eeeaf324164",
+    "tools/agent/inspect-workspace.mjs": "d7de52e0fb0d5eacd5b2d1cc76ade29ca6d1ee2b4ef64764fa0165567f52e8ae",
+    "tools/agent/resolve-context.mjs": "63cf673d59735aa96fa26883148c5c1de43d3e935c850b20a7d8cd7b64fd03f7",
+    "tools/agent/validate-change.mjs": "c7b62dfc1a7cd8ed3620aacf5589a77910e77ef8782a89e7ee93f0255d557e0a",
+    "tools/agent/validate-scaffolding.mjs": "3daa4c7e122db80951b168845055918d39bf702e8a5f1eb7216f2cecd47be96e",
+    "tools/skills/package-skill.mjs": "5eb9a6f420f8808209ed8282c4c54d20557c26f41d46c24abdd309a0c468df2d",
+    "tools/skills/test-bootstrap.mjs": "fa26b9b77c5993206f3f1ab0507fe003d6f1d4e99fd7ca2f8670ae440fbac9da",
+    ".agent/plans/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "packageScripts": {
+    "agent:index": "node tools/agent/build-index.mjs",
+    "agent:context": "node tools/agent/resolve-context.mjs",
+    "agent:check": "node tools/agent/validate-scaffolding.mjs",
+    "agent:adapters": "node tools/agent/generate-adapters.mjs"
+  }
+}

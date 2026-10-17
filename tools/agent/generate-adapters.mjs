@@ -1,0 +1,1 @@
+import fs from 'node:fs';import {adapter} from './core.mjs';for(const n of ['AGENTS.md','CLAUDE.md'])fs.writeFileSync(n,adapter(process.cwd(),n));console.log('Generated adapters');

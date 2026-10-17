@@ -1,4 +1,5 @@
 packages:
+  - "skills/*"
   - apps/*
   - packages/*
   - tools/*

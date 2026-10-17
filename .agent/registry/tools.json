@@ -1,0 +1,22 @@
+{
+  "tools": [
+    {
+      "id": "tool.workspace.inspect",
+      "command": "node tools/agent/inspect-workspace.mjs",
+      "readOnly": true,
+      "output": "json"
+    },
+    {
+      "id": "tool.context.resolve",
+      "command": "node tools/agent/resolve-context.mjs",
+      "readOnly": true,
+      "output": "json"
+    },
+    {
+      "id": "tool.change.validate",
+      "command": "node tools/agent/validate-change.mjs",
+      "readOnly": false,
+      "output": "json"
+    }
+  ]
+}

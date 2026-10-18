@@ -17,6 +17,19 @@ body {
     linear-gradient(135deg, var(--color-background-deep), #03100c 55%, #010705);
 }
 
+#root {
+  min-height: 100vh;
+}
+
+@media (min-width: 681px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
 body::before {
   position: fixed;
   inset: 0;

@@ -52,9 +52,19 @@ describe('App', () => {
     expect(menuButton).toHaveFocus();
   });
 
+  it('orders primary navigation around the main site workflows', () => {
+    renderApp();
+    const navigation = screen.getByRole('navigation', { name: /primary navigation/i });
+    const linkNames = within(navigation).getAllByRole('link').map((link) => link.textContent?.trim());
+
+    expect(linkNames).toEqual(['Skills', 'Lab', 'Blog', 'Wiki', 'About', 'GitHub ↗']);
+  });
+
   it('renders published articles without exposing drafts', () => {
     renderApp('/blog');
 
+    expect(screen.getByRole('heading', { name: /corpus lab: small model, sharp edges/i })).toBeInTheDocument();
+    expect(screen.getByText(/these are the next things i’ll try/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /welcome to the workshop/i })).toBeInTheDocument();
     expect(screen.queryByText(/repository bootstrap field notes/i)).not.toBeInTheDocument();
   });
@@ -140,13 +150,12 @@ describe('App', () => {
     const user = userEvent.setup();
     renderApp('/wiki');
 
-    expect(await screen.findByRole('link', { name: /agent architecture fundamentals/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'agents' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'coordination' })).toBeInTheDocument();
-    await user.click(screen.getByRole('button', { name: /^agents/i }));
-    expect(screen.queryByRole('link', { name: /agent architecture fundamentals/i })).not.toBeInTheDocument();
-    await user.click(screen.getByRole('button', { name: /^all topics/i }));
-    await user.type(screen.getByRole('searchbox', { name: /search the wiki/i }), 'delegation');
+    expect(await screen.findByText('Handbook')).toBeInTheDocument();
+    await user.click(screen.getByText('Handbook'));
+    await user.click(screen.getByText('Coordination'));
+    expect(screen.getByRole('link', { name: /agent architecture fundamentals/i })).toBeInTheDocument();
+
+    await user.type(screen.getByRole('searchbox', { name: /filter documents/i }), 'delegation');
 
     expect(screen.queryByRole('link', { name: /agent architecture fundamentals/i })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: /delegation, subagents, and parallelism/i })).toBeInTheDocument();

@@ -30,10 +30,12 @@ describe('Corpus Lab inference boundary', () => {
 
     expect(prompt.byteLength).toBeLessThanOrEqual(maximumPromptBytes);
     expect(prompt.messages[0]?.content).toMatch(/untrusted data/i);
+    expect(prompt.messages[0]?.content).toMatch(/actual question directly/i);
+    expect(prompt.messages[0]?.content).toMatch(/easiest, best, or recommended/i);
     expect(prompt.allowedIds).toEqual(['AEP-AGENT-004']);
   });
 
-  it('accepts only cited lines grounded in selected evidence', () => {
+  it('accepts an answer with a citation to selected evidence', () => {
     expect(validateModelOutput({
       response: 'Delegate when the work has a clear boundary. [AEP-AGENT-004]',
       usage: { prompt_tokens: 100, completion_tokens: 20, total_tokens: 120 },
@@ -41,6 +43,14 @@ describe('Corpus Lab inference boundary', () => {
       answer: 'Delegate when the work has a clear boundary. [AEP-AGENT-004]',
       citations: ['AEP-AGENT-004'],
       usage: { totalTokens: 120 },
+    });
+  });
+
+  it('accepts uncited lines when the answer includes an allowed citation', () => {
+    expect(validateModelOutput({
+      response: 'Start with the smallest useful context.\nAdd details as the task needs them. [AEP-AGENT-004]',
+    }, ['AEP-AGENT-004'])).toMatchObject({
+      citations: ['AEP-AGENT-004'],
     });
   });
 

@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { WikiMarkdown } from '../components/WikiMarkdown';
-import { loadWikiDocument, type WikiDocument } from '../wiki';
+import { WikiTree } from '../components/WikiTree';
+import { loadWikiDocument, loadWikiIndex, type WikiDocument, type WikiIndex } from '../wiki';
 import './WikiPage.css';
 
 export function WikiDocumentPage() {
   const { documentId = '' } = useParams();
   const [document, setDocument] = useState<WikiDocument>();
   const [error, setError] = useState(false);
+  const [indexError, setIndexError] = useState(false);
+  const [query, setQuery] = useState('');
+  const [wikiIndex, setWikiIndex] = useState<WikiIndex>();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -24,6 +28,16 @@ export function WikiDocumentPage() {
     return () => controller.abort();
   }, [documentId]);
 
+  useEffect(() => {
+    const controller = new AbortController();
+    loadWikiIndex(controller.signal)
+      .then(setWikiIndex)
+      .catch((requestError: unknown) => {
+        if (!(requestError instanceof DOMException && requestError.name === 'AbortError')) setIndexError(true);
+      });
+    return () => controller.abort();
+  }, []);
+
   if (error) {
     return (
       <section className="content-section wiki-state">
@@ -38,7 +52,7 @@ export function WikiDocumentPage() {
   if (!document) return <p className="empty-state wiki-loading" aria-live="polite">Loading document…</p>;
 
   return (
-    <article className="wiki-document">
+    <article className="wiki-document wiki-page">
       <header className="wiki-document__header">
         <Link className="wiki-back" to="/wiki">← Wiki index</Link>
         <p className="eyebrow">// {document.id} / {document.topic}</p>
@@ -50,15 +64,26 @@ export function WikiDocumentPage() {
           <div><dt>Source review</dt><dd>{document.sourceReviewDate}</dd></div>
         </dl>
       </header>
-      <div className="wiki-document__layout">
-        <div className="wiki-prose"><WikiMarkdown markdown={document.body} /></div>
-        <aside className="wiki-related" aria-labelledby="related-documents-title">
-          <h2 id="related-documents-title">Related documents</h2>
-          {document.relatedDocumentIds.length > 0 ? (
-            <ul>{document.relatedDocumentIds.map((id) => <li key={id}><Link to={`/wiki/${id.toLowerCase()}`}>{id}</Link></li>)}</ul>
-          ) : <p>No related documents are listed.</p>}
-          <p className="wiki-source">Source: <code>{document.sourcePath}</code></p>
-        </aside>
+      <div className="wiki-document__workspace">
+        <WikiTree
+          activeDocumentId={document.id}
+          error={indexError}
+          onQueryChange={setQuery}
+          query={query}
+          wikiIndex={wikiIndex}
+        />
+        <div className="wiki-document__reading">
+          <div className="wiki-document__layout">
+            <div className="wiki-prose"><WikiMarkdown markdown={document.body} /></div>
+            <aside className="wiki-related" aria-labelledby="related-documents-title">
+              <h2 id="related-documents-title">Related documents</h2>
+              {document.relatedDocumentIds.length > 0 ? (
+                <ul>{document.relatedDocumentIds.map((id) => <li key={id}><Link to={`/wiki/${id.toLowerCase()}`}>{id}</Link></li>)}</ul>
+              ) : <p>No related documents are listed.</p>}
+              <p className="wiki-source">Source: <code>{document.sourcePath}</code></p>
+            </aside>
+          </div>
+        </div>
       </div>
     </article>
   );

@@ -8,7 +8,9 @@ function RouteEffects() {
 
   useEffect(() => {
     document.title = getDocumentTitle(location.pathname);
-    document.getElementById('main-content')?.focus({ preventScroll: true });
+    const main = document.getElementById('main-content');
+    main?.focus({ preventScroll: true });
+    main?.scrollTo?.({ top: 0 });
     window.scrollTo({ top: 0 });
   }, [location.pathname]);
 

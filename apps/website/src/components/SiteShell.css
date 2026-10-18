@@ -23,6 +23,22 @@
   box-shadow: 0 0 40px rgba(18, 200, 117, 0.07), inset 0 0 50px rgba(19, 150, 94, 0.04);
 }
 
+@media (min-width: 681px) {
+  .site-frame {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: calc(100dvh - (2 * var(--space-4)));
+    margin-block: var(--space-4);
+  }
+
+  .site-frame > main {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+}
+
 .site-header {
   position: relative;
   z-index: 20;

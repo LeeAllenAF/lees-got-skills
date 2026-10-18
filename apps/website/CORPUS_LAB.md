@@ -30,7 +30,7 @@ Run `pnpm lab:check` to verify that the committed lab index is current. Retrieva
 
 The only configured model is `@cf/meta/llama-3.2-3b-instruct`. It receives the question and bounded retrieved passages as untrusted data, has no tools, emits at most 256 tokens, and is aborted after 12 seconds. There is no retry and no second-model fallback.
 
-Every non-empty answer line must end with one or more citations. The server rejects empty output, tool calls, URLs, overlong output, missing citations, and citations outside the selected evidence. `INSUFFICIENT_EVIDENCE` is the model's only accepted uncited response.
+Every answer must include at least one citation to the selected evidence. Individual lines do not need their own citation. The server rejects empty output, tool calls, URLs, overlong output, missing citations, and citations outside the selected evidence. `INSUFFICIENT_EVIDENCE` is the model's only accepted uncited response.
 
 ## Admission and privacy
 

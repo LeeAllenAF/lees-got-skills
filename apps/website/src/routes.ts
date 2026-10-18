@@ -18,17 +18,6 @@ interface SiteRoute {
 export const siteRoutes: readonly SiteRoute[] = [
   { path: '/', title: "Lee's Got Skills", Component: HomePage },
   {
-    path: '/wiki',
-    title: "Wiki // Lee's Got Skills",
-    navigationLabel: 'Wiki',
-    Component: WikiPage,
-  },
-  {
-    path: '/wiki/:documentId',
-    title: "Wiki // Lee's Got Skills",
-    Component: WikiDocumentPage,
-  },
-  {
     path: '/skills',
     title: "Skills // Lee's Got Skills",
     navigationLabel: 'Skills',
@@ -45,6 +34,17 @@ export const siteRoutes: readonly SiteRoute[] = [
     title: "Blog // Lee's Got Skills",
     navigationLabel: 'Blog',
     Component: BlogPage,
+  },
+  {
+    path: '/wiki',
+    title: "Wiki // Lee's Got Skills",
+    navigationLabel: 'Wiki',
+    Component: WikiPage,
+  },
+  {
+    path: '/wiki/:documentId',
+    title: "Wiki // Lee's Got Skills",
+    Component: WikiDocumentPage,
   },
   {
     path: '/about',

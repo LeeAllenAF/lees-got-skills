@@ -5,7 +5,9 @@
   "sourceRoot": "apps/website/src",
   "targets": {
     "dev": {
-      "command": "pnpm --filter @alienfish/website dev"
+      "command": "corepack pnpm --filter @alienfish/website dev",
+      "cache": false,
+      "continuous": true
     },
     "typecheck": {
       "command": "pnpm --filter @alienfish/website typecheck"

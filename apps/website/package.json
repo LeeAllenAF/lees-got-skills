@@ -10,7 +10,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy:check": "vite build && wrangler deploy --dry-run",
-    "deploy": "vite build && wrangler deploy"
+    "deploy": "vite build && wrangler deploy",
+    "deploy:staging:check": "vite build && wrangler deploy --env staging --dry-run",
+    "deploy:staging": "vite build && wrangler deploy --env staging"
   },
   "dependencies": {
     "react": "19.3.1",

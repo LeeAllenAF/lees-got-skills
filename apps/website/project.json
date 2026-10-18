@@ -26,6 +26,14 @@
     "deploy": {
       "command": "corepack pnpm --filter @alienfish/website run deploy",
       "cache": false
+    },
+    "deploy:staging:check": {
+      "command": "corepack pnpm --filter @alienfish/website run deploy:staging:check",
+      "cache": false
+    },
+    "deploy:staging": {
+      "command": "corepack pnpm --filter @alienfish/website run deploy:staging",
+      "cache": false
     }
   }
 }

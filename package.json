@@ -25,6 +25,8 @@
     "skills:package": "nx run-many -t package --projects=tag:type:skill",
     "website:login": "corepack pnpm --filter @alienfish/website exec wrangler login",
     "website:deploy:check": "nx run website:deploy:check",
-    "website:deploy": "nx run website:deploy"
+    "website:deploy": "nx run website:deploy",
+    "website:deploy:staging:check": "nx run website:deploy:staging:check",
+    "website:deploy:staging": "nx run website:deploy:staging"
   }
 }

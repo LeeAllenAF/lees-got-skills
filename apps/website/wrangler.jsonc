@@ -16,5 +16,17 @@
       "pattern": "www.lees-got-skills.com",
       "custom_domain": true
     }
-  ]
+  ],
+  "env": {
+    "staging": {
+      "name": "lees-got-skills-staging",
+      "workers_dev": true,
+      "routes": [
+        {
+          "pattern": "staging.lees-got-skills.com",
+          "custom_domain": true
+        }
+      ]
+    }
+  }
 }

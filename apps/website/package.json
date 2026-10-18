@@ -8,6 +8,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
     "build": "vite build",
+    "cf-types": "wrangler types src/worker-configuration.d.ts",
     "preview": "vite preview",
     "deploy:check": "vite build && wrangler deploy --env=\"\" --dry-run",
     "deploy": "vite build && wrangler deploy --env=\"\"",

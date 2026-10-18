@@ -59,6 +59,39 @@ describe('App', () => {
     expect(screen.queryByText(/repository bootstrap field notes/i)).not.toBeInTheDocument();
   });
 
+  it('runs deterministic Corpus Lab commands without calling inference', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      json: async () => ({
+        inferenceAvailable: true,
+        budgetState: 'available',
+        quotaState: 'unknown',
+        model: '@cf/meta/llama-3.2-3b-instruct',
+        budget: {
+          state: 'available',
+          quotaState: 'unknown',
+          dailyAdmissions: 0,
+          dailyAdmissionLimit: 80,
+          remainingAdmissions: 80,
+          reservedNeuronEstimate: 0,
+          dailyNeuronEstimateLimit: 8_800,
+          resetsAt: '2026-10-19T00:00:00.000Z',
+        },
+      }),
+    });
+    vi.stubGlobal('fetch', fetchMock);
+    const user = userEvent.setup();
+    renderApp('/lab');
+
+    const command = screen.getByLabelText(/command console/i);
+    await user.clear(command);
+    await user.type(command, 'help');
+    await user.click(screen.getByRole('button', { name: /run/i }));
+
+    expect(screen.getByText(/commands: ask <question>/i)).toBeInTheDocument();
+    expect(fetchMock).not.toHaveBeenCalledWith('/api/lab/ask', expect.anything());
+    expect(await screen.findByText(/current state: available/i)).toBeInTheDocument();
+  });
+
   it('loads and filters the generated wiki index', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,

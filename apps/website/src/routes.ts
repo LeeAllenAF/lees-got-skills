@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import { AboutPage } from './pages/AboutPage';
 import { BlogPage } from './pages/BlogPage';
+import { CorpusLabPage } from './pages/CorpusLabPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { SkillsPage } from './pages/SkillsPage';
@@ -32,6 +33,12 @@ export const siteRoutes: readonly SiteRoute[] = [
     title: "Skills // Lee's Got Skills",
     navigationLabel: 'Skills',
     Component: SkillsPage,
+  },
+  {
+    path: '/lab',
+    title: "Corpus Lab // Lee's Got Skills",
+    navigationLabel: 'Lab',
+    Component: CorpusLabPage,
   },
   {
     path: '/blog',

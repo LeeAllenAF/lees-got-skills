@@ -25,6 +25,8 @@
     "skills:package": "nx run-many -t package --projects=tag:type:skill",
     "wiki:build": "node tools/wiki/scripts/build-wiki.mjs build",
     "wiki:check": "node tools/wiki/scripts/build-wiki.mjs check",
+    "lab:build": "node tools/lab/scripts/build-lab-index.mjs build",
+    "lab:check": "node tools/lab/scripts/build-lab-index.mjs check",
     "website:login": "corepack pnpm --filter @alienfish/website exec wrangler login",
     "website:deploy:check": "nx run website:deploy:check",
     "website:deploy": "nx run website:deploy",

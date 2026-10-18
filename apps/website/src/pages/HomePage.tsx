@@ -6,6 +6,7 @@ import './HomePage.css';
 const homeCards = [
   { icon: '</>', title: 'Agent Skills', text: 'Small, useful, and built to travel.', to: '/skills' },
   { icon: '⌘', title: 'The Wiki', text: 'Agent engineering, mapped and searchable.', to: '/wiki' },
+  { icon: '>_', title: 'Corpus Lab', text: 'Bounded evidence. One small model. No mystery tools.', to: '/lab' },
   { icon: '▤', title: 'The Blog', text: 'Experiments, mistakes, victories.', to: '/blog' },
 ] as const;
 

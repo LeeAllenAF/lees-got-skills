@@ -10,6 +10,8 @@
     &nbsp;·&nbsp;
     <a href="https://lees-got-skills.com/wiki">Explore the wiki</a>
     &nbsp;·&nbsp;
+    <a href="https://lees-got-skills.com/lab">Open Corpus Lab</a>
+    &nbsp;·&nbsp;
     <a href="https://github.com/LeeAllenAF/lees-got-skills/releases">Get a release</a>
   </p>
 </div>
@@ -25,6 +27,7 @@
 | `</>` | **[Agent Skills](skills/)** | Small, focused capabilities that are independently packaged and built to travel. |
 | `⌘` | **[The Corpus](corpus/)** | A structured, source-attributed library about agent architecture, context, tools, evaluation, security, operations, and more. |
 | `▤` | **[The Website](apps/website/)** | The public home for the skills catalog, searchable wiki, and dispatches from the experiment. |
+| `>_` | **[Corpus Lab](apps/website/CORPUS_LAB.md)** | A bounded, inspectable experiment in pairing deterministic retrieval with one small language model. |
 
 The aim is not to invent another universal agent framework. It is to make practical knowledge easier to find, useful behavior easier to install, and agent work a little less dependent on inspired guessing.
 

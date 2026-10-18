@@ -1,11 +1,39 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "lees-got-skills",
-  "compatibility_date": "2026-10-17",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-18",
   "workers_dev": true,
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "LAB_ADMISSION",
+        "class_name": "LabAdmissionController"
+      }
+    ]
+  },
+  "exports": {
+    "LabAdmissionController": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    }
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true
+    }
+  },
   "assets": {
     "directory": "../../dist/apps/website",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/lab/*"]
   },
   "routes": [
     {
@@ -21,6 +49,17 @@
     "staging": {
       "name": "lees-got-skills-staging",
       "workers_dev": true,
+      "ai": {
+        "binding": "AI"
+      },
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "LAB_ADMISSION",
+            "class_name": "LabAdmissionController"
+          }
+        ]
+      },
       "routes": [
         {
           "pattern": "staging.lees-got-skills.com",

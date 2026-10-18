@@ -8,7 +8,6 @@ This directory contains React websites and their associated code. Follow the rep
 2. Reuse established components and patterns before creating new abstractions or introducing dependencies.
 3. Keep design and behavior consistent with the existing website unless changes are requested.
 4. Follow local directory `AGENTS.md` and `CODING_STANDARDS.md` files encountered along the affected paths.
-5. For user-facing changes, use the repository's [accessibility-check skill](../../skills/accessibility-check/SKILL.md) for the scoped accessibility review.
 
 ## Implementation Guidance
 

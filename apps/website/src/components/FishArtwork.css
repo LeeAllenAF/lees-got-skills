@@ -9,13 +9,6 @@
     repeating-linear-gradient(0deg, transparent 0 35px, rgba(45, 255, 166, 0.025) 36px);
 }
 
-.fish-art::after {
-  position: absolute;
-  inset: 7% 4%;
-  content: "";
-  border: 1px dashed rgba(45, 255, 166, 0.15);
-}
-
 .terminal-fish {
   position: absolute;
   top: 1%;

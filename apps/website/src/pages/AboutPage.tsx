@@ -12,7 +12,7 @@ export function AboutPage() {
   return (
     <>
       <PageIntro eyebrow="ABOUT" title="THE HUMAN BEHIND THE KEYBOARD.">
-        <p>I’m Lee—a developer, problem solver, and perpetual tinkerer. Lee’s Got Skills is my personal lab for exploring agentic development, building useful tools, and documenting the journey.</p>
+        <p>Hi, I'm Lee...a developer, problem solver, and perpetual tinkerer. <b>Lee’s Got Skills</b> is my personal lab for exploring agentic development, building useful tools, and documenting the journey. Oh yeah, and I'm also the founder of <a href="">AlienFish Technologies</a></p>
       </PageIntro>
       <section aria-labelledby="values-title">
         <h2 className="sr-only" id="values-title">Working values</h2>
@@ -28,7 +28,7 @@ export function AboutPage() {
         </ul>
       </section>
       <section className="about-note" aria-label="Site independence">
-        <p>Lee’s Got Skills is an independent developer workshop. It flies the AlienFish flag and links to the related <a href="https://github.com/AlienFish">AlienFish GitHub organization</a>, but this site does not claim to be owned by AlienFish.</p>
+        <p>Lee’s Got Skills is an (often wrong) independent developer workshop. It flies the AlienFish flag and links to the related <a href="https://github.com/LeeAllenAF">AlienFish GitHub organization</a>, but this site does not claim to be owned by AlienFish.</p>
       </section>
     </>
   );

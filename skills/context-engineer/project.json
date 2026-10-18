@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "context-engineer",
+  "projectType": "library",
+  "root": "skills/context-engineer",
+  "tags": ["type:skill"],
+  "targets": {
+    "validate": {
+      "command": "node tools/skills/validate-skill.mjs {projectRoot} && node --test {projectRoot}/test/pack-context.test.mjs"
+    },
+    "package": {
+      "dependsOn": ["validate"],
+      "command": "node tools/skills/package-skill.mjs {projectRoot}",
+      "outputs": ["{workspaceRoot}/dist/skills/context-engineer"]
+    }
+  }
+}

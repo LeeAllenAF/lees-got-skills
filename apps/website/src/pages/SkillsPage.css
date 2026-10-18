@@ -81,7 +81,7 @@
 }
 
 .skill-links span {
-  color: #5b806f;
+  color: var(--color-text-muted);
 }
 
 .catalog-note {

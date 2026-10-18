@@ -7,6 +7,8 @@ coverage/
 .env.*
 !.env.example
 .DS_Store
+**/__pycache__/
+**/*.pyc
 
 # Codex credentials and local agent state
 .codex/

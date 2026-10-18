@@ -1,0 +1,23 @@
+{
+  "id": "AEP-PERM-009",
+  "title": "Adversarial Isolation Testing",
+  "summary": "Adversarial Isolation Testing. Focus: adversarial testing, data isolation.",
+  "collection": "handbook",
+  "topic": "permissions",
+  "type": "evaluation",
+  "status": "recommended",
+  "tags": [
+    "adversarial-testing",
+    "data-isolation"
+  ],
+  "domains": [
+    "access-control"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/permissions/aep-perm-009-adversarial-isolation-testing.md",
+  "relatedDocumentIds": [],
+  "body": "# Adversarial Isolation Testing\n\n## Purpose\n\nPermission boundaries require adversarial tests that attempt cross-scope retrieval through search, caches, embeddings, related-document traversal, summaries, and error messages.\n\n## Guidance\n\n- Test direct and indirect references.\n- Test stale permission changes.\n- Test cache contamination.\n- Test malicious query phrasing.\n- Verify that authorization is enforced outside the model.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

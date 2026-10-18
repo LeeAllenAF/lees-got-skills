@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-CODEX-PLUGIN-03-MCP-AND-HOOKS",
+  "title": "MCP tooling and lifecycle hooks",
+  "summary": "MCP tooling and lifecycle hooks. Focus: authorization, lifecycle hooks, mcp.",
+  "collection": "harness",
+  "topic": "codex-plugin",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "authorization",
+    "lifecycle-hooks",
+    "mcp"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-plugin/03-mcp-and-hooks.md",
+  "relatedDocumentIds": [],
+  "body": "# MCP tooling and lifecycle hooks\n\n[← Index](/wiki) · [Plugins](/wiki/harness-codex-plugin-01-plugin-foundations) · [Security](/wiki/harness-foundations-04-reliability-and-evals)\n\n## MCP\n**[DOCUMENTED]** Model Context Protocol provides a standardized way for clients to discover/use tools and other exposed resources. MCP is not itself an agent orchestrator. In a Codex plugin, MCP exposes reliable application capabilities while skills describe how to use them.\n\n### Tool design [DESIGN]\nPrefer domain-oriented, typed operations over thousands of tiny endpoint wrappers. Examples:\n- `claim_work_unit` / `submit_classification`\n- `search_sources` / `read_evidence`\n- `verify_relationship` / `complete_work_unit`\n- `get_run_status` / `list_pending_decisions`\n\nTool outputs should carry stable IDs, bounded text, error categories, provenance and explicit retry guidance. Server-side code must enforce authorization and policy.\n\n### Portable MCP configuration\nUse the portable root `mcp.json` schema and explicit transport; for example (remote endpoint only):\n```json\n{\n  \"$schema\": \"https://agent-plugins.org/schemas/1.0.0/mcp.schema.json\",\n  \"mcpServers\": {\n    \"research\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://example.invalid/mcp\"\n    }\n  }\n}\n```\n`.invalid` is intentionally nonfunctional. Local vs remote transport and authentication must be established in implementation.\n\n## Hooks\n**[DOCUMENTED]** Codex supports defined lifecycle hook events; event shape and supported surfaces are version-dependent. Plugin hook scripts need to exist locally and must be trusted before execution. Do not assert that arbitrary `beforeModelCall`/`afterToolCall` are real API names without checking the current [hooks reference](https://developers.openai.com/codex/hooks).\n\n### Control boundary\nAn MCP result can suggest the next task to Codex but **cannot force the host** to perform the next model invocation. The SDK or App Server is required for direct client-managed model turn orchestration.\n\nSources: https://developers.openai.com/plugins/build/plugins ; https://developers.openai.com/codex/hooks ; https://modelcontextprotocol.io/specification"
+}

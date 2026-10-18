@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-003",
+  "title": "Evaluation Datasets and Task Design",
+  "summary": "Evaluation Datasets and Task Design. Focus: evaluation datasets, task design.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation-datasets",
+    "task-design"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-003-datasets-and-task-design.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-001",
+    "AEP-CODE-014"
+  ],
+  "body": "# AEP-EVAL-003 — Evaluation Datasets and Task Design\n\n## 1. Purpose\nAn eval suite is only as representative as its tasks. Dataset design should reflect the real distribution of work while deliberately including important edge, failure, and adversarial cases.\n\n## 2. Dataset sources\nUseful task sources include:\n- anonymized production failures;\n- historical bugs and incidents;\n- representative enterprise workflows;\n- domain-expert authored cases;\n- synthetic variations validated by humans;\n- public benchmarks used as external references.\n\n## 3. Split the corpus\nMaintain separate sets for:\n- development/debugging;\n- regression gating;\n- capability exploration;\n- hidden or holdout evaluation when gaming/overfitting is a concern.\n\nDo not continuously tune against the same visible set and then treat that score as unbiased evidence.\n\n## 4. Diversity requirements\nFor company-wide software guidance, include variation in:\n- language/framework;\n- repository size and age;\n- architecture style;\n- dependency management;\n- task ambiguity;\n- risk/blast radius;\n- tool availability;\n- documentation quality;\n- greenfield vs legacy work.\n\n## 5. Difficulty distribution\nA useful suite contains easy, normal, hard, and pathological cases. If every task is currently solved near 100%, the suite provides little signal for capability improvement; if almost nothing succeeds, it provides weak regression signal.\n\n## 6. Production representativeness\nTrack the difference between benchmark distribution and actual work. Public coding benchmarks are valuable comparators but must not substitute for the platform/scope-specific workloads.\n\n## 7. Task versioning\nTasks are versioned artifacts. Changes to instructions, fixtures, tests, dependencies, or environments can invalidate historical comparisons and must be recorded.\n\n## References\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- OpenAI, Datasets — https://developers.openai.com/api/docs/guides/evaluation-getting-started\n- SWE-bench Verified — https://www.swebench.com/verified.html"
+}

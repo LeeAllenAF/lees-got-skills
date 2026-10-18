@@ -1,0 +1,29 @@
+{
+  "id": "AEP-COST-004",
+  "title": "Request, Tool, and Orchestration Efficiency",
+  "summary": "Request, Tool, and Orchestration Efficiency. Focus: cost optimization, orchestration, tool use.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "cost-optimization",
+    "orchestration",
+    "tool-use"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-004-request-tool-and-orchestration-efficiency.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-003",
+    "AEP-TOOL-009",
+    "AEP-AGENT-004",
+    "AEP-COST-001"
+  ],
+  "body": "# AEP-COST-004 — Request, Tool, and Orchestration Efficiency\n\n## 1. Purpose\nEvery model call, tool call, handoff, and coordination boundary adds latency, cost, and potential failure.\n\n## 2. Reduce unnecessary round trips\nWhere semantics are predictable, combine deterministic work rather than asking the model to orchestrate every micro-step.\n\nExamples:\n\n```text\nfilter + sort + aggregate in code\ninstead of\nmodel -> tool -> model -> tool -> model\n```\n\n## 3. Tool call economics\nMeasure:\n\n- calls per successful task;\n- repeated or redundant calls;\n- bytes/tokens returned;\n- latency distribution;\n- external API charges;\n- error/retry rate;\n- cacheability.\n\nA tool is inefficient if it routinely returns far more context than the model uses.\n\n## 4. Multi-agent overhead\nSubagents can reduce wall time for independent work, but they also duplicate model context and synthesis cost. Account for all child-agent usage when comparing architectures.\n\n## 5. Fuse deterministic operations\nWhen a workflow always performs the same sequence, implement it as deterministic application code or a domain-coherent tool unless there is value in model-directed branching.\n\n## 6. Prefer one high-information call over many low-information calls\nDo not mechanically minimize calls if doing so creates overloaded prompts or brittle tools. The target is useful work per round trip.\n\n## 7. Recommendation\nInstrument request and tool graphs. Optimize repeated communication and redundant orchestration before tuning token-level details.\n\n## References\n- OpenAI, Latency optimization — https://developers.openai.com/api/docs/guides/latency-optimization\n- Anthropic, Advanced tool use — https://www.anthropic.com/engineering/advanced-tool-use"
+}

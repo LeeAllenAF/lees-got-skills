@@ -1,0 +1,27 @@
+{
+  "id": "AEP-MODEL-008",
+  "title": "Local, Self-Hosted, and Privacy-Aware Models",
+  "summary": "Local, Self-Hosted, and Privacy-Aware Models. Focus: privacy, self hosted models.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "provisional",
+  "tags": [
+    "privacy",
+    "self-hosted-models"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-008-local-self-hosted-and-privacy-aware-models.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-003",
+    "AEP-MODEL-007",
+    "AEP-TOOL-006"
+  ],
+  "body": "# AEP-MODEL-008 — Local, Self-Hosted, and Privacy-Aware Models\n\n## 1. Purpose\n\nLocal/self-hosted inference can be justified by privacy, data residency, offline operation, predictable capacity, customization, or economics at sufficient scale. It should not be recommended merely because it is technically possible.\n\n## 2. Decision dimensions\n\nEvaluate:\n\n- quality on representative tasks;\n- hardware/capacity requirements;\n- concurrency;\n- latency distribution;\n- model loading/cold start;\n- quantization impact;\n- operational staffing;\n- patching/security;\n- data residency;\n- licensing;\n- total cost of ownership.\n\n## 3. Good candidate roles\n\nSelf-hosted models may be attractive for:\n\n- embeddings;\n- reranking;\n- classification;\n- sensitive local retrieval;\n- high-volume bounded transformations;\n- offline development environments.\n\nGeneral-purpose autonomous coding is a higher bar and should be benchmarked directly.\n\n## 4. Privacy is architectural\n\nA local model does not automatically make a system private. Tool calls, telemetry, vector databases, logs, traces, backups, and external services may still move sensitive data.\n\n## 5. Hybrid deployment\n\nA useful pattern may be:\n\n```text\nlocal deterministic/small-model preprocessing\n        ↓\npolicy / redaction / retrieval\n        ↓\nhosted frontier reasoning only when allowed/needed\n```\n\nThis should be driven by scoped requirements and measured workload needs.\n\n## 6. Initial platform guidance\n\nDo not steer teams toward self-hosting without a clear requirement or economic case. Treat local inference as one deployment option within the same evaluation framework used for hosted models."
+}

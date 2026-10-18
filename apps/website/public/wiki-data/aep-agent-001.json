@@ -1,0 +1,26 @@
+{
+  "id": "AEP-AGENT-001",
+  "title": "Agent Architecture Fundamentals",
+  "summary": "Agent Architecture Fundamentals. Focus: deterministic control, orchestration.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "deterministic-control",
+    "orchestration"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-001-agent-architecture-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-001",
+    "AEP-MODEL-001"
+  ],
+  "body": "# AEP-AGENT-001 — Agent Architecture Fundamentals\n\n## 1. Purpose\nAgent architecture decides where control is deterministic and where a model is allowed to choose the next action.\n\n> **Use deterministic workflow logic where the sequence is known; use agentic control where useful decisions cannot be fully specified in advance.**\n\nAn agent is not simply an LLM call. A production agent is a runtime loop combining model reasoning, context, tools, state, authority, verification, and stopping conditions.\n\n## 2. Workflow vs agent\nA deterministic workflow is appropriate when steps, branches, and recovery behavior can be expressed reliably in code. An agent loop is appropriate when the system must inspect evidence and dynamically decide what to do next.\n\nDo not convert a known workflow into an autonomous loop merely for architectural novelty.\n\n## 3. Start with one agent\nCurrent OpenAI and Google guidance both recommend beginning with a single agent and adding specialists only where separate tools, policies, contexts, ownership, or parallelism materially improve outcomes.\n\n## 4. Core agent loop\n```text\nprepare context\n   ↓\nmodel decides\n   ↓\nact / call tool / produce result\n   ↓\nobserve\n   ↓\nverify progress\n   ↓\ncontinue or stop\n```\n\nEvery loop needs explicit stop conditions, budgets, and non-progress handling.\n\n## 5. Reasons to split\nA second agent may be justified by:\n- materially different tool surfaces;\n- different authority or approval policy;\n- context isolation;\n- independent parallel work;\n- different model requirements;\n- a distinct output contract;\n- traceability or ownership requirements.\n\nConceptual job titles alone are insufficient justification.\n\n## 6. Initial platform guidance\n1. Prefer deterministic orchestration where control flow is known.\n2. Prefer a single capable agent before multi-agent composition.\n3. Add agents only when an explicit architectural boundary earns the complexity.\n4. Use external verification and progress signals, not model claims alone.\n5. Record why a multi-agent boundary exists and revalidate it as models improve.\n\n## References\n- OpenAI, Agents SDK and orchestration — https://developers.openai.com/api/docs/guides/agents/sdk\n- OpenAI, Orchestration and handoffs — https://developers.openai.com/api/docs/guides/agents/orchestration\n- Google Cloud, Choose a design pattern for your agentic AI system — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

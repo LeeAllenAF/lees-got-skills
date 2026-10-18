@@ -1,0 +1,28 @@
+{
+  "id": "AEP-EVAL-007",
+  "title": "Cost, Latency, and Efficiency Evaluation",
+  "summary": "Cost, Latency, and Efficiency Evaluation. Focus: cost optimization, evaluation, latency.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "cost-optimization",
+    "evaluation",
+    "latency"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-007-cost-latency-and-efficiency.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-005",
+    "AEP-TOOL-009",
+    "AEP-EVAL-001"
+  ],
+  "body": "# AEP-EVAL-007 — Cost, Latency, and Efficiency Evaluation\n\n## 1. Purpose\nCorrectness is not the only operational objective. Agent systems consume model tokens, tool calls, compute, network time, and human attention.\n\n## 2. Metrics\nTrack where practical:\n- input/output/reasoning tokens;\n- cached vs uncached tokens;\n- model spend;\n- tool/API spend;\n- wall-clock latency;\n- model latency vs tool latency;\n- calls and retries;\n- human review time;\n- cost per successful task;\n- cost per escaped defect or failed task where estimable.\n\n## 3. Normalize by success\nCheap failures are not efficient. Prefer metrics such as:\n\n```text\ncost per successful task\nlatency at target success rate\nhuman minutes per accepted result\n```\n\nrather than raw average token cost alone.\n\n## 4. Pareto analysis\nWhen systems trade quality against cost/latency, report a frontier rather than one universal winner. Different workload classes can rationally choose different operating points.\n\n## 5. Tail behavior\nTrack p90/p95 latency and high-cost outliers. Agent loops can have acceptable averages while occasionally entering expensive pathological trajectories.\n\n## 6. Recommendation\nEvery experiment that proposes an optimization should report quality and cost/latency together unless one is provably irrelevant.\n\n## References\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "AEP-ASSURE-009",
+  "title": "Findings and Promotion Gates",
+  "summary": "Findings and Promotion Gates. Focus: release gates, security findings.",
+  "collection": "handbook",
+  "topic": "assurance",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "release-gates",
+    "security-findings"
+  ],
+  "domains": [
+    "security-assurance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/assurance/aep-assure-009-findings-and-promotion-gates.md",
+  "relatedDocumentIds": [],
+  "body": "# Findings and Promotion Gates\n\n## Purpose\n\nSecurity findings must influence whether models, skills, tools, retrieval configurations, or workflows can be promoted.\n\n## Guidance\n\n- Classify severity and exploitability.\n- Require remediation or explicit exception for blockers.\n- Link findings to affected versions.\n- Re-test after fixes.\n- Do not bury security regressions inside aggregate scores.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

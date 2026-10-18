@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-009",
+  "title": "Optimization Experiments and Pareto Selection",
+  "summary": "Optimization Experiments and Pareto Selection. Focus: experimentation, pareto optimization.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "experimentation",
+    "pareto-optimization"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-009-optimization-experiments-and-pareto-selection.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-006",
+    "AEP-EVAL-007",
+    "AEP-COST-001"
+  ],
+  "body": "# AEP-COST-009 — Optimization Experiments and Pareto Selection\n\n## 1. Purpose\nOptimization claims must be evaluated against representative tasks and repeated runs.\n\n## 2. Multi-objective comparison\nReport at least:\n\n- success/quality;\n- cost per attempt;\n- cost per success;\n- median and p95 latency;\n- human intervention;\n- reliability/variance.\n\n## 3. Pareto frontier\nA configuration is dominated if another configuration is no worse on all relevant objectives and better on at least one.\n\nPrefer presenting the non-dominated frontier rather than declaring one universal winner.\n\n## 4. Experiment isolation\nChange one architectural variable at a time where possible:\n\n```text\nmodel\nreasoning effort\nretrieval depth\nreranking\ncontext strategy\nparallelism\ncache policy\ntool design\n```\n\nOtherwise causal interpretation becomes weak.\n\n## 5. Real workload weighting\nAggregate scores should reflect expected workload distribution. Avoid optimizing heavily for rare benchmark tasks at the expense of routine engineering work.\n\n## 6. Optimization regression\nA cost reduction is unacceptable when it causes meaningful degradation in safety, correctness, or maintainability outside the experiment's headline metric.\n\n## 7. Recommendation\nPromote an optimization into handbook guidance only after it improves the relevant quality/cost/latency frontier for representative workloads."
+}

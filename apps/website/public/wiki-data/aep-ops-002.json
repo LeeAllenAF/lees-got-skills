@@ -1,0 +1,23 @@
+{
+  "id": "AEP-OPS-002",
+  "title": "Observability and Traceability",
+  "summary": "Observability and Traceability. Focus: observability, tracing.",
+  "collection": "handbook",
+  "topic": "operations",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "observability",
+    "tracing"
+  ],
+  "domains": [
+    "operations"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/operations/aep-ops-002-observability-and-traceability.md",
+  "relatedDocumentIds": [],
+  "body": "# Observability and Traceability\n\n## Purpose\n\nOperational telemetry should reveal query routing, candidate counts, permission filters, selected documents, resolver decisions, latency, cost, and index versions without leaking restricted content.\n\n## Guidance\n\n- Use structured traces.\n- Separate sensitive payloads from metrics.\n- Correlate downstream task failures with retrieval behavior.\n- Track tail latency.\n- Version dashboards and metrics definitions.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

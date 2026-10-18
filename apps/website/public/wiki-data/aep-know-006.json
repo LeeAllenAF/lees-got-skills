@@ -1,0 +1,24 @@
+{
+  "id": "AEP-KNOW-006",
+  "title": "Provenance, Evidence, and Freshness",
+  "summary": "Provenance, Evidence, and Freshness. Focus: evidence lineage, freshness, provenance.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evidence-lineage",
+    "freshness",
+    "provenance"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-006-provenance-evidence-and-freshness.md",
+  "relatedDocumentIds": [],
+  "body": "# Provenance, Evidence, and Freshness\n\n## Principle\n\nEvery machine-delivered recommendation should be traceable to the material that justified it.\n\n## Provenance record\n\nA returned guidance item should expose enough information to answer:\n\n- What source document did this come from?\n- Which version?\n- Which section?\n- What scope?\n- What maturity/status?\n- What evidence supports it?\n- When was it last reviewed?\n- Is it stale or due for review?\n\n## Freshness states\n\nPossible derived states:\n\n```text\ncurrent\nreview_due\nstale\nsuperseded\nunknown\n```\n\nA stale document may still be historically useful but should not silently drive current recommendations.\n\n## Evidence graph\n\nKnowledge may point to:\n\n```text\nguidance\n  ↓ supported_by\nexperiment\nreference\nproduction observation\ndecision\nincident\n```\n\nExperiments may in turn supersede or weaken prior recommendations.\n\n## Revalidation triggers\n\nFreshness should support both scheduled and event-driven revalidation.\n\nEvents include:\n\n- provider/model changes;\n- MCP specification revisions;\n- framework/tool releases;\n- pricing changes;\n- security advisories;\n- repeated production failures;\n- experiment results;\n- scoped policy changes.\n\n## Derived summaries\n\nSummaries and embeddings inherit the freshness of their source material and must be invalidated when the source is superseded.\n\n## Current recommendation\n\nFreshness is part of query semantics. The service should be able to answer \"show me current approved guidance\" without relying on the model to inspect dates manually."
+}

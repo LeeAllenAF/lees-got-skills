@@ -1,0 +1,28 @@
+{
+  "id": "AEP-AGENT-004",
+  "title": "Delegation, Subagents, and Parallelism",
+  "summary": "Delegation, Subagents, and Parallelism. Focus: concurrency, delegation, multi agent.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "provisional",
+  "tags": [
+    "concurrency",
+    "delegation",
+    "multi-agent"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-004-delegation-subagents-and-parallelism.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-001",
+    "AEP-CTX-001",
+    "AEP-MODEL-005"
+  ],
+  "body": "# AEP-AGENT-004 — Delegation, Subagents, and Parallelism\n\n## Purpose\nUse subagents when independent work benefits from isolated context or concurrent execution.\n\n## Good delegation candidates\n- researching independent hypotheses;\n- reviewing independent documents/modules;\n- running separate diagnostic branches;\n- parallelizing independent test/debug investigations;\n- isolating specialist context that would pollute the parent.\n\nOpenAI's current Agents API recommends subagents for independent tasks and keeping short or tightly dependent steps with the main agent.\n\n## Delegation contract\nEach delegated task should define:\n- bounded objective;\n- supplied context;\n- allowed tools and authority;\n- expected output schema;\n- completion criteria;\n- budget;\n- whether results are evidence or decisions.\n\n## Parallelism\nParallel work improves wall time only when tasks are sufficiently independent. Shared-file edits, shared mutable state, ordering dependencies, or scarce resources may make parallelism harmful.\n\n## Guidance\nPrefer **fan out → bounded work → structured synthesis** over unrestricted agent-to-agent conversation.\n\n## References\n- OpenAI, Multi-agent Agents API — https://developers.openai.com/api/docs/guides/agents-api/multi-agent\n- Google Cloud, Agentic AI design patterns — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

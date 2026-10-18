@@ -1,0 +1,27 @@
+{
+  "id": "AEP-EVAL-002",
+  "title": "Success Criteria and Outcome Verification",
+  "summary": "Success Criteria and Outcome Verification. Focus: success criteria, verification.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "success-criteria",
+    "verification"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-002-success-criteria-and-outcome-verification.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-001",
+    "AEP-CODE-008",
+    "AEP-AGENT-009"
+  ],
+  "body": "# AEP-EVAL-002 — Success Criteria and Outcome Verification\n\n## 1. Purpose\nA useful eval begins with an observable definition of success. The desired end state should be specified independently from whatever explanation the model gives about its own performance.\n\n## 2. Outcome hierarchy\nPrefer the strongest available evidence:\n\n```text\nreal environment state\n    ↓\nexecutable tests / invariants\n    ↓\nstructured assertions\n    ↓\nreference comparison\n    ↓\nmodel judgment\n    ↓\nhuman subjective review\n```\n\nThis is not a value judgment about humans; it reflects reproducibility and automation. Subjective product quality may legitimately require human review.\n\n## 3. Multi-dimensional success\nA task may have multiple independent assertions. Example for a code change:\n- requested behavior works;\n- prior behavior remains intact;\n- tests pass;\n- no prohibited files changed;\n- security policy remains satisfied;\n- migration is reversible or explicitly approved;\n- output is within cost/latency budget.\n\nPassing one assertion must not mask failing another.\n\n## 4. Partial credit\nUse partial scores only where gradations are meaningful. Safety-critical requirements, destructive-operation constraints, and mandatory policy checks are often better represented as hard gates.\n\n## 5. Outcome loopholes\nAgents can discover unexpected paths that satisfy a brittle grader while violating intent. Graders should therefore encode the real requirement rather than proxies whenever practical, and suspiciously high scores should be inspected for reward hacking.\n\n## 6. Recommendation\nEvery production-relevant eval task should declare:\n- task intent;\n- expected observable outcome;\n- hard constraints;\n- optional quality criteria;\n- failure conditions;\n- allowed tools/authority;\n- environment assumptions.\n\n## References\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices"
+}

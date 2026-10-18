@@ -1,7 +1,7 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { App } from './App';
 
 function renderApp(path = '/') {
@@ -13,6 +13,8 @@ function renderApp(path = '/') {
 }
 
 describe('App', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
   it('navigates to the released skill catalog', async () => {
     const user = userEvent.setup();
     renderApp();
@@ -20,17 +22,20 @@ describe('App', () => {
     await user.click(screen.getByRole('link', { name: /explore skills/i }));
 
     expect(screen.getByRole('heading', { name: /skill catalog/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'accessibility-check' })).toBeInTheDocument();
-    expect(screen.getByText('v0.1.0')).toBeInTheDocument();
-    expect(screen.getByText(/official release available/i)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /documentation/i })).toHaveAttribute(
+    const accessibilityCard = screen.getByRole('heading', { name: 'accessibility-check' }).closest('article');
+    expect(accessibilityCard).not.toBeNull();
+    const scopedCard = within(accessibilityCard as HTMLElement);
+    expect(scopedCard.getByText('v0.1.0')).toBeInTheDocument();
+    expect(scopedCard.getByText(/official release available/i)).toBeInTheDocument();
+    expect(scopedCard.getByRole('link', { name: /documentation/i })).toHaveAttribute(
       'href',
       'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/accessibility-check',
     );
-    expect(screen.getByRole('link', { name: /install/i })).toHaveAttribute(
+    expect(scopedCard.getByRole('link', { name: /install/i })).toHaveAttribute(
       'href',
       'https://github.com/LeeAllenAF/lees-got-skills/releases/download/accessibility-check%400.1.0/accessibility-check-0.1.0.tar.gz',
     );
+    expect(screen.getByRole('heading', { name: 'teach-agentic-development' })).toBeInTheDocument();
     await waitFor(() => expect(document.title).toBe("Skills // Lee's Got Skills"));
   });
 
@@ -52,5 +57,65 @@ describe('App', () => {
 
     expect(screen.getByRole('heading', { name: /welcome to the workshop/i })).toBeInTheDocument();
     expect(screen.queryByText(/repository bootstrap field notes/i)).not.toBeInTheDocument();
+  });
+
+  it('loads and filters the generated wiki index', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        schemaVersion: 1,
+        contentFingerprint: 'fixture',
+        documentCount: 2,
+        topics: [
+          { topic: 'agents', count: 1 },
+          { topic: 'coordination', count: 1 },
+        ],
+        documents: [
+          {
+            id: 'AEP-AGENT-001',
+            title: 'Agent Architecture Fundamentals',
+            summary: 'Deterministic control and orchestration.',
+            collection: 'handbook',
+            topic: 'coordination',
+            type: 'guidance',
+            status: 'recommended',
+            tags: ['orchestration'],
+            domains: ['agent-architecture'],
+            scope: ['enterprise-global'],
+            sourceReviewDate: '2026-10-01',
+            sourcePath: 'corpus/handbook/agents/example.md',
+            relatedDocumentIds: [],
+          },
+          {
+            id: 'AEP-AGENT-004',
+            title: 'Delegation, Subagents, and Parallelism',
+            summary: 'Boundaries for multi-agent work.',
+            collection: 'handbook',
+            topic: 'agents',
+            type: 'guidance',
+            status: 'recommended',
+            tags: ['delegation'],
+            domains: ['agent-architecture'],
+            scope: ['enterprise-global'],
+            sourceReviewDate: '2026-10-01',
+            sourcePath: 'corpus/handbook/agents/example-two.md',
+            relatedDocumentIds: [],
+          },
+        ],
+      }),
+    }));
+    const user = userEvent.setup();
+    renderApp('/wiki');
+
+    expect(await screen.findByRole('link', { name: /agent architecture fundamentals/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'agents' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'coordination' })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /^agents/i }));
+    expect(screen.queryByRole('link', { name: /agent architecture fundamentals/i })).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /^all topics/i }));
+    await user.type(screen.getByRole('searchbox', { name: /search the wiki/i }), 'delegation');
+
+    expect(screen.queryByRole('link', { name: /agent architecture fundamentals/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /delegation, subagents, and parallelism/i })).toBeInTheDocument();
   });
 });

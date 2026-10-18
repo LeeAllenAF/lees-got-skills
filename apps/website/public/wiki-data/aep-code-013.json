@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-013",
+  "title": "Documentation and Architecture Work",
+  "summary": "Documentation and Architecture Work. Focus: architecture, documentation.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "architecture",
+    "documentation"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-013-documentation-and-architecture-work.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-004",
+    "AEP-CTX-002",
+    "AEP-HBK-000"
+  ],
+  "body": "# AEP-CODE-013 — Documentation and Architecture Work\n\n## 1. Principle\nDocumentation should represent the system that actually exists, clearly separating current state, proposed state, assumptions, and unresolved decisions.\n\n## 2. Sources\nUse code, configuration, deployment manifests, schemas, CI, repository history, existing ADRs, and authoritative owner input. Do not infer architecture solely from folder names.\n\n## 3. Architecture proposals\nA proposal should state problem, constraints, alternatives, decision, tradeoffs, migration path, operational implications, security implications, and validation plan.\n\n## 4. Diagrams\nPrefer diagrams whose entities and boundaries can be traced to real components or clearly labeled proposals.\n\n## 5. Living documentation\nWhere documentation describes mutable system facts, attach owners, sources, or automated checks so drift can be detected.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

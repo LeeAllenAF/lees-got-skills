@@ -1,0 +1,15 @@
+{
+  "sessionId": "",
+  "condition": "baseline-or-treatment",
+  "questionId": "",
+  "model": "",
+  "host": "",
+  "inputTokens": null,
+  "outputTokens": null,
+  "toolCalls": null,
+  "elapsedSeconds": null,
+  "citationsSupported": null,
+  "conceptuallyCorrect": null,
+  "helpful": null,
+  "notes": ""
+}

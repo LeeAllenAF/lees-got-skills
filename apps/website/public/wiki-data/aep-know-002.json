@@ -1,0 +1,24 @@
+{
+  "id": "AEP-KNOW-002",
+  "title": "Knowledge Schema, Identifiers, and Metadata",
+  "summary": "Knowledge Schema, Identifiers, and Metadata. Focus: identifiers, metadata, schemas.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "identifiers",
+    "metadata",
+    "schemas"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-002-knowledge-schema-and-identifiers.md",
+  "relatedDocumentIds": [],
+  "body": "# Knowledge Schema, Identifiers, and Metadata\n\n## Principle\n\nMachine consumption requires stable identity independent of filenames and folder layout.\n\nStable document IDs such as `AEP-CTX-003` are authoritative. Paths are implementation details.\n\n## Required metadata\n\nCanonical knowledge artifacts should support:\n\n```yaml\nid: AEP-CTX-003\ntitle: Retrieval Architecture\ntype: standard\nstatus: recommended\nversion: 1.0.0\n\nscope:\n  - enterprise-global\ndomains:\n  - agent-engineering\n  - retrieval\n\napplies_to:\n  - coding-agents\n\ntechnologies:\n  - generic\n\ntags:\n  - retrieval\n  - hybrid-search\n\nrelated:\n  - AEP-CTX-004\n  - AEP-CTX-005\n\nsupersedes: null\n\nevidence:\n  experiments: []\n  references: []\n\nreview:\n  owner: agent-engineering\n  last_reviewed: 2026-10-01\n  review_interval: 180d\n```\n\nNot every field is mandatory for every type, but the schema should make absence explicit.\n\n## Knowledge types\n\nThe service should understand at least:\n\n- principle;\n- standard;\n- pattern;\n- anti-pattern;\n- technique;\n- skill;\n- experiment;\n- evaluation;\n- decision;\n- reference;\n- playbook.\n\n## Status and maturity\n\nStatus is semantically meaningful:\n\n```text\napproved\nrecommended\nprovisional\nexperimental\ninformational\ndeprecated\nrejected\n```\n\nRetrieval may return deprecated/rejected material when requested for historical analysis, but ordinary guidance resolution should not treat it as active advice.\n\n## Immutable identity, versioned content\n\nAn artifact's stable ID should survive revisions. Content versions should remain traceable.\n\nIf the meaning changes enough to invalidate historical references, create a new artifact and use `supersedes` / `superseded_by`.\n\n## Schema validation\n\nMetadata should be validated in CI using a formal schema.\n\nValidation should include:\n\n- unique IDs;\n- valid statuses/types;\n- valid relationships;\n- review metadata;\n- unresolved references;\n- dependency cycles where prohibited;\n- malformed overlay scopes.\n\n## Current recommendation\n\nPrefer boring, inspectable metadata over opaque embeddings-only knowledge stores. Semantic indexes are derivatives; metadata is part of the canonical contract."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "AEP-ASSURE-005",
+  "title": "Adversarial Workflow Testing",
+  "summary": "Adversarial Workflow Testing. Focus: adversarial testing, orchestration.",
+  "collection": "handbook",
+  "topic": "assurance",
+  "type": "evaluation",
+  "status": "recommended",
+  "tags": [
+    "adversarial-testing",
+    "orchestration"
+  ],
+  "domains": [
+    "security-assurance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/assurance/aep-assure-005-adversarial-workflow-testing.md",
+  "relatedDocumentIds": [],
+  "body": "# Adversarial Workflow Testing\n\n## Purpose\n\nAgent workflows should be challenged with misleading tool outputs, partial failures, conflicting instructions, retry storms, poisoned context, and attempts to bypass checkpoints.\n\n## Guidance\n\n- Check termination behavior.\n- Check idempotency and replay.\n- Check audit completeness.\n- Check budget enforcement.\n- Check postcondition verification.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

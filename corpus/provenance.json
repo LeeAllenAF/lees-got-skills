@@ -1,0 +1,1160 @@
+{
+  "sources": [
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "sha256": "ee40e0b80c070ce82319a4b9511877a364594155e1c0f0df787627c9bd4cc6ef"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "sha256": "d37e7e0e727cbacf0a3723517eb9d1bb50db4e864594cd75e60d2bc21be50a83"
+    }
+  ],
+  "files": [
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/AGENTS.md",
+      "path": "harness/AGENTS.md",
+      "sha256": "6fe64de41437fe2484443fd2203ce058639af6bd2f4c47681b5e235199845297"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/INDEX.md",
+      "path": "harness/INDEX.md",
+      "sha256": "70e82bff252deb78af7208166dbd328180ddadcc7ca3b157f1795c9adc64f3d8"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/README.md",
+      "path": "harness/README.md",
+      "sha256": "4149ee5ba4838b796100911de0f8f00de9b33eb30fd58775d5cbb7c62bd824ea"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/app-server/01-app-server-foundations.md",
+      "path": "harness/app-server/01-app-server-foundations.md",
+      "sha256": "a3e79e94d7477abb53fff528a912e29e2016a6e59c6cca0153f5406e6b2746f9"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/app-server/02-lifecycle-and-integration.md",
+      "path": "harness/app-server/02-lifecycle-and-integration.md",
+      "sha256": "f4a41a80cabbe8af67192e780c643baf64130d4109d25f0ff5a274b7c67df317"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/architecture/01-integration-boundaries.md",
+      "path": "harness/architecture/01-integration-boundaries.md",
+      "sha256": "c997615d70c88a68b251b55cf343ad6a91ec5b97499136b59179692b025a5494"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/architecture/02-reference-design.md",
+      "path": "harness/architecture/02-reference-design.md",
+      "sha256": "ba8c715843963b6114d016ec243c18b4f4a9d770cbce0e7248b78cd5db106541"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/architecture/03-decisions-and-questions.md",
+      "path": "harness/architecture/03-decisions-and-questions.md",
+      "sha256": "fb1e7ac718c4b0f91e015c1ea37598ce38372924cf245225ce33b1996ede9d26"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-plugin/01-plugin-foundations.md",
+      "path": "harness/codex-plugin/01-plugin-foundations.md",
+      "sha256": "087ff6c8ff78028796bb84a13c17315b79064a8dde4b4fb2ef763d2d82fcbf24"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-plugin/02-skills.md",
+      "path": "harness/codex-plugin/02-skills.md",
+      "sha256": "e533d9efade80a507e837862378d4ec2d9fec07912027b2edd6c083e76c6a03a"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-plugin/03-mcp-and-hooks.md",
+      "path": "harness/codex-plugin/03-mcp-and-hooks.md",
+      "sha256": "5ae48515273ff5b3a4bee6e4da52871d52db31cc072434747e848f6a98ba4e3c"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-sdk/01-sdk-foundations.md",
+      "path": "harness/codex-sdk/01-sdk-foundations.md",
+      "sha256": "038e9ee9934689e1cc64c3fe62d632456f48951e4840376afc7dc8931308ad4e"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-sdk/02-configuration-and-capabilities.md",
+      "path": "harness/codex-sdk/02-configuration-and-capabilities.md",
+      "sha256": "f6b5e321d5e18ad555995a545551e75c1be8e1205fed7d02148650a4f743b8ce"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/codex-sdk/03-orchestration-pattern.md",
+      "path": "harness/codex-sdk/03-orchestration-pattern.md",
+      "sha256": "2104a4bf34bfe793d4b3c1d8d9be8d7dc800e99144c6caec7844df834711c122"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/foundations/01-harness-concepts.md",
+      "path": "harness/foundations/01-harness-concepts.md",
+      "sha256": "89af074c02ee2d77150eded5adca9cb20f271b255d887b59e9763c728aaf55c3"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/foundations/02-orchestration-patterns.md",
+      "path": "harness/foundations/02-orchestration-patterns.md",
+      "sha256": "cf88cc6c8f3798727490eda3976fa6edbf5e3087873cfb48aa404f6327885512"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/foundations/03-context-and-state.md",
+      "path": "harness/foundations/03-context-and-state.md",
+      "sha256": "aa0084cc58234d8e1fd9f21dbc964707442730812800cbe3a26f15acb40f6222"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/foundations/04-reliability-and-evals.md",
+      "path": "harness/foundations/04-reliability-and-evals.md",
+      "sha256": "b19d7bea66539ac314f91e0ce066b1f0cd809c3c93c74cae6f5dc6451538527b"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/manifest.json",
+      "path": "harness/manifest.json",
+      "sha256": "82ab36d9b892049d7e93337879f178777b909b27cb48855b9808ceabbbbb6de1"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/reference/GLOSSARY.md",
+      "path": "harness/reference/GLOSSARY.md",
+      "sha256": "19a717b69494f0d4b5264c74851b6e976f8a67809b0d9bc7e5ff2bf1c3466828"
+    },
+    {
+      "archive": "agentic-harness-foundations.zip",
+      "original_path": "agentic-harness-foundations/reference/SOURCES.md",
+      "path": "harness/reference/SOURCES.md",
+      "sha256": "8efb9ce5e552368865c6b3d430ced3ff6743e413e092eb39c99c7f7566c4d98d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-001-agent-architecture-fundamentals.md",
+      "path": "handbook/agents/AEP-AGENT-001-agent-architecture-fundamentals.md",
+      "sha256": "d830354d6b6fd86814943126c1d661cfe7766b4dce9729ae574d4c70ea4e0efe"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-002-workflows-vs-agent-loops.md",
+      "path": "handbook/agents/AEP-AGENT-002-workflows-vs-agent-loops.md",
+      "sha256": "dbb54a556a93bd2488e9e867d4b56fdb8f1aadd706080ed90268cb820c020a5f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-003-single-agent-patterns.md",
+      "path": "handbook/agents/AEP-AGENT-003-single-agent-patterns.md",
+      "sha256": "560eb59119c05c30845ebc1d5617d07b31fe8f7cb2d0e63ae2302b4bb07a2232"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-004-delegation-subagents-and-parallelism.md",
+      "path": "handbook/agents/AEP-AGENT-004-delegation-subagents-and-parallelism.md",
+      "sha256": "9417f2daec4e3b4e6414491c962ae5d07d00993135aadca2e6e4ee6bf602ac46"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-005-managers-handoffs-and-ownership.md",
+      "path": "handbook/agents/AEP-AGENT-005-managers-handoffs-and-ownership.md",
+      "sha256": "718af0955770afe3bc77570da15e9000478192cb8a4b0a20c68224ea9f413e83"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-006-planning-decomposition-and-execution.md",
+      "path": "handbook/agents/AEP-AGENT-006-planning-decomposition-and-execution.md",
+      "sha256": "6de0e42d2c881a799948b5edc9616e4068cf9cb90c8a599eb98ca398e0448588"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-007-critique-refinement-and-verification.md",
+      "path": "handbook/agents/AEP-AGENT-007-critique-refinement-and-verification.md",
+      "sha256": "add943d35d79392c6ce9d4051579874dc822cdfa2216b65a43e878c291cd62be"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-008-human-in-the-loop-and-authority-boundaries.md",
+      "path": "handbook/agents/AEP-AGENT-008-human-in-the-loop-and-authority-boundaries.md",
+      "sha256": "0cfe3f0f54fe56a6f4b1fe74561c202559a21138fa7e134f151c92f906a3b2c2"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-009-termination-progress-and-recovery.md",
+      "path": "handbook/agents/AEP-AGENT-009-termination-progress-and-recovery.md",
+      "sha256": "5229faa1349e5bf67064a037c5e486bb67a5aadcfd81470a76a9d3ab8273c634"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/agents/AEP-AGENT-010-multi-agent-lifecycle-evaluation-and-freshness.md",
+      "path": "handbook/agents/AEP-AGENT-010-multi-agent-lifecycle-evaluation-and-freshness.md",
+      "sha256": "d16dd46099bbc429130275561bfa17fd78b7533b56690551492118df487b9733"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-001-security-assurance-fundamentals.md",
+      "path": "handbook/assurance/aep-assure-001-security-assurance-fundamentals.md",
+      "sha256": "fb19a6d82ebd64fbe217fca6e26e243db96fc5a30e930ce0dd3cc308a9ca6a70"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-002-agent-threat-modeling.md",
+      "path": "handbook/assurance/aep-assure-002-agent-threat-modeling.md",
+      "sha256": "d14ea41a0d1a0c2ecafc2cded2f64bdcf100e538e2bab7d51b61727eccd936a7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-003-prompt-injection-testing.md",
+      "path": "handbook/assurance/aep-assure-003-prompt-injection-testing.md",
+      "sha256": "4d4c6b862f28f1afbc2c050b83ae19ea2a00797469d0d33b4a66e5cf2c995583"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-004-authorization-boundary-testing.md",
+      "path": "handbook/assurance/aep-assure-004-authorization-boundary-testing.md",
+      "sha256": "2d9a805d37472bf7db9ed8a101cc67552108024b0837360e78788f285d41e787"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-005-adversarial-workflow-testing.md",
+      "path": "handbook/assurance/aep-assure-005-adversarial-workflow-testing.md",
+      "sha256": "5c65a3f0708fb0dfec95bbe0598fc5da36b24e158a4dedb51690980244c93ce7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-006-future-automated-penetration-testing.md",
+      "path": "handbook/assurance/aep-assure-006-future-automated-penetration-testing.md",
+      "sha256": "4f6d060b496c654a337b0276ee563da9c7878c26dea4595cb6fd42c97cecd8ba"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-007-supply-chain-and-skill-security.md",
+      "path": "handbook/assurance/aep-assure-007-supply-chain-and-skill-security.md",
+      "sha256": "1b6a9743420b2da7bcd193bd1e9909ba68f24b64ee50fa051a57229d314ba87c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-008-behavioral-assurance.md",
+      "path": "handbook/assurance/aep-assure-008-behavioral-assurance.md",
+      "sha256": "6c733e2cefdf3366293d0d764e0473908344fd3378594d8385ade0509b2939d7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-009-findings-and-promotion-gates.md",
+      "path": "handbook/assurance/aep-assure-009-findings-and-promotion-gates.md",
+      "sha256": "7613773c69d2bfb1983a7997b53bc50157f4d2cfd40b12349f6aa1b14e93b6e7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/assurance/aep-assure-010-continuous-assurance-lifecycle.md",
+      "path": "handbook/assurance/aep-assure-010-continuous-assurance-lifecycle.md",
+      "sha256": "00518702b76c2a621073207faf36322d24e52bdddd2b4e9300e7c8677d09ce47"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-001-knowledge-audit-fundamentals.md",
+      "path": "handbook/audit/aep-audit-001-knowledge-audit-fundamentals.md",
+      "sha256": "c60043cfbb192b3916b463d185f5fa7bdeadd4f599b6cfe13658e7abf7a9ed3e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-002-decision-records.md",
+      "path": "handbook/audit/aep-audit-002-decision-records.md",
+      "sha256": "5e2797e1b75ee77ca560230376adb5f5fb483a15dfd1dcd4bf95305e3133fd82"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-003-knowledge-mutation-records.md",
+      "path": "handbook/audit/aep-audit-003-knowledge-mutation-records.md",
+      "sha256": "ff74bd5d73b82b3e9c63f3d83652d8cb382782d0341f7897e2d3e4020703016c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-004-experiment-decision-records.md",
+      "path": "handbook/audit/aep-audit-004-experiment-decision-records.md",
+      "sha256": "a4bb17abd054390eb31c74a12db94ee5e2454295ab2d4bd9a00c2c133720ea04"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-005-evidence-lineage.md",
+      "path": "handbook/audit/aep-audit-005-evidence-lineage.md",
+      "sha256": "a1f2820d979a205b2e5b8b1abe020a52164229b4a148e502bb628f43b34908a7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-006-permission-evaluation-records.md",
+      "path": "handbook/audit/aep-audit-006-permission-evaluation-records.md",
+      "sha256": "5871c1aa83dac52e6ec52e8c2574b63944fe98ab01a72254abbfc4fbfac6c748"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-007-reconstruction-and-forensics.md",
+      "path": "handbook/audit/aep-audit-007-reconstruction-and-forensics.md",
+      "sha256": "91626a4337e4558553582949e842e485894e522f9ea4482865ee1738a1bbdcb5"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-008-tamper-evidence-and-retention.md",
+      "path": "handbook/audit/aep-audit-008-tamper-evidence-and-retention.md",
+      "sha256": "14a81efa438916713b5a6239b0f81d26ab3f636b1aeeba483c446a8e2b6afdf2"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-009-reporting-and-review.md",
+      "path": "handbook/audit/aep-audit-009-reporting-and-review.md",
+      "sha256": "2c2ac92f652c8b850ef71d738407e99a019efb0909a3bb02b4992192ee73a341"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/audit/aep-audit-010-audit-lifecycle-and-governance.md",
+      "path": "handbook/audit/aep-audit-010-audit-lifecycle-and-governance.md",
+      "sha256": "10edf734df862d0614e0e6ed0baf5905c52016fbfeda66f535a8af3ea4140eeb"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-001-software-engineering-agent-fundamentals.md",
+      "path": "handbook/coding/AEP-CODE-001-software-engineering-agent-fundamentals.md",
+      "sha256": "3c002fcd6e0296c496680adefb88970658c1774398cf79564ad0673dca703a01"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-002-repository-discovery-and-environment-understanding.md",
+      "path": "handbook/coding/AEP-CODE-002-repository-discovery-and-environment-understanding.md",
+      "sha256": "9dc195732a21b2aa382497c9d9f16d2e66133952718d155bd9cabb0c70db1c2d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-003-language-and-framework-specialization.md",
+      "path": "handbook/coding/AEP-CODE-003-language-and-framework-specialization.md",
+      "sha256": "cd7c1171318074f2826b21f6064bda7f339d9ddbdaf316c1fbb5a85cef4df070"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-004-technology-selection-and-architectural-fit.md",
+      "path": "handbook/coding/AEP-CODE-004-technology-selection-and-architectural-fit.md",
+      "sha256": "1fee558544480b535d8cc502693a30c19e023832164ebda6824035d9bd5deed6"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-005-feature-implementation.md",
+      "path": "handbook/coding/AEP-CODE-005-feature-implementation.md",
+      "sha256": "8e01c39c646d4628dc998a024bc4b4280ba16074b3ed8b916b9d274f33f207a7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-006-debugging-and-root-cause-analysis.md",
+      "path": "handbook/coding/AEP-CODE-006-debugging-and-root-cause-analysis.md",
+      "sha256": "72b06c5df749e2e9236a59e21f8833dcfa2c947451f0de26bc76b48351a761fc"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-007-refactoring.md",
+      "path": "handbook/coding/AEP-CODE-007-refactoring.md",
+      "sha256": "ae7e983562071df6873ee41f2e2b3e652c1cbfcf108a98c94cc5969fe974e2fc"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-008-testing-and-verification.md",
+      "path": "handbook/coding/AEP-CODE-008-testing-and-verification.md",
+      "sha256": "6e1a1ab48ee9ff8ed57157554d71a3f1ac775cd81bc927a0df6926363a9e0c5e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-009-dependencies-and-upgrades.md",
+      "path": "handbook/coding/AEP-CODE-009-dependencies-and-upgrades.md",
+      "sha256": "bc0e303022f49b67d0ce1c01ada4e3092fad1992e592c8a977d4a19d1697eb81"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-010-database-and-schema-migrations.md",
+      "path": "handbook/coding/AEP-CODE-010-database-and-schema-migrations.md",
+      "sha256": "efca5b981fa1dce8bf337e084a41e6e98abf1ca5253a7cd22e123d55fbde3382"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-011-pull-request-review.md",
+      "path": "handbook/coding/AEP-CODE-011-pull-request-review.md",
+      "sha256": "ca2d92939255d7673d648aed63f977458b8ffb905fef5d323e62ec6a2a73c867"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-012-ci-cd-diagnosis-and-repair.md",
+      "path": "handbook/coding/AEP-CODE-012-ci-cd-diagnosis-and-repair.md",
+      "sha256": "17150c8fbf8efe3664ba998edddf7dc79f3d6b4fb97b69a3363831e1954648d8"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-013-documentation-and-architecture-work.md",
+      "path": "handbook/coding/AEP-CODE-013-documentation-and-architecture-work.md",
+      "sha256": "4f1148c8d750bbe7eb869de715a6830be2a5dbae95f23e48dc3d7c296a442550"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/coding/AEP-CODE-014-coding-agent-lifecycle-evaluation-and-freshness.md",
+      "path": "handbook/coding/AEP-CODE-014-coding-agent-lifecycle-evaluation-and-freshness.md",
+      "sha256": "452a1747ef33b1b74a39daac601659ad395a14d20b0426ef64c2159047a4b896"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-001-context-engineering-fundamentals.md",
+      "path": "handbook/context/AEP-CTX-001-context-engineering-fundamentals.md",
+      "sha256": "b35182d7e48c90724cee108506a14de643324990bd139b6332f139db12b607fc"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-002-context-sources-and-instruction-hierarchy.md",
+      "path": "handbook/context/AEP-CTX-002-context-sources-and-instruction-hierarchy.md",
+      "sha256": "28300e24eebc309d89a48794078b91667437407022767980e7409ceb53a35e81"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-003-retrieval-architecture.md",
+      "path": "handbook/context/AEP-CTX-003-retrieval-architecture.md",
+      "sha256": "720065e9fbea7b54abb775a9cdfa4b63df9cba697d7288f7b1e09ea681ca81b5"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-004-embeddings-and-semantic-retrieval.md",
+      "path": "handbook/context/AEP-CTX-004-embeddings-and-semantic-retrieval.md",
+      "sha256": "07c8af0dcc421637736a249581367d03f763439908f564c69028f6f7e2a14016"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-005-lexical-and-hybrid-retrieval.md",
+      "path": "handbook/context/AEP-CTX-005-lexical-and-hybrid-retrieval.md",
+      "sha256": "6dd4666064486f53fe0956f804b604c9df9b3f36b6f148a74d76b2ab9a3f08a8"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-006-reranking.md",
+      "path": "handbook/context/AEP-CTX-006-reranking.md",
+      "sha256": "5643b51cb6b6c920f533976d42a71e5ad84a7f66e97f8cba9c2c83249e3602c6"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-007-progressive-disclosure.md",
+      "path": "handbook/context/AEP-CTX-007-progressive-disclosure.md",
+      "sha256": "6c27342064f162612182e3f3cc846c4077f616923529de52783cec38254945e9"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-008-context-compression-and-compaction.md",
+      "path": "handbook/context/AEP-CTX-008-context-compression-and-compaction.md",
+      "sha256": "0935822a0303c180379e1e45ca6f97024e96f6dcadb0eabc44b26235961c5fa3"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-009-working-memory-and-persistent-memory.md",
+      "path": "handbook/context/AEP-CTX-009-working-memory-and-persistent-memory.md",
+      "sha256": "70fc8be18f5614b2ab303b50199921bc42fab28a20b5be8c646e31de7558e14e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-010-repository-context-and-code-intelligence.md",
+      "path": "handbook/context/AEP-CTX-010-repository-context-and-code-intelligence.md",
+      "sha256": "884d517c931ba3ebd81ff8427defbb2fad7105b72cd9184cd8c06c2eea41c85f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-011-context-caching.md",
+      "path": "handbook/context/AEP-CTX-011-context-caching.md",
+      "sha256": "e688e163be15e416c25bed84687a99952cd86c6f370a5e570c3824d1a2285f40"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/context/AEP-CTX-012-context-failure-modes.md",
+      "path": "handbook/context/AEP-CTX-012-context-failure-modes.md",
+      "sha256": "cde3d7090e7aec10415afe9261cda34636caab608760b6cdda86c03c1db35fb5"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-001-cost-and-performance-fundamentals.md",
+      "path": "handbook/cost/AEP-COST-001-cost-and-performance-fundamentals.md",
+      "sha256": "23244c50dacf42ecbc35b5d13ac014337ff4d0b7de741d57ae193638256c31c8"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-002-cost-accounting-and-unit-economics.md",
+      "path": "handbook/cost/AEP-COST-002-cost-accounting-and-unit-economics.md",
+      "sha256": "f261279be08aadb28f63705ad5f3ecf168989f503d5fc7a6ac39f9ac09387158"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-003-token-and-context-efficiency.md",
+      "path": "handbook/cost/AEP-COST-003-token-and-context-efficiency.md",
+      "sha256": "71716d0e8425f14f9a9478f47994fce2e3eaea077aeabea34581e1cd679c06dd"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-004-request-tool-and-orchestration-efficiency.md",
+      "path": "handbook/cost/AEP-COST-004-request-tool-and-orchestration-efficiency.md",
+      "sha256": "65205c530ee1bd2b9ce1ece362db2e681e72f208bb6d1c9772ccece0b2d4afee"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-005-latency-and-user-perceived-performance.md",
+      "path": "handbook/cost/AEP-COST-005-latency-and-user-perceived-performance.md",
+      "sha256": "26885f157e58899705e490068b317ab605a3f6b709f7ed131a74ae014f90f154"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-006-concurrency-parallelism-and-throughput.md",
+      "path": "handbook/cost/AEP-COST-006-concurrency-parallelism-and-throughput.md",
+      "sha256": "8df4a10bae027976ffa90143e02a03a374b0deec9b4d0106783442e89ea1bfa9"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-007-caching-batching-and-reuse.md",
+      "path": "handbook/cost/AEP-COST-007-caching-batching-and-reuse.md",
+      "sha256": "1c11e7805e9494e4ba6ff9ff9358d2e0d030a1fbd6ef208a9a387aa62eb08ebb"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-008-budgets-quotas-and-economic-guardrails.md",
+      "path": "handbook/cost/AEP-COST-008-budgets-quotas-and-economic-guardrails.md",
+      "sha256": "cc94e8cf8762fad6e8f32b76a7174986b263dd7341343ffd212553e8a6f063f3"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-009-optimization-experiments-and-pareto-selection.md",
+      "path": "handbook/cost/AEP-COST-009-optimization-experiments-and-pareto-selection.md",
+      "sha256": "bd5c5e55c2231e31440c97b2cc17522ae62b9493ca5ddcc0ae2a002dbcc604f6"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/cost/AEP-COST-010-capacity-lifecycle-and-freshness.md",
+      "path": "handbook/cost/AEP-COST-010-capacity-lifecycle-and-freshness.md",
+      "sha256": "a58016efb63eac35289a02bb6eca90cdb174401eb0f69d713a217f79af6a6b46"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-001-evaluation-fundamentals.md",
+      "path": "handbook/evals/AEP-EVAL-001-evaluation-fundamentals.md",
+      "sha256": "7dc229f361d187f325e427376971a52af01e1bcf89d50d926be43075de5b18a4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-002-success-criteria-and-outcome-verification.md",
+      "path": "handbook/evals/AEP-EVAL-002-success-criteria-and-outcome-verification.md",
+      "sha256": "579fd1e27d325e2e8d81f3577cf40d1c2a73b82a70c7bd0b1d04e5f7dc0ec13a"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-003-datasets-and-task-design.md",
+      "path": "handbook/evals/AEP-EVAL-003-datasets-and-task-design.md",
+      "sha256": "60d3906721b5c46bd0c3072c9277859ce816e92ab39a48649650fbfd25e403fd"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-004-graders-and-scoring.md",
+      "path": "handbook/evals/AEP-EVAL-004-graders-and-scoring.md",
+      "sha256": "c47af3630ec90d623ae339d4d83a2a64aa39ffaa835135d7de365883fd3cc57c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-005-traces-and-trajectory-evaluation.md",
+      "path": "handbook/evals/AEP-EVAL-005-traces-and-trajectory-evaluation.md",
+      "sha256": "ed08486540f9968ea1c7e8b47ab8281de431b61fb163d0ebe7000095a26bca23"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-006-variance-statistics-and-confidence.md",
+      "path": "handbook/evals/AEP-EVAL-006-variance-statistics-and-confidence.md",
+      "sha256": "962adc4c7b2376aef8d1d904c4764b3ec29d23b40d0503a936fdee02d4845c4a"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-007-cost-latency-and-efficiency.md",
+      "path": "handbook/evals/AEP-EVAL-007-cost-latency-and-efficiency.md",
+      "sha256": "0261e55d88ee0ff2c08d91afd0e1cad547dfac340be283a9bf680a89fa28b62d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-008-capability-regression-and-release-gates.md",
+      "path": "handbook/evals/AEP-EVAL-008-capability-regression-and-release-gates.md",
+      "sha256": "2124bd8b87a9c62ace49621003bf108c32a714426fc4407386b649f59a21f1a2"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-009-human-evaluation-and-judge-calibration.md",
+      "path": "handbook/evals/AEP-EVAL-009-human-evaluation-and-judge-calibration.md",
+      "sha256": "160cb958e2cd858de19297ad3a7083ba426d1bd153f62ea5f8d5bf734117068a"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-010-safety-security-and-adversarial-evaluation.md",
+      "path": "handbook/evals/AEP-EVAL-010-safety-security-and-adversarial-evaluation.md",
+      "sha256": "cdf4205c13c551372990a8350f33d9e56f4b1ca6f67263305d0760110a52f47b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-011-evaluation-harness-and-reproducibility.md",
+      "path": "handbook/evals/AEP-EVAL-011-evaluation-harness-and-reproducibility.md",
+      "sha256": "7f67e6d33daf8cc2d9125033dc875c0cdbdeecba86af1e1f86834829274b6fa4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/evals/AEP-EVAL-012-evaluation-lifecycle-benchmark-hygiene-and-freshness.md",
+      "path": "handbook/evals/AEP-EVAL-012-evaluation-lifecycle-benchmark-hygiene-and-freshness.md",
+      "sha256": "c435a55c0f0ecc750248b343adb8c375f65361434a1bc52a340176b23f8f88c5"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/foundations/AEP-BASE-001-baseline-knowledge-inventory.md",
+      "path": "handbook/foundations/AEP-BASE-001-baseline-knowledge-inventory.md",
+      "sha256": "ab06bf019cdfcd60dc8aab76099ea23c2d828450b5f57e8aeded0ead403f46c2"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/foundations/AEP-GLOSS-001-glossary.md",
+      "path": "handbook/foundations/AEP-GLOSS-001-glossary.md",
+      "sha256": "a849bad704fd7c658677193a5362ae5b4c25683dc6a028422bddcd524b47262c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/foundations/AEP-HBK-000-charter.md",
+      "path": "handbook/foundations/AEP-HBK-000-charter.md",
+      "sha256": "b33ed8f1d5434e462e79cd7ddc36e1072c2a76d84031f4591147a0e13243ed96"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/foundations/AEP-PLAN-001-development-plan.md",
+      "path": "handbook/foundations/AEP-PLAN-001-development-plan.md",
+      "sha256": "95228c9ec905b12beead2440be972075a5a4e8996703ab10af329df3c32ecec8"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/foundations/AEP-QUESTIONS-001-open-questions.md",
+      "path": "handbook/foundations/AEP-QUESTIONS-001-open-questions.md",
+      "sha256": "e4e67556d84a3903d5b11a35f4be09d8652f0eadbee25999ce366a54d2aeadf7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-001-innovation-fundamentals.md",
+      "path": "handbook/innovation/aep-innov-001-innovation-fundamentals.md",
+      "sha256": "abfe63b6c7886dcd2ebf71c078e23fc8897ba4a24f5d76371884b488d4e2f58b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-002-hypothesis-generation.md",
+      "path": "handbook/innovation/aep-innov-002-hypothesis-generation.md",
+      "sha256": "b1d685aec035f69797cd31b7c31dcb0dfba809fa8a4a2899ffcaf0cd0e4be3b3"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-003-experiment-candidate-discovery.md",
+      "path": "handbook/innovation/aep-innov-003-experiment-candidate-discovery.md",
+      "sha256": "2ba0f1d21eb0514c4bb0f910f38e765a4beecb9d4f73faf5d32eb8f5b7dfa2f9"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-004-sandbox-prototyping.md",
+      "path": "handbook/innovation/aep-innov-004-sandbox-prototyping.md",
+      "sha256": "da8a23ebe0688ce9f81b513d21f0568573a3ab5271710621e9c13df629d2198f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-005-comparative-evaluation.md",
+      "path": "handbook/innovation/aep-innov-005-comparative-evaluation.md",
+      "sha256": "371185e54efc338199e57627051f4f7a0cf2f2e160e57bc5bc5f991af5caf22f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-006-promotion-and-rejection.md",
+      "path": "handbook/innovation/aep-innov-006-promotion-and-rejection.md",
+      "sha256": "3518851e634835c509a8de584775a51ba27528644060cf7784a343af6f9d47d7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-007-novelty-vs-reliability.md",
+      "path": "handbook/innovation/aep-innov-007-novelty-vs-reliability.md",
+      "sha256": "ecb96bf88316e4d32cc2f760527b66e7b3e4e217eb35e802ee77489a126d97c4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-008-automated-research-loops.md",
+      "path": "handbook/innovation/aep-innov-008-automated-research-loops.md",
+      "sha256": "e28281d39aa528689845c3c0fab6b476b556490ba35738809f0e4443a439a9b3"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-009-innovation-safety.md",
+      "path": "handbook/innovation/aep-innov-009-innovation-safety.md",
+      "sha256": "db9fac20cd722f2147aac8364ff3caa9254f24625a1e6cddf9746d70ea6a245a"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/innovation/aep-innov-010-innovation-lifecycle-and-freshness.md",
+      "path": "handbook/innovation/aep-innov-010-innovation-lifecycle-and-freshness.md",
+      "sha256": "dfae40677f006084ae93c24bad1f9000aae7494ad7b279834d77dd90bd9b27c7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-001-knowledge-service-fundamentals.md",
+      "path": "handbook/knowledge/AEP-KNOW-001-knowledge-service-fundamentals.md",
+      "sha256": "26109ec0123cfb777ea4a6bb46fd9a63afae66be9e31e9e8b74d69b2c381f703"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-002-knowledge-schema-and-identifiers.md",
+      "path": "handbook/knowledge/AEP-KNOW-002-knowledge-schema-and-identifiers.md",
+      "sha256": "f51ead01649b49d14cf952b48f4288ae2081bbba20da32eeeeb1a66fabdb7873"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-003-ingestion-indexing-and-derived-artifacts.md",
+      "path": "handbook/knowledge/AEP-KNOW-003-ingestion-indexing-and-derived-artifacts.md",
+      "sha256": "6004a318e71949c45852d5ed076f9d1509c83a0afb9e0b2cdaeb7ebe3914a7ca"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-004-retrieval-ranking-and-context-packages.md",
+      "path": "handbook/knowledge/AEP-KNOW-004-retrieval-ranking-and-context-packages.md",
+      "sha256": "b745cbb913425dda1ebdb41f657e0c4ef2d39be864d554b44ba420f12a7f7b06"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-005-overlays-policy-resolution-and-conflicts.md",
+      "path": "handbook/knowledge/AEP-KNOW-005-overlays-policy-resolution-and-conflicts.md",
+      "sha256": "48e64119bd29748232e1afbcdcd9182ef76ec5fea3d1d1b8e43c0c9144531408"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-006-provenance-evidence-and-freshness.md",
+      "path": "handbook/knowledge/AEP-KNOW-006-provenance-evidence-and-freshness.md",
+      "sha256": "6690a916253b5357352c7ef86958a29e498be504ad21a49e448b0f193833a690"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-007-access-control-permission-isolation-and-security.md",
+      "path": "handbook/knowledge/AEP-KNOW-007-access-control-permission-isolation-and-security.md",
+      "sha256": "c5433ad6b7dbdc41ed32271f578cf57923af0f02b5a84487e346629c360970d1"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-008-mcp-api-and-cli-surface.md",
+      "path": "handbook/knowledge/AEP-KNOW-008-mcp-api-and-cli-surface.md",
+      "sha256": "07451ef235b5c901401899d90962bbd07fa6f66e591799f72bdb1c32c18a0afa"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-009-observability-evaluation-and-experiments.md",
+      "path": "handbook/knowledge/AEP-KNOW-009-observability-evaluation-and-experiments.md",
+      "sha256": "75e5a77b5285628af1ff08f3b8fa9320c1407a813851400fb22a135bc46ed888"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/knowledge/AEP-KNOW-010-lifecycle-versioning-and-revalidation.md",
+      "path": "handbook/knowledge/AEP-KNOW-010-lifecycle-versioning-and-revalidation.md",
+      "sha256": "dc4dd56d1f4103ba046becb4eb96fcc312ea5fc0d93ebeb18cca51ff98ac214e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-001-model-selection-fundamentals.md",
+      "path": "handbook/models/AEP-MODEL-001-model-selection-fundamentals.md",
+      "sha256": "baa97364987733cc002b21af795341a24e6945495989a36f5260e244f0fdf98b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-002-capability-profiles-and-task-classes.md",
+      "path": "handbook/models/AEP-MODEL-002-capability-profiles-and-task-classes.md",
+      "sha256": "d17120a52d967f6f35e1b1829b18ac662b8808140054d9c51562417b1cb03aad"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-003-small-and-specialized-models.md",
+      "path": "handbook/models/AEP-MODEL-003-small-and-specialized-models.md",
+      "sha256": "1c715b1e56b6e369c1e172a734c738ee117c74aa0956886a89ce05198a965fa1"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-004-reasoning-effort-and-test-time-compute.md",
+      "path": "handbook/models/AEP-MODEL-004-reasoning-effort-and-test-time-compute.md",
+      "sha256": "dbe8ccf019459ae282194b5fd558a970c1ca641b879b69d5716b556c488c2dd3"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-005-routing-architecture.md",
+      "path": "handbook/models/AEP-MODEL-005-routing-architecture.md",
+      "sha256": "ce661e72873cf9d982e2590745927f68731f0c095b352f954ddd7ce19ddaca4d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-006-cascades-escalation-and-rescue.md",
+      "path": "handbook/models/AEP-MODEL-006-cascades-escalation-and-rescue.md",
+      "sha256": "cb2fb648d17cbfa66f8db020174ce7d55c4816039c424088ea6a9b5ad76b7489"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-007-provider-portability-fallbacks-and-resilience.md",
+      "path": "handbook/models/AEP-MODEL-007-provider-portability-fallbacks-and-resilience.md",
+      "sha256": "1ff5539820c3880ae3122f80072f0d91943d0479fa9acf14bddfcd5d3cc04d88"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-008-local-self-hosted-and-privacy-aware-models.md",
+      "path": "handbook/models/AEP-MODEL-008-local-self-hosted-and-privacy-aware-models.md",
+      "sha256": "35f134b521ee9fd93c0b55a6d5447cc9ee59d3d49934ba40b3ebafdd3f45091f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-009-model-evaluation-and-selection-benchmarks.md",
+      "path": "handbook/models/AEP-MODEL-009-model-evaluation-and-selection-benchmarks.md",
+      "sha256": "07bd9f45b67745479e25ffca76043e372b855edb312668db02cc6d4aa209d380"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/models/AEP-MODEL-010-model-lifecycle-versioning-and-freshness.md",
+      "path": "handbook/models/AEP-MODEL-010-model-lifecycle-versioning-and-freshness.md",
+      "sha256": "5bff138c71cc804a2a6d5f712f9fbb8f9f68e7c7f7db84ceacf5b8a3da69f6c7"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/operations/aep-ops-001-operations-and-reliability-fundamentals.md",
+      "path": "handbook/operations/aep-ops-001-operations-and-reliability-fundamentals.md",
+      "sha256": "ce5b60b8c596a493ed607e7fe588d5858ac350876767a17bed687cbe0802c741"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/operations/aep-ops-002-observability-and-traceability.md",
+      "path": "handbook/operations/aep-ops-002-observability-and-traceability.md",
+      "sha256": "67ca6c6dd79cb990f9d96bc38009b0639bdbfdc35bb7c47967d16fd48223899e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/operations/aep-ops-003-degraded-and-offline-modes.md",
+      "path": "handbook/operations/aep-ops-003-degraded-and-offline-modes.md",
+      "sha256": "44c48ce77421a90594443194a18bcbfdc1ef00b7a3410bd67ff44b2eb08f3c3c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/operations/aep-ops-004-backup-recovery-and-rebuildability.md",
+      "path": "handbook/operations/aep-ops-004-backup-recovery-and-rebuildability.md",
+      "sha256": "75dc94030c0cf4bf4a92ce980ef6c8fd83dc0a679c274d90e337178585ffb970"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/operations/aep-ops-005-capacity-and-performance-operations.md",
+      "path": "handbook/operations/aep-ops-005-capacity-and-performance-operations.md",
+      "sha256": "404c5862f339d875f759c4a24cfa43be29d4a74fb9c22c9092c04077b1e01a59"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-001-permission-model-fundamentals.md",
+      "path": "handbook/permissions/aep-perm-001-permission-model-fundamentals.md",
+      "sha256": "115fd80993d877a60b6a3037ccd0bdf338031e0b190dbf94e3dddd30b15bd7ec"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-002-subject-and-service-identity.md",
+      "path": "handbook/permissions/aep-perm-002-subject-and-service-identity.md",
+      "sha256": "adb52ddc2d92442831bae5847cabd94be3ebe5b771f56ccf55fd07f017cc7482"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-003-scope-and-overlay-resolution.md",
+      "path": "handbook/permissions/aep-perm-003-scope-and-overlay-resolution.md",
+      "sha256": "79d7f833ad88822aa341ebe8059cd0d6bddb8e8c910b8528f6c44343853ee84b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-004-authorization-before-retrieval.md",
+      "path": "handbook/permissions/aep-perm-004-authorization-before-retrieval.md",
+      "sha256": "75fb228051cfecd790467d4949b058eee7617eaebbedb6dca49851ba1079fa8f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-005-cache-and-index-isolation.md",
+      "path": "handbook/permissions/aep-perm-005-cache-and-index-isolation.md",
+      "sha256": "8531e9031ab8387ef4f6bfb0d22bd808f439c98031f1326d2bcca26767d0c1ae"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-006-restricted-knowledge.md",
+      "path": "handbook/permissions/aep-perm-006-restricted-knowledge.md",
+      "sha256": "8d238d899f1a64a02218d24d139b134e1d6c7747570e4aa94c2a47d439ac7b62"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-007-permission-decision-audit.md",
+      "path": "handbook/permissions/aep-perm-007-permission-decision-audit.md",
+      "sha256": "5b6b2041d859f660bc44e6340fef0b72e0c31fc6ac989d9818bdd2de5ab09373"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-008-service-to-service-access.md",
+      "path": "handbook/permissions/aep-perm-008-service-to-service-access.md",
+      "sha256": "a90cd4466adf947fde4c068d36f0810cda7925fde5266c7203d2aefbc0342e39"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-009-adversarial-isolation-testing.md",
+      "path": "handbook/permissions/aep-perm-009-adversarial-isolation-testing.md",
+      "sha256": "e5195d7dd5acce29ca6b03165d232f358f23dc79243a3dc19de01f5536f25e0d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/permissions/aep-perm-010-permission-lifecycle-and-revalidation.md",
+      "path": "handbook/permissions/aep-perm-010-permission-lifecycle-and-revalidation.md",
+      "sha256": "f4ee45a041dfbe2f97ec75111280cd7eb3a06d200b005ad974bfd7e2a4efa7c4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-001-security-and-authority-fundamentals.md",
+      "path": "handbook/security/AEP-SEC-001-security-and-authority-fundamentals.md",
+      "sha256": "eb71361b1b4d805d21a4fc464669c8fb127da894c61834719694e35ef2a8e055"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-002-threat-models-and-trust-boundaries.md",
+      "path": "handbook/security/AEP-SEC-002-threat-models-and-trust-boundaries.md",
+      "sha256": "37388009d5a266c36e593ebf09a1c4b473cc68e369e0beab132d19638b8c51d4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-003-prompt-injection-and-untrusted-content.md",
+      "path": "handbook/security/AEP-SEC-003-prompt-injection-and-untrusted-content.md",
+      "sha256": "e7921347b6a8e6dd9f11b401be60c4b4b54852d5060f88018e4ae3dd5ea7191b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-004-identity-credentials-and-secrets.md",
+      "path": "handbook/security/AEP-SEC-004-identity-credentials-and-secrets.md",
+      "sha256": "7dedb6f8de6751e84d85471795e43529ba8547d3033cd20e936f1e79a1df06b5"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-005-least-privilege-and-capability-authorization.md",
+      "path": "handbook/security/AEP-SEC-005-least-privilege-and-capability-authorization.md",
+      "sha256": "3f7f0e93466b9e087d26ac1c31ac889b004782eb03cb87c6dcd698d480bb8c94"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-006-sandboxing-filesystem-and-network-isolation.md",
+      "path": "handbook/security/AEP-SEC-006-sandboxing-filesystem-and-network-isolation.md",
+      "sha256": "e9bcda4a8cce9bbf99400bcb52c436ff4a9be8e73bf15144ce357f508f00b67b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-007-human-approvals-and-consequential-actions.md",
+      "path": "handbook/security/AEP-SEC-007-human-approvals-and-consequential-actions.md",
+      "sha256": "28f9f8f9882742f562e2efb45d2dc45b53f409324df98443d6326ca43b2a6b68"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-008-data-protection-permission-isolation-and-privacy.md",
+      "path": "handbook/security/AEP-SEC-008-data-protection-permission-isolation-and-privacy.md",
+      "sha256": "04ccc36c5ce7d008e2728e53461fb406334ce0cb168e41ecb99a7bb80a6ccdfe"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-009-production-access-destructive-operations-and-change-control.md",
+      "path": "handbook/security/AEP-SEC-009-production-access-destructive-operations-and-change-control.md",
+      "sha256": "8d03f59e038b2fd58fc4d2e909533b39c46412c4a4e181f7c5bb73edf7df2aa0"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-010-memory-retrieval-and-supply-chain-poisoning.md",
+      "path": "handbook/security/AEP-SEC-010-memory-retrieval-and-supply-chain-poisoning.md",
+      "sha256": "7b97343e1666b041c8585429f3eee9ce0ec4107dbcc4ce5e9dbcfd20543be67d"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-011-security-observability-incident-response-and-red-teaming.md",
+      "path": "handbook/security/AEP-SEC-011-security-observability-incident-response-and-red-teaming.md",
+      "sha256": "c85b1eb86812579f0bcd4d1471aedfa131b80bbfb59ea7ac6d181d8a21cc91bd"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/security/AEP-SEC-012-security-lifecycle-governance-and-freshness.md",
+      "path": "handbook/security/AEP-SEC-012-security-lifecycle-governance-and-freshness.md",
+      "sha256": "2b14a481ecaef77f6560085f73d90c73013f2b3e85a3f783484cc56331e166bb"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-001-skill-fundamentals.md",
+      "path": "handbook/skills/AEP-SKILL-001-skill-fundamentals.md",
+      "sha256": "5515612b0d4cee0659ef4de733d50c278ba04d6b5c801a5419b8fcc1db60966f"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-002-discovery-activation-and-progressive-loading.md",
+      "path": "handbook/skills/AEP-SKILL-002-discovery-activation-and-progressive-loading.md",
+      "sha256": "aad14121893e04a1e1dd5c1c9640cc9bfcb9adea0224f60fcdd4c7192e081e21"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-003-skill-content-and-package-design.md",
+      "path": "handbook/skills/AEP-SKILL-003-skill-content-and-package-design.md",
+      "sha256": "047978fd2655723fdaa3ea0a5449d65f08d096bce4886116442bb69c08361953"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-004-skill-composition-and-dependencies.md",
+      "path": "handbook/skills/AEP-SKILL-004-skill-composition-and-dependencies.md",
+      "sha256": "0169211fb14c56eff4d3ef4a0958bcacdeb7a0aaab5988ceae5a7a90bfac965c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-005-skills-tools-and-mcp.md",
+      "path": "handbook/skills/AEP-SKILL-005-skills-tools-and-mcp.md",
+      "sha256": "6a52f62b6fe3d87526d93fcf54e3686fe9bd5b05f04fefa4170795aa5a714aad"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-006-portability-and-provider-adapters.md",
+      "path": "handbook/skills/AEP-SKILL-006-portability-and-provider-adapters.md",
+      "sha256": "443554e3545a242568a8e7451d5423cd44cd3c809772b53b4d57577cfaeecb38"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-007-skill-evaluation-and-quality.md",
+      "path": "handbook/skills/AEP-SKILL-007-skill-evaluation-and-quality.md",
+      "sha256": "0253d9094dcd5abd30a3d5b5d19e8d5091ee928630622d407cd9942d0ab660ff"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-008-governance-security-and-trust.md",
+      "path": "handbook/skills/AEP-SKILL-008-governance-security-and-trust.md",
+      "sha256": "1612b96ca94452097a141f0e277bbd65b74d2e020985accdd62918e55a8f6dce"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-009-promotion-from-handbook-to-skill.md",
+      "path": "handbook/skills/AEP-SKILL-009-promotion-from-handbook-to-skill.md",
+      "sha256": "36242490dce2d58c948f486303296388b23695838700696bd6ded1e7ccc32be4"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/skills/AEP-SKILL-010-skill-lifecycle-versioning-and-freshness.md",
+      "path": "handbook/skills/AEP-SKILL-010-skill-lifecycle-versioning-and-freshness.md",
+      "sha256": "a028e29f75fdb2f37a1f5026f03fe0a7cf84e2b6d252428b33c23efc13b8a4c6"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-001-source-intelligence-fundamentals.md",
+      "path": "handbook/sources/aep-src-001-source-intelligence-fundamentals.md",
+      "sha256": "5dcd0e23b09acbf6a8bfe3e8d10858d0a6232f2356b9e827b8e8e65df4c89178"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-002-source-discovery.md",
+      "path": "handbook/sources/aep-src-002-source-discovery.md",
+      "sha256": "7119d3e15722f1e09f7fd6c35d933d579c4d634f9e5c6f10f27b4edfa0569d70"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-003-source-classification-and-authority.md",
+      "path": "handbook/sources/aep-src-003-source-classification-and-authority.md",
+      "sha256": "ea4ce9feeea6dab624bd5f31f598a423beb1615c3c3176bd1da07d890f233ed6"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-004-trust-and-vetting.md",
+      "path": "handbook/sources/aep-src-004-trust-and-vetting.md",
+      "sha256": "9751f262d419cfcf100f84a2a8504d924455e9ada5c741019cb03bcd47c1fd13"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-005-source-snapshots-and-evidence.md",
+      "path": "handbook/sources/aep-src-005-source-snapshots-and-evidence.md",
+      "sha256": "a11f5996c696013cd164e2a9629e78f42815f176ae18b221b4499b4b58a37f0b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-006-source-prioritization-and-monitoring.md",
+      "path": "handbook/sources/aep-src-006-source-prioritization-and-monitoring.md",
+      "sha256": "67370cee1bcca949e4aecd04a7664b692d0db5d291a9687c23a167a95b9ee92e"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-007-conflicts-and-corroboration.md",
+      "path": "handbook/sources/aep-src-007-conflicts-and-corroboration.md",
+      "sha256": "e7e0b3be7028d779c6434ae84b086ed894705bd2507c35b852858c735ff8e082"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-008-source-security-and-poisoning.md",
+      "path": "handbook/sources/aep-src-008-source-security-and-poisoning.md",
+      "sha256": "c8eba0060cc5dd120b5967b33dfa20dc2a46705aed7aa4c4d720d444ffdbb11c"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-009-source-evaluation.md",
+      "path": "handbook/sources/aep-src-009-source-evaluation.md",
+      "sha256": "cb42c0651f4755fa6c0b7d4493f72df4bf8b24f8d7b2fdccc2e6a734fd6e21c0"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/sources/aep-src-010-source-lifecycle-and-freshness.md",
+      "path": "handbook/sources/aep-src-010-source-lifecycle-and-freshness.md",
+      "sha256": "1d27379eb2a39c89bfd08285dfb9188de476226423f715d088c09ce9e4799e48"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-001-tool-design-fundamentals.md",
+      "path": "handbook/tools/AEP-TOOL-001-tool-design-fundamentals.md",
+      "sha256": "9aaa9737c395409ac15d2be55d289b9266f97bf4c54f2a843263df397b529f18"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-002-tool-contracts-and-schemas.md",
+      "path": "handbook/tools/AEP-TOOL-002-tool-contracts-and-schemas.md",
+      "sha256": "90a3d8a2a816f022f6a8f86d16a8703a209b902a3cf85241171000351ae224ae"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-003-tool-granularity-and-composition.md",
+      "path": "handbook/tools/AEP-TOOL-003-tool-granularity-and-composition.md",
+      "sha256": "fe369ba63a1ee4af9c64d5b3cde79a683b879f1a1d1a94b1a56c3a4a71438a6b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-004-tool-discovery-and-capability-loading.md",
+      "path": "handbook/tools/AEP-TOOL-004-tool-discovery-and-capability-loading.md",
+      "sha256": "f539a356956d4e0edaf24454cbd516e14fd420da68d4d6d2a080705ffc6a2910"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-005-errors-retries-and-idempotency.md",
+      "path": "handbook/tools/AEP-TOOL-005-errors-retries-and-idempotency.md",
+      "sha256": "99a664df8cb7c695598070679d46fd00f9e5f42080bb57d87b1fe1ec1d134697"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-006-authority-permissions-and-side-effects.md",
+      "path": "handbook/tools/AEP-TOOL-006-authority-permissions-and-side-effects.md",
+      "sha256": "7ed7ed2accbd8e20d4d8bb3d3d324a3c741c09a5d7dcfcddbdcd4b69b909952b"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-007-mcp-architecture.md",
+      "path": "handbook/tools/AEP-TOOL-007-mcp-architecture.md",
+      "sha256": "3e06a5816ed6129a8d4581e848f9f34c4858d5684bca33a8aeb0338a1c9da7fc"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-008-long-running-tools-and-tasks.md",
+      "path": "handbook/tools/AEP-TOOL-008-long-running-tools-and-tasks.md",
+      "sha256": "e69b870c003aa9c5fb7cbaea8f81e8e5b41130d637075114ce080c45372c4f84"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-009-tool-observability-and-evaluation.md",
+      "path": "handbook/tools/AEP-TOOL-009-tool-observability-and-evaluation.md",
+      "sha256": "2f3f8afe6380a3837636b5f1181234352c6b6aa817092d6487b28db6342468ab"
+    },
+    {
+      "archive": "agentic-engineering-platform-handoff.zip",
+      "original_path": "agentic-engineering-platform/handbook/tools/AEP-TOOL-010-tool-lifecycle-versioning-and-freshness.md",
+      "path": "handbook/tools/AEP-TOOL-010-tool-lifecycle-versioning-and-freshness.md",
+      "sha256": "0a3ee8820b1932564603fa6d934847d22026aca7c4f0ac5d60d26a17c2d3706a"
+    }
+  ]
+}

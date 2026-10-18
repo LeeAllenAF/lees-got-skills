@@ -1,0 +1,24 @@
+{
+  "id": "AEP-KNOW-008",
+  "title": "MCP, API, and CLI Surface",
+  "summary": "MCP, API, and CLI Surface. Focus: api design, cli, mcp.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "api-design",
+    "cli",
+    "mcp"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-008-mcp-api-and-cli-surface.md",
+  "relatedDocumentIds": [],
+  "body": "# MCP, API, and CLI Surface\n\n## Principle\n\nMCP is an interface to the knowledge service, not the architecture of the knowledge service.\n\nThe same domain operations should be usable through MCP, API, CLI, IDE, and CI adapters where useful.\n\n## Initial domain operations\n\nRecommended first capabilities:\n\n```text\nknowledge.get\nknowledge.search\nguidance.resolve\ncontext.build\nskills.search\nskills.get\nexperiments.get\nexperiments.search\ndecisions.get\nfreshness.check\n```\n\nAvoid exposing dozens of internal storage primitives.\n\n## MCP mapping\n\nThe 2026-07-28 MCP specification supports tools, resources, prompts, cacheable list/read results, optional discovery, extensions, and stateless request handling.\n\nPossible mapping:\n\n### Resources\n\nUse for directly addressable read-only canonical content:\n\n```text\nenterprise://handbook/AEP-CTX-003\nenterprise://skill/react-component/SKILL.md\n```\n\n### Tools\n\nUse for computed/query operations:\n\n```text\nsearch_knowledge\nresolve_guidance\nbuild_context\ncheck_freshness\n```\n\n### Skills extension\n\nIf useful, publish approved skills through the MCP Skills extension while retaining the repository as canonical source.\n\n### Tasks extension\n\nUse only for genuinely long-running operations such as large reindexing or comprehensive cross-corpus analysis. Ordinary retrieval should remain synchronous.\n\n## API/CLI\n\nThe CLI should expose the same domain concepts:\n\n```text\naf knowledge get AEP-CTX-003\naf knowledge search \"reranking repository retrieval\"\naep guidance resolve --scope X --repo Y --task \"...\"\naf freshness check\n```\n\n## Tool descriptions\n\nTool names/descriptions should emphasize user goals, not storage implementation.\n\n## Current recommendation\n\nBegin with a small read-only MCP tool/resource surface. Expand only when traces show missing use cases."
+}

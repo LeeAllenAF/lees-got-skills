@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-010",
+  "title": "Database and Schema Migrations",
+  "summary": "Database and Schema Migrations. Focus: data protection, database migrations.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "data-protection",
+    "database-migrations"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-010-database-and-schema-migrations.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-008",
+    "AEP-TOOL-006",
+    "AEP-AGENT-008"
+  ],
+  "body": "# AEP-CODE-010 — Database and Schema Migrations\n\n## 1. Principle\nSchema changes combine software correctness with data durability and operational risk. Treat them as higher-authority work than ordinary code edits.\n\n## 2. Considerations\nEvaluate backward/forward compatibility, deployment ordering, nullable/default transitions, index creation cost, locking, data backfill, rollback feasibility, replica/online migration behavior, and application-version skew.\n\n## 3. Prefer expand/migrate/contract where needed\nFor changes crossing deployments, introduce compatible schema first, migrate application/data, then remove obsolete structures after verification.\n\n## 4. Destructive operations\nDropping data, columns, tables, or irreversible transforms should require explicit authorization appropriate to the environment.\n\n## 5. Verification\nValidate generated migration artifacts, schema state, representative data behavior, and application compatibility—not just ORM/client generation.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

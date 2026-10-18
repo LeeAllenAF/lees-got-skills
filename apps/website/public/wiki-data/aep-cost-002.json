@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-002",
+  "title": "Cost Accounting and Unit Economics",
+  "summary": "Cost Accounting and Unit Economics. Focus: cost accounting, observability.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "cost-accounting",
+    "observability"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-002-cost-accounting-and-unit-economics.md",
+  "relatedDocumentIds": [
+    "AEP-COST-001",
+    "AEP-EVAL-007",
+    "AEP-TOOL-009"
+  ],
+  "body": "# AEP-COST-002 — Cost Accounting and Unit Economics\n\n## 1. Purpose\nAgent systems have more cost centers than model tokens. Cost accounting should make the whole task economically visible.\n\n## 2. Cost taxonomy\nTrack where material:\n\n### Model cost\n- uncached input;\n- cache writes;\n- cached input reads;\n- output and reasoning tokens;\n- subagent calls;\n- retries and failed trajectories.\n\n### Tool and infrastructure cost\n- search, browser, database, SaaS, and MCP calls;\n- sandbox/runtime compute;\n- storage and indexing;\n- embedding/reranking jobs;\n- network or egress charges;\n- queues, orchestration, and background workers.\n\n### Human cost\n- approval time;\n- review and repair;\n- incident response;\n- evaluation and maintenance effort.\n\n## 3. Required attribution\nCosts should be attributable to useful dimensions such as:\n\n```text\nclient\nworkspace/repository\nworkflow\ntask class\nmodel/configuration\nagent/subagent\ntool\nexperiment/version\n```\n\nAvoid cross-scope accounting ambiguity.\n\n## 4. Unit economics\nUseful normalized metrics include:\n\n```text\ncost / successful task\ncost / merged change\ncost / resolved incident\ncost / accepted review finding\nhuman minutes / accepted output\nretry cost / task\nwasted spend / abandoned trajectory\n```\n\n## 5. Marginal cost\nWhen evaluating an added component, measure incremental value and incremental cost. A reranker, critic, subagent, or larger model must justify its marginal cost rather than merely improve a local metric.\n\n## 6. Cost attribution for shared infrastructure\nShared indexes, cached prompts, and persistent services should be accounted separately from marginal request cost. For enterprise engineering work, distinguish:\n\n```text\nfixed platform cost\n+ shared operating cost\n+ scope-specific marginal cost\n```\n\n## 7. Recommendation\nBuild cost accounting from traces and provider usage fields rather than estimates alone. Estimated prices are useful for planning, but production decisions should rely on realized cost per outcome.\n\n## References\n- OpenAI, Observability and usage — https://developers.openai.com/api/docs/guides/agents-api/observability\n- OpenAI, Cost optimization — https://developers.openai.com/api/docs/guides/cost-optimization"
+}

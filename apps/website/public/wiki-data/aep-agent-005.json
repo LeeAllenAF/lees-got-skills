@@ -1,0 +1,26 @@
+{
+  "id": "AEP-AGENT-005",
+  "title": "Managers, Handoffs, and Ownership",
+  "summary": "Managers, Handoffs, and Ownership. Focus: handoffs, multi agent.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "handoffs",
+    "multi-agent"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-005-managers-handoffs-and-ownership.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-004",
+    "AEP-TOOL-006"
+  ],
+  "body": "# AEP-AGENT-005 — Managers, Handoffs, and Ownership\n\n## Purpose\nChoose whether a specialist assists a controlling agent or takes ownership of the workflow branch.\n\n## Manager / agents-as-tools\nUse when one outer agent should retain responsibility for synthesis and user-facing output. Specialists behave like bounded capabilities.\n\n## Handoff\nUse when the specialist should own the next interaction or branch. Control transfers rather than merely returning a result.\n\nOpenAI's current orchestration guidance makes this distinction explicit.\n\n## Supervisor pattern\nA supervisor may route, decompose, budget, and synthesize. It should not become an unnecessary reasoning tax. Deterministic routing should remain preferred where routing rules are stable.\n\n## Ownership rule\nAt every point, one component should have explicit responsibility for:\n- the next action;\n- current authority;\n- final synthesis;\n- user communication;\n- unresolved errors.\n\nAvoid ambiguous shared ownership.\n\n## References\n- OpenAI, Orchestration and handoffs — https://developers.openai.com/api/docs/guides/agents/orchestration"
+}

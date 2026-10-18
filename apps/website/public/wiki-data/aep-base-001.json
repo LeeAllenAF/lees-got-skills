@@ -1,0 +1,23 @@
+{
+  "id": "AEP-BASE-001",
+  "title": "Baseline Knowledge Inventory",
+  "summary": "Baseline Knowledge Inventory. Focus: index navigation, knowledge management.",
+  "collection": "handbook",
+  "topic": "foundations",
+  "type": "reference",
+  "status": "informational",
+  "tags": [
+    "index-navigation",
+    "knowledge-management"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/foundations/AEP-BASE-001-baseline-knowledge-inventory.md",
+  "relatedDocumentIds": [],
+  "body": "# Baseline Knowledge Inventory\n\nThe initial corpus covers context engineering, tool/MCP design, model routing, agent architecture, software-engineering agents, evaluation, security and authority, cost/performance, reusable skills, knowledge services, source intelligence, permission-aware retrieval, innovation, security assurance, and knowledge auditability.\n\nThis inventory is descriptive, not proof that every recommendation is mature.\n\n## Maturity rule\n\nEach topic must retain its own status, evidence, freshness, and experiment links. Presence in the handbook does not imply approval.\n\n## Initial implementation priorities\n\n1. validate the canonical corpus;\n2. establish source and evidence schemas;\n3. establish permission-aware retrieval;\n4. establish provider-neutral evals;\n5. create exact/metadata/lexical retrieval baselines;\n6. expose a read-only MCP after domain behavior is verified."
+}

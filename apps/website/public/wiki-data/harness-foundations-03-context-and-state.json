@@ -1,0 +1,25 @@
+{
+  "id": "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE",
+  "title": "Context engineering, retrieval, memory, and durable state",
+  "summary": "Context engineering, retrieval, memory, and durable state. Focus: context engineering, memory, retrieval, state management.",
+  "collection": "harness",
+  "topic": "foundations",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "context-engineering",
+    "memory",
+    "retrieval",
+    "state-management"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/foundations/03-context-and-state.md",
+  "relatedDocumentIds": [],
+  "body": "# Context engineering, retrieval, memory, and durable state\n\n[← Index](/wiki) · [Harness](/wiki/harness-foundations-01-harness-concepts) · [Evaluation](/wiki/harness-foundations-04-reliability-and-evals)\n\n## Distinct concepts\n- **State:** current and pending work plus execution status.\n- **Memory:** retained events, facts, or procedures across steps/sessions.\n- **Context:** the subset actually included in a particular model invocation.\n- **Artifact:** persisted output (report, evidence bundle, graph update) typically referenced by identifier.\n\n## Context engineering\nSelective retrieval, progressive disclosure, context isolation, summarization/compaction, evidence anchoring, and returning artifact references in place of huge tool results. Restrict authority: retrieved pages are untrusted **data**, not new system instructions.\n\n## Retrieval strategy\nKeyword search finds exact names and symbols; semantic search finds conceptual neighbors; hybrid search combines them; rerankers improve candidate ordering; entity resolution merges aliases; graph traversal follows explicit relationships. Keep provenance and timestamps with each claim.\n\n## Suggested work state (illustrative, not SDK API)\n```ts\ninterface WorkUnit {\n  id: string;\n  kind: string;\n  status: 'queued' | 'leased' | 'blocked' | 'complete' | 'failed';\n  attempts: number;\n  inputRefs: string[];\n  outputRefs: string[];\n  evidenceRefs: string[];\n  leaseUntil?: string;\n  version: number;\n}\n```\n\n## Reliability constraints\n- Checkpoint after validated transitions, not before a side effect you cannot recover.\n- Side-effecting tools need idempotency keys or reconciliation.\n- A resumed workflow need not have the exact prior inference context.\n- Track source versions/hashes to support incremental processing.\n- Long-running background workers should remain useful even when inference is unavailable.\n\nContinue with [SDK orchestration](/wiki/harness-codex-sdk-03-orchestration-pattern) and [reference design](/wiki/harness-architecture-02-reference-design)."
+}

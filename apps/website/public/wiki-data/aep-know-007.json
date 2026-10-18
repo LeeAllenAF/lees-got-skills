@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-007",
+  "title": "Access Control, Permission Isolation, and Security",
+  "summary": "Access Control, Permission Isolation, and Security. Focus: authorization, data isolation.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "authorization",
+    "data-isolation"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-007-access-control-permission-isolation-and-security.md",
+  "relatedDocumentIds": [],
+  "body": "# Access Control, Permission Isolation, and Security\n\n## Principle\n\nAuthorization applies **before retrieval**, not after the model sees the result.\n\n## Scope hierarchy\n\nPotential knowledge scopes include:\n\n```text\npublic\nthe platform internal\nscope-specific\nproject/repository-specific\nrestricted/security-sensitive\n```\n\n## Query enforcement\n\nThe caller's identity and claims determine which corpus/index partitions can participate in retrieval.\n\nDo not:\n\n```text\nsearch everything\n   ↓\nrank results\n   ↓\nremove unauthorized documents\n```\n\nPrefer:\n\n```text\nauthorize scope\n   ↓\nretrieve only permitted corpus\n```\n\n## MCP security\n\nMCP exposure introduces an integration boundary.\n\nCurrent MCP/OpenAI guidance reinforces:\n\n- narrow allowed tool surfaces;\n- explicit approval for sensitive operations;\n- OAuth/authorization for private data;\n- distrust of arbitrary remote MCP servers;\n- careful handling of tool outputs as potentially untrusted content.\n\nThe handbook knowledge MCP should initially expose read-only capabilities.\n\n## Tenant isolation\n\nScoped knowledge should use strong tenant boundaries in:\n\n- storage;\n- indexes;\n- cache keys;\n- logs/traces;\n- vector namespaces;\n- task handles;\n- authorization claims.\n\n## Sensitive knowledge\n\nSecurity runbooks, credentials, secrets, or restricted enterprise material should not be placed into a broad semantic index merely because indexing is convenient.\n\n## Audit\n\nLog:\n\n```text\nidentity\nquery/tool\nscope\ndocuments returned\nresolved guidance IDs\nversion/index snapshot\ntimestamp\n```\n\nwithout logging sensitive payloads unnecessarily.\n\n## Current recommendation\n\nStart internal-only and read-only. Earn broader exposure after authorization, isolation, and adversarial evals are proven."
+}

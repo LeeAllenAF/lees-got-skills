@@ -1,0 +1,26 @@
+{
+  "id": "AEP-CODE-001",
+  "title": "Software Engineering Agent Fundamentals",
+  "summary": "Software Engineering Agent Fundamentals. Focus: software engineering, verification.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "software-engineering",
+    "verification"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-001-software-engineering-agent-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-010",
+    "AEP-AGENT-001"
+  ],
+  "body": "# AEP-CODE-001 — Software Engineering Agent Fundamentals\n\n## 1. Purpose\nSoftware-engineering agents operate in unusually favorable conditions for agentic work because much of the output is executable and independently verifiable. That advantage should shape the architecture.\n\n> **A coding agent should behave like an engineer operating inside an existing system, not like a code generator operating in isolation.**\n\n## 2. Core loop\n```text\nunderstand intent\n  ↓\ninspect repository/environment\n  ↓\nform bounded plan\n  ↓\nmake the smallest coherent change\n  ↓\nrun appropriate verification\n  ↓\ninspect failures / regressions\n  ↓\nrepair or escalate\n  ↓\nreport evidence and remaining uncertainty\n```\n\n## 3. Initial platform guidance\n1. Discover repository conventions before editing.\n2. Prefer existing project structure and tooling over introducing new infrastructure.\n3. Use executable evidence wherever possible.\n4. Keep changes scoped to the requested outcome.\n5. Treat tests, types, linters, schemas, build systems, and runtime behavior as evidence rather than ceremony.\n6. Preserve human judgment for ambiguous product intent, irreversible decisions, and architecture tradeoffs.\n7. Record assumptions and unresolved risks rather than silently inventing requirements.\n\n## 4. Completion standard\nA task is not complete because code was produced. Completion requires the requested outcome plus appropriate verification and a truthful statement of anything that could not be verified.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

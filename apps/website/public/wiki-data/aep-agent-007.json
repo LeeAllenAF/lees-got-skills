@@ -1,0 +1,25 @@
+{
+  "id": "AEP-AGENT-007",
+  "title": "Critique, Refinement, and Verification",
+  "summary": "Critique, Refinement, and Verification. Focus: critique, verification.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "critique",
+    "verification"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-007-critique-refinement-and-verification.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-006"
+  ],
+  "body": "# AEP-AGENT-007 — Critique, Refinement, and Verification\n\n## Purpose\nDefine when iterative review helps and when deterministic validation is stronger.\n\n## Order of preference\n1. deterministic verifier;\n2. domain-specific executable check;\n3. independent evidence retrieval;\n4. model-based critique where judgment is genuinely required.\n\nA second model/agent should not be used merely to restate whether output 'looks correct' when tests, compilers, schemas, security checks, or policy engines can provide stronger evidence.\n\n## Critic patterns\nUseful for subjective quality, incomplete specifications, architectural tradeoffs, adversarial review, and tasks without deterministic graders.\n\n## Independence\nA critic is more useful when it receives the artifact and rubric rather than the generator's full reasoning narrative. Shared assumptions can create correlated failures.\n\n## Iteration\nRefinement loops require bounded attempts and explicit improvement criteria.\n\n## References\n- Google Cloud, iterative refinement agent pattern — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

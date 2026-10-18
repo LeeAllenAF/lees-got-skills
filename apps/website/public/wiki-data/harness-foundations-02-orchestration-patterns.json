@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-FOUNDATIONS-02-ORCHESTRATION-PATTERNS",
+  "title": "Common orchestration patterns",
+  "summary": "Common orchestration patterns. Focus: deterministic control, multi agent, orchestration.",
+  "collection": "harness",
+  "topic": "foundations",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "deterministic-control",
+    "multi-agent",
+    "orchestration"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/foundations/02-orchestration-patterns.md",
+  "relatedDocumentIds": [],
+  "body": "# Common orchestration patterns\n\n[← Index](/wiki) · [Harness concepts](/wiki/harness-foundations-01-harness-concepts) · [Design architecture](/wiki/harness-architecture-02-reference-design)\n\n| Pattern | Shape | Appropriate for | Trade-off |\n|---|---|---|---|\n| Single-agent loop | Decide → tool → observe → repeat | Interactive tasks, prototyping | Harder to bound if too open-ended |\n| Sequential pipeline | Discover → classify → verify → publish | ETL, document analysis | Rigid stage ordering |\n| Supervisor-worker | Controller delegates distinct tasks | Complex heterogeneous research | Coordination cost |\n| Fan-out/fan-in | Partition work, parallel workers, reconcile | Independent documents/repos | Deduplication and rate control |\n| Generator-critic | Produce → validate → revise | Reports, code, evidence assessment | Critic may share generator's errors |\n| Event-driven | Event → scoped workflow | Syncs, changes, alerts | Need idempotency and queue management |\n| Human approval | Pause → review → resume | Sensitive writes and ambiguity | May increase latency |\n\n## Reasoning techniques\n- **ReAct:** alternate reasoning and observations from tools.\n- **Plan-and-execute:** outline steps then execute with possible replanning.\n- **Reflection:** critique and bounded revision; use objective validators when possible.\n- **Task decomposition:** explicitly scoped independently verifiable work units.\n- **Model routing:** choose model/effort based on task class, eligibility and quality evidence.\n- **Bounded autonomy:** cap turns, tool calls, wall time, retry attempts and spending.\n\n## Suggested selection heuristic\nStart with a single agent and deterministic tools. Introduce extra agents when measurable specialization, parallelism, or context isolation justifies their cost. Keep work ownership, exit criteria and budgets explicit.\n\n## Example\nTo analyze 30,000 documents: deterministic discovery and hashing → parallel extraction → classify only unclear items → evidence-based resolution → publish indexed relationships. Avoid a supervisor model deciding each pagination call.\n\nSee [Context and state](/wiki/harness-foundations-03-context-and-state) and [Reliability](/wiki/harness-foundations-04-reliability-and-evals)."
+}

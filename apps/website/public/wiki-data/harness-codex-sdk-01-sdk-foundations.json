@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-CODEX-SDK-01-SDK-FOUNDATIONS",
+  "title": "Codex TypeScript SDK foundations",
+  "summary": "Codex TypeScript SDK foundations. Focus: authentication, codex sdk.",
+  "collection": "harness",
+  "topic": "codex-sdk",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "authentication",
+    "codex-sdk"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-sdk/01-sdk-foundations.md",
+  "relatedDocumentIds": [],
+  "body": "# Codex TypeScript SDK foundations\n\n[← Index](/wiki) · [Capabilities](/wiki/harness-codex-sdk-02-configuration-and-capabilities) · [Orchestration](/wiki/harness-codex-sdk-03-orchestration-pattern)\n\n## What it is\n**[DOCUMENTED]** The TypeScript package `@openai/codex-sdk` wraps the Codex CLI, spawning it and exchanging JSONL events over stdin/stdout. It is distinct from the OpenAI Agents SDK and OpenAI Platform Agents API. The SDK can use an existing approved Codex authentication session; no separate Platform API key is inherently required for that use path. Verify enterprise terms and configured authentication before unattended use.\n\nInstall:\n```sh\npnpm add @openai/codex-sdk\n```\n**[VERIFY]** SDK/CLI binary packaging is version-dependent; install additional CLI dependencies only if current package docs say so. See [TypeScript README](https://github.com/openai/codex/blob/main/sdk/typescript/README.md).\n\n## Basic workflow\n```ts\nimport { Codex } from '@openai/codex-sdk';\nconst client = new Codex();\nconst thread = client.startThread();\nconst turn = await thread.run('Summarize this repository architecture');\nconsole.log(turn.finalResponse);\nconst next = await thread.run('Identify architectural risks');\n```\n\n**[DOCUMENTED]** `startThread()` creates a thread; `resumeThread(id, options)` reconnects to a persisted conversation, subject to local session availability. `run()` returns completed turn data; `runStreamed()` yields structured events.\n\n## Constraints\nThe SDK gives application-driven Codex invocation, but is not equivalent to direct control of each internal model token/tool-selection decision. The installed SDK types are authoritative over source `main` when versions differ.\n\nSources: https://github.com/openai/codex/blob/main/sdk/typescript/README.md ; https://github.com/openai/codex/blob/main/sdk/typescript/src/codex.ts"
+}

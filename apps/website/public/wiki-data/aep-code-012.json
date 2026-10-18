@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-012",
+  "title": "CI/CD Diagnosis and Repair",
+  "summary": "CI/CD Diagnosis and Repair. Focus: ci cd, debugging.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "ci-cd",
+    "debugging"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-012-ci-cd-diagnosis-and-repair.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-006",
+    "AEP-TOOL-006",
+    "AEP-AGENT-009"
+  ],
+  "body": "# AEP-CODE-012 — CI/CD Diagnosis and Repair\n\n## 1. Principle\nTreat CI failures as observable evidence, not invitations to disable safeguards.\n\n## 2. Workflow\nIdentify the first causally relevant failure; distinguish product-code failures from pipeline/environment failures; reproduce locally or in an equivalent environment when possible; repair the cause; rerun the narrow stage; then validate downstream stages as appropriate.\n\n## 3. Guardrails\nDo not bypass failing tests, weaken security checks, remove required approvals, broaden credentials, or disable quality gates merely to make a pipeline green unless explicitly authorized as a temporary incident measure.\n\n## 4. Flakiness\nRepeated reruns are not a fix. If success depends on retries, classify the failure as flaky and preserve evidence for root-cause work.\n\n## 5. Production actions\nDeployment, rollback, credential, infrastructure, and production-data operations should follow the authority model of AEP-TOOL-006 and AEP-AGENT-008.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

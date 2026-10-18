@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-FOUNDATIONS-01-HARNESS-CONCEPTS",
+  "title": "Harness foundations: mental model and components",
+  "summary": "Harness foundations: mental model and components. Focus: harness design, orchestration.",
+  "collection": "harness",
+  "topic": "foundations",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "harness-design",
+    "orchestration"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/foundations/01-harness-concepts.md",
+  "relatedDocumentIds": [],
+  "body": "# Harness foundations: mental model and components\n\n[← Index](/wiki) · [Patterns →](/wiki/harness-foundations-02-orchestration-patterns) · [Glossary](/wiki/harness-reference-glossary)\n\n## Definition\nAn **agentic harness** is the runtime and application infrastructure around a model that makes goal-directed reasoning executable, observable, bounded, and recoverable. The **model** infers decisions, the **agent** applies model capabilities to a goal, the **harness** provides tools, state and policies, and a **workflow** describes progression.\n\n## Canonical loop\n1. Observe current work state and relevant evidence.\n2. Assemble a bounded context.\n3. Invoke a model only where judgment is needed.\n4. Validate requested actions and execute tools under policy.\n5. Persist observations, artifacts, cost, and checkpoint.\n6. Verify completion; continue, retry, escalate, or finish.\n\nA single model prompt or fixed linear chain is not necessarily autonomous. Autonomy is a degree of decision authority, not a binary label.\n\n## Component responsibilities\n| Component | Responsibility | Usually deterministic? |\n|---|---|---|\n| Controller/orchestrator | State transitions, scheduling, routing, budget | Yes |\n| Model gateway | Select configured model and inference invocation | Mostly |\n| Agent | Interpret evidence; plan or synthesize | No |\n| Tool registry/executor | Typed interface, authz, sandbox, timeout | Yes |\n| Context assembler | Retrieve, trim, order, and reference evidence | Mostly |\n| Work store | Queues, leases, checkpoints, artifacts | Yes |\n| Knowledge index | Search and relationship lookup | Mostly |\n| Evaluator | Tests, evidence checks, quality metrics | Hybrid |\n| Telemetry | Traces, logs, counters, cost | Yes |\n\n## Key design principle\n**[DESIGN]** Prefer deterministic mechanisms for pagination, parsing, retry policies, permissions, hashing, deduplication, and state. Reserve LLM calls for ambiguity, classification, planning, and interpretation. This reduces cost and gives objective test surfaces.\n\n## Further reading\n- [Orchestration patterns](/wiki/harness-foundations-02-orchestration-patterns)\n- [Memory/state/context](/wiki/harness-foundations-03-context-and-state)\n- [SDK orchestration](/wiki/harness-codex-sdk-03-orchestration-pattern)"
+}

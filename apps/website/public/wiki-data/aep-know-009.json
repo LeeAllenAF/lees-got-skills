@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-009",
+  "title": "Knowledge Service Observability, Evaluation, and Experiments",
+  "summary": "Knowledge Service Observability, Evaluation, and Experiments. Focus: evaluation, observability.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "observability"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-009-observability-evaluation-and-experiments.md",
+  "relatedDocumentIds": [],
+  "body": "# Knowledge Service Observability, Evaluation, and Experiments\n\n## Principle\n\nThe knowledge service itself is an agent-support system and must be evaluated, not merely assumed useful.\n\n## Retrieval metrics\n\nMeasure:\n\n- recall@k;\n- precision@k;\n- MRR/NDCG where meaningful;\n- exact lookup success;\n- reranking gain;\n- latency;\n- index freshness.\n\n## Downstream metrics\n\nRetrieval metrics are proxies.\n\nAlso measure:\n\n- agent task success;\n- instruction adherence;\n- context tokens supplied;\n- hallucination/unsupported-claim rate;\n- conflict-resolution accuracy;\n- human correction rate;\n- cost per successful task.\n\n## Resolution evals\n\nCreate fixtures containing:\n\n```text\nthe platform guidance\nscoped override\nrepository exception\ntask constraints\n```\n\nwith expected effective guidance and expected conflict states.\n\n## Security evals\n\nTest:\n\n- cross-scope retrieval attempts;\n- scope confusion;\n- cache leakage;\n- stale/deprecated policy selection;\n- malicious content in documents;\n- prompt injection embedded in retrieved material.\n\n## Trace fields\n\nRecord:\n\n```text\nquery\nretrieval route\nfilters\ncandidate counts\nreranker use\nselected document IDs\nresolver decisions\ncontext size\nlatency\nindex version\n```\n\nsubject to privacy constraints.\n\n## Experiments\n\nThe service should become the execution environment for many existing context experiments:\n\n- hybrid vs semantic retrieval;\n- reranking;\n- progressive disclosure;\n- context-pack composition;\n- freshness labels;\n- provenance;\n- skill routing.\n\n## Current recommendation\n\nDo not optimize retrieval metrics in isolation. Promote changes only when they improve downstream useful outcomes or materially improve cost/latency without harming them."
+}

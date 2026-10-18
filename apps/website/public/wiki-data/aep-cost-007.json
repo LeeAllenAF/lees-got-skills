@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-007",
+  "title": "Caching, Batching, and Reuse",
+  "summary": "Caching, Batching, and Reuse. Focus: batching, caching.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "batching",
+    "caching"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-007-caching-batching-and-reuse.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-011",
+    "AEP-COST-003",
+    "AEP-COST-005"
+  ],
+  "body": "# AEP-COST-007 — Caching, Batching, and Reuse\n\n## 1. Purpose\nReuse previously performed work when semantics allow it. Choose the reuse mechanism according to freshness, latency, and isolation requirements.\n\n## 2. Prompt caching\nPrompt caching can materially reduce repeated-prefix cost and latency, especially for agent sessions with stable instructions, tools, and long histories. Preserve stable prefixes but do not retain irrelevant context merely to maximize cache hit rate.\n\n## 3. Application caching\nCache deterministic or semantically stable results where safe:\n\n- parsed repository metadata;\n- embeddings;\n- dependency graphs;\n- immutable documentation versions;\n- tool discovery catalogs;\n- expensive transformations.\n\nUse explicit invalidation/version keys.\n\n## 4. Batch processing\nFor non-interactive workloads, asynchronous batch processing can provide materially lower pricing and higher throughput. Current OpenAI Batch API guidance advertises a 50% discount relative to synchronous requests with completion within 24 hours.\n\nSuitable workloads include:\n\n- evaluations;\n- bulk classification;\n- embeddings/indexing;\n- offline enrichment;\n- periodic analysis.\n\n## 5. Flex/low-priority processing\nWhere supported, slower/interruptible processing may further reduce cost for lower-priority work. Treat availability and deadline constraints explicitly.\n\n## 6. Reuse boundaries\nNever reuse across incompatible security, scope, model-version, repository-version, or freshness scopes.\n\n## 7. Recommendation\nUse caching and batching as workload-level architecture decisions. Measure realized hit rate and net savings rather than assuming theoretical discounts will materialize.\n\n## References\n- OpenAI, Prompt caching — https://developers.openai.com/api/docs/guides/prompt-caching\n- OpenAI, Batch API — https://developers.openai.com/api/docs/guides/batch\n- OpenAI, Cost optimization — https://developers.openai.com/api/docs/guides/cost-optimization\n- Anthropic, Contextual Retrieval — https://www.anthropic.com/engineering/contextual-retrieval"
+}

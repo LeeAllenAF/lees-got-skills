@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-CODEX-SDK-02-CONFIGURATION-AND-CAPABILITIES",
+  "title": "SDK capability map: models, threads, and outputs",
+  "summary": "SDK capability map: models, threads, and outputs. Focus: codex sdk, reasoning effort, structured output.",
+  "collection": "harness",
+  "topic": "codex-sdk",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "codex-sdk",
+    "reasoning-effort",
+    "structured-output"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-sdk/02-configuration-and-capabilities.md",
+  "relatedDocumentIds": [],
+  "body": "# SDK capability map: models, threads, and outputs\n\n[← Index](/wiki) · [SDK basics](/wiki/harness-codex-sdk-01-sdk-foundations) · [SDK controller](/wiki/harness-codex-sdk-03-orchestration-pattern)\n\n## Thread options [DOCUMENTED, source snapshot 2026-10-14]\nFrom [threadOptions.ts](https://github.com/openai/codex/blob/main/sdk/typescript/src/threadOptions.ts):\n\n| Option | Purpose |\n|---|---|\n| `model` | Requested model identifier |\n| `modelReasoningEffort` | Requested reasoning intensity |\n| `workingDirectory` | Execution working directory |\n| `sandboxMode` | Filesystem/process sandbox selection |\n| `approvalPolicy` | Approval behavior |\n| `networkAccessEnabled` | Network allowance in supported sandbox |\n| `webSearchMode` | Disabled / cached / live search |\n| `additionalDirectories` | Additional accessible paths |\n| `skipGitRepoCheck` | Override repo check |\n| `threadSource` | Thread source classification |\n\nThe source additionally has `webSearchEnabled` (legacy/alternate configuration). **[VERIFY]** Exact accepted combinations and enabled settings depend on CLI/model/account/runtime policies.\n\n### Model reasoning effort\nThe TypeScript source declares `minimal`, `low`, `medium`, `high`, `xhigh`, `max`, `ultra`, and `persistent` as possible strings. **Do not assume any particular model accepts them all.** Model identifiers shown in documentation are examples rather than entitlement guarantees.\n\n## Execution and results [DOCUMENTED]\n- `run(prompt)` returns a final response, items and usage when available.\n- `runStreamed(prompt)` returns structured events, enabling progress reporting and observability.\n- `resumeThread(id)` creates a thread handle for earlier local sessions.\n- `TurnOptions.outputSchema` allows a JSON Schema output contract for a turn.\n- User inputs can include text and local-image references.\n- Streaming event types cover thread/turn and item transitions; tool and file-change items can be observed.\n\n## Example model-specific thread\n```ts\nconst thread = codex.startThread({\n  model: process.env.CODEX_RESEARCH_MODEL,\n  modelReasoningEffort: 'high',\n  sandboxMode: 'read-only',\n  approvalPolicy: 'on-request',\n});\n```\nThis configuration requests settings; it does not guarantee host acceptance.\n\n## Operational checks\n1. Check `node_modules/@openai/codex-sdk` declarations and pinned version.\n2. Verify enabled models and effort levels under approved account.\n3. Test auth session expiry, concurrency limits, and background execution.\n4. Capture run/stream item and usage shapes in integration tests.\n5. Confirm sandbox behavior on the target operating system.\n\nSources: https://github.com/openai/codex/blob/main/sdk/typescript/src/threadOptions.ts ; https://github.com/openai/codex/blob/main/sdk/typescript/src/thread.ts ; https://github.com/openai/codex/blob/main/sdk/typescript/src/events.ts ; https://developers.openai.com/codex/config-reference"
+}

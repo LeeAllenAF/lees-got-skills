@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-002",
+  "title": "Skill Discovery, Activation, and Progressive Loading",
+  "summary": "Skill Discovery, Activation, and Progressive Loading. Focus: progressive disclosure, skill discovery.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "progressive-disclosure",
+    "skill-discovery"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-002-discovery-activation-and-progressive-loading.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Discovery, Activation, and Progressive Loading\n\n## Principle\n\nA skill should expose **just enough metadata to be discoverable before its full body is loaded**.\n\nCurrent skill systems from both OpenAI and Anthropic use this pattern: models first see lightweight name/description metadata, then load the full instructions and supporting resources only when the skill is relevant.\n\n## Three-stage disclosure model\n\n```text\nStage 1 — catalog metadata\nname\ndescription\nscope/tags\ncompatibility\n\nStage 2 — operational instructions\nSKILL.md\n\nStage 3 — deep resources\nreferences/\nexamples/\nscripts/\ntemplates/\n```\n\nThis avoids permanently occupying context with details for capabilities that may never be used.\n\n## Activation metadata\n\nDescriptions should explain both:\n\n- what the skill does;\n- when it should be used.\n\nBad:\n\n> Handles React.\n\nBetter:\n\n> Implement or review React components using the repository's existing state, styling, accessibility, testing, and component conventions. Use when the current repository is React-based and the task modifies UI components.\n\nAvoid descriptions so broad that many skills match every request.\n\n## Deterministic vs model-selected activation\n\nPossible strategies include:\n\n```text\nmodel-selected\nrule-selected\nmetadata-filtered\nexplicit user selection\ntool/harness-selected\nhybrid\n```\n\nThe default should depend on catalog size, task risk, and measurability.\n\nFor small skill catalogs, model selection may be sufficient. Larger or higher-risk catalogs may benefit from deterministic filtering before model selection.\n\n## Loading discipline\n\nLoading a skill does not imply loading every supporting file.\n\nThe agent should retrieve deeper material only when required.\n\nExamples:\n\n- load a schema when producing structured output;\n- load a migration reference when performing a migration;\n- run a helper script instead of reading its implementation unless inspection is required.\n\n## Failure modes\n\n- ambiguous descriptions cause incorrect activation;\n- overlapping skills create routing conflicts;\n- giant SKILL.md files recreate static-context bloat;\n- nested references become difficult to discover;\n- capability catalogs themselves consume excessive context;\n- a skill remains loaded after it is no longer relevant.\n\n## Current recommendation\n\nTreat skill discovery as a retrieval problem with measurable precision, recall, and downstream task success.\n\n## Sources\n\n- OpenAI, *Skills*: https://developers.openai.com/api/docs/guides/tools-skills\n- Anthropic, *Introducing Agent Skills*: https://www.anthropic.com/research/skills"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "AEP-CODE-003",
+  "title": "Language and Framework Specialization",
+  "summary": "Language and Framework Specialization. Focus: language specialization, skills.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "language-specialization",
+    "skills"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-003-language-and-framework-specialization.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-007",
+    "AEP-MODEL-003"
+  ],
+  "body": "# AEP-CODE-003 — Language and Framework Specialization\n\n## 1. Purpose\nA general coding agent should adapt its behavior to the language and framework in front of it without turning the platform preferences into repository requirements.\n\n> **Specialize behavior to the environment; do not force the environment to match the agent.**\n\n## 2. Sources of specialization\nPrefer, in order:\n1. repository-local conventions and executable tooling;\n2. project standards;\n3. current framework/language guidance;\n4. the platform reusable skills;\n5. generic defaults.\n\n## 3. Skill examples\nA TypeScript skill might teach strict typing, module semantics, compiler-driven verification, package-manager conventions, and framework idioms. A Python skill may cover packaging metadata, environments, typing, pytest, and linting. Equivalent skills may exist for Go, Rust, Java/Kotlin, .NET, Ruby, mobile platforms, and others.\n\n## 4. Do not confuse knowledge specialization with model specialization\nA stronger language skill plus repository context may outperform adding a separate specialized model. Model specialization should be introduced only after workload evaluation demonstrates benefit.\n\n## 5. Living knowledge\nLanguage/framework skills should be versioned against major ecosystem changes and tested against representative repositories. Remove obsolete instructions as compilers, frameworks, and models evolve.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

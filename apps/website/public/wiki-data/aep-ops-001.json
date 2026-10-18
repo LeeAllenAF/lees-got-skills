@@ -1,0 +1,23 @@
+{
+  "id": "AEP-OPS-001",
+  "title": "Operations and Reliability Fundamentals",
+  "summary": "Operations and Reliability Fundamentals. Focus: recovery, reliability.",
+  "collection": "handbook",
+  "topic": "operations",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "recovery",
+    "reliability"
+  ],
+  "domains": [
+    "operations"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/operations/aep-ops-001-operations-and-reliability-fundamentals.md",
+  "relatedDocumentIds": [],
+  "body": "# Operations and Reliability Fundamentals\n\n## Purpose\n\nThe knowledge platform should degrade predictably, expose health, and avoid turning a retrieval outage into unsafe agent behavior.\n\n## Guidance\n\n- Fail closed for restricted authorization failures.\n- Distinguish unavailable from empty results.\n- Expose freshness and index version.\n- Keep local deterministic validation available.\n- Define recovery procedures.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

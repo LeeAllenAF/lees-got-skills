@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-005",
+  "title": "Overlays, Policy Resolution, and Conflicts",
+  "summary": "Overlays, Policy Resolution, and Conflicts. Focus: conflict resolution, policy resolution.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "conflict-resolution",
+    "policy-resolution"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-005-overlays-policy-resolution-and-conflicts.md",
+  "relatedDocumentIds": [],
+  "body": "# Overlays, Policy Resolution, and Conflicts\n\n## Purpose\n\nResolve effective guidance across organizational, scope, repository, and task scopes without confusing specificity, trust, authority, or relevance.\n\n## Layer model\n\n```text\ngeneral engineering knowledge\n        ↓\nthe platform principles\n        ↓\nthe platform standards\n        ↓\ntechnology/domain guidance\n        ↓\nscoped requirements\n        ↓\nrepository requirements\n        ↓\ntask-specific constraints\n```\n\nThis is a resolution model, not a simplistic \"later text wins\" prompt order.\n\n## Independent dimensions\n\nEvery candidate guidance item may carry:\n\n- authority;\n- trust;\n- scope;\n- specificity;\n- status;\n- freshness;\n- applicability;\n- provenance.\n\nA highly relevant item does not automatically have authority to override policy.\n\n## Conflict states\n\nThe resolver should distinguish:\n\n```text\ncompatible\nmore-specific override\nexplicit exception\nunresolved conflict\ndeprecated conflict\nnot applicable\n```\n\nUnresolved conflicts should be returned explicitly to the caller.\n\n## Example\n\nthe platform guidance:\n\n> Prefer TypeScript strict mode.\n\nProject policy:\n\n> All production TypeScript projects require strict mode.\n\nRepository:\n\n> This legacy package temporarily disables `noUncheckedIndexedAccess`.\n\nThe effective result should preserve all three facts and identify the repository exception rather than flattening them into one sentence.\n\n## Permission isolation\n\nProject overlays must be authorization-scoped before retrieval and resolution.\n\nNever retrieve across permission scopes and filter after ranking.\n\n## Explainability\n\nResolution output should include:\n\n```text\neffective rule\nsource\nscope\nreason it applied\noverridden candidates\nunresolved conflicts\n```\n\n## Current recommendation\n\nImplement resolution deterministically wherever rules can be expressed structurally. Use LLM synthesis only for explanation, not for deciding policy precedence."
+}

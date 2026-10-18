@@ -1,0 +1,24 @@
+{
+  "id": "AEP-PERM-005",
+  "title": "Cache and Index Isolation",
+  "summary": "Cache and Index Isolation. Focus: caching, data isolation, indexing.",
+  "collection": "handbook",
+  "topic": "permissions",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "caching",
+    "data-isolation",
+    "indexing"
+  ],
+  "domains": [
+    "access-control"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/permissions/aep-perm-005-cache-and-index-isolation.md",
+  "relatedDocumentIds": [],
+  "body": "# Cache and Index Isolation\n\n## Purpose\n\nIndexes and caches are part of the security boundary. Permission mistakes in a cache key can leak knowledge even if the final response layer is correct.\n\n## Guidance\n\n- Partition or securely filter indexes before candidate exposure.\n- Include authorization-relevant scope in cache keys.\n- Invalidate caches after permission changes.\n- Test side-channel and stale-cache cases.\n- Keep restricted traces isolated.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

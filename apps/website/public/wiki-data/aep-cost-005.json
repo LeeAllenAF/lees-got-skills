@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-005",
+  "title": "Latency and User-Perceived Performance",
+  "summary": "Latency and User-Perceived Performance. Focus: latency, streaming.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "latency",
+    "streaming"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-005-latency-and-user-perceived-performance.md",
+  "relatedDocumentIds": [
+    "AEP-COST-001",
+    "AEP-MODEL-004",
+    "AEP-AGENT-009"
+  ],
+  "body": "# AEP-COST-005 — Latency and User-Perceived Performance\n\n## 1. Purpose\nUsers experience end-to-end delay, not token throughput. Optimize the critical path and perceived responsiveness rather than model latency alone.\n\n## 2. Decompose latency\nTrack:\n\n```text\nqueue time\nmodel time-to-first-token\nmodel generation time\ntool latency\nnetwork latency\nsandbox startup\nhandoff/synthesis time\nhuman approval time\n```\n\n## 3. Tail latency\np95/p99 behavior matters for agent systems because retries, slow tools, and long reasoning tails can create severe outliers. Report both median and tail latency.\n\n## 4. Interactive vs asynchronous classes\nClassify workloads before optimizing:\n\n### Interactive\nPrioritize responsiveness and progressive feedback.\n\n### Background\nPrioritize throughput and economics; batching/flex processing may be preferable.\n\n### Long-running agent task\nExpose durable progress and resumability rather than blocking a synchronous request.\n\n## 5. Make users wait less\nUseful techniques include:\n\n- streaming meaningful progress;\n- parallelizing independent slow operations;\n- prefetching predictable context;\n- caching stable inputs;\n- avoiding unnecessary model round trips;\n- moving non-critical enrichment off the critical path.\n\nProgress messages must reflect real state, not fabricated activity.\n\n## 6. Recommendation\nDefine latency SLOs by task class and quality target. Never trade correctness or safety for speed without making that trade explicit.\n\n## References\n- OpenAI, Latency optimization — https://developers.openai.com/api/docs/guides/latency-optimization\n- OpenAI, Cost optimization — https://developers.openai.com/api/docs/guides/cost-optimization"
+}

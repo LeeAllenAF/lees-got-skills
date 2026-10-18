@@ -1,0 +1,25 @@
+{
+  "id": "AEP-CODE-004",
+  "title": "Technology Selection and Architectural Fit",
+  "summary": "Technology Selection and Architectural Fit. Focus: architecture, technology selection.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "architecture",
+    "technology-selection"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-004-technology-selection-and-architectural-fit.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-009"
+  ],
+  "body": "# AEP-CODE-004 — Technology Selection and Architectural Fit\n\n## 1. Purpose\nTechnology selection should optimize for the project/enterprise environment, not organizational familiarity or model familiarity.\n\n> **Prefer environmental fit over organizational familiarity.**\n\n## 2. Decision inputs\nEvaluate:\n- business requirements and delivery horizon;\n- existing ecosystem and integration constraints;\n- team expertise and hiring/support realities;\n- deployment environment;\n- security, regulatory, and data constraints;\n- expected scale and performance needs;\n- reliability and operational burden;\n- maintainability and ecosystem maturity;\n- licensing/vendor risk;\n- total cost of ownership;\n- migration/reversibility cost.\n\n## 3. Greenfield choices\nFor material decisions, produce a short ADR-style comparison of viable candidates and explicitly identify assumptions. Avoid false precision and avoid ranking options on irrelevant criteria.\n\n## 4. Brownfield choices\nThe burden of proof is higher for replacing existing technology than for using it competently. Prefer incremental compatibility unless a concrete problem justifies migration.\n\n## 5. Agent guardrail\nA coding agent may recommend introducing infrastructure only when it can name the problem being solved, alternatives considered, operational cost, migration cost, and verification path.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

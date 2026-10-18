@@ -1,0 +1,24 @@
+{
+  "id": "AEP-KNOW-010",
+  "title": "Knowledge Service Lifecycle, Versioning, and Revalidation",
+  "summary": "Knowledge Service Lifecycle, Versioning, and Revalidation. Focus: knowledge management, lifecycle, versioning.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "knowledge-management",
+    "lifecycle",
+    "versioning"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-010-lifecycle-versioning-and-revalidation.md",
+  "relatedDocumentIds": [],
+  "body": "# Knowledge Service Lifecycle, Versioning, and Revalidation\n\n## Principle\n\nThe knowledge service is living infrastructure built on living knowledge.\n\nIt must be able to change without losing historical traceability.\n\n## Independently version\n\nTrack versions for:\n\n```text\nknowledge schema\ncanonical corpus\nresolver rules\nchunker\nembedding configuration\nreranker\nindex snapshot\nMCP/API contract\nprovider adapters\n```\n\nDo not collapse these into one application version.\n\n## Compatibility\n\nA trace or experiment should be reproducible against the versions that produced it.\n\nFor important runs, record:\n\n```text\nsource commit\nindex snapshot\nschema version\nresolver version\nretrieval config\nmodel/harness config\n```\n\n## Revalidation triggers\n\nRevalidate when:\n\n- the MCP spec changes;\n- SDK behavior changes;\n- retrieval models change;\n- embedding/reranker versions change;\n- schema changes;\n- new scopes/consumers are added;\n- security requirements change;\n- important handbook guidance is superseded;\n- production traces show repeated retrieval/resolution failures.\n\n## Protocol evolution\n\nCurrent MCP guidance includes a formal deprecation policy and independently versioned extensions. Provider adapters should therefore be treated as volatile edges with shorter review intervals than domain logic.\n\n## Migration\n\nIndex/schema changes should support:\n\n```text\nbuild new snapshot\nrun eval suite\ncompare results\npromote atomically\nretain rollback snapshot\n```\n\nAvoid in-place opaque mutations when reproducibility matters.\n\n## Simplification review\n\nPeriodically ask:\n\n- Can a retrieval stage be removed?\n- Is reranking still earning its cost?\n- Are old provider workarounds obsolete?\n- Can metadata replace model-based classification?\n- Are unused MCP operations still necessary?\n\n## Current recommendation\n\nThe domain model should evolve conservatively; indexes, models, and adapters may evolve rapidly behind evaluated contracts."
+}

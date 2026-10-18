@@ -1,0 +1,26 @@
+{
+  "id": "AEP-CODE-008",
+  "title": "Testing and Verification",
+  "summary": "Testing and Verification. Focus: software testing, verification.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "software-testing",
+    "verification"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-008-testing-and-verification.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-007",
+    "AEP-CODE-001"
+  ],
+  "body": "# AEP-CODE-008 — Testing and Verification\n\n## 1. Principle\nVerification depth should be proportional to change risk and blast radius, not to agent enthusiasm.\n\n## 2. Evidence ladder\nPossible checks include:\n- syntax/format validation;\n- type checking/compilation;\n- focused unit/component tests;\n- integration/contract tests;\n- schema validation;\n- static/security analysis;\n- build/package verification;\n- end-to-end/runtime checks;\n- repository-required CI checks.\n\n## 3. Narrow then broaden\nRun the fastest discriminating checks first. Broaden after changes stabilize or when dependencies/risk justify it. Avoid repeated broad test runs without new information.\n\n## 4. Test quality\nGenerated tests must fail for the defect or missing behavior they claim to cover. Passing tests that merely restate the implementation are weak evidence.\n\n## 5. Honesty requirement\nNever claim a check passed unless it was actually executed or its result was obtained from a trustworthy system.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

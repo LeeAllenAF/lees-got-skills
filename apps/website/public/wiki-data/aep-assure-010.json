@@ -1,0 +1,23 @@
+{
+  "id": "AEP-ASSURE-010",
+  "title": "Continuous Assurance Lifecycle",
+  "summary": "Continuous Assurance Lifecycle. Focus: adversarial testing, lifecycle.",
+  "collection": "handbook",
+  "topic": "assurance",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "adversarial-testing",
+    "lifecycle"
+  ],
+  "domains": [
+    "security-assurance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/assurance/aep-assure-010-continuous-assurance-lifecycle.md",
+  "relatedDocumentIds": [],
+  "body": "# Continuous Assurance Lifecycle\n\n## Purpose\n\nAssurance suites evolve with new models, tools, attacks, source types, and enterprise integrations.\n\n## Guidance\n\n- Rotate adversarial fixtures.\n- Add production incidents as regressions.\n- Revalidate after model/provider changes.\n- Track false positives and false negatives.\n- Review the assurance corpus for contamination and saturation.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

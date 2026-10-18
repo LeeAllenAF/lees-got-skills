@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-REFERENCE-GLOSSARY",
+  "title": "Glossary",
+  "summary": "Glossary. Focus: glossary, harness design.",
+  "collection": "harness",
+  "topic": "reference",
+  "type": "reference",
+  "status": "informational",
+  "tags": [
+    "glossary",
+    "harness-design"
+  ],
+  "domains": [
+    "reference"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/reference/GLOSSARY.md",
+  "relatedDocumentIds": [],
+  "body": "# Glossary\n\n[← Index](/wiki)\n\n| Term | Definition |\n|---|---|\n| Agent | Goal-directed model-based worker with instructions and capabilities |\n| Harness | Execution environment and controls around a model worker |\n| Agent loop | Observe, decide, act, evaluate, repeat |\n| Orchestrator | Controller coordinating state and work execution |\n| Skill | Packaged procedural instructions and resources |\n| MCP | Standard interface for exposing tools/resources/prompts |\n| Plugin | Distributable unit of skills, MCP config, and optionally host-specific extensions |\n| Codex SDK | Programmatic wrapper around Codex execution and thread APIs |\n| App Server | Bidirectional protocol for Codex threads, turns and events |\n| ReAct | Reason/action iterative pattern |\n| RAG | Retrieval-augmented generation |\n| Reranker | Model/algorithm that orders retrieved candidates by relevance |\n| Provenance | Traceable origin and version of an asserted fact |\n| Checkpoint | Persisted execution state used for recovery |\n| Idempotency | Repeating an operation without duplicate intended effects |\n| Handoff | Delegation/transfer of work to another agent |\n| HITL | Human-in-the-loop review/approval |\n| Guardrail | Enforced or advisory behavioral boundary |\n| Context engineering | Selection/organization of input to a model turn |\n| Compaction | Compression of earlier context into usable shorter form |\n| Structured output | Machine-validated response shape, e.g. JSON Schema |\n| Trace | Correlated record of execution events |"
+}

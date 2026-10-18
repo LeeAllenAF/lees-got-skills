@@ -1,0 +1,27 @@
+{
+  "id": "AEP-AGENT-010",
+  "title": "Multi-Agent Evaluation, Lifecycle, and Freshness",
+  "summary": "Multi-Agent Evaluation, Lifecycle, and Freshness. Focus: evaluation, lifecycle, multi agent.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "lifecycle",
+    "multi-agent"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-010-multi-agent-lifecycle-evaluation-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-001",
+    "AEP-MODEL-010"
+  ],
+  "body": "# AEP-AGENT-010 — Multi-Agent Evaluation, Lifecycle, and Freshness\n\n## Purpose\nRequire multi-agent complexity to remain justified over time.\n\n## Baseline requirement\nEvery proposed multi-agent design should be compared with a strong single-agent or deterministic-workflow baseline where feasible.\n\nEvaluate:\n- end-task success;\n- repeated-run reliability;\n- wall-clock latency;\n- total token/model cost;\n- coordination failures;\n- context duplication;\n- handoff/delegation failures;\n- tool/authority mistakes;\n- human intervention;\n- trace/debugging complexity.\n\n## Living architecture\nAgent topology is not permanent. Improvements in models, context windows, tool use, or harnesses may eliminate the need for specialists or planners introduced earlier.\n\nRecord for each nontrivial agent boundary:\n- reason it exists;\n- evidence supporting it;\n- owner;\n- evaluation set;\n- review interval;\n- removal criteria.\n\n## Revalidation triggers\nRe-run relevant comparisons after major model upgrades, tool redesigns, context architecture changes, provider/runtime changes, or repeated production coordination failures.\n\n> **A multi-agent workaround for today's capability limit must not become tomorrow's unquestioned architecture.**\n\n## References\n- OpenAI, Orchestration and handoffs — https://developers.openai.com/api/docs/guides/agents/orchestration\n- Google Cloud, Agentic AI design patterns — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-ARCHITECTURE-03-DECISIONS-AND-QUESTIONS",
+  "title": "Design discussion: decisions and open questions",
+  "summary": "Design discussion: decisions and open questions. Focus: architecture, decision records.",
+  "collection": "harness",
+  "topic": "architecture",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "architecture",
+    "decision-records"
+  ],
+  "domains": [
+    "harness-architecture"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/architecture/03-decisions-and-questions.md",
+  "relatedDocumentIds": [],
+  "body": "# Design discussion: decisions and open questions\n\n[← Index](/wiki) · [Reference design](/wiki/harness-architecture-02-reference-design) · [Sources](/wiki/harness-reference-sources)\n\n## Captured assumptions (not organizational commitments)\n- [DECISION CANDIDATE] Use Codex TypeScript SDK for programmatic reasoning with an approved existing Codex session.\n- [DECISION CANDIDATE] Keep MCP + skills as reusable plugin assets, independent of worker orchestration.\n- [DECISION CANDIDATE] Store work queue, evidence, and checkpoints outside Codex sessions.\n- [DECISION CANDIDATE] Prefer deterministic extraction, routing and validation where possible.\n- [DECISION CANDIDATE] Use App Server only when SDK lacks a required client lifecycle feature.\n\n## Unknowns requiring validation\n1. Which models and reasoning effort values are entitled in the target environment?\n2. Is noninteractive Codex SDK execution permitted by enterprise licensing and policy?\n3. What concurrency and usage limits apply to multiple SDK threads?\n4. Does the installed SDK expose the expected outputSchema and streaming types?\n5. Which plugin packaging form and hook surfaces are enabled on deployment hosts?\n6. How is authentication for remote MCP and private sources established without broad credentials?\n7. How long are Codex sessions retained and what recovery mechanisms are available?\n8. Is there a specific App Server-only requirement (steering, approvals, protocol events)?\n9. How will source permissions and retention be preserved in cached documents and graph edges?\n10. What evaluation fixtures define acceptable precision, recall, and evidence validity?\n\n## Discussion prompts\n- What is the smallest deterministic unit of work?\n- Which tasks genuinely require LLM inference?\n- Which consequences require user approval or stronger enforcement?\n- What evidence would prove the system is both useful and safe?\n- What could be migrated to other model providers later?\n\n## Change control\nLog resolved decisions with date, owner, rationale, alternatives, and the source/documentation version. Never silently promote these candidates to final decisions."
+}

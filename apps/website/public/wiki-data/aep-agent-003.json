@@ -1,0 +1,27 @@
+{
+  "id": "AEP-AGENT-003",
+  "title": "Single-Agent Patterns",
+  "summary": "Single-Agent Patterns. Focus: single agent, tool use.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "pattern",
+  "status": "recommended",
+  "tags": [
+    "single-agent",
+    "tool-use"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-003-single-agent-patterns.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-001",
+    "AEP-TOOL-004",
+    "AEP-CTX-007"
+  ],
+  "body": "# AEP-AGENT-003 — Single-Agent Patterns\n\n## Purpose\nDefine the preferred baseline architecture before introducing multiple agents.\n\n## Common patterns\n### ReAct-style loop\nThe agent reasons from current evidence, acts through tools, observes results, and adapts.\n\n### Tool-using specialist\nOne stable agent owns the task with a narrow domain and tool set.\n\n### Agent inside a deterministic workflow\nThe surrounding application owns control flow while the agent resolves ambiguous steps.\n\n### Long-running workspace agent\nOne agent maintains task state across many actions, often with compaction, working memory, and sandboxed execution.\n\n## When single-agent systems work well\n- tools are understandable and bounded;\n- one context can support the task;\n- authority is uniform;\n- dependencies between steps are high;\n- one owner should synthesize the final result.\n\n## Pressure signals for splitting\nWrong-tool selection, incompatible policy surfaces, overloaded context, independent parallel tasks, or repeated need for truly distinct models/output contracts may justify decomposition.\n\n## Guidance\nBefore splitting, try improving tool descriptions, context disclosure, deterministic routing, and tool scope. Multi-agent structure should solve an observed failure, not an anticipated aesthetic problem.\n\n## References\n- OpenAI, Running agents — https://developers.openai.com/api/docs/guides/agents/running-agents\n- Google Cloud, Agentic AI design patterns — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

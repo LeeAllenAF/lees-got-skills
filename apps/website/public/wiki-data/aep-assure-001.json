@@ -1,0 +1,23 @@
+{
+  "id": "AEP-ASSURE-001",
+  "title": "Security Assurance Fundamentals",
+  "summary": "Security Assurance Fundamentals. Focus: adversarial testing, security controls.",
+  "collection": "handbook",
+  "topic": "assurance",
+  "type": "standard",
+  "status": "approved",
+  "tags": [
+    "adversarial-testing",
+    "security-controls"
+  ],
+  "domains": [
+    "security-assurance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/assurance/aep-assure-001-security-assurance-fundamentals.md",
+  "relatedDocumentIds": [],
+  "body": "# Security Assurance Fundamentals\n\n## Purpose\n\nSecurity assurance combines deterministic software security with agent-specific adversarial evaluation. The goal is evidence that controls hold under realistic hostile inputs.\n\n## Guidance\n\n- Test controls, not only model refusals.\n- Use explicit threat models.\n- Separate detection from containment.\n- Verify environmental enforcement.\n- Convert important failures into regressions.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

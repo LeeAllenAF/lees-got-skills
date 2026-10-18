@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-001",
+  "title": "Evaluation Fundamentals",
+  "summary": "Evaluation Fundamentals. Focus: evaluation, verification.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "verification"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-001-evaluation-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-014",
+    "AEP-AGENT-010"
+  ],
+  "body": "# AEP-EVAL-001 — Evaluation Fundamentals\n\n## 1. Purpose\nEvaluation converts agent engineering from intuition into evidence. An eval is not merely a benchmark score; it is a repeatable mechanism for deciding whether a system satisfies a defined requirement under a defined environment.\n\n## 2. Core principle\n**Evaluate the system that will actually be used.** For an agent, the evaluated unit is usually the model plus instructions, tools, retrieval, harness, environment, permissions, retries, and verification policy.\n\nA model-only score is useful evidence, but it is not automatically evidence about the deployed agent.\n\n## 3. Outcome first, trace second\nthe platform should separate two questions:\n\n1. **Outcome:** Did the task actually succeed in the environment?\n2. **Process:** Did the agent reach that outcome safely, efficiently, and according to policy?\n\nFor coding agents, executable end-state checks are usually stronger than textual self-reports. Trace grading is then used to diagnose tool choice, handoffs, retries, policy violations, and wasted work.\n\n## 4. Evaluation dimensions\nAt minimum, consider:\n- correctness and task completion;\n- safety and authority compliance;\n- regression risk;\n- robustness across repeated trials;\n- token and monetary cost;\n- wall-clock latency;\n- tool and model-call counts;\n- human intervention;\n- unnecessary changes or side effects.\n\n## 5. Eval-driven development\nNew capabilities should increasingly be specified by examples and success criteria before they are considered mature. Early manual testing is acceptable, but recurring behavior should move toward repeatable evaluation as soon as it influences architecture or production commitments.\n\n## 6. Living knowledge\nEval failures are candidate knowledge. A recurring production failure should be eligible to become:\n\n```text\nproduction observation\n      ↓\nreproducible eval task\n      ↓\nfix / experiment\n      ↓\nregression protection\n      ↓\nhandbook guidance\n```\n\n## 7. Anti-patterns\n- vibe-based acceptance;\n- one successful demo treated as proof;\n- measuring only final text when environment state matters;\n- comparing models under different harnesses without documenting the difference;\n- using one aggregate score to hide severe failure classes;\n- allowing the eval suite to remain static while production behavior changes.\n\n## References\n- OpenAI, Evaluate agent workflows — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

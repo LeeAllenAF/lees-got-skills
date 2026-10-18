@@ -23,6 +23,8 @@
     "website:build": "nx build website",
     "skills:validate": "nx run-many -t validate --projects=tag:type:skill",
     "skills:package": "nx run-many -t package --projects=tag:type:skill",
+    "wiki:build": "node tools/wiki/scripts/build-wiki.mjs build",
+    "wiki:check": "node tools/wiki/scripts/build-wiki.mjs check",
     "website:login": "corepack pnpm --filter @alienfish/website exec wrangler login",
     "website:deploy:check": "nx run website:deploy:check",
     "website:deploy": "nx run website:deploy",

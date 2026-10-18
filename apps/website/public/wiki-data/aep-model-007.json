@@ -1,0 +1,26 @@
+{
+  "id": "AEP-MODEL-007",
+  "title": "Provider Portability, Fallbacks, and Resilience",
+  "summary": "Provider Portability, Fallbacks, and Resilience. Focus: fallbacks, provider portability.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "fallbacks",
+    "provider-portability"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-007-provider-portability-fallbacks-and-resilience.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-001",
+    "AEP-TOOL-002"
+  ],
+  "body": "# AEP-MODEL-007 — Provider Portability, Fallbacks, and Resilience\n\n## 1. Purpose\n\nPortability is valuable, but fake portability is expensive. the platform should preserve portable domain knowledge and contracts while allowing provider-specific optimizations where they provide measurable benefit.\n\n## 2. Separate capability from provider adapter\n\n```text\nworkflow intent\n   ↓\nmodel capability contract\n   ↓\nprovider/model adapter\n```\n\nDo not reduce every provider to a lowest-common-denominator API if that sacrifices important capabilities.\n\n## 3. Fallback categories\n\n- availability fallback;\n- rate-limit/capacity fallback;\n- regional/compliance fallback;\n- capability fallback;\n- cost/budget fallback.\n\nFallbacks should not silently change the semantic contract of the workflow.\n\n## 4. Validate fallback equivalence\n\nA fallback model should be evaluated on the tasks it may actually receive. \"Supports text and tools\" is insufficient evidence of behavioral equivalence.\n\n## 5. Cross-provider differences matter\n\nPotential differences include:\n\n- tool-call semantics;\n- reasoning controls;\n- context behavior;\n- structured-output behavior;\n- caching;\n- safety behavior;\n- rate limits;\n- observability;\n- data-retention controls.\n\nAdapters should surface meaningful differences rather than hide them.\n\n## 6. Failure policy\n\nFor high-risk operations, fail closed when no approved model configuration is available. For low-risk read-only tasks, degraded fallback may be acceptable if visible in traces and user experience.\n\n## 7. Initial platform guidance\n\nDesign for replaceability, not forced interchangeability. Keep organizational knowledge and workflow intent portable while testing each provider/model configuration as a distinct runtime dependency."
+}

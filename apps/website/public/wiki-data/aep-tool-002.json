@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-002",
+  "title": "Tool Contracts and Schemas",
+  "summary": "Tool Contracts and Schemas. Focus: api design, schemas, structured output.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "api-design",
+    "schemas",
+    "structured-output"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-002-tool-contracts-and-schemas.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-001",
+    "AEP-CTX-002"
+  ],
+  "body": "# AEP-TOOL-002 — Tool Contracts and Schemas\n\n## 1. Purpose\n\nA tool contract defines the exact interface between an agent and a capability. The contract should make intent, inputs, outputs, permissions, side effects, and failures explicit enough that both models and deterministic callers can use the tool safely.\n\n## 2. Contract fields\n\nthe platform tool definitions should record, at minimum:\n\n```text\nstable name\ntitle / human label\npurpose and invocation conditions\ninput schema\noutput schema when predictable\nauthorization requirements\nside-effect classification\nidempotency semantics\ncost / latency notes when material\nfailure model\nprovenance fields\nversion / deprecation state\n```\n\nThis aligns with current OpenAI plugin/tool guidance, which explicitly calls for stable identifiers, clear descriptions, structured inputs/outputs, authorization, side-effect, and failure behavior.\n\n## 3. Names and descriptions are part of runtime behavior\n\nDescriptions are not documentation only. They influence tool selection.\n\nA good description should answer:\n\n- what goal this tool serves;\n- when to use it;\n- when not to use it;\n- important side effects;\n- prerequisites the caller must already have.\n\nAvoid descriptions that overlap heavily with sibling tools.\n\n## 4. Prefer strict schemas\n\nWhere the platform supports it, schema-constrained tool arguments should be preferred to free-form parsing.\n\nCurrent OpenAI function calling recommends strict mode and JSON Schema constraints because they reduce malformed argument generation.\n\nthe platform should treat schema validation as necessary but insufficient. The application must still validate semantic correctness and authorization.\n\n```text\nSchema valid ≠ authorized\nSchema valid ≠ resource exists\nSchema valid ≠ action is safe\n```\n\n## 5. Inputs should express intent directly\n\nBad:\n\n```json\n{\"query\":\"close issue 123 as fixed\"}\n```\n\nBetter:\n\n```json\n{\"issue_id\":\"123\",\"resolution\":\"fixed\",\"comment\":null}\n```\n\nThe latter lets application code validate each decision independently.\n\nDo not force the model to guess opaque account IDs, project IDs, branch names, or resource scopes when they can be discovered deterministically.\n\n## 6. Output schemas\n\nStructured output is especially valuable when results will be:\n\n- filtered;\n- joined;\n- ranked;\n- cached;\n- validated;\n- passed to another tool;\n- consumed by deterministic orchestration.\n\nExample:\n\n```json\n{\n  \"status\": \"ok\",\n  \"commit\": \"abc123\",\n  \"changed_files\": [\"src/a.ts\"],\n  \"warnings\": []\n}\n```\n\nPrefer compact structured results plus references to large artifacts rather than dumping large logs into model context.\n\n## 7. Stable identifiers\n\nOutputs should return stable identifiers required for follow-up operations.\n\nIf `search_issues` returns human titles but not issue IDs, every follow-up action becomes fragile.\n\nStable IDs also improve traceability and reduce repeated retrieval.\n\n## 8. Error schema\n\nErrors should be machine-actionable.\n\nRecommended conceptual shape:\n\n```json\n{\n  \"status\": \"error\",\n  \"code\": \"PERMISSION_DENIED\",\n  \"retryable\": false,\n  \"message\": \"Readable explanation\",\n  \"details\": {},\n  \"correlation_id\": \"...\"\n}\n```\n\nDo not require an agent to infer retryability from prose.\n\n## 9. Avoid schema overfitting\n\nExcessively deep schemas can be as harmful as under-specified ones.\n\nA schema should reflect meaningful decisions, not internal database representation.\n\nLarge enums and deeply nested polymorphism may increase model error rates and context cost. Split or discover detail progressively when appropriate.\n\n## 10. Contract testing\n\nEvery production tool should have tests for:\n\n- valid inputs;\n- invalid schemas;\n- semantic invalidity;\n- permission denial;\n- missing resources;\n- transient failures;\n- unexpected provider responses;\n- output schema stability;\n- side-effect behavior;\n- idempotent retries where promised.\n\n## 11. Guidance\n\nTool contracts are versioned APIs. Treat breaking schema changes exactly as breaking software-interface changes, regardless of whether the primary caller is an LLM.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

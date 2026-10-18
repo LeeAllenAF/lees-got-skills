@@ -1,0 +1,26 @@
+{
+  "id": "AEP-MODEL-004",
+  "title": "Reasoning Effort and Test-Time Compute",
+  "summary": "Reasoning Effort and Test-Time Compute. Focus: cost optimization, reasoning effort.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "cost-optimization",
+    "reasoning-effort"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-004-reasoning-effort-and-test-time-compute.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-001",
+    "AEP-MODEL-005"
+  ],
+  "body": "# AEP-MODEL-004 — Reasoning Effort and Test-Time Compute\n\n## 1. Purpose\n\nModern model selection increasingly includes a second axis: how much inference-time reasoning to spend. A single model can occupy several points on the quality/cost/latency frontier.\n\n## 2. Treat effort as routable capacity\n\nReasoning effort can be selected independently of model family when supported.\n\nA useful conceptual ladder:\n\n```text\nlow effort\n  ↓ when evidence indicates difficulty\nmedium\n  ↓\nhigh / extended\n  ↓\nhuman or alternate strategy\n```\n\nThe exact labels are provider-specific; the architectural concept is not.\n\n## 3. Use more reasoning where it changes outcomes\n\nLikely candidates:\n\n- ambiguous debugging;\n- architecture decisions;\n- complex multi-step planning;\n- security/code review;\n- tasks with conflicting evidence;\n- recovery after repeated failed attempts.\n\nLikely poor candidates:\n\n- deterministic extraction;\n- simple classification;\n- formatting;\n- straightforward transformation;\n- operations already validated by code.\n\n## 4. More thinking is not monotonic value\n\nHigher effort can increase cost and tail latency, and on some workloads may provide little or no quality improvement. Defaults have also changed across product releases, demonstrating that harness assumptions around reasoning effort can become stale.\n\n## 5. Evaluate effort jointly with model choice\n\nDo not assume:\n\n```text\nsmall model + high effort < large model + low effort\n```\n\nMeasure actual combinations. A newer smaller model at higher effort may outperform an older/larger configuration at lower cost, and vice versa.\n\n## 6. Initial platform guidance\n\nReasoning effort should be explicit for high-value production workflows when the provider exposes it. Record it in traces. Benchmark at least adjacent effort levels before standardizing a default.\n\n## References\n\n- OpenAI, Reasoning models — https://developers.openai.com/api/docs/guides/reasoning\n- OpenAI, Model selection — https://developers.openai.com/api/docs/guides/model-selection\n- Anthropic, April 2026 Claude Code quality postmortem — https://www.anthropic.com/engineering/april-23-postmortem"
+}

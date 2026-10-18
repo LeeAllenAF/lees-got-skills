@@ -1,0 +1,26 @@
+{
+  "id": "AEP-SEC-005",
+  "title": "Least Privilege and Capability Authorization",
+  "summary": "Least Privilege and Capability Authorization. Focus: authorization, least privilege.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "authorization",
+    "least-privilege"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-005-least-privilege-and-capability-authorization.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-006",
+    "AEP-SEC-004"
+  ],
+  "body": "# AEP-SEC-005 — Least Privilege and Capability Authorization\n\n## 1. Purpose\nAn agent should be able to propose many actions while being authorized to execute only the subset appropriate to the current principal, task, and environment.\n\n## 2. Authorization must be external\nThe model must not grant itself permissions, interpret its own permission policy as authoritative enforcement, or bypass controls by changing prompt state.\n\n## 3. Capability design\nPrefer narrowly scoped capabilities such as:\n\n```text\nread repository A\ncreate branch in repository A\nrun tests in sandbox\nrequest deployment to staging\n```\n\nover broad capabilities such as:\n\n```text\nfull GitHub access\ncloud admin\nshell anywhere\n```\n\n## 4. Evaluate action arguments\nAuthorization should consider the exact target and arguments, not only the tool name. `delete_file` and `write_file` are obvious examples, but even a generic shell or HTTP tool can become highly privileged depending on arguments.\n\n## 5. Default deny\nUnknown tools, destinations, resources, clients, environments, or action classes should fail closed unless an explicit policy permits them.\n\n## 6. Delegation\nWhen agents delegate work, authority should not automatically expand. A subagent should inherit at most the capabilities needed for its bounded task.\n\n## 7. Auditability\nAuthorization decisions should record principal, requested action, target, policy decision, approval if any, and final execution result."
+}

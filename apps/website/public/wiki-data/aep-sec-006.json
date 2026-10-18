@@ -1,0 +1,26 @@
+{
+  "id": "AEP-SEC-006",
+  "title": "Sandboxing, Filesystem, and Network Isolation",
+  "summary": "Sandboxing, Filesystem, and Network Isolation. Focus: network isolation, sandboxing.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "network-isolation",
+    "sandboxing"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-006-sandboxing-filesystem-and-network-isolation.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-001",
+    "AEP-SEC-005"
+  ],
+  "body": "# AEP-SEC-006 — Sandboxing, Filesystem, and Network Isolation\n\n## 1. Purpose\nRuntime isolation turns model mistakes into bounded local failures rather than host, network, or production incidents.\n\n## 2. Filesystem boundary\nCoding agents should normally operate within an explicit workspace. Restrict access to unrelated home directories, credentials, SSH material, browser profiles, and other unrelated workspaces.\n\n## 3. Network boundary\nNetwork access should be deny-by-default or allowlisted for higher-risk workloads. Distinguish package registries, documentation, internal APIs, production services, and arbitrary internet destinations.\n\n## 4. Process boundary\nLimit process privileges, resource use, container/VM escape paths, host mounts, privileged sockets, and access to orchestration control planes.\n\n## 5. Sandboxing improves usability too\nA strong sandbox can safely allow more autonomous iteration inside the approved boundary and reduce repetitive approval prompts. Anthropic has reported large reductions in permission prompts from filesystem and network sandboxing in Claude Code.\n\n## 6. Not a complete defense\nA sandbox does not solve authorization, data leakage through permitted channels, dependency compromise, or malicious actions inside the sandbox.\n\n## 7. Environment classes\nDefine at least development/sandbox, shared non-production, and production authority classes. Do not assume controls appropriate to a disposable workspace are sufficient for production.\n\n## References\n- Anthropic, Claude Code sandboxing — https://www.anthropic.com/engineering/claude-code-sandboxing"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "AEP-SKILL-010",
+  "title": "Skill Lifecycle, Versioning, and Freshness",
+  "summary": "Skill Lifecycle, Versioning, and Freshness. Focus: lifecycle, skills, versioning.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "lifecycle",
+    "skills",
+    "versioning"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-010-skill-lifecycle-versioning-and-freshness.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Lifecycle, Versioning, and Freshness\n\n## Principle\n\nSkills are living executable knowledge. They must be versioned, evaluated, revalidated, and removable.\n\n## Lifecycle\n\n```text\ncandidate\n  ↓\nexperimental\n  ↓\nrecommended\n  ↓\napproved\n  ↓\ndeprecated\n  ↓\nretired\n```\n\nA skill may also be rejected or superseded.\n\n## Versioning\n\nVersion changes should communicate behavioral compatibility.\n\nMajor changes may include:\n\n- changed goal or activation semantics;\n- new authority requirements;\n- incompatible input/output contract;\n- materially different workflow.\n\nMinor changes may include backward-compatible procedure improvements.\n\nPatch changes may include wording, examples, or bug fixes that do not intentionally change the contract.\n\n## Freshness triggers\n\nRevalidate when:\n\n- a referenced standard changes;\n- a tool/MCP contract changes;\n- a model generation changes materially;\n- a provider changes skill-loading behavior;\n- a language/framework ecosystem changes;\n- a recurring production failure appears;\n- security guidance changes;\n- a skill is repeatedly not selected or selected incorrectly.\n\n## Review intervals\n\nInitial defaults:\n\n```text\nprovider adapter/workaround   30–60d\nsecurity-sensitive skill      30–60d\nframework-specific skill      60–90d\ngeneral workflow skill        90–180d\n```\n\nEvent-driven review overrides the calendar.\n\n## Deprecation\n\nDeprecation should preserve:\n\n- why the skill existed;\n- what superseded it;\n- migration guidance;\n- historical eval evidence.\n\n## Complexity deletion\n\nPeriodic review should explicitly ask:\n\n> Which instructions, examples, dependencies, scripts, or provider workarounds can now be removed?\n\nA smaller skill that preserves outcome quality is generally preferable."
+}

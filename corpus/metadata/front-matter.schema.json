@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agentic Engineering Knowledge Markdown Metadata",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "summary",
+    "type",
+    "status",
+    "version",
+    "collection",
+    "domains",
+    "tags",
+    "scope",
+    "related",
+    "review",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "standard",
+        "guidance",
+        "reference",
+        "index",
+        "plan",
+        "instruction",
+        "report",
+        "pattern",
+        "playbook",
+        "evaluation"
+      ]
+    },
+    "status": {
+      "enum": [
+        "approved",
+        "recommended",
+        "provisional",
+        "experimental",
+        "informational",
+        "deprecated",
+        "rejected"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "collection": {
+      "enum": [
+        "handbook",
+        "harness",
+        "assembly"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "access-control",
+          "agent-architecture",
+          "auditability",
+          "codex-integration",
+          "context-engineering",
+          "cost-performance",
+          "engineering-foundations",
+          "evaluation",
+          "harness-architecture",
+          "knowledge-systems",
+          "model-engineering",
+          "operations",
+          "package-navigation",
+          "reference",
+          "research-innovation",
+          "security",
+          "security-assurance",
+          "skill-engineering",
+          "software-engineering",
+          "source-intelligence",
+          "tool-engineering"
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "adversarial-testing",
+          "api-design",
+          "architecture",
+          "audit-records",
+          "authentication",
+          "authorization",
+          "backup-recovery",
+          "batching",
+          "behavioral-assurance",
+          "benchmark-hygiene",
+          "budgets",
+          "cache-invalidation",
+          "caching",
+          "capacity-planning",
+          "change-control",
+          "change-history",
+          "ci-cd",
+          "cli",
+          "code-intelligence",
+          "code-review",
+          "codex-app-server",
+          "codex-plugins",
+          "codex-sdk",
+          "comparative-evaluation",
+          "concurrency",
+          "conflict-resolution",
+          "consequential-actions",
+          "context-compaction",
+          "context-efficiency",
+          "context-engineering",
+          "context-failures",
+          "context-packages",
+          "corroboration",
+          "cost-accounting",
+          "cost-optimization",
+          "credentials",
+          "critique",
+          "data-classification",
+          "data-isolation",
+          "data-poisoning",
+          "data-protection",
+          "database-migrations",
+          "debugging",
+          "decision-records",
+          "delegation",
+          "dependencies",
+          "destructive-actions",
+          "deterministic-control",
+          "documentation",
+          "embeddings",
+          "error-handling",
+          "evaluation",
+          "evaluation-datasets",
+          "evidence-lineage",
+          "experiment-discovery",
+          "experimentation",
+          "fallbacks",
+          "feature-implementation",
+          "forensics",
+          "freshness",
+          "glossary",
+          "governance",
+          "graders",
+          "handoffs",
+          "harness-design",
+          "human-approval",
+          "human-evaluation",
+          "hybrid-search",
+          "hypotheses",
+          "idempotency",
+          "identifiers",
+          "identity",
+          "incident-response",
+          "index-navigation",
+          "indexing",
+          "ingestion",
+          "instruction-hierarchy",
+          "judge-calibration",
+          "knowledge-management",
+          "knowledge-promotion",
+          "language-specialization",
+          "latency",
+          "least-privilege",
+          "lexical-search",
+          "lifecycle",
+          "lifecycle-hooks",
+          "mcp",
+          "memory",
+          "metadata",
+          "model-capabilities",
+          "model-cascades",
+          "model-routing",
+          "model-selection",
+          "multi-agent",
+          "network-isolation",
+          "observability",
+          "offline-operation",
+          "orchestration",
+          "packaging",
+          "pareto-optimization",
+          "penetration-testing",
+          "planning",
+          "policy-resolution",
+          "privacy",
+          "progressive-disclosure",
+          "prompt-caching",
+          "prompt-injection",
+          "prototyping",
+          "provenance",
+          "provider-portability",
+          "quotas",
+          "rank-fusion",
+          "reasoning-effort",
+          "recovery",
+          "refactoring",
+          "regression-testing",
+          "release-gates",
+          "reliability",
+          "repeatability",
+          "reporting",
+          "repository-discovery",
+          "reranking",
+          "research-automation",
+          "retention",
+          "retries",
+          "retrieval",
+          "root-cause-analysis",
+          "sandboxing",
+          "schemas",
+          "scoring",
+          "secrets",
+          "security-controls",
+          "security-findings",
+          "self-hosted-models",
+          "semantic-search",
+          "service-identity",
+          "single-agent",
+          "skill-authoring",
+          "skill-composition",
+          "skill-discovery",
+          "skills",
+          "small-models",
+          "software-engineering",
+          "software-testing",
+          "source-authority",
+          "source-classification",
+          "source-discovery",
+          "source-intelligence",
+          "source-monitoring",
+          "source-snapshots",
+          "source-vetting",
+          "state-management",
+          "statistics",
+          "streaming",
+          "structured-output",
+          "success-criteria",
+          "supply-chain",
+          "tamper-evidence",
+          "task-design",
+          "technology-selection",
+          "termination",
+          "threat-modeling",
+          "throughput",
+          "tool-design",
+          "tool-use",
+          "trace-evaluation",
+          "tracing",
+          "trust-boundaries",
+          "untrusted-content",
+          "verification",
+          "versioning"
+        ]
+      }
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "metadata_reviewed_on",
+        "method",
+        "technical_review_performed",
+        "technical_last_reviewed",
+        "technical_review_interval",
+        "owner"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metadata_reviewed_on": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "method": {
+          "const": "assistant-content-classification"
+        },
+        "technical_review_performed": {
+          "const": false
+        },
+        "technical_last_reviewed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technical_review_interval": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_archive",
+        "original_path",
+        "original_sha256",
+        "original_metadata_record",
+        "authority"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source_archive": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_metadata_record": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority": {
+          "enum": [
+            "inherited-source-context",
+            "reference-only"
+          ]
+        }
+      }
+    }
+  }
+}

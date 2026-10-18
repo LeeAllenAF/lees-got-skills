@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SRC-001",
+  "title": "Source Intelligence Fundamentals",
+  "summary": "Source Intelligence Fundamentals. Focus: knowledge management, source intelligence.",
+  "collection": "handbook",
+  "topic": "sources",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "knowledge-management",
+    "source-intelligence"
+  ],
+  "domains": [
+    "source-intelligence"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/sources/aep-src-001-source-intelligence-fundamentals.md",
+  "relatedDocumentIds": [],
+  "body": "# Source Intelligence Fundamentals\n\n## Purpose\n\nSource intelligence governs how the platform discovers and uses evidence. A source is not trusted merely because retrieval found it. Source authority, freshness, scope, reproducibility, and corroboration remain explicit metadata.\n\nThe source subsystem should support curated sources first, then progressively add discovery automation after quality can be measured.\n\n## Guidance\n\n- Separate source identity from source snapshots.\n- Preserve the exact snapshot that supported a claim.\n- Treat vendor guidance as evidence, not universal truth.\n- Do not let discovered content become instruction authority automatically.\n- Permission filtering applies before source retrieval.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-009",
+  "title": "Dependencies and Upgrades",
+  "summary": "Dependencies and Upgrades. Focus: dependencies, supply chain.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "dependencies",
+    "supply-chain"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-009-dependencies-and-upgrades.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-002",
+    "AEP-CODE-008",
+    "AEP-TOOL-006"
+  ],
+  "body": "# AEP-CODE-009 — Dependencies and Upgrades\n\n## 1. Principle\nDependency changes alter both code and supply-chain state and should be treated as explicit engineering changes.\n\n## 2. Workflow\nDetermine current version and constraints; review authoritative release/migration guidance; understand transitive impact; make the smallest necessary version change; preserve lockfile consistency; run affected verification; inspect generated diffs.\n\n## 3. Avoid speculative upgrades\nDo not modernize unrelated dependencies during a targeted change unless explicitly requested or required to resolve compatibility/security issues.\n\n## 4. Major upgrades\nMajor framework/runtime upgrades should usually be decomposed into migration stages with explicit checkpoints and rollback paths.\n\n## 5. Freshness\nVersion-specific recommendations require current documentation and short review horizons.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

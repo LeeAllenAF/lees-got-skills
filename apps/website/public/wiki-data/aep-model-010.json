@@ -1,0 +1,27 @@
+{
+  "id": "AEP-MODEL-010",
+  "title": "Model Lifecycle, Versioning, and Freshness",
+  "summary": "Model Lifecycle, Versioning, and Freshness. Focus: lifecycle, model selection, versioning.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "lifecycle",
+    "model-selection",
+    "versioning"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-010-model-lifecycle-versioning-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-009",
+    "AEP-TOOL-010"
+  ],
+  "body": "# AEP-MODEL-010 — Model Lifecycle, Versioning, and Freshness\n\n## 1. Purpose\n\nModel guidance decays quickly. New generations can invalidate prompt workarounds, routing thresholds, cost assumptions, reasoning defaults, and even architectural patterns.\n\n> **Model guidance must be treated as versioned, dated, testable operational knowledge.**\n\n## 2. Record resolved runtime identity\n\nWhere possible record:\n\n```text\nprovider\nmodel identifier\nresolved version/snapshot\nreasoning configuration\nAPI/runtime surface\nimportant feature flags\n```\n\nAliases are convenient but weak experimental identifiers.\n\n## 3. Revalidation triggers\n\nRe-run relevant evals when:\n\n- a model version changes;\n- a provider changes default reasoning effort;\n- pricing changes materially;\n- context/tool capabilities change;\n- the harness changes;\n- tool schemas change;\n- safety/permission behavior changes;\n- production traces show regression;\n- a new candidate model becomes economically interesting.\n\n## 4. Scheduled review\n\nStarting defaults:\n\n```text\nmodel-specific recommendations       30-45 days\nrouting thresholds                   30-45 days\nprovider capability assumptions      45-60 days\narchitectural principles             180 days\n```\n\nEvent-driven review overrides schedules.\n\n## 5. Delete obsolete scaffolding\n\nHarness logic built around old model limitations should be challenged whenever models improve. Anthropic's managed-agent work documents exactly this phenomenon: context-reset behavior useful for one generation became unnecessary overhead for another.\n\n## 6. Promotion and rollback\n\nA new model/configuration should progress through:\n\n```text\ncandidate\n  ↓\noffline eval\n  ↓\nshadow/canary where appropriate\n  ↓\napproved workload profile\n  ↓\nproduction\n```\n\nMaintain rollback paths for production-critical agents.\n\n## 7. Living knowledge linkage\n\nEach model-specific recommendation should link to:\n\n- supporting evals;\n- date/model version;\n- affected workloads;\n- owner;\n- review trigger;\n- replacement/deprecation information.\n\nHistorical results stay searchable because they explain why architecture changed.\n\n## References\n\n- Anthropic, Scaling Managed Agents — https://www.anthropic.com/engineering/managed-agents\n- Anthropic, April 2026 Claude Code quality postmortem — https://www.anthropic.com/engineering/april-23-postmortem\n- OpenAI, Models and providers — https://developers.openai.com/api/docs/guides/agents/models"
+}

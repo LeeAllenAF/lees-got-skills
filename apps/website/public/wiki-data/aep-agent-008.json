@@ -1,0 +1,26 @@
+{
+  "id": "AEP-AGENT-008",
+  "title": "Human-in-the-Loop and Authority Boundaries",
+  "summary": "Human-in-the-Loop and Authority Boundaries. Focus: authorization, human approval.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "authorization",
+    "human-approval"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-008-human-in-the-loop-and-authority-boundaries.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-006",
+    "AEP-MODEL-006"
+  ],
+  "body": "# AEP-AGENT-008 — Human-in-the-Loop and Authority Boundaries\n\n## Purpose\nDefine human involvement as an architectural control, not a last-minute UI prompt.\n\n## Approval triggers\nHuman review is appropriate when actions are irreversible, financially consequential, security-sensitive, externally communicative, destructive, legally material, production-impacting, or ambiguous beyond the authorized policy.\n\n## Approval placement\nPrefer approval at the narrowest meaningful boundary: after the system has gathered evidence and prepared an action, but before the consequential side effect occurs.\n\n## Escalation packet\nA human should receive:\n- intended action;\n- evidence and source provenance;\n- expected effect;\n- alternatives where material;\n- uncertainty or failed checks;\n- exact authority being requested.\n\n## Anti-patterns\n- approval fatigue for harmless reads;\n- asking humans to approve opaque actions;\n- treating human approval as compensation for excessive tool authority;\n- letting agents silently broaden permissions after approval."
+}

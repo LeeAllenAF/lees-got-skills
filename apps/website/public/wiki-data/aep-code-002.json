@@ -1,0 +1,26 @@
+{
+  "id": "AEP-CODE-002",
+  "title": "Repository Discovery and Environment Understanding",
+  "summary": "Repository Discovery and Environment Understanding. Focus: repository discovery, software engineering.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "repository-discovery",
+    "software-engineering"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-002-repository-discovery-and-environment-understanding.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-010",
+    "AEP-TOOL-004"
+  ],
+  "body": "# AEP-CODE-002 — Repository Discovery and Environment Understanding\n\n## 1. Purpose\nBefore making changes, a coding agent should determine what kind of repository it is operating in and which local conventions are authoritative.\n\n## 2. Discovery dimensions\nInspect only what is useful to the task, including:\n- repository and package layout;\n- package manager and lockfile;\n- language/runtime versions;\n- build, test, lint, typecheck, formatting, and CI commands;\n- framework and library conventions;\n- generated-code boundaries;\n- dependency/project graph where available;\n- repository instruction files;\n- ownership and high-risk areas;\n- nearby tests and examples;\n- current git state and changed files.\n\n## 3. Framework-neutral rule\nUse repository-native metadata if present. An Nx graph, Bazel graph, Turborepo task graph, pnpm workspace, Maven project model, Cargo workspace, or plain package.json/filesystem are all possible evidence sources. None is a default requirement.\n\n## 4. Minimal discovery contract\nThe agent should be able to answer:\n1. What am I changing?\n2. What depends on it?\n3. How is it built and verified?\n4. Which conventions apply?\n5. What must I avoid modifying?\n\n## 5. Anti-pattern\nDo not install a monorepo manager, test framework, formatter, dependency injection framework, or other infrastructure merely to make the agent more comfortable.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

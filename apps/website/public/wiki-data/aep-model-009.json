@@ -1,0 +1,27 @@
+{
+  "id": "AEP-MODEL-009",
+  "title": "Model Evaluation and Selection Benchmarks",
+  "summary": "Model Evaluation and Selection Benchmarks. Focus: evaluation, model selection.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "model-selection"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-009-model-evaluation-and-selection-benchmarks.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-009",
+    "AEP-MODEL-001",
+    "AEP-MODEL-005"
+  ],
+  "body": "# AEP-MODEL-009 — Model Evaluation and Selection Benchmarks\n\n## 1. Purpose\n\nPublic benchmarks are useful signals, but production model selection should be driven by representative workload evaluation under the actual harness and infrastructure.\n\n## 2. Why generic benchmarks are insufficient\n\nAgentic performance depends on more than base-model capability:\n\n```text\nmodel\n+ reasoning settings\n+ prompts/instructions\n+ tools\n+ context\n+ sandbox/resources\n+ retry policy\n+ evaluator\n```\n\nInfrastructure differences alone can materially change coding-agent benchmark results.\n\n## 3. Evaluation layers\n\n### Component evals\nClassification, extraction, tool selection, retrieval, schema adherence.\n\n### Task evals\nRepresentative end-to-end engineering tasks.\n\n### Regression suites\nPreviously observed failures and critical behaviors.\n\n### Production shadowing\nWhere permitted, compare alternate configurations without allowing them to execute consequential side effects.\n\n## 4. Metrics\n\nTrack a vector, not a single score:\n\n- task success;\n- correctness/tests;\n- human intervention;\n- unsafe/unauthorized actions;\n- retries;\n- tool calls;\n- input/output/reasoning tokens;\n- cost;\n- time to first useful output;\n- end-to-end latency;\n- tail latency;\n- variance.\n\n## 5. Repeated runs\n\nNondeterministic systems need repeated measurements. One impressive run is not evidence of reliability.\n\n## 6. Control the environment\n\nRecord:\n\n- exact model/version or resolved alias;\n- reasoning effort;\n- harness commit;\n- tool versions;\n- environment resources;\n- dataset version;\n- evaluator version.\n\n## 7. Choose Pareto-efficient configurations\n\nDo not ask for a universal winner. Identify configurations that are not dominated across quality, cost, latency, and risk, then select according to workload constraints.\n\n## References\n\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents\n- Anthropic, Quantifying infrastructure noise in agentic coding evals — https://www.anthropic.com/engineering/infrastructure-noise\n- OpenAI, Model selection — https://developers.openai.com/api/docs/guides/model-selection"
+}

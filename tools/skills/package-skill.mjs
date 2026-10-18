@@ -28,6 +28,17 @@ const outputRoot = path.join(workspaceRoot, 'dist', 'skills', skillName);
 const outputDirectory = path.join(outputRoot, skillName);
 const archivePath = path.join(outputRoot, `${skillName}-${packageJson.version}.tar.gz`);
 
+function resolveContained(root, entry, label) {
+  const resolved = path.resolve(root, entry);
+  const relative = path.relative(root, resolved);
+
+  if (relative.startsWith('..') || path.isAbsolute(relative)) {
+    throw new Error(`${skillName}: ${label} escapes its allowed root: ${entry}`);
+  }
+
+  return resolved;
+}
+
 await rm(outputRoot, { force: true, recursive: true });
 await mkdir(outputDirectory, { recursive: true });
 
@@ -40,6 +51,16 @@ for (const entry of packagedEntries) {
   } catch (error) {
     if (error?.code !== 'ENOENT') throw error;
   }
+}
+
+for (const include of packageJson.skillPackage?.include ?? []) {
+  if (typeof include?.source !== 'string' || typeof include?.destination !== 'string') {
+    throw new Error(`${skillName}: skillPackage.include entries require source and destination strings`);
+  }
+
+  const source = resolveContained(workspaceRoot, include.source, 'package source');
+  const destination = resolveContained(outputDirectory, include.destination, 'package destination');
+  await cp(source, destination, { recursive: true });
 }
 
 const archiveResult = spawnSync(

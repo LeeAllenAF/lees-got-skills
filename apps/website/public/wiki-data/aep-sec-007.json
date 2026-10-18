@@ -1,0 +1,27 @@
+{
+  "id": "AEP-SEC-007",
+  "title": "Human Approvals and Consequential Actions",
+  "summary": "Human Approvals and Consequential Actions. Focus: consequential actions, human approval.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "consequential-actions",
+    "human-approval"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-007-human-approvals-and-consequential-actions.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-008",
+    "AEP-TOOL-006",
+    "AEP-SEC-005"
+  ],
+  "body": "# AEP-SEC-007 — Human Approvals and Consequential Actions\n\n## 1. Purpose\nHuman approval is a control for decisions where automatic authorization is insufficient because consequences are material, ambiguous, irreversible, or require accountable judgment.\n\n## 2. Approve the exact action\nApproval should occur as close as practical to the side effect and show the reviewer the target, action, relevant arguments, data disclosure, and expected impact.\n\n## 3. Typical approval candidates\n- production deployment or destructive mutation;\n- sending external communications;\n- deleting or overwriting important data;\n- modifying access controls;\n- creating financial commitments;\n- disclosure of sensitive information;\n- security-sensitive actions outside a preapproved engagement scope.\n\n## 4. Avoid approval theater\nA prompt such as “Allow this tool?” is weak if the reviewer cannot see the real operation. Approval packets should be concise but decision-complete.\n\n## 5. Avoid approval fatigue\nMove low-risk repeatable actions inside well-defined sandboxes/policies rather than requiring constant clicks. Reserve approvals for meaningful boundaries.\n\n## 6. Approval is not authorization\nThe requested action must still satisfy deterministic policy. Human approval should not bypass hard tenant, credential, or scope restrictions.\n\n## 7. Fail closed\nIf required review is unavailable, times out, or returns ambiguous state, do not perform the side effect.\n\n## References\n- OpenAI, Guardrails and human review — https://developers.openai.com/api/docs/guides/agents/guardrails-approvals"
+}

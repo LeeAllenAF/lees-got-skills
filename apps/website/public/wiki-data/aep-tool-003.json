@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-003",
+  "title": "Tool Granularity and Composition",
+  "summary": "Tool Granularity and Composition. Focus: orchestration, tool design.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "orchestration",
+    "tool-design"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-003-tool-granularity-and-composition.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-001",
+    "AEP-TOOL-002",
+    "AEP-CTX-007"
+  ],
+  "body": "# AEP-TOOL-003 — Tool Granularity and Composition\n\n## 1. Purpose\n\nTool granularity determines how much decision-making lives in the agent versus the tool implementation.\n\nToo fine-grained and the model must orchestrate dozens of low-level calls. Too coarse-grained and tools become ambiguous, overpowered, difficult to authorize, and difficult to compose.\n\n> **Choose the smallest coherent capability, not the smallest possible operation.**\n\n## 2. Three useful levels\n\n### Primitive tools\n\nExpose low-level operations such as reading a file, querying a record, or running a command.\n\nBest when flexibility and composition matter.\n\n### Domain tools\n\nRepresent stable domain operations such as `create_invoice`, `run_project_tests`, or `lookup_customer`.\n\nOften the best default for business systems.\n\n### Workflow tools\n\nPerform multi-step deterministic processes such as collecting test results from multiple packages and returning an aggregate.\n\nUse when the steps are predictable and the model does not need to reason between them.\n\n## 3. When to move orchestration into code\n\nIf the model repeatedly performs the same sequence:\n\n```text\ncall A\nparse\ncall B\nfilter\ncall C\naggregate\n```\n\nconsider implementing a deterministic workflow tool.\n\nCurrent OpenAI Programmatic Tool Calling guidance explicitly recommends code-driven orchestration when results can be predictably filtered, joined, ranked, deduplicated, aggregated, or validated.\n\n## 4. When not to hide steps\n\nKeep steps agent-visible when intermediate results require judgment or when hiding them would obscure important evidence.\n\nFor example, a code-review workflow may need the model to inspect test failures before deciding which source file to read next.\n\n## 5. Cohesion test\n\nA tool is likely too broad if its description contains many unrelated verbs or if authorization requirements differ substantially across its modes.\n\nA tool is likely too narrow if meaningful user intent requires many deterministic calls with no reasoning between them.\n\n## 6. Authorization pressure is an architectural signal\n\nIf one tool needs permissions ranging from read-only to destructive administration, split it.\n\nAuthorization boundaries are often better granularity boundaries than conceptual object models.\n\n## 7. Composition\n\nTools should compose through stable identifiers and structured outputs.\n\nPrefer:\n\n```text\nsearch_repository -> file_id/path -> read_file -> test_target\n```\n\nrather than hidden natural-language coupling between tools.\n\n## 8. Experimentation\n\nThere is no universal ideal tool size. `EXP-TOOL-001` should compare narrow, domain-coherent, and multifunction variants using selection accuracy, call count, latency, task success, and security/approval complexity.\n\n## 9. Guidance\n\nStart domain-coherent. Split when authority or semantics diverge. Combine when repeated deterministic orchestration is measurable waste. Do not refactor tool boundaries solely because a particular model currently struggles; verify that the change improves the system across representative workloads.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

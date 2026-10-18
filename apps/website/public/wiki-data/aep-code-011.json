@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-011",
+  "title": "Pull Request Review",
+  "summary": "Pull Request Review. Focus: code review, verification.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "code-review",
+    "verification"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-011-pull-request-review.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-007",
+    "AEP-CODE-008",
+    "AEP-EVAL-001"
+  ],
+  "body": "# AEP-CODE-011 — Pull Request Review\n\n## 1. Principle\nReview should search for material defects, requirement gaps, security/reliability risks, and maintainability problems—not maximize comment count.\n\n## 2. Review order\n1. Understand intended behavior and scope.\n2. Inspect changed interfaces and data flows.\n3. Trace high-risk paths and call sites.\n4. Check tests and verification evidence.\n5. Look for regressions, edge cases, security, concurrency, error-handling, and migration concerns.\n6. Distinguish blocking defects from optional suggestions.\n\n## 3. Agent review behavior\nAvoid inventing repository rules, stylistic preferences, or hypothetical problems without evidence. Prefer fewer high-confidence findings with file/line evidence and concrete consequence.\n\n## 4. Independence\nFor high-impact changes, review quality may improve when the reviewer is not exposed to the implementer's private reasoning, while still having access to requirements and repository evidence.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

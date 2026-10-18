@@ -1,0 +1,25 @@
+{
+  "id": "HARNESS-ARCHITECTURE-01-INTEGRATION-BOUNDARIES",
+  "title": "Integration boundaries and capability comparison",
+  "summary": "Integration boundaries and capability comparison. Focus: architecture, codex app server, codex plugins, codex sdk.",
+  "collection": "harness",
+  "topic": "architecture",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "architecture",
+    "codex-app-server",
+    "codex-plugins",
+    "codex-sdk"
+  ],
+  "domains": [
+    "harness-architecture"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/architecture/01-integration-boundaries.md",
+  "relatedDocumentIds": [],
+  "body": "# Integration boundaries and capability comparison\n\n[← Index](/wiki) · [Plugin](/wiki/harness-codex-plugin-01-plugin-foundations) · [SDK](/wiki/harness-codex-sdk-01-sdk-foundations) · [App Server](/wiki/harness-app-server-01-app-server-foundations)\n\n## Four separate abstractions\n| Surface | It owns | Does not automatically own |\n|---|---|---|\n| Plugin package | Distribution of skills, MCP config, assets, optional hooks | Inference lifecycle |\n| MCP server | Typed capabilities, data access, side effects and policy | New Codex model invocations |\n| Codex TypeScript SDK | Programmatic thread creation/resumption and turn execution | Every internal Codex decision or durable business workflow |\n| Codex App Server | Bidirectional Codex session and turn protocol | Your business database, task scheduler or security policy |\n\n## Access assumption\nExisting approved Codex authentication can be reused by the SDK; a Platform API key is not inherently mandatory for this path. **[VERIFY]** Enterprise permission for unattended processes, approved models, concurrency and quota. Do not infer Platform Agents API / Agents SDK access from Codex SDK access.\n\n## Capability overview\n| Capability | Plugin+MCP | + SDK | App Server client |\n|---|---|---|---|\n| Package multiple skills | Yes | Yes | Host/config-dependent integration |\n| Expose structured tools | Yes | Yes | Supported through Codex configuration |\n| Trigger new Codex turn from own scheduler | No, not by MCP alone | Yes | Yes |\n| Select requested model/effort | Host-dependent | Thread configuration | Protocol configuration |\n| Stream execution progress | Tool-scoped only | Yes | Yes, richer protocol |\n| Resume business work | Build it yourself | Build it yourself | Build it yourself |\n| Resume Codex session | Host-managed | SDK thread resume | Protocol thread resume |\n| Interactive steering / client responses | Host-dependent | Limited by SDK API | Richer protocol where supported |\n| Enforce enterprise tool policy | In MCP implementation | In controller/tools | In client/tools |\n\n## Key guidance [DESIGN]\nBuild a durable, deterministic application core with a replaceable `ReasoningExecutor` interface. Implement it first via the SDK. Keep skills and MCP independently reusable. Consider App Server only when concrete interaction requirements justify it.\n\nNext: [reference architecture](/wiki/harness-architecture-02-reference-design), [open decisions](/wiki/harness-architecture-03-decisions-and-questions)."
+}

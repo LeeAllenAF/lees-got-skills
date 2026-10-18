@@ -1,0 +1,27 @@
+{
+  "id": "AEP-SEC-004",
+  "title": "Identity, Credentials, and Secrets",
+  "summary": "Identity, Credentials, and Secrets. Focus: credentials, identity, secrets.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "credentials",
+    "identity",
+    "secrets"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-004-identity-credentials-and-secrets.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-006",
+    "AEP-SEC-005"
+  ],
+  "body": "# AEP-SEC-004 — Identity, Credentials, and Secrets\n\n## 1. Purpose\nCredentials convert model decisions into real authority. They must therefore be treated as security capabilities, not convenient configuration.\n\n## 2. Core guidance\nPrefer short-lived, scoped, workload-specific credentials over static broad secrets. Agents should receive only the credential material required for the current operation and should not need to reason over raw secrets.\n\n## 3. Identity separation\nWhere feasible, distinguish:\n- the human principal;\n- the agent/workload identity;\n- the tool/service identity;\n- the target-resource authorization context.\n\nThis enables accountability and prevents one shared credential from becoming universal authority.\n\n## 4. Secret handling\n- never embed secrets in prompts, memory, or reusable handbook content;\n- inject credentials at the execution boundary;\n- redact secrets from traces and tool output;\n- rotate and revoke credentials independently of agent configuration;\n- prefer delegated/OAuth/workload identity mechanisms to copied long-lived tokens.\n\n## 5. Credential scope\nScope credentials by resource, action, environment, tenant/scope, duration, and where useful network origin.\n\n## 6. Security failure to avoid\nA read-only reasoning task should not run with a production-admin credential merely because the same agent may sometimes deploy software.\n\n## 7. Verification\nCredential and identity configuration should be testable with negative cases: attempts to access other permission scopes, environments, resources, or operations must fail."
+}

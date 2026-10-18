@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-APP-SERVER-01-APP-SERVER-FOUNDATIONS",
+  "title": "Codex App Server foundations",
+  "summary": "Codex App Server foundations. Focus: architecture, codex app server.",
+  "collection": "harness",
+  "topic": "app-server",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "architecture",
+    "codex-app-server"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/app-server/01-app-server-foundations.md",
+  "relatedDocumentIds": [],
+  "body": "# Codex App Server foundations\n\n[← Index](/wiki) · [Lifecycle](/wiki/harness-app-server-02-lifecycle-and-integration) · [SDK comparison](/wiki/harness-architecture-01-integration-boundaries)\n\n## Purpose\n**[DOCUMENTED]** `codex app-server` exposes a bidirectional protocol intended for richer Codex client integrations. It uses JSON-RPC-style messages (the `jsonrpc: \"2.0\"` member is omitted on the wire). Unlike MCP, which exposes *tools to agents*, App Server exposes *Codex session/turn control to an application client*.\n\n## Transport [DOCUMENTED]\n- `stdio` (default): JSONL messages.\n- Unix socket: available as documented.\n- WebSocket listener: documented as experimental/unsupported; do not make it a production requirement without confirming current support.\n\n## Core protocol concepts\n- Client sends `initialize` request, then `initialized` notification; this handshake is required.\n- `thread/start`: create conversation.\n- `thread/resume`: reopen previous thread.\n- `thread/fork`: branch thread history.\n- `turn/start`: start an agent turn with input and options.\n- `turn/steer`: append steering input to an active turn.\n- Turn/item notifications stream progress and results.\n\n## Why consider it?\nApp Server can enable an interactive application to manage approvals, watch event streams, steer in-flight work, and build more advanced session UX or custom lifecycle controls than the lightweight SDK surface offers.\n\n## Boundaries\nA richer protocol carries more client responsibilities: handshake, event processing, cancellation, error handling, reconnection, version compatibility and security. Not every field is stable; experimental capabilities require explicit opt-in. App Server is **not** the OpenAI Platform Agents API.\n\n## Official source\nhttps://developers.openai.com/codex/app-server"
+}

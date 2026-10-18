@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-005",
+  "title": "Errors, Retries, and Idempotency",
+  "summary": "Errors, Retries, and Idempotency. Focus: error handling, idempotency, retries.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "error-handling",
+    "idempotency",
+    "retries"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-005-errors-retries-and-idempotency.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-002",
+    "AEP-TOOL-003"
+  ],
+  "body": "# AEP-TOOL-005 — Errors, Retries, and Idempotency\n\n## 1. Purpose\n\nTool failures are normal operating conditions. Agent systems must distinguish errors that should be corrected, retried, escalated, or surfaced to a human.\n\n## 2. Error taxonomy\n\nAt minimum distinguish:\n\n```text\nVALIDATION_ERROR     caller arguments invalid\nNOT_FOUND            requested resource absent\nCONFLICT             state changed / optimistic lock failed\nPERMISSION_DENIED    caller lacks authority\nAUTH_REQUIRED        authentication/consent needed\nRATE_LIMITED         retry after provider limit\nTRANSIENT_FAILURE    retry may succeed\nPERMANENT_FAILURE    retry without change will not help\nDEPENDENCY_FAILURE   upstream system failed\nPARTIAL_SUCCESS      some effects completed\nUNKNOWN              state cannot safely be inferred\n```\n\n## 3. Structured retry semantics\n\nTools should report whether retry is safe and, when useful, an earliest retry time.\n\nDo not make the model derive retry policy from an exception string.\n\n## 4. Idempotency\n\nWrite operations should be idempotent where practical.\n\nPossible strategies:\n\n- idempotency keys;\n- optimistic concurrency/version checks;\n- deduplication tokens;\n- compare-and-set operations;\n- explicit current-state checks.\n\nCurrent OpenAI programmatic tool guidance specifically recommends idempotent function calls because replay/retry should not duplicate unsafe side effects.\n\n## 5. Unknown outcome is special\n\nNetwork failure after a request was sent can leave the caller uncertain whether the side effect occurred.\n\nDo not blindly retry an irreversible operation in this state.\n\nPrefer:\n\n```text\nrequest with operation_id\n      ↓ timeout\nlookup operation_id\n      ↓\nconfirmed success / confirmed absence / escalate\n```\n\n## 6. Retry budgets\n\nRetries must be bounded by:\n\n- attempt count;\n- elapsed time;\n- monetary cost;\n- side-effect risk;\n- user-visible latency.\n\nRepeated model reasoning around the same provider error should not become an unbounded loop.\n\n## 7. Compensating actions\n\nFor workflows that span multiple systems, document whether rollback or compensation exists. Compensation is not the same as transactional rollback and may itself require approval.\n\n## 8. Guidance\n\nErrors are part of the tool contract. Tool quality includes how safely and cheaply an agent can recover when the happy path fails.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

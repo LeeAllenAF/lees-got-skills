@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-007",
+  "title": "Skill Evaluation and Quality",
+  "summary": "Skill Evaluation and Quality. Focus: evaluation, skills.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "skills"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-007-skill-evaluation-and-quality.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Evaluation and Quality\n\n## Principle\n\nA skill is a behavioral change to an agent system and should be evaluated as one.\n\n## Evaluate at multiple layers\n\n### Discovery\n\nDid the correct skill activate?\n\nMetrics may include:\n\n- activation precision;\n- activation recall;\n- unnecessary activation rate;\n- conflicting activation rate.\n\n### Execution\n\nDid the skill improve the task?\n\nMeasure:\n\n- task success;\n- adherence to required process;\n- tool choice;\n- verification completeness;\n- retries;\n- latency;\n- token/cost impact.\n\n### Robustness\n\nTest:\n\n- incomplete inputs;\n- conflicting repository rules;\n- unavailable tools;\n- adversarial content;\n- unsupported environments;\n- provider/model changes.\n\n## Compare against baselines\n\nA skill should be compared against:\n\n```text\nno skill\nvs\nskill\n```\n\nand, when relevant:\n\n```text\nstatic instruction\nvs\nskill\nvs\nspecialized agent/model\n```\n\nThis prevents adding skills whose complexity does not materially improve outcomes.\n\n## Regression suite\n\nOnce a skill becomes relied upon, representative successful cases should become a regression suite.\n\n## Anti-overfitting\n\nDo not optimize only against visible examples used to author the skill.\n\nMaintain hidden or held-out cases where practical.\n\n## Removal is success\n\nIf newer models or better tools make a skill unnecessary, removing the skill is an acceptable and often desirable outcome."
+}

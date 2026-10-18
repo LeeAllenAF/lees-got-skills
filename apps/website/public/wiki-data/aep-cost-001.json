@@ -1,0 +1,28 @@
+{
+  "id": "AEP-COST-001",
+  "title": "Cost and Performance Engineering Fundamentals",
+  "summary": "Cost and Performance Engineering Fundamentals. Focus: cost optimization, latency, reliability.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "cost-optimization",
+    "latency",
+    "reliability"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-001-cost-and-performance-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-007",
+    "AEP-MODEL-001",
+    "AEP-CTX-001"
+  ],
+  "body": "# AEP-COST-001 — Cost and Performance Engineering Fundamentals\n\n## 1. Purpose\nAgent economics must be optimized around useful outcomes rather than isolated token or request prices. A system that is cheap per call but unreliable, slow, or dependent on frequent human repair may be more expensive in practice than a higher-priced configuration.\n\n## 2. Core objective\nthe platform should optimize an operating point across:\n\n- task success and defect escape rate;\n- model, tool, infrastructure, and third-party spend;\n- human intervention and review time;\n- end-to-end latency and tail latency;\n- throughput and concurrency;\n- reliability and recovery cost;\n- security and operational risk.\n\nA useful default metric is:\n\n```text\ncost per accepted successful outcome\n```\n\nnot merely:\n\n```text\ncost per request\n```\n\n## 3. The performance budget\nFor a production workflow, define explicit budgets where practical:\n\n```text\nquality floor\ncost ceiling\nlatency target\np95 latency target\nhuman-intervention ceiling\nretry ceiling\n```\n\nIf the system cannot meet all targets, report the tradeoff rather than hiding it in averages.\n\n## 4. Optimization order\nPrefer interventions roughly in this order unless evidence suggests otherwise:\n\n1. remove unnecessary work;\n2. remove unnecessary model calls;\n3. improve context/tool efficiency;\n4. route to the least expensive configuration that meets the quality floor;\n5. exploit caching or asynchronous pricing where appropriate;\n6. parallelize only independent work;\n7. optimize infrastructure after dominant costs are measured.\n\n## 5. Local vs global optimization\nDo not reduce one component's cost while increasing total workflow cost. Examples:\n\n- aggressive context pruning that increases retries;\n- smaller models that cause more failed attempts;\n- parallel subagents that duplicate expensive work;\n- terse tool outputs that omit evidence and trigger follow-up calls;\n- batching an interactive task and violating latency expectations.\n\n## 6. Current recommendation\nTreat cost, latency, and reliability as first-class architectural properties from initial design through production operation. Every optimization must preserve or deliberately trade against an explicit quality objective.\n\n## 7. Living knowledge\nPricing, model capability, cache behavior, rate limits, and infrastructure efficiency change quickly. Cost guidance must therefore be versioned, measured from real telemetry, and revalidated after relevant provider or architecture changes.\n\n## References\n- OpenAI, Cost optimization — https://developers.openai.com/api/docs/guides/cost-optimization\n- OpenAI, Latency optimization — https://developers.openai.com/api/docs/guides/latency-optimization\n- OpenAI, Observability and usage — https://developers.openai.com/api/docs/guides/agents-api/observability"
+}

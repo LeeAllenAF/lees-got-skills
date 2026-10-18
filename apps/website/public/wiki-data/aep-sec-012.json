@@ -1,0 +1,26 @@
+{
+  "id": "AEP-SEC-012",
+  "title": "Security Lifecycle, Governance, and Freshness",
+  "summary": "Security Lifecycle, Governance, and Freshness. Focus: lifecycle, security controls.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "lifecycle",
+    "security-controls"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-012-security-lifecycle-governance-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-012",
+    "AEP-TOOL-010"
+  ],
+  "body": "# AEP-SEC-012 — Security Lifecycle, Governance, and Freshness\n\n## 1. Purpose\nAgent security guidance decays as models, tool protocols, providers, attack techniques, and deployment environments change. Security is therefore a living knowledge system.\n\n## 2. Security artifact lifecycle\nMaintain traceable links among:\n\n```text\nthreat model\n   ↓\nsecurity requirement\n   ↓\ncontrol\n   ↓\neval / test\n   ↓\nproduction telemetry\n   ↓\nincident / finding\n   ↓\nrevalidation\n```\n\n## 3. Review cadence\nInitial default review intervals:\n- durable least-privilege principles: ~180d;\n- tool/auth architecture: ~90d;\n- provider/MCP security assumptions: ~60d;\n- model-specific prompt-injection mitigations: ~30–60d;\n- active incident controls: event-driven.\n\nThese are defaults, not guarantees.\n\n## 4. Event-driven revalidation\nTrigger review after significant model releases, MCP/protocol changes, provider auth changes, new security advisories, incidents, permission-scope changes, new production permissions, new memory capabilities, or major tool additions.\n\n## 5. Security control expiry\nControls introduced as workarounds for a particular model/provider weakness should have owners, rationale, tests, and removal criteria. Old controls can become unnecessary friction or create new vulnerabilities.\n\n## 6. Security promotion rules\nHigh-impact standards should require stronger evidence than low-risk recommendations. Vendor claims are inputs, not proof. Favor independent security research, adversarial tests, and observed production behavior.\n\n## 7. Governance objective\nThe security program should be able to answer:\n> Which authority can this agent exercise today, why is it allowed, which controls enforce it, when were they last tested, and what happens if one fails?\n\n## References\n- OpenAI, Safety in building agents — https://developers.openai.com/api/docs/guides/agent-builder-safety\n- Anthropic, Trustworthy agents in practice — https://www.anthropic.com/research/trustworthy-agents\n- OWASP, AI Agent Security Cheat Sheet — https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html"
+}

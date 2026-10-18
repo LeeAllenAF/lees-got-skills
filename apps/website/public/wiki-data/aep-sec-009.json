@@ -1,0 +1,27 @@
+{
+  "id": "AEP-SEC-009",
+  "title": "Production Access, Destructive Operations, and Change Control",
+  "summary": "Production Access, Destructive Operations, and Change Control. Focus: change control, destructive actions.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "change-control",
+    "destructive-actions"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-009-production-access-destructive-operations-and-change-control.md",
+  "relatedDocumentIds": [
+    "AEP-SEC-007",
+    "AEP-CODE-012",
+    "AEP-TOOL-005"
+  ],
+  "body": "# AEP-SEC-009 — Production Access, Destructive Operations, and Change Control\n\n## 1. Purpose\nProduction access changes the consequence profile of agent mistakes. Production authority should be rare, narrowly scoped, and strongly observable.\n\n## 2. Prefer promotion over direct mutation\nWhere feasible, agents should produce reviewable artifacts—code changes, plans, manifests, migration scripts, deployment requests—that existing change-control systems promote into production.\n\n## 3. Destructive action classes\nClassify operations such as delete, revoke, rotate, migrate, overwrite, scale-to-zero, terminate, publish, or externally communicate. Require stronger controls for irreversible or difficult-to-recover operations.\n\n## 4. Preconditions\nHigh-impact actions should verify:\n- target/environment;\n- principal and authorization;\n- current state;\n- expected impact;\n- backup/rollback or compensating action;\n- concurrency and idempotency constraints;\n- required approval.\n\n## 5. Two-phase pattern\nFor risky operations prefer:\n\n```text\nprepare / preview / plan\n        ↓\nvalidate + approve\n        ↓\nexecute\n        ↓\nverify postcondition\n```\n\n## 6. Unknown outcomes\nIf a connection fails after a destructive request, do not blindly replay. Resolve whether the operation occurred before retrying.\n\n## 7. Emergency stop\nLong-running/autonomous systems need revocation and cancellation mechanisms independent of the model."
+}

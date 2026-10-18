@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-ARCHITECTURE-02-REFERENCE-DESIGN",
+  "title": "Portable reference architecture",
+  "summary": "Portable reference architecture. Focus: architecture, harness design, state management.",
+  "collection": "harness",
+  "topic": "architecture",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "architecture",
+    "harness-design",
+    "state-management"
+  ],
+  "domains": [
+    "harness-architecture"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/architecture/02-reference-design.md",
+  "relatedDocumentIds": [],
+  "body": "# Portable reference architecture\n\n[← Index](/wiki) · [Boundaries](/wiki/harness-architecture-01-integration-boundaries) · [Decisions](/wiki/harness-architecture-03-decisions-and-questions)\n\n## Objective\nProvide a reusable conceptual blueprint for research, discovery and architecture analysis where large quantities of source material must be indexed and interpreted without requiring the OpenAI Platform API.\n\n```text\nsource connectors (Git, knowledge base, cloud, directories)\n           |\n           v\ndeterministic ingestion -> raw snapshots / hashes / provenance\n           |\n           v\nqueue + scheduler -> structured work units / leases / budgets\n           |                    |\n           v                    v\nCodex SDK reasoning workers   deterministic parsers / validators\n           |                    |\n           +----------+---------+\n                      v\n              evidence reconciliation\n                      |\n                      v\n              knowledge store / graph\n                      |\n                      v\n          research / discussion plugin\n         (skills + MCP tools + references)\n```\n\n## Main interfaces [DESIGN]\n- `SourceAdapter`: enumerate, fetch, incremental changes, auth.\n- `WorkQueue`: claim/lease/retry/complete with idempotency.\n- `ReasoningExecutor`: submit bounded task, collect typed result and usage metadata.\n- `EvidenceStore`: save source excerpts with immutable/versioned locators.\n- `GraphWriter`: validated entity and relationship updates.\n- `PolicyEngine`: authorize actions independent of model output.\n- `Telemetry`: event correlation across task and Codex threads.\n\n## Suggested repository skeleton\n```text\npackages/\n  contracts/\n  knowledge-core/\n  orchestration/\n  telemetry/\napps/\n  worker/\n  mcp-server/\nplugin/\n  plugin.json\n  mcp.json\n  skills/\n    research/SKILL.md\n    verify/SKILL.md\n```\nThis is **illustrative**, not a requirement to use a monorepo, Nx, or any specific cloud service.\n\n## Workflow sample\n1. Enumerate source metadata deterministically.\n2. Detect changed pages/files via versions and content hashes.\n3. Extract basic structure without inference.\n4. Route ambiguous classifications to SDK threads with explicit schemas.\n5. Cross-check entity relationships against evidence.\n6. Write accepted entities/edges with provenance.\n7. Surface unresolved contradictions for review.\n8. Expose query/investigate operations through plugin MCP tools.\n\n## Design properties\nRecoverability, least privilege, throughput control, cost accounting, source provenance, replaceable inference adapters, and testable contracts.\n\nSee [reliability](/wiki/harness-foundations-04-reliability-and-evals) and [SDK controller](/wiki/harness-codex-sdk-03-orchestration-pattern)."
+}

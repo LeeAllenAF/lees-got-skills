@@ -1,0 +1,22 @@
+[
+  {"id":"multi-agent","query":"When should I use multiple agents?","status":"found","anyOf":["AEP-AGENT-004","AEP-AGENT-001"]},
+  {"id":"memory-context","query":"What is the difference between memory and context?","status":"found","anyOf":["AEP-CTX-009","HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE"]},
+  {"id":"injection","query":"How do I prevent prompt injection?","status":"found","anyOf":["AEP-SEC-003","AEP-ASSURE-003"]},
+  {"id":"skills-mcp","query":"How are skills different from MCP tools?","status":"found","anyOf":["AEP-SKILL-005","AEP-SKILL-001"]},
+  {"id":"lexical-semantic","query":"When should I use lexical versus semantic search?","status":"found","anyOf":["AEP-CTX-005","AEP-CTX-003"]},
+  {"id":"eval-basics","query":"How do I evaluate an agent?","status":"found","anyOf":["AEP-EVAL-001"]},
+  {"id":"app-server","query":"What is the Codex App Server?","status":"found","anyOf":["HARNESS-APP-SERVER-01-APP-SERVER-FOUNDATIONS"]},
+  {"id":"cost","query":"How can I make inference cheaper?","status":"found","anyOf":["AEP-COST-001","AEP-COST-009","AEP-MODEL-004"]},
+  {"id":"idempotency","query":"How do I handle retries without duplicate side effects?","status":"found","anyOf":["AEP-TOOL-005"]},
+  {"id":"model-selection","query":"How should I choose a model?","status":"found","anyOf":["AEP-MODEL-001","AEP-MODEL-009"]},
+  {"id":"progressive","query":"What is progressive disclosure?","status":"found","anyOf":["AEP-CTX-007"]},
+  {"id":"crash-recovery","query":"What happens when a worker crashes?","status":"found","anyOf":["AEP-AGENT-009","HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE"]},
+  {"id":"reranking","query":"What is reranking?","status":"found","anyOf":["AEP-CTX-006"]},
+  {"id":"source-authority","query":"How should I decide which sources to trust?","status":"found","anyOf":["AEP-SRC-004","AEP-SRC-003","AEP-CTX-002"]},
+  {"id":"authorization","query":"Should authorization happen before retrieval?","status":"found","anyOf":["AEP-PERM-004","AEP-KNOW-007"]},
+  {"id":"exact-id","query":"AEP-AGENT-004","status":"found","anyOf":["AEP-AGENT-004"]},
+  {"id":"ambiguous","query":"Explain agents","status":"ambiguous"},
+  {"id":"unknown-physics","query":"What is quantum entanglement?","status":"insufficient"},
+  {"id":"unknown-cooking","query":"How do I bake sourdough bread?","status":"insufficient"},
+  {"id":"unknown-symbol","query":"Explain qzxvplm999","status":"insufficient"}
+]

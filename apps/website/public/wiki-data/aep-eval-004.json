@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-004",
+  "title": "Graders and Scoring",
+  "summary": "Graders and Scoring. Focus: graders, scoring.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "graders",
+    "scoring"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-004-graders-and-scoring.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-002",
+    "AEP-EVAL-009"
+  ],
+  "body": "# AEP-EVAL-004 — Graders and Scoring\n\n## 1. Purpose\nGraders translate success criteria into repeatable measurements. the platform should use the simplest grader that faithfully measures the requirement.\n\n## 2. Grader hierarchy\nPrefer:\n1. deterministic code and state checks;\n2. static analysis or domain validators;\n3. structured reference comparison;\n4. model-based graders for semantic/subjective properties;\n5. human review for ambiguous, high-value, or calibration work.\n\n## 3. LLM-as-judge\nModel graders are useful for open-ended qualities that deterministic code cannot easily assess, but they must be calibrated against human labels. Known risks include position bias, verbosity bias, rubric ambiguity, correlated failure with the system being graded, and instability across model upgrades.\n\nWhere practical:\n- prefer narrow criteria over vague holistic scores;\n- use pairwise or categorical judgments when they are more reliable;\n- randomize response order in pairwise comparisons;\n- normalize for irrelevant length differences;\n- retain examples for score levels;\n- measure judge-human agreement.\n\n## 4. Multi-grader design\nA task can combine hard gates and soft quality metrics. Example:\n\n```text\nunit tests                 hard gate\nsecurity policy            hard gate\nunnecessary diff size      metric\narchitecture quality       calibrated judge\ncost                       metric\nlatency                    metric\n```\n\n## 5. Reward hacking\nA grader is part of the system and can be gamed. Inspect unexpectedly high-scoring outputs, keep hidden cases where justified, and avoid proxy metrics that are easier to satisfy than the actual requirement.\n\n## 6. Scoring policy\nDo not collapse all dimensions into one score unless the weighting reflects an actual decision. Preserve component metrics so a system cannot hide a critical regression behind gains elsewhere.\n\n## References\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- OpenAI, Graders — https://developers.openai.com/api/docs/guides/graders\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

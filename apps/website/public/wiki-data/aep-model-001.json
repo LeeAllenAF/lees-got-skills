@@ -1,0 +1,25 @@
+{
+  "id": "AEP-MODEL-001",
+  "title": "Model Selection Fundamentals",
+  "summary": "Model Selection Fundamentals. Focus: cost optimization, model selection.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "cost-optimization",
+    "model-selection"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-001-model-selection-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-BASE-001"
+  ],
+  "body": "# AEP-MODEL-001 — Model Selection Fundamentals\n\n## 1. Purpose\n\nModel choice is an engineering decision across quality, cost, latency, capability, privacy, availability, and operational risk. the platform does not treat the largest or newest model as the automatic production default.\n\n> **Select the least expensive model configuration that reliably satisfies the workload's quality and risk requirements.**\n\nThe word *configuration* is intentional: model family, reasoning effort, tool access, context strategy, and output constraints can all materially change performance.\n\n## 2. Establish capability before optimizing\n\nFor a new workflow, first establish a quality ceiling using a highly capable configuration and representative tasks. Then test cheaper/faster configurations against that baseline.\n\nThis avoids two opposite errors:\n\n- prematurely constraining a system around an inadequate model;\n- paying frontier-model prices for work a smaller model performs equally well.\n\n## 3. Selection dimensions\n\nEvaluate at least:\n\n- task success and correctness;\n- reliability across repeated runs;\n- tool-use competence;\n- instruction following;\n- context handling;\n- latency, including tail latency;\n- input/output/reasoning cost;\n- availability and rate limits;\n- modality requirements;\n- privacy/data-residency requirements;\n- provider/tool compatibility;\n- operational stability.\n\n## 4. Model size is not the architecture\n\nAvoid reasoning such as:\n\n```text\nsmall model = cheap task\nlarge model = hard task\n```\n\nA better formulation is:\n\n```text\nworkload requirements\n      +\nobserved model behavior\n      +\nrisk / cost / latency constraints\n      ↓\nmodel configuration\n```\n\nSome small models are excellent at classification, extraction, ranking, or focused code edits. Some larger models may offer little incremental value for those workloads.\n\n## 5. Separate model choice from orchestration\n\nA workflow may use one model for every step, or multiple models where specialization is measured to help. Do not create multiple model roles merely because the workflow has multiple conceptual roles.\n\n## 6. Prefer explicit production configuration\n\nProduction agents should pin or explicitly resolve their intended model/configuration rather than silently inheriting SDK defaults. Record model identifiers, relevant effort settings, and compatibility assumptions in traces and evaluations.\n\n## 7. Initial platform guidance\n\n1. Establish a high-quality baseline first.\n2. Evaluate lighter configurations on the same representative tasks.\n3. Keep the cheapest configuration that meets the defined quality/risk bar.\n4. Re-evaluate after meaningful model or harness changes.\n5. Never infer superiority from model size, price, or benchmark reputation alone.\n\n## 8. Failure modes\n\n- frontier-by-default spending;\n- benchmark-driven selection without workload evals;\n- changing model and harness simultaneously;\n- relying on provider aliases without recording resolved versions;\n- evaluating only mean latency and ignoring tail latency;\n- routing by cost while omitting failure cost.\n\n## References\n\n- OpenAI, Model selection — https://developers.openai.com/api/docs/guides/model-selection\n- OpenAI, A practical guide to building AI agents — https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/\n- Google Cloud, Choose your agentic AI architecture components — https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents"
+}

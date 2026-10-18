@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-003",
+  "title": "Ingestion, Indexing, and Derived Artifacts",
+  "summary": "Ingestion, Indexing, and Derived Artifacts. Focus: indexing, ingestion.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "indexing",
+    "ingestion"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-003-ingestion-indexing-and-derived-artifacts.md",
+  "relatedDocumentIds": [],
+  "body": "# Ingestion, Indexing, and Derived Artifacts\n\n## Purpose\n\nDefine how canonical documents become searchable machine artifacts.\n\n## Pipeline\n\n```text\nsource repository\n   ↓\nschema validation\n   ↓\nparse sections / metadata\n   ↓\nnormalize relationships\n   ↓\ngenerate lexical index\n   ↓\ngenerate semantic index\n   ↓\noptional reranking metadata\n   ↓\npublish versioned index snapshot\n```\n\n## Derived artifacts are rebuildable\n\nIndexes, embeddings, summaries, entity maps, and search caches are **derived**.\n\nThey must be reproducible from canonical source plus recorded configuration.\n\nNever require manual edits to an embedding store to correct policy.\n\n## Chunking\n\nChunking should preserve semantic structure:\n\n- heading hierarchy;\n- document ID;\n- section path;\n- status;\n- scope;\n- technologies;\n- effective dates;\n- source version.\n\nAvoid anonymous fragments that cannot be traced back to a precise source section.\n\n## Multiple indexes\n\nA single vector index should not be assumed sufficient.\n\nPotential indexes include:\n\n```text\nexact ID index\nmetadata/filter index\nlexical/BM25 index\nsemantic embedding index\nrelationship graph\nskill catalog\nexperiment/evidence index\n```\n\n## Incremental rebuilds\n\nIncremental indexing is desirable, but correctness outranks rebuild speed.\n\nThe system must invalidate derived material when:\n\n- source content changes;\n- metadata changes;\n- embedding configuration changes;\n- chunking logic changes;\n- access scope changes;\n- status changes.\n\n## Index version\n\nEvery published index snapshot should record:\n\n```text\nsource commit/version\nschema version\nchunker version\nembedding configuration\nindex build timestamp\n```\n\n## Current recommendation\n\nStart with Markdown + validated metadata + lexical search. Add semantic retrieval and reranking only when experiments show value."
+}

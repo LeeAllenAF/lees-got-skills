@@ -1,0 +1,28 @@
+{
+  "id": "AEP-AGENT-009",
+  "title": "Termination, Progress, and Recovery",
+  "summary": "Termination, Progress, and Recovery. Focus: budgets, recovery, termination.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "budgets",
+    "recovery",
+    "termination"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-009-termination-progress-and-recovery.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-005",
+    "AEP-CTX-008",
+    "AEP-MODEL-006"
+  ],
+  "body": "# AEP-AGENT-009 — Termination, Progress, and Recovery\n\n## Purpose\nEnsure agent loops stop for principled reasons and recover safely from failure.\n\n## Stop conditions\nExamples:\n- objective verified;\n- required structured output produced;\n- user/human approval required;\n- budget exhausted;\n- repeated non-progress;\n- unrecoverable tool failure;\n- authority boundary reached;\n- cancellation.\n\n## Progress\nProgress should be measured externally where possible: tests newly passing, errors reduced, required artifacts produced, evidence gaps closed, or task graph nodes completed.\n\nModel statements such as 'I am making progress' are not sufficient telemetry.\n\n## Non-progress detection\nTrack repeated actions, repeated failures, unchanged outputs, oscillation, and retries without new evidence. When detected, change strategy, escalate, or terminate.\n\n## Recovery\nPersist enough structured state to resume without reconstructing the entire reasoning history. Long-running architectures should support checkpoints, idempotent replay, cancellation, and known-unknown outcomes."
+}

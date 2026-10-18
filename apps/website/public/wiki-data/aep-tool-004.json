@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-004",
+  "title": "Tool Discovery and Capability Loading",
+  "summary": "Tool Discovery and Capability Loading. Focus: progressive disclosure, tool design.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "progressive-disclosure",
+    "tool-design"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-004-tool-discovery-and-capability-loading.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-007",
+    "AEP-CTX-011",
+    "AEP-TOOL-001"
+  ],
+  "body": "# AEP-TOOL-004 — Tool Discovery and Capability Loading\n\n## 1. Purpose\n\nLarge tool catalogs consume context and can reduce selection quality. Tool discovery allows agents to know that capabilities exist without loading every complete schema and description up front.\n\n## 2. Capability layers\n\nRecommended conceptual layers:\n\n```text\nAlways-known capabilities\n        ↓\nCompact capability metadata\n        ↓\nTask-scoped tool discovery\n        ↓\nFull contract/schema loading\n        ↓\nInvocation\n```\n\nThis mirrors progressive disclosure in the broader context architecture.\n\n## 3. What remains always visible\n\nKeep tools permanently visible when they are:\n\n- frequently required;\n- foundational for discovery;\n- cheap in schema/context size;\n- low ambiguity;\n- necessary for safety or user interaction.\n\nExamples might include repository search, reading known files, or requesting user approval in a coding harness.\n\n## 4. Deferred capability loading\n\nLess common or domain-specific tools should be discoverable on demand.\n\nCurrent OpenAI tool calling supports deferred tool loading through tool search for sufficiently recent models, and the 2026 MCP specification adds cacheable, deterministic list responses that make capability discovery more practical at scale.\n\n## 5. Discovery metadata\n\nCompact metadata should include:\n\n- name;\n- short purpose;\n- capability domain;\n- read/write classification;\n- required scope;\n- risk class;\n- version;\n- optional keywords/examples.\n\nDo not place full operating manuals in discovery metadata.\n\n## 6. Dynamic scoping\n\nThe capability catalog may be narrowed based on:\n\n- current repository;\n- client;\n- user role;\n- task type;\n- environment;\n- connected systems;\n- authorization grants.\n\nDynamic scoping is both a context optimization and a security-supporting measure, but hidden capabilities are not an authorization boundary.\n\n## 7. Cacheability\n\nTool catalogs should be deterministic and versioned where possible. This supports provider prompt caching and MCP list-response caching.\n\nChanging tool order or descriptions unnecessarily can destroy cache reuse and make evaluation less reproducible.\n\n## 8. Failure modes\n\nWatch for:\n\n- a needed tool becoming undiscoverable;\n- excessive discovery calls;\n- stale capability metadata;\n- tool aliases causing ambiguity;\n- discovery exposing capabilities the caller cannot actually use;\n- dynamic scoping hiding a legitimate recovery path.\n\n## 9. Guidance\n\nExpose a small stable core, discover specialized capabilities progressively, and evaluate whether dynamic catalogs improve actual task success—not just token count.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

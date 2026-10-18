@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SRC-007",
+  "title": "Conflicts and Corroboration",
+  "summary": "Conflicts and Corroboration. Focus: conflict resolution, corroboration.",
+  "collection": "handbook",
+  "topic": "sources",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "conflict-resolution",
+    "corroboration"
+  ],
+  "domains": [
+    "source-intelligence"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/sources/aep-src-007-conflicts-and-corroboration.md",
+  "relatedDocumentIds": [],
+  "body": "# Conflicts and Corroboration\n\n## Purpose\n\nConflicting evidence must remain visible. The platform should represent disagreement, scope differences, and supersession rather than synthesizing an artificial consensus.\n\n## Guidance\n\n- Prefer primary evidence where applicable.\n- Corroboration improves confidence but does not erase scope differences.\n- Record unresolved conflicts explicitly.\n- Separate factual disagreement from different operating assumptions.\n- Allow later experiments to resolve uncertain claims.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

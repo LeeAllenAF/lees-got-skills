@@ -22,4 +22,14 @@ export const skills: readonly Skill[] = [
     installUrl: 'https://github.com/LeeAllenAF/lees-got-skills/releases/download/accessibility-check%400.1.0/accessibility-check-0.1.0.tar.gz',
     releaseUrl: 'https://github.com/LeeAllenAF/lees-got-skills/releases/tag/accessibility-check%400.1.0',
   },
+  {
+    name: 'teach-agentic-development',
+    description: 'Teach agent architecture, context, tools, evaluation, security, and operations using deterministic local retrieval over a bundled source corpus.',
+    version: '0.1.0',
+    releaseStatus: 'released',
+    agentCompatibility: ['Codex', 'Claude', 'Vendor-neutral'],
+    docsUrl: 'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/teach-agentic-development',
+    installUrl: 'https://github.com/LeeAllenAF/lees-got-skills/releases/download/teach-agentic-development%400.1.0/teach-agentic-development-0.1.0.tar.gz',
+    releaseUrl: 'https://github.com/LeeAllenAF/lees-got-skills/releases/tag/teach-agentic-development%400.1.0',
+  },
 ];

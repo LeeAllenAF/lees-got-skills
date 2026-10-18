@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-006",
+  "title": "Variance, Statistics, and Confidence",
+  "summary": "Variance, Statistics, and Confidence. Focus: repeatability, statistics.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "repeatability",
+    "statistics"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-006-variance-statistics-and-confidence.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-009",
+    "AEP-EVAL-011"
+  ],
+  "body": "# AEP-EVAL-006 — Variance, Statistics, and Confidence\n\n## 1. Purpose\nAgent results are stochastic. A single trial is evidence about one run, not a reliable estimate of a system's expected behavior.\n\n## 2. Repeated trials\nFor decisions where small differences matter, run repeated trials. Report:\n- number of tasks;\n- trials per task;\n- success rate;\n- dispersion/variance where applicable;\n- confidence intervals or equivalent uncertainty;\n- failure distribution, not just the mean.\n\n## 3. Paired comparison\nWhen comparing two configurations, use the same task set and environment. Paired analysis is generally more informative than comparing unrelated aggregate runs.\n\n## 4. Infrastructure noise\nAgentic coding results depend on CPU, memory, network, dependency availability, timeouts, sandbox behavior, and harness implementation. Environment differences can exceed the apparent performance difference between models.\n\nTherefore, record and control infrastructure whenever the experiment claims comparative performance.\n\n## 5. Practical significance\nStatistical significance does not imply operational value. A 0.5% gain may not justify doubled cost; a small average gain may be extremely valuable if concentrated in high-risk tasks.\n\n## 6. Recommendation\nFor major architecture/model changes, require both:\n- evidence that the difference is unlikely to be noise; and\n- evidence that the difference matters to the decision being made.\n\n## References\n- Anthropic, Quantifying infrastructure noise in agentic coding evals — https://www.anthropic.com/engineering/infrastructure-noise\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

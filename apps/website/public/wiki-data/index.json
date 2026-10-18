@@ -1,0 +1,4586 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "corpus/catalog.json",
+  "contentFingerprint": "f19a36ae9bbd6c21734843a84c9b513e3d07dc667025ea4f206d28da4ab517e8",
+  "documentCount": 187,
+  "topics": [
+    {
+      "topic": "agents",
+      "count": 10
+    },
+    {
+      "topic": "app-server",
+      "count": 2
+    },
+    {
+      "topic": "architecture",
+      "count": 3
+    },
+    {
+      "topic": "assurance",
+      "count": 10
+    },
+    {
+      "topic": "audit",
+      "count": 10
+    },
+    {
+      "topic": "codex-plugin",
+      "count": 3
+    },
+    {
+      "topic": "codex-sdk",
+      "count": 3
+    },
+    {
+      "topic": "coding",
+      "count": 14
+    },
+    {
+      "topic": "context",
+      "count": 12
+    },
+    {
+      "topic": "cost",
+      "count": 10
+    },
+    {
+      "topic": "evals",
+      "count": 12
+    },
+    {
+      "topic": "foundations",
+      "count": 9
+    },
+    {
+      "topic": "innovation",
+      "count": 10
+    },
+    {
+      "topic": "knowledge",
+      "count": 10
+    },
+    {
+      "topic": "models",
+      "count": 10
+    },
+    {
+      "topic": "operations",
+      "count": 5
+    },
+    {
+      "topic": "permissions",
+      "count": 10
+    },
+    {
+      "topic": "reference",
+      "count": 2
+    },
+    {
+      "topic": "security",
+      "count": 12
+    },
+    {
+      "topic": "skills",
+      "count": 10
+    },
+    {
+      "topic": "sources",
+      "count": 10
+    },
+    {
+      "topic": "tools",
+      "count": 10
+    }
+  ],
+  "documents": [
+    {
+      "id": "AEP-AGENT-001",
+      "title": "Agent Architecture Fundamentals",
+      "summary": "Agent Architecture Fundamentals. Focus: deterministic control, orchestration.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "deterministic-control",
+        "orchestration"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-001-agent-architecture-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-001",
+        "AEP-MODEL-001"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-002",
+      "title": "Deterministic Workflows vs Agent Loops",
+      "summary": "Deterministic Workflows vs Agent Loops. Focus: deterministic control, orchestration.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "deterministic-control",
+        "orchestration"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-002-workflows-vs-agent-loops.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-001",
+        "AEP-TOOL-003"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-003",
+      "title": "Single-Agent Patterns",
+      "summary": "Single-Agent Patterns. Focus: single agent, tool use.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "pattern",
+      "status": "recommended",
+      "tags": [
+        "single-agent",
+        "tool-use"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-003-single-agent-patterns.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-001",
+        "AEP-TOOL-004",
+        "AEP-CTX-007"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-004",
+      "title": "Delegation, Subagents, and Parallelism",
+      "summary": "Delegation, Subagents, and Parallelism. Focus: concurrency, delegation, multi agent.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "concurrency",
+        "delegation",
+        "multi-agent"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-004-delegation-subagents-and-parallelism.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-001",
+        "AEP-CTX-001",
+        "AEP-MODEL-005"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-005",
+      "title": "Managers, Handoffs, and Ownership",
+      "summary": "Managers, Handoffs, and Ownership. Focus: handoffs, multi agent.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "handoffs",
+        "multi-agent"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-005-managers-handoffs-and-ownership.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-004",
+        "AEP-TOOL-006"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-006",
+      "title": "Planning, Decomposition, and Execution",
+      "summary": "Planning, Decomposition, and Execution. Focus: orchestration, planning.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "orchestration",
+        "planning"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-006-planning-decomposition-and-execution.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-003",
+        "AEP-AGENT-004",
+        "AEP-MODEL-004"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-007",
+      "title": "Critique, Refinement, and Verification",
+      "summary": "Critique, Refinement, and Verification. Focus: critique, verification.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "critique",
+        "verification"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-007-critique-refinement-and-verification.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-006"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-008",
+      "title": "Human-in-the-Loop and Authority Boundaries",
+      "summary": "Human-in-the-Loop and Authority Boundaries. Focus: authorization, human approval.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "human-approval"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-008-human-in-the-loop-and-authority-boundaries.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-006",
+        "AEP-MODEL-006"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-009",
+      "title": "Termination, Progress, and Recovery",
+      "summary": "Termination, Progress, and Recovery. Focus: budgets, recovery, termination.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "budgets",
+        "recovery",
+        "termination"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-009-termination-progress-and-recovery.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-005",
+        "AEP-CTX-008",
+        "AEP-MODEL-006"
+      ]
+    },
+    {
+      "id": "AEP-AGENT-010",
+      "title": "Multi-Agent Evaluation, Lifecycle, and Freshness",
+      "summary": "Multi-Agent Evaluation, Lifecycle, and Freshness. Focus: evaluation, lifecycle, multi agent.",
+      "collection": "handbook",
+      "topic": "agents",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "lifecycle",
+        "multi-agent"
+      ],
+      "domains": [
+        "agent-architecture"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/agents/AEP-AGENT-010-multi-agent-lifecycle-evaluation-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-001",
+        "AEP-MODEL-010"
+      ]
+    },
+    {
+      "id": "AEP-ASSURE-001",
+      "title": "Security Assurance Fundamentals",
+      "summary": "Security Assurance Fundamentals. Focus: adversarial testing, security controls.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "standard",
+      "status": "approved",
+      "tags": [
+        "adversarial-testing",
+        "security-controls"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-001-security-assurance-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-002",
+      "title": "Agent Threat Modeling",
+      "summary": "Agent Threat Modeling. Focus: threat modeling, trust boundaries.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "threat-modeling",
+        "trust-boundaries"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-002-agent-threat-modeling.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-003",
+      "title": "Prompt-Injection Testing",
+      "summary": "Prompt-Injection Testing. Focus: adversarial testing, prompt injection.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "evaluation",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "prompt-injection"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-003-prompt-injection-testing.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-004",
+      "title": "Authorization Boundary Testing",
+      "summary": "Authorization Boundary Testing. Focus: adversarial testing, authorization.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "evaluation",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "authorization"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-004-authorization-boundary-testing.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-005",
+      "title": "Adversarial Workflow Testing",
+      "summary": "Adversarial Workflow Testing. Focus: adversarial testing, orchestration.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "evaluation",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "orchestration"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-005-adversarial-workflow-testing.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-006",
+      "title": "Future Automated Penetration Testing",
+      "summary": "Future Automated Penetration Testing. Focus: authorization, penetration testing, sandboxing.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "plan",
+      "status": "provisional",
+      "tags": [
+        "authorization",
+        "penetration-testing",
+        "sandboxing"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-006-future-automated-penetration-testing.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-007",
+      "title": "Supply-Chain and Skill Security",
+      "summary": "Supply-Chain and Skill Security. Focus: skills, supply chain.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "skills",
+        "supply-chain"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-007-supply-chain-and-skill-security.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-008",
+      "title": "Behavioral Assurance",
+      "summary": "Behavioral Assurance. Focus: adversarial testing, behavioral assurance.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "evaluation",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "behavioral-assurance"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-008-behavioral-assurance.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-009",
+      "title": "Findings and Promotion Gates",
+      "summary": "Findings and Promotion Gates. Focus: release gates, security findings.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "release-gates",
+        "security-findings"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-009-findings-and-promotion-gates.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-ASSURE-010",
+      "title": "Continuous Assurance Lifecycle",
+      "summary": "Continuous Assurance Lifecycle. Focus: adversarial testing, lifecycle.",
+      "collection": "handbook",
+      "topic": "assurance",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "lifecycle"
+      ],
+      "domains": [
+        "security-assurance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/assurance/aep-assure-010-continuous-assurance-lifecycle.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-001",
+      "title": "Knowledge Audit Fundamentals",
+      "summary": "Knowledge Audit Fundamentals. Focus: audit records, knowledge management.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "audit-records",
+        "knowledge-management"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-001-knowledge-audit-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-002",
+      "title": "Decision Records",
+      "summary": "Decision Records. Focus: decision records, provenance.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "decision-records",
+        "provenance"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-002-decision-records.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-003",
+      "title": "Knowledge Mutation Records",
+      "summary": "Knowledge Mutation Records. Focus: change history, knowledge management.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "change-history",
+        "knowledge-management"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-003-knowledge-mutation-records.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-004",
+      "title": "Experiment Decision Records",
+      "summary": "Experiment Decision Records. Focus: decision records, experimentation.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "decision-records",
+        "experimentation"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-004-experiment-decision-records.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-005",
+      "title": "Evidence Lineage",
+      "summary": "Evidence Lineage. Focus: evidence lineage, provenance.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evidence-lineage",
+        "provenance"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-005-evidence-lineage.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-006",
+      "title": "Permission Evaluation Records",
+      "summary": "Permission Evaluation Records. Focus: audit records, authorization.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "audit-records",
+        "authorization"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-006-permission-evaluation-records.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-007",
+      "title": "Reconstruction and Forensics",
+      "summary": "Reconstruction and Forensics. Focus: change history, forensics.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "change-history",
+        "forensics"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-007-reconstruction-and-forensics.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-008",
+      "title": "Tamper Evidence and Retention",
+      "summary": "Tamper Evidence and Retention. Focus: retention, tamper evidence.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "provisional",
+      "tags": [
+        "retention",
+        "tamper-evidence"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-008-tamper-evidence-and-retention.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-009",
+      "title": "Reporting and Review",
+      "summary": "Reporting and Review. Focus: audit records, reporting.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "pattern",
+      "status": "recommended",
+      "tags": [
+        "audit-records",
+        "reporting"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-009-reporting-and-review.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-AUDIT-010",
+      "title": "Audit Lifecycle and Governance",
+      "summary": "Audit Lifecycle and Governance. Focus: audit records, lifecycle.",
+      "collection": "handbook",
+      "topic": "audit",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "audit-records",
+        "lifecycle"
+      ],
+      "domains": [
+        "auditability"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/audit/aep-audit-010-audit-lifecycle-and-governance.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-BASE-001",
+      "title": "Baseline Knowledge Inventory",
+      "summary": "Baseline Knowledge Inventory. Focus: index navigation, knowledge management.",
+      "collection": "handbook",
+      "topic": "foundations",
+      "type": "reference",
+      "status": "informational",
+      "tags": [
+        "index-navigation",
+        "knowledge-management"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/foundations/AEP-BASE-001-baseline-knowledge-inventory.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-CODE-001",
+      "title": "Software Engineering Agent Fundamentals",
+      "summary": "Software Engineering Agent Fundamentals. Focus: software engineering, verification.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "software-engineering",
+        "verification"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-001-software-engineering-agent-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-010",
+        "AEP-AGENT-001"
+      ]
+    },
+    {
+      "id": "AEP-CODE-002",
+      "title": "Repository Discovery and Environment Understanding",
+      "summary": "Repository Discovery and Environment Understanding. Focus: repository discovery, software engineering.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "repository-discovery",
+        "software-engineering"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-002-repository-discovery-and-environment-understanding.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-010",
+        "AEP-TOOL-004"
+      ]
+    },
+    {
+      "id": "AEP-CODE-003",
+      "title": "Language and Framework Specialization",
+      "summary": "Language and Framework Specialization. Focus: language specialization, skills.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "language-specialization",
+        "skills"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-003-language-and-framework-specialization.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-007",
+        "AEP-MODEL-003"
+      ]
+    },
+    {
+      "id": "AEP-CODE-004",
+      "title": "Technology Selection and Architectural Fit",
+      "summary": "Technology Selection and Architectural Fit. Focus: architecture, technology selection.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "architecture",
+        "technology-selection"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-004-technology-selection-and-architectural-fit.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-009"
+      ]
+    },
+    {
+      "id": "AEP-CODE-005",
+      "title": "Feature Implementation",
+      "summary": "Feature Implementation. Focus: feature implementation, verification.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "feature-implementation",
+        "verification"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-005-feature-implementation.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-001",
+        "AEP-CODE-002",
+        "AEP-CODE-008"
+      ]
+    },
+    {
+      "id": "AEP-CODE-006",
+      "title": "Debugging and Root-Cause Analysis",
+      "summary": "Debugging and Root-Cause Analysis. Focus: debugging, root cause analysis.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "debugging",
+        "root-cause-analysis"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-006-debugging-and-root-cause-analysis.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-001",
+        "AEP-AGENT-009",
+        "AEP-CTX-010"
+      ]
+    },
+    {
+      "id": "AEP-CODE-007",
+      "title": "Refactoring",
+      "summary": "Refactoring. Focus: refactoring, verification.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "refactoring",
+        "verification"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-007-refactoring.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-008"
+      ]
+    },
+    {
+      "id": "AEP-CODE-008",
+      "title": "Testing and Verification",
+      "summary": "Testing and Verification. Focus: software testing, verification.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "software-testing",
+        "verification"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-008-testing-and-verification.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-007",
+        "AEP-CODE-001"
+      ]
+    },
+    {
+      "id": "AEP-CODE-009",
+      "title": "Dependencies and Upgrades",
+      "summary": "Dependencies and Upgrades. Focus: dependencies, supply chain.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "dependencies",
+        "supply-chain"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-009-dependencies-and-upgrades.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-002",
+        "AEP-CODE-008",
+        "AEP-TOOL-006"
+      ]
+    },
+    {
+      "id": "AEP-CODE-010",
+      "title": "Database and Schema Migrations",
+      "summary": "Database and Schema Migrations. Focus: data protection, database migrations.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "data-protection",
+        "database-migrations"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-010-database-and-schema-migrations.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-008",
+        "AEP-TOOL-006",
+        "AEP-AGENT-008"
+      ]
+    },
+    {
+      "id": "AEP-CODE-011",
+      "title": "Pull Request Review",
+      "summary": "Pull Request Review. Focus: code review, verification.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "code-review",
+        "verification"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-011-pull-request-review.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-007",
+        "AEP-CODE-008",
+        "AEP-EVAL-001"
+      ]
+    },
+    {
+      "id": "AEP-CODE-012",
+      "title": "CI/CD Diagnosis and Repair",
+      "summary": "CI/CD Diagnosis and Repair. Focus: ci cd, debugging.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "ci-cd",
+        "debugging"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-012-ci-cd-diagnosis-and-repair.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-006",
+        "AEP-TOOL-006",
+        "AEP-AGENT-009"
+      ]
+    },
+    {
+      "id": "AEP-CODE-013",
+      "title": "Documentation and Architecture Work",
+      "summary": "Documentation and Architecture Work. Focus: architecture, documentation.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "architecture",
+        "documentation"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-013-documentation-and-architecture-work.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-004",
+        "AEP-CTX-002",
+        "AEP-HBK-000"
+      ]
+    },
+    {
+      "id": "AEP-CODE-014",
+      "title": "Coding-Agent Lifecycle, Evaluation, and Freshness",
+      "summary": "Coding-Agent Lifecycle, Evaluation, and Freshness. Focus: evaluation, lifecycle, software engineering.",
+      "collection": "handbook",
+      "topic": "coding",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "lifecycle",
+        "software-engineering"
+      ],
+      "domains": [
+        "software-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/coding/AEP-CODE-014-coding-agent-lifecycle-evaluation-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-010",
+        "AEP-TOOL-010",
+        "AEP-AGENT-010"
+      ]
+    },
+    {
+      "id": "AEP-COST-001",
+      "title": "Cost and Performance Engineering Fundamentals",
+      "summary": "Cost and Performance Engineering Fundamentals. Focus: cost optimization, latency, reliability.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "cost-optimization",
+        "latency",
+        "reliability"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-001-cost-and-performance-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-007",
+        "AEP-MODEL-001",
+        "AEP-CTX-001"
+      ]
+    },
+    {
+      "id": "AEP-COST-002",
+      "title": "Cost Accounting and Unit Economics",
+      "summary": "Cost Accounting and Unit Economics. Focus: cost accounting, observability.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "cost-accounting",
+        "observability"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-002-cost-accounting-and-unit-economics.md",
+      "relatedDocumentIds": [
+        "AEP-COST-001",
+        "AEP-EVAL-007",
+        "AEP-TOOL-009"
+      ]
+    },
+    {
+      "id": "AEP-COST-003",
+      "title": "Token and Context Efficiency",
+      "summary": "Token and Context Efficiency. Focus: context compaction, context efficiency.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "context-compaction",
+        "context-efficiency"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-003-token-and-context-efficiency.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-007",
+        "AEP-CTX-008",
+        "AEP-CTX-011"
+      ]
+    },
+    {
+      "id": "AEP-COST-004",
+      "title": "Request, Tool, and Orchestration Efficiency",
+      "summary": "Request, Tool, and Orchestration Efficiency. Focus: cost optimization, orchestration, tool use.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "cost-optimization",
+        "orchestration",
+        "tool-use"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-004-request-tool-and-orchestration-efficiency.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-003",
+        "AEP-TOOL-009",
+        "AEP-AGENT-004",
+        "AEP-COST-001"
+      ]
+    },
+    {
+      "id": "AEP-COST-005",
+      "title": "Latency and User-Perceived Performance",
+      "summary": "Latency and User-Perceived Performance. Focus: latency, streaming.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "latency",
+        "streaming"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-005-latency-and-user-perceived-performance.md",
+      "relatedDocumentIds": [
+        "AEP-COST-001",
+        "AEP-MODEL-004",
+        "AEP-AGENT-009"
+      ]
+    },
+    {
+      "id": "AEP-COST-006",
+      "title": "Concurrency, Parallelism, and Throughput",
+      "summary": "Concurrency, Parallelism, and Throughput. Focus: concurrency, throughput.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "concurrency",
+        "throughput"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-006-concurrency-parallelism-and-throughput.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-004",
+        "AEP-TOOL-008",
+        "AEP-COST-005"
+      ]
+    },
+    {
+      "id": "AEP-COST-007",
+      "title": "Caching, Batching, and Reuse",
+      "summary": "Caching, Batching, and Reuse. Focus: batching, caching.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "batching",
+        "caching"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-007-caching-batching-and-reuse.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-011",
+        "AEP-COST-003",
+        "AEP-COST-005"
+      ]
+    },
+    {
+      "id": "AEP-COST-008",
+      "title": "Budgets, Quotas, and Economic Guardrails",
+      "summary": "Budgets, Quotas, and Economic Guardrails. Focus: budgets, quotas.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "budgets",
+        "quotas"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-008-budgets-quotas-and-economic-guardrails.md",
+      "relatedDocumentIds": [
+        "AEP-COST-002",
+        "AEP-AGENT-009",
+        "AEP-SEC-005"
+      ]
+    },
+    {
+      "id": "AEP-COST-009",
+      "title": "Optimization Experiments and Pareto Selection",
+      "summary": "Optimization Experiments and Pareto Selection. Focus: experimentation, pareto optimization.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "experimentation",
+        "pareto-optimization"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-009-optimization-experiments-and-pareto-selection.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-006",
+        "AEP-EVAL-007",
+        "AEP-COST-001"
+      ]
+    },
+    {
+      "id": "AEP-COST-010",
+      "title": "Capacity, Lifecycle, and Freshness",
+      "summary": "Capacity, Lifecycle, and Freshness. Focus: capacity planning, lifecycle.",
+      "collection": "handbook",
+      "topic": "cost",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "capacity-planning",
+        "lifecycle"
+      ],
+      "domains": [
+        "cost-performance"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/cost/AEP-COST-010-capacity-lifecycle-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-010",
+        "AEP-TOOL-010",
+        "AEP-COST-002"
+      ]
+    },
+    {
+      "id": "AEP-CTX-001",
+      "title": "Context Engineering Fundamentals",
+      "summary": "Context Engineering Fundamentals. Focus: context engineering, memory, progressive disclosure, retrieval.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "context-engineering",
+        "memory",
+        "progressive-disclosure",
+        "retrieval"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-001-context-engineering-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-CTX-002",
+      "title": "Context Sources and Instruction Hierarchy",
+      "summary": "Context Sources and Instruction Hierarchy. Focus: instruction hierarchy, provenance, trust boundaries.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "instruction-hierarchy",
+        "provenance",
+        "trust-boundaries"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-002-context-sources-and-instruction-hierarchy.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001"
+      ]
+    },
+    {
+      "id": "AEP-CTX-003",
+      "title": "Retrieval Architecture",
+      "summary": "Retrieval Architecture. Focus: lexical search, reranking, retrieval, semantic search.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "lexical-search",
+        "reranking",
+        "retrieval",
+        "semantic-search"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-003-retrieval-architecture.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-002"
+      ]
+    },
+    {
+      "id": "AEP-CTX-004",
+      "title": "Embeddings and Semantic Retrieval",
+      "summary": "Embeddings and Semantic Retrieval. Focus: embeddings, indexing, semantic search.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "embeddings",
+        "indexing",
+        "semantic-search"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-004-embeddings-and-semantic-retrieval.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-003",
+        "AEP-QUESTIONS-001"
+      ]
+    },
+    {
+      "id": "AEP-CTX-005",
+      "title": "Lexical and Hybrid Retrieval",
+      "summary": "Lexical and Hybrid Retrieval. Focus: hybrid search, lexical search, rank fusion.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "hybrid-search",
+        "lexical-search",
+        "rank-fusion"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-005-lexical-and-hybrid-retrieval.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-003",
+        "AEP-CTX-004",
+        "AEP-QUESTIONS-001"
+      ]
+    },
+    {
+      "id": "AEP-CTX-006",
+      "title": "Reranking",
+      "summary": "Reranking. Focus: reranking, retrieval.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "reranking",
+        "retrieval"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-006-reranking.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-003",
+        "AEP-CTX-004",
+        "AEP-CTX-005",
+        "AEP-QUESTIONS-001"
+      ]
+    },
+    {
+      "id": "AEP-CTX-007",
+      "title": "Progressive Disclosure",
+      "summary": "Progressive Disclosure. Focus: context engineering, progressive disclosure.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "context-engineering",
+        "progressive-disclosure"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global",
+        "software-development-agents"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-007-progressive-disclosure.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-002",
+        "AEP-CTX-003",
+        "AEP-CTX-006"
+      ]
+    },
+    {
+      "id": "AEP-CTX-008",
+      "title": "Context Compression and Compaction",
+      "summary": "Context Compression and Compaction. Focus: context compaction, memory.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "context-compaction",
+        "memory"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global",
+        "software-development-agents"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-008-context-compression-and-compaction.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-007"
+      ]
+    },
+    {
+      "id": "AEP-CTX-009",
+      "title": "Working Memory and Persistent Memory",
+      "summary": "Working Memory and Persistent Memory. Focus: memory, provenance, retention.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "memory",
+        "provenance",
+        "retention"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global",
+        "software-development-agents"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-009-working-memory-and-persistent-memory.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-002",
+        "AEP-CTX-007",
+        "AEP-CTX-008"
+      ]
+    },
+    {
+      "id": "AEP-CTX-010",
+      "title": "Repository Context and Code Intelligence",
+      "summary": "Repository Context and Code Intelligence. Focus: code intelligence, repository discovery, retrieval.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "code-intelligence",
+        "repository-discovery",
+        "retrieval"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-010-repository-context-and-code-intelligence.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-003",
+        "AEP-CTX-005",
+        "AEP-CTX-007"
+      ]
+    },
+    {
+      "id": "AEP-CTX-011",
+      "title": "Context Caching",
+      "summary": "Context Caching. Focus: cache invalidation, prompt caching.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "cache-invalidation",
+        "prompt-caching"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-011-context-caching.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-007",
+        "AEP-CTX-008",
+        "AEP-CTX-009"
+      ]
+    },
+    {
+      "id": "AEP-CTX-012",
+      "title": "Context Failure Modes",
+      "summary": "Context Failure Modes. Focus: context compaction, context failures, prompt injection.",
+      "collection": "handbook",
+      "topic": "context",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "context-compaction",
+        "context-failures",
+        "prompt-injection"
+      ],
+      "domains": [
+        "context-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/context/AEP-CTX-012-context-failure-modes.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-002",
+        "AEP-CTX-003",
+        "AEP-CTX-007",
+        "AEP-CTX-008",
+        "AEP-CTX-009",
+        "AEP-CTX-010",
+        "AEP-CTX-011"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-001",
+      "title": "Evaluation Fundamentals",
+      "summary": "Evaluation Fundamentals. Focus: evaluation, verification.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "verification"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-001-evaluation-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-014",
+        "AEP-AGENT-010"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-002",
+      "title": "Success Criteria and Outcome Verification",
+      "summary": "Success Criteria and Outcome Verification. Focus: success criteria, verification.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "success-criteria",
+        "verification"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-002-success-criteria-and-outcome-verification.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-001",
+        "AEP-CODE-008",
+        "AEP-AGENT-009"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-003",
+      "title": "Evaluation Datasets and Task Design",
+      "summary": "Evaluation Datasets and Task Design. Focus: evaluation datasets, task design.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation-datasets",
+        "task-design"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-003-datasets-and-task-design.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-001",
+        "AEP-CODE-014"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-004",
+      "title": "Graders and Scoring",
+      "summary": "Graders and Scoring. Focus: graders, scoring.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "graders",
+        "scoring"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-004-graders-and-scoring.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-002",
+        "AEP-EVAL-009"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-005",
+      "title": "Trace and Trajectory Evaluation",
+      "summary": "Trace and Trajectory Evaluation. Focus: observability, trace evaluation.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "pattern",
+      "status": "recommended",
+      "tags": [
+        "observability",
+        "trace-evaluation"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-005-traces-and-trajectory-evaluation.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-001",
+        "AEP-TOOL-009",
+        "AEP-AGENT-010"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-006",
+      "title": "Variance, Statistics, and Confidence",
+      "summary": "Variance, Statistics, and Confidence. Focus: repeatability, statistics.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "repeatability",
+        "statistics"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-006-variance-statistics-and-confidence.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-009",
+        "AEP-EVAL-011"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-007",
+      "title": "Cost, Latency, and Efficiency Evaluation",
+      "summary": "Cost, Latency, and Efficiency Evaluation. Focus: cost optimization, evaluation, latency.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "cost-optimization",
+        "evaluation",
+        "latency"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-007-cost-latency-and-efficiency.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-005",
+        "AEP-TOOL-009",
+        "AEP-EVAL-001"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-008",
+      "title": "Capability, Regression, and Release Gates",
+      "summary": "Capability, Regression, and Release Gates. Focus: regression testing, release gates.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "regression-testing",
+        "release-gates"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-008-capability-regression-and-release-gates.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-003",
+        "AEP-EVAL-012"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-009",
+      "title": "Human Evaluation and Judge Calibration",
+      "summary": "Human Evaluation and Judge Calibration. Focus: human evaluation, judge calibration.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "human-evaluation",
+        "judge-calibration"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-009-human-evaluation-and-judge-calibration.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-004"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-010",
+      "title": "Safety, Security, and Adversarial Evaluation",
+      "summary": "Safety, Security, and Adversarial Evaluation. Focus: adversarial testing, security controls.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "security-controls"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-010-safety-security-and-adversarial-evaluation.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-006",
+        "AEP-CTX-012",
+        "AEP-AGENT-008"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-011",
+      "title": "Evaluation Harness and Reproducibility",
+      "summary": "Evaluation Harness and Reproducibility. Focus: evaluation, repeatability.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "repeatability"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-011-evaluation-harness-and-reproducibility.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-006"
+      ]
+    },
+    {
+      "id": "AEP-EVAL-012",
+      "title": "Evaluation Lifecycle, Benchmark Hygiene, and Freshness",
+      "summary": "Evaluation Lifecycle, Benchmark Hygiene, and Freshness. Focus: benchmark hygiene, lifecycle.",
+      "collection": "handbook",
+      "topic": "evals",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "benchmark-hygiene",
+        "lifecycle"
+      ],
+      "domains": [
+        "evaluation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/evals/AEP-EVAL-012-evaluation-lifecycle-benchmark-hygiene-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-003",
+        "AEP-EVAL-008"
+      ]
+    },
+    {
+      "id": "AEP-GLOSS-001",
+      "title": "Agent Engineering Glossary",
+      "summary": "Agent Engineering Glossary. Focus: glossary, knowledge management.",
+      "collection": "handbook",
+      "topic": "foundations",
+      "type": "reference",
+      "status": "provisional",
+      "tags": [
+        "glossary",
+        "knowledge-management"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/foundations/AEP-GLOSS-001-glossary.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-HBK-000",
+      "title": "Agentic Engineering Platform Charter",
+      "summary": "Agentic Engineering Platform Charter. Focus: deterministic control, governance, knowledge management.",
+      "collection": "handbook",
+      "topic": "foundations",
+      "type": "standard",
+      "status": "approved",
+      "tags": [
+        "deterministic-control",
+        "governance",
+        "knowledge-management"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/foundations/AEP-HBK-000-charter.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-001",
+      "title": "Innovation Fundamentals",
+      "summary": "Innovation Fundamentals. Focus: experimentation, hypotheses.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "experimentation",
+        "hypotheses"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-001-innovation-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-002",
+      "title": "Hypothesis Generation",
+      "summary": "Hypothesis Generation. Focus: experimentation, hypotheses.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "pattern",
+      "status": "provisional",
+      "tags": [
+        "experimentation",
+        "hypotheses"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-002-hypothesis-generation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-003",
+      "title": "Experiment Candidate Discovery",
+      "summary": "Experiment Candidate Discovery. Focus: experiment discovery, experimentation.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "pattern",
+      "status": "provisional",
+      "tags": [
+        "experiment-discovery",
+        "experimentation"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-003-experiment-candidate-discovery.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-004",
+      "title": "Sandbox Prototyping",
+      "summary": "Sandbox Prototyping. Focus: prototyping, sandboxing.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "prototyping",
+        "sandboxing"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-004-sandbox-prototyping.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-005",
+      "title": "Comparative Evaluation",
+      "summary": "Comparative Evaluation. Focus: comparative evaluation, experimentation.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "comparative-evaluation",
+        "experimentation"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-005-comparative-evaluation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-006",
+      "title": "Promotion and Rejection",
+      "summary": "Promotion and Rejection. Focus: decision records, knowledge promotion.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "decision-records",
+        "knowledge-promotion"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-006-promotion-and-rejection.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-007",
+      "title": "Novelty vs Reliability",
+      "summary": "Novelty vs Reliability. Focus: experimentation, reliability.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "experimentation",
+        "reliability"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-007-novelty-vs-reliability.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-008",
+      "title": "Automated Research Loops",
+      "summary": "Automated Research Loops. Focus: human approval, research automation.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "pattern",
+      "status": "experimental",
+      "tags": [
+        "human-approval",
+        "research-automation"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-008-automated-research-loops.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-009",
+      "title": "Innovation Safety",
+      "summary": "Innovation Safety. Focus: authorization, experimentation, sandboxing.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "experimentation",
+        "sandboxing"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-009-innovation-safety.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-INNOV-010",
+      "title": "Innovation Lifecycle and Freshness",
+      "summary": "Innovation Lifecycle and Freshness. Focus: experimentation, lifecycle.",
+      "collection": "handbook",
+      "topic": "innovation",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "experimentation",
+        "lifecycle"
+      ],
+      "domains": [
+        "research-innovation"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/innovation/aep-innov-010-innovation-lifecycle-and-freshness.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-001",
+      "title": "Knowledge Service Fundamentals",
+      "summary": "Knowledge Service Fundamentals. Focus: architecture, knowledge management.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "architecture",
+        "knowledge-management"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-001-knowledge-service-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-002",
+      "title": "Knowledge Schema, Identifiers, and Metadata",
+      "summary": "Knowledge Schema, Identifiers, and Metadata. Focus: identifiers, metadata, schemas.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "identifiers",
+        "metadata",
+        "schemas"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-002-knowledge-schema-and-identifiers.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-003",
+      "title": "Ingestion, Indexing, and Derived Artifacts",
+      "summary": "Ingestion, Indexing, and Derived Artifacts. Focus: indexing, ingestion.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "indexing",
+        "ingestion"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-003-ingestion-indexing-and-derived-artifacts.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-004",
+      "title": "Retrieval, Ranking, and Context Packages",
+      "summary": "Retrieval, Ranking, and Context Packages. Focus: context packages, retrieval.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "context-packages",
+        "retrieval"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-004-retrieval-ranking-and-context-packages.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-005",
+      "title": "Overlays, Policy Resolution, and Conflicts",
+      "summary": "Overlays, Policy Resolution, and Conflicts. Focus: conflict resolution, policy resolution.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "conflict-resolution",
+        "policy-resolution"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-005-overlays-policy-resolution-and-conflicts.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-006",
+      "title": "Provenance, Evidence, and Freshness",
+      "summary": "Provenance, Evidence, and Freshness. Focus: evidence lineage, freshness, provenance.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evidence-lineage",
+        "freshness",
+        "provenance"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-006-provenance-evidence-and-freshness.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-007",
+      "title": "Access Control, Permission Isolation, and Security",
+      "summary": "Access Control, Permission Isolation, and Security. Focus: authorization, data isolation.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "data-isolation"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-007-access-control-permission-isolation-and-security.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-008",
+      "title": "MCP, API, and CLI Surface",
+      "summary": "MCP, API, and CLI Surface. Focus: api design, cli, mcp.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "api-design",
+        "cli",
+        "mcp"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-008-mcp-api-and-cli-surface.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-009",
+      "title": "Knowledge Service Observability, Evaluation, and Experiments",
+      "summary": "Knowledge Service Observability, Evaluation, and Experiments. Focus: evaluation, observability.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-009-observability-evaluation-and-experiments.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-KNOW-010",
+      "title": "Knowledge Service Lifecycle, Versioning, and Revalidation",
+      "summary": "Knowledge Service Lifecycle, Versioning, and Revalidation. Focus: knowledge management, lifecycle, versioning.",
+      "collection": "handbook",
+      "topic": "knowledge",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "knowledge-management",
+        "lifecycle",
+        "versioning"
+      ],
+      "domains": [
+        "knowledge-systems"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-010-lifecycle-versioning-and-revalidation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-MODEL-001",
+      "title": "Model Selection Fundamentals",
+      "summary": "Model Selection Fundamentals. Focus: cost optimization, model selection.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "cost-optimization",
+        "model-selection"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-001-model-selection-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-BASE-001"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-002",
+      "title": "Capability Profiles and Task Classes",
+      "summary": "Capability Profiles and Task Classes. Focus: model capabilities, task design.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "model-capabilities",
+        "task-design"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-002-capability-profiles-and-task-classes.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-001",
+        "AEP-TOOL-009"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-003",
+      "title": "Small and Specialized Models",
+      "summary": "Small and Specialized Models. Focus: model selection, small models.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "model-selection",
+        "small-models"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-003-small-and-specialized-models.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-004",
+        "AEP-CTX-006",
+        "AEP-MODEL-001"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-004",
+      "title": "Reasoning Effort and Test-Time Compute",
+      "summary": "Reasoning Effort and Test-Time Compute. Focus: cost optimization, reasoning effort.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "cost-optimization",
+        "reasoning-effort"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-004-reasoning-effort-and-test-time-compute.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-001",
+        "AEP-MODEL-005"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-005",
+      "title": "Model Routing Architecture",
+      "summary": "Model Routing Architecture. Focus: model routing, model selection.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "model-routing",
+        "model-selection"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-005-routing-architecture.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-001",
+        "AEP-MODEL-002",
+        "AEP-MODEL-006"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-006",
+      "title": "Cascades, Escalation, and Rescue",
+      "summary": "Cascades, Escalation, and Rescue. Focus: fallbacks, model cascades.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "fallbacks",
+        "model-cascades"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-006-cascades-escalation-and-rescue.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-005",
+        "AEP-MODEL-009"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-007",
+      "title": "Provider Portability, Fallbacks, and Resilience",
+      "summary": "Provider Portability, Fallbacks, and Resilience. Focus: fallbacks, provider portability.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "fallbacks",
+        "provider-portability"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-007-provider-portability-fallbacks-and-resilience.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-001",
+        "AEP-TOOL-002"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-008",
+      "title": "Local, Self-Hosted, and Privacy-Aware Models",
+      "summary": "Local, Self-Hosted, and Privacy-Aware Models. Focus: privacy, self hosted models.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "provisional",
+      "tags": [
+        "privacy",
+        "self-hosted-models"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-008-local-self-hosted-and-privacy-aware-models.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-003",
+        "AEP-MODEL-007",
+        "AEP-TOOL-006"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-009",
+      "title": "Model Evaluation and Selection Benchmarks",
+      "summary": "Model Evaluation and Selection Benchmarks. Focus: evaluation, model selection.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "model-selection"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-009-model-evaluation-and-selection-benchmarks.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-009",
+        "AEP-MODEL-001",
+        "AEP-MODEL-005"
+      ]
+    },
+    {
+      "id": "AEP-MODEL-010",
+      "title": "Model Lifecycle, Versioning, and Freshness",
+      "summary": "Model Lifecycle, Versioning, and Freshness. Focus: lifecycle, model selection, versioning.",
+      "collection": "handbook",
+      "topic": "models",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "lifecycle",
+        "model-selection",
+        "versioning"
+      ],
+      "domains": [
+        "model-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/models/AEP-MODEL-010-model-lifecycle-versioning-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-MODEL-009",
+        "AEP-TOOL-010"
+      ]
+    },
+    {
+      "id": "AEP-OPS-001",
+      "title": "Operations and Reliability Fundamentals",
+      "summary": "Operations and Reliability Fundamentals. Focus: recovery, reliability.",
+      "collection": "handbook",
+      "topic": "operations",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "recovery",
+        "reliability"
+      ],
+      "domains": [
+        "operations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/operations/aep-ops-001-operations-and-reliability-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-OPS-002",
+      "title": "Observability and Traceability",
+      "summary": "Observability and Traceability. Focus: observability, tracing.",
+      "collection": "handbook",
+      "topic": "operations",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "observability",
+        "tracing"
+      ],
+      "domains": [
+        "operations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/operations/aep-ops-002-observability-and-traceability.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-OPS-003",
+      "title": "Degraded and Offline Modes",
+      "summary": "Degraded and Offline Modes. Focus: offline operation, reliability.",
+      "collection": "handbook",
+      "topic": "operations",
+      "type": "standard",
+      "status": "provisional",
+      "tags": [
+        "offline-operation",
+        "reliability"
+      ],
+      "domains": [
+        "operations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/operations/aep-ops-003-degraded-and-offline-modes.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-OPS-004",
+      "title": "Backup, Recovery, and Rebuildability",
+      "summary": "Backup, Recovery, and Rebuildability. Focus: backup recovery, repeatability.",
+      "collection": "handbook",
+      "topic": "operations",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "backup-recovery",
+        "repeatability"
+      ],
+      "domains": [
+        "operations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/operations/aep-ops-004-backup-recovery-and-rebuildability.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-OPS-005",
+      "title": "Capacity and Performance Operations",
+      "summary": "Capacity and Performance Operations. Focus: capacity planning, latency, throughput.",
+      "collection": "handbook",
+      "topic": "operations",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "capacity-planning",
+        "latency",
+        "throughput"
+      ],
+      "domains": [
+        "operations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/operations/aep-ops-005-capacity-and-performance-operations.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-001",
+      "title": "Permission Model Fundamentals",
+      "summary": "Permission Model Fundamentals. Focus: authorization, data isolation.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "approved",
+      "tags": [
+        "authorization",
+        "data-isolation"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-001-permission-model-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-002",
+      "title": "Subject and Service Identity",
+      "summary": "Subject and Service Identity. Focus: identity, service identity.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "identity",
+        "service-identity"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-002-subject-and-service-identity.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-003",
+      "title": "Scope and Overlay Resolution",
+      "summary": "Scope and Overlay Resolution. Focus: conflict resolution, policy resolution.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "conflict-resolution",
+        "policy-resolution"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-003-scope-and-overlay-resolution.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-004",
+      "title": "Authorization Before Retrieval",
+      "summary": "Authorization Before Retrieval. Focus: authorization, data isolation, retrieval.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "approved",
+      "tags": [
+        "authorization",
+        "data-isolation",
+        "retrieval"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-004-authorization-before-retrieval.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-005",
+      "title": "Cache and Index Isolation",
+      "summary": "Cache and Index Isolation. Focus: caching, data isolation, indexing.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "caching",
+        "data-isolation",
+        "indexing"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-005-cache-and-index-isolation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-006",
+      "title": "Restricted Knowledge",
+      "summary": "Restricted Knowledge. Focus: data classification, data protection.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "data-classification",
+        "data-protection"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-006-restricted-knowledge.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-007",
+      "title": "Permission Decision Audit",
+      "summary": "Permission Decision Audit. Focus: audit records, authorization.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "audit-records",
+        "authorization"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-007-permission-decision-audit.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-008",
+      "title": "Service-to-Service Access",
+      "summary": "Service-to-Service Access. Focus: credentials, service identity.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "credentials",
+        "service-identity"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-008-service-to-service-access.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-009",
+      "title": "Adversarial Isolation Testing",
+      "summary": "Adversarial Isolation Testing. Focus: adversarial testing, data isolation.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "evaluation",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "data-isolation"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-009-adversarial-isolation-testing.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PERM-010",
+      "title": "Permission Lifecycle and Revalidation",
+      "summary": "Permission Lifecycle and Revalidation. Focus: authorization, lifecycle.",
+      "collection": "handbook",
+      "topic": "permissions",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "lifecycle"
+      ],
+      "domains": [
+        "access-control"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/permissions/aep-perm-010-permission-lifecycle-and-revalidation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-PLAN-001",
+      "title": "Platform Development Plan",
+      "summary": "Platform Development Plan. Focus: knowledge management, planning.",
+      "collection": "handbook",
+      "topic": "foundations",
+      "type": "plan",
+      "status": "recommended",
+      "tags": [
+        "knowledge-management",
+        "planning"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/foundations/AEP-PLAN-001-development-plan.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-QUESTIONS-001",
+      "title": "Open Questions",
+      "summary": "Open Questions. Focus: experimentation, knowledge management.",
+      "collection": "handbook",
+      "topic": "foundations",
+      "type": "reference",
+      "status": "informational",
+      "tags": [
+        "experimentation",
+        "knowledge-management"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/foundations/AEP-QUESTIONS-001-open-questions.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SEC-001",
+      "title": "Security and Authority Fundamentals",
+      "summary": "Security and Authority Fundamentals. Focus: authorization, least privilege, security controls.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "least-privilege",
+        "security-controls"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-001-security-and-authority-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-006",
+        "AEP-EVAL-010"
+      ]
+    },
+    {
+      "id": "AEP-SEC-002",
+      "title": "Threat Models and Trust Boundaries",
+      "summary": "Threat Models and Trust Boundaries. Focus: threat modeling, trust boundaries.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "threat-modeling",
+        "trust-boundaries"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-002-threat-models-and-trust-boundaries.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-002",
+        "AEP-SEC-001"
+      ]
+    },
+    {
+      "id": "AEP-SEC-003",
+      "title": "Prompt Injection and Untrusted Content",
+      "summary": "Prompt Injection and Untrusted Content. Focus: prompt injection, untrusted content.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "prompt-injection",
+        "untrusted-content"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-003-prompt-injection-and-untrusted-content.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-002",
+        "AEP-EVAL-010"
+      ]
+    },
+    {
+      "id": "AEP-SEC-004",
+      "title": "Identity, Credentials, and Secrets",
+      "summary": "Identity, Credentials, and Secrets. Focus: credentials, identity, secrets.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "credentials",
+        "identity",
+        "secrets"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-004-identity-credentials-and-secrets.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-006",
+        "AEP-SEC-005"
+      ]
+    },
+    {
+      "id": "AEP-SEC-005",
+      "title": "Least Privilege and Capability Authorization",
+      "summary": "Least Privilege and Capability Authorization. Focus: authorization, least privilege.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "least-privilege"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-005-least-privilege-and-capability-authorization.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-006",
+        "AEP-SEC-004"
+      ]
+    },
+    {
+      "id": "AEP-SEC-006",
+      "title": "Sandboxing, Filesystem, and Network Isolation",
+      "summary": "Sandboxing, Filesystem, and Network Isolation. Focus: network isolation, sandboxing.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "network-isolation",
+        "sandboxing"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-006-sandboxing-filesystem-and-network-isolation.md",
+      "relatedDocumentIds": [
+        "AEP-CODE-001",
+        "AEP-SEC-005"
+      ]
+    },
+    {
+      "id": "AEP-SEC-007",
+      "title": "Human Approvals and Consequential Actions",
+      "summary": "Human Approvals and Consequential Actions. Focus: consequential actions, human approval.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "consequential-actions",
+        "human-approval"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-007-human-approvals-and-consequential-actions.md",
+      "relatedDocumentIds": [
+        "AEP-AGENT-008",
+        "AEP-TOOL-006",
+        "AEP-SEC-005"
+      ]
+    },
+    {
+      "id": "AEP-SEC-008",
+      "title": "Data Protection, Permission Isolation, and Privacy",
+      "summary": "Data Protection, Permission Isolation, and Privacy. Focus: data isolation, data protection, privacy.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "data-isolation",
+        "data-protection",
+        "privacy"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-008-data-protection-permission-isolation-and-privacy.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-009",
+        "AEP-SEC-004",
+        "AEP-SEC-005"
+      ]
+    },
+    {
+      "id": "AEP-SEC-009",
+      "title": "Production Access, Destructive Operations, and Change Control",
+      "summary": "Production Access, Destructive Operations, and Change Control. Focus: change control, destructive actions.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "change-control",
+        "destructive-actions"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-009-production-access-destructive-operations-and-change-control.md",
+      "relatedDocumentIds": [
+        "AEP-SEC-007",
+        "AEP-CODE-012",
+        "AEP-TOOL-005"
+      ]
+    },
+    {
+      "id": "AEP-SEC-010",
+      "title": "Memory, Retrieval, and Supply-Chain Poisoning",
+      "summary": "Memory, Retrieval, and Supply-Chain Poisoning. Focus: data poisoning, supply chain.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "data-poisoning",
+        "supply-chain"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-010-memory-retrieval-and-supply-chain-poisoning.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-009",
+        "AEP-CTX-012",
+        "AEP-SEC-003"
+      ]
+    },
+    {
+      "id": "AEP-SEC-011",
+      "title": "Security Observability, Incident Response, and Red Teaming",
+      "summary": "Security Observability, Incident Response, and Red Teaming. Focus: adversarial testing, incident response, observability.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "adversarial-testing",
+        "incident-response",
+        "observability"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-011-security-observability-incident-response-and-red-teaming.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-010",
+        "AEP-TOOL-009",
+        "AEP-SEC-001"
+      ]
+    },
+    {
+      "id": "AEP-SEC-012",
+      "title": "Security Lifecycle, Governance, and Freshness",
+      "summary": "Security Lifecycle, Governance, and Freshness. Focus: lifecycle, security controls.",
+      "collection": "handbook",
+      "topic": "security",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "lifecycle",
+        "security-controls"
+      ],
+      "domains": [
+        "security"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/security/AEP-SEC-012-security-lifecycle-governance-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-EVAL-012",
+        "AEP-TOOL-010"
+      ]
+    },
+    {
+      "id": "AEP-SKILL-001",
+      "title": "Skill Fundamentals",
+      "summary": "Skill Fundamentals. Focus: knowledge management, skills.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "knowledge-management",
+        "skills"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-001-skill-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-002",
+      "title": "Skill Discovery, Activation, and Progressive Loading",
+      "summary": "Skill Discovery, Activation, and Progressive Loading. Focus: progressive disclosure, skill discovery.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "progressive-disclosure",
+        "skill-discovery"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-002-discovery-activation-and-progressive-loading.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-003",
+      "title": "Skill Content and Package Design",
+      "summary": "Skill Content and Package Design. Focus: packaging, skill authoring.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "packaging",
+        "skill-authoring"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-003-skill-content-and-package-design.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-004",
+      "title": "Skill Composition and Dependencies",
+      "summary": "Skill Composition and Dependencies. Focus: dependencies, skill composition.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "pattern",
+      "status": "provisional",
+      "tags": [
+        "dependencies",
+        "skill-composition"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-004-skill-composition-and-dependencies.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-005",
+      "title": "Skills, Tools, and MCP",
+      "summary": "Skills, Tools, and MCP. Focus: mcp, skills, tool design.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "mcp",
+        "skills",
+        "tool-design"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-005-skills-tools-and-mcp.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-006",
+      "title": "Skill Portability and Provider Adapters",
+      "summary": "Skill Portability and Provider Adapters. Focus: provider portability, skills.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "provider-portability",
+        "skills"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-006-portability-and-provider-adapters.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-007",
+      "title": "Skill Evaluation and Quality",
+      "summary": "Skill Evaluation and Quality. Focus: evaluation, skills.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "skills"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-007-skill-evaluation-and-quality.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-008",
+      "title": "Skill Governance, Security, and Trust",
+      "summary": "Skill Governance, Security, and Trust. Focus: governance, skills, supply chain.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "governance",
+        "skills",
+        "supply-chain"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-008-governance-security-and-trust.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-009",
+      "title": "Promotion from Handbook Knowledge to Skill",
+      "summary": "Promotion from Handbook Knowledge to Skill. Focus: knowledge promotion, skills.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "playbook",
+      "status": "recommended",
+      "tags": [
+        "knowledge-promotion",
+        "skills"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-009-promotion-from-handbook-to-skill.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SKILL-010",
+      "title": "Skill Lifecycle, Versioning, and Freshness",
+      "summary": "Skill Lifecycle, Versioning, and Freshness. Focus: lifecycle, skills, versioning.",
+      "collection": "handbook",
+      "topic": "skills",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "lifecycle",
+        "skills",
+        "versioning"
+      ],
+      "domains": [
+        "skill-engineering"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/skills/AEP-SKILL-010-skill-lifecycle-versioning-and-freshness.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-001",
+      "title": "Source Intelligence Fundamentals",
+      "summary": "Source Intelligence Fundamentals. Focus: knowledge management, source intelligence.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "knowledge-management",
+        "source-intelligence"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-001-source-intelligence-fundamentals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-002",
+      "title": "Source Discovery",
+      "summary": "Source Discovery. Focus: source discovery, source intelligence.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "pattern",
+      "status": "provisional",
+      "tags": [
+        "source-discovery",
+        "source-intelligence"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-002-source-discovery.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-003",
+      "title": "Source Classification and Authority",
+      "summary": "Source Classification and Authority. Focus: source authority, source classification.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "source-authority",
+        "source-classification"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-003-source-classification-and-authority.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-004",
+      "title": "Trust and Vetting",
+      "summary": "Trust and Vetting. Focus: source authority, source vetting.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "source-authority",
+        "source-vetting"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-004-trust-and-vetting.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-005",
+      "title": "Source Snapshots and Evidence",
+      "summary": "Source Snapshots and Evidence. Focus: provenance, source snapshots.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "provenance",
+        "source-snapshots"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-005-source-snapshots-and-evidence.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-006",
+      "title": "Source Prioritization and Monitoring",
+      "summary": "Source Prioritization and Monitoring. Focus: freshness, source monitoring.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "pattern",
+      "status": "recommended",
+      "tags": [
+        "freshness",
+        "source-monitoring"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-006-source-prioritization-and-monitoring.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-007",
+      "title": "Conflicts and Corroboration",
+      "summary": "Conflicts and Corroboration. Focus: conflict resolution, corroboration.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "conflict-resolution",
+        "corroboration"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-007-conflicts-and-corroboration.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-008",
+      "title": "Source Security and Poisoning",
+      "summary": "Source Security and Poisoning. Focus: data poisoning, prompt injection.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "data-poisoning",
+        "prompt-injection"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-008-source-security-and-poisoning.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-009",
+      "title": "Source Evaluation",
+      "summary": "Source Evaluation. Focus: evaluation, source intelligence.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "source-intelligence"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-009-source-evaluation.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-SRC-010",
+      "title": "Source Lifecycle and Freshness",
+      "summary": "Source Lifecycle and Freshness. Focus: freshness, lifecycle, source intelligence.",
+      "collection": "handbook",
+      "topic": "sources",
+      "type": "standard",
+      "status": "recommended",
+      "tags": [
+        "freshness",
+        "lifecycle",
+        "source-intelligence"
+      ],
+      "domains": [
+        "source-intelligence"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/sources/aep-src-010-source-lifecycle-and-freshness.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "AEP-TOOL-001",
+      "title": "Tool Design Fundamentals",
+      "summary": "Tool Design Fundamentals. Focus: authorization, deterministic control, tool design.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "deterministic-control",
+        "tool-design"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-001-tool-design-fundamentals.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-007"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-002",
+      "title": "Tool Contracts and Schemas",
+      "summary": "Tool Contracts and Schemas. Focus: api design, schemas, structured output.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "api-design",
+        "schemas",
+        "structured-output"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-002-tool-contracts-and-schemas.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-001",
+        "AEP-CTX-002"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-003",
+      "title": "Tool Granularity and Composition",
+      "summary": "Tool Granularity and Composition. Focus: orchestration, tool design.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "orchestration",
+        "tool-design"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-003-tool-granularity-and-composition.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-001",
+        "AEP-TOOL-002",
+        "AEP-CTX-007"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-004",
+      "title": "Tool Discovery and Capability Loading",
+      "summary": "Tool Discovery and Capability Loading. Focus: progressive disclosure, tool design.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "progressive-disclosure",
+        "tool-design"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-004-tool-discovery-and-capability-loading.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-007",
+        "AEP-CTX-011",
+        "AEP-TOOL-001"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-005",
+      "title": "Errors, Retries, and Idempotency",
+      "summary": "Errors, Retries, and Idempotency. Focus: error handling, idempotency, retries.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "error-handling",
+        "idempotency",
+        "retries"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-005-errors-retries-and-idempotency.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-002",
+        "AEP-TOOL-003"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-006",
+      "title": "Authority, Permissions, and Side Effects",
+      "summary": "Authority, Permissions, and Side Effects. Focus: authorization, human approval, least privilege.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "authorization",
+        "human-approval",
+        "least-privilege"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-006-authority-permissions-and-side-effects.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-002",
+        "AEP-TOOL-001"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-007",
+      "title": "MCP Architecture",
+      "summary": "MCP Architecture. Focus: mcp, provider portability.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "mcp",
+        "provider-portability"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-007-mcp-architecture.md",
+      "relatedDocumentIds": [
+        "AEP-CTX-007",
+        "AEP-TOOL-004"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-008",
+      "title": "Long-Running Tools and Tasks",
+      "summary": "Long-Running Tools and Tasks. Focus: recovery, state management, termination.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "recovery",
+        "state-management",
+        "termination"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-008-long-running-tools-and-tasks.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-005",
+        "AEP-TOOL-007",
+        "AEP-CTX-008"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-009",
+      "title": "Tool Observability and Evaluation",
+      "summary": "Tool Observability and Evaluation. Focus: evaluation, observability.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-009-tool-observability-and-evaluation.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-001",
+        "AEP-TOOL-005",
+        "AEP-CTX-012"
+      ]
+    },
+    {
+      "id": "AEP-TOOL-010",
+      "title": "Tool Lifecycle, Versioning, and Freshness",
+      "summary": "Tool Lifecycle, Versioning, and Freshness. Focus: lifecycle, versioning.",
+      "collection": "handbook",
+      "topic": "tools",
+      "type": "guidance",
+      "status": "recommended",
+      "tags": [
+        "lifecycle",
+        "versioning"
+      ],
+      "domains": [
+        "tool-engineering"
+      ],
+      "scope": [
+        "enterprise-global"
+      ],
+      "sourceReviewDate": "2026-10-01",
+      "sourcePath": "corpus/handbook/tools/AEP-TOOL-010-tool-lifecycle-versioning-and-freshness.md",
+      "relatedDocumentIds": [
+        "AEP-TOOL-002",
+        "AEP-TOOL-007",
+        "AEP-TOOL-009"
+      ]
+    },
+    {
+      "id": "HARNESS-APP-SERVER-01-APP-SERVER-FOUNDATIONS",
+      "title": "Codex App Server foundations",
+      "summary": "Codex App Server foundations. Focus: architecture, codex app server.",
+      "collection": "harness",
+      "topic": "app-server",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "architecture",
+        "codex-app-server"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/app-server/01-app-server-foundations.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-APP-SERVER-02-LIFECYCLE-AND-INTEGRATION",
+      "title": "App Server lifecycle and integration decisions",
+      "summary": "App Server lifecycle and integration decisions. Focus: codex app server, human approval, state management.",
+      "collection": "harness",
+      "topic": "app-server",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "codex-app-server",
+        "human-approval",
+        "state-management"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/app-server/02-lifecycle-and-integration.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-ARCHITECTURE-01-INTEGRATION-BOUNDARIES",
+      "title": "Integration boundaries and capability comparison",
+      "summary": "Integration boundaries and capability comparison. Focus: architecture, codex app server, codex plugins, codex sdk.",
+      "collection": "harness",
+      "topic": "architecture",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "architecture",
+        "codex-app-server",
+        "codex-plugins",
+        "codex-sdk"
+      ],
+      "domains": [
+        "harness-architecture"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/architecture/01-integration-boundaries.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-ARCHITECTURE-02-REFERENCE-DESIGN",
+      "title": "Portable reference architecture",
+      "summary": "Portable reference architecture. Focus: architecture, harness design, state management.",
+      "collection": "harness",
+      "topic": "architecture",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "architecture",
+        "harness-design",
+        "state-management"
+      ],
+      "domains": [
+        "harness-architecture"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/architecture/02-reference-design.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-ARCHITECTURE-03-DECISIONS-AND-QUESTIONS",
+      "title": "Design discussion: decisions and open questions",
+      "summary": "Design discussion: decisions and open questions. Focus: architecture, decision records.",
+      "collection": "harness",
+      "topic": "architecture",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "architecture",
+        "decision-records"
+      ],
+      "domains": [
+        "harness-architecture"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/architecture/03-decisions-and-questions.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-PLUGIN-01-PLUGIN-FOUNDATIONS",
+      "title": "Codex plugin development foundations",
+      "summary": "Codex plugin development foundations. Focus: codex plugins, packaging.",
+      "collection": "harness",
+      "topic": "codex-plugin",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "codex-plugins",
+        "packaging"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-plugin/01-plugin-foundations.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-PLUGIN-02-SKILLS",
+      "title": "Skill design and agent guidance",
+      "summary": "Skill design and agent guidance. Focus: progressive disclosure, skill authoring.",
+      "collection": "harness",
+      "topic": "codex-plugin",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "progressive-disclosure",
+        "skill-authoring"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-plugin/02-skills.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-PLUGIN-03-MCP-AND-HOOKS",
+      "title": "MCP tooling and lifecycle hooks",
+      "summary": "MCP tooling and lifecycle hooks. Focus: authorization, lifecycle hooks, mcp.",
+      "collection": "harness",
+      "topic": "codex-plugin",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "authorization",
+        "lifecycle-hooks",
+        "mcp"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-plugin/03-mcp-and-hooks.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-SDK-01-SDK-FOUNDATIONS",
+      "title": "Codex TypeScript SDK foundations",
+      "summary": "Codex TypeScript SDK foundations. Focus: authentication, codex sdk.",
+      "collection": "harness",
+      "topic": "codex-sdk",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "authentication",
+        "codex-sdk"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-sdk/01-sdk-foundations.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-SDK-02-CONFIGURATION-AND-CAPABILITIES",
+      "title": "SDK capability map: models, threads, and outputs",
+      "summary": "SDK capability map: models, threads, and outputs. Focus: codex sdk, reasoning effort, structured output.",
+      "collection": "harness",
+      "topic": "codex-sdk",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "codex-sdk",
+        "reasoning-effort",
+        "structured-output"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-sdk/02-configuration-and-capabilities.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-CODEX-SDK-03-ORCHESTRATION-PATTERN",
+      "title": "Application-managed orchestration using the Codex SDK",
+      "summary": "Application-managed orchestration using the Codex SDK. Focus: codex sdk, orchestration, state management.",
+      "collection": "harness",
+      "topic": "codex-sdk",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "codex-sdk",
+        "orchestration",
+        "state-management"
+      ],
+      "domains": [
+        "codex-integration"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/codex-sdk/03-orchestration-pattern.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-FOUNDATIONS-01-HARNESS-CONCEPTS",
+      "title": "Harness foundations: mental model and components",
+      "summary": "Harness foundations: mental model and components. Focus: harness design, orchestration.",
+      "collection": "harness",
+      "topic": "foundations",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "harness-design",
+        "orchestration"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/foundations/01-harness-concepts.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-FOUNDATIONS-02-ORCHESTRATION-PATTERNS",
+      "title": "Common orchestration patterns",
+      "summary": "Common orchestration patterns. Focus: deterministic control, multi agent, orchestration.",
+      "collection": "harness",
+      "topic": "foundations",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "deterministic-control",
+        "multi-agent",
+        "orchestration"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/foundations/02-orchestration-patterns.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE",
+      "title": "Context engineering, retrieval, memory, and durable state",
+      "summary": "Context engineering, retrieval, memory, and durable state. Focus: context engineering, memory, retrieval, state management.",
+      "collection": "harness",
+      "topic": "foundations",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "context-engineering",
+        "memory",
+        "retrieval",
+        "state-management"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/foundations/03-context-and-state.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-FOUNDATIONS-04-RELIABILITY-AND-EVALS",
+      "title": "Guardrails, evaluation, telemetry, and failure handling",
+      "summary": "Guardrails, evaluation, telemetry, and failure handling. Focus: evaluation, observability, reliability, security controls.",
+      "collection": "harness",
+      "topic": "foundations",
+      "type": "guidance",
+      "status": "informational",
+      "tags": [
+        "evaluation",
+        "observability",
+        "reliability",
+        "security-controls"
+      ],
+      "domains": [
+        "engineering-foundations"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/foundations/04-reliability-and-evals.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-REFERENCE-GLOSSARY",
+      "title": "Glossary",
+      "summary": "Glossary. Focus: glossary, harness design.",
+      "collection": "harness",
+      "topic": "reference",
+      "type": "reference",
+      "status": "informational",
+      "tags": [
+        "glossary",
+        "harness-design"
+      ],
+      "domains": [
+        "reference"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/reference/GLOSSARY.md",
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "HARNESS-REFERENCE-SOURCES",
+      "title": "Source inventory and verification checklist",
+      "summary": "Source inventory and verification checklist. Focus: provenance, source authority.",
+      "collection": "harness",
+      "topic": "reference",
+      "type": "reference",
+      "status": "informational",
+      "tags": [
+        "provenance",
+        "source-authority"
+      ],
+      "domains": [
+        "reference"
+      ],
+      "scope": [
+        "portable-reference"
+      ],
+      "sourceReviewDate": "2026-10-14",
+      "sourcePath": "corpus/harness/reference/SOURCES.md",
+      "relatedDocumentIds": []
+    }
+  ]
+}

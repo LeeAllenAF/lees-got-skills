@@ -1,0 +1,27 @@
+{
+  "id": "AEP-SEC-010",
+  "title": "Memory, Retrieval, and Supply-Chain Poisoning",
+  "summary": "Memory, Retrieval, and Supply-Chain Poisoning. Focus: data poisoning, supply chain.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "data-poisoning",
+    "supply-chain"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-010-memory-retrieval-and-supply-chain-poisoning.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-009",
+    "AEP-CTX-012",
+    "AEP-SEC-003"
+  ],
+  "body": "# AEP-SEC-010 — Memory, Retrieval, and Supply-Chain Poisoning\n\n## 1. Purpose\nPersistent state can transform a one-time malicious input into a recurring compromise. Software repositories and dependencies add another persistent attack surface.\n\n## 2. Memory promotion boundary\nAgents may observe untrusted information, but durable semantic/procedural memory should require provenance, scope, validation, and where warranted human approval.\n\n## 3. Retrieval poisoning\nIndexing does not make content trustworthy. Preserve source identity, timestamp, permission scope, and trust classification so retrieval can filter or down-rank suspicious content.\n\n## 4. Repository content\nTreat cloned codebases as potentially hostile. Risks include agent-directed comments, malicious scripts, dependency hooks, poisoned configuration, generated artifacts, and hidden instructions.\n\n## 5. Dependency execution\nInstalling dependencies or running repository scripts can cross from reading untrusted data into executing attacker-controlled code. Prefer sandboxing, lockfile verification, scoped network access, and explicit policies before package execution.\n\n## 6. Persistent compromise indicators\nWatch for memories or knowledge entries that:\n- lack provenance;\n- unexpectedly expand scope;\n- instruct future agents rather than describe facts;\n- originate in low-trust external sources;\n- survive beyond their intended task/scope lifetime.\n\n## 7. Revalidation\nMemory and retrieval indexes require deletion, invalidation, and re-indexing mechanisms after source changes or security incidents.\n\n## References\n- OWASP, Memory Is a Feature. It Is Also an Attack Surface — https://genai.owasp.org/2026/05/13/memory-is-a-feature-it-is-also-an-attack-surface/"
+}

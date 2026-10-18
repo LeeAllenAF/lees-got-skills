@@ -1,0 +1,28 @@
+{
+  "id": "AEP-TOOL-008",
+  "title": "Long-Running Tools and Tasks",
+  "summary": "Long-Running Tools and Tasks. Focus: recovery, state management, termination.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "recovery",
+    "state-management",
+    "termination"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-008-long-running-tools-and-tasks.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-005",
+    "AEP-TOOL-007",
+    "AEP-CTX-008"
+  ],
+  "body": "# AEP-TOOL-008 — Long-Running Tools and Tasks\n\n## 1. Purpose\n\nSome operations exceed the useful lifetime of a synchronous tool call: deployments, builds, large analyses, data exports, migrations, remote workflows, and human-in-the-loop processes.\n\nThese require durable task semantics rather than pretending every operation completes immediately.\n\n## 2. Task model\n\nA long-running task should expose at least:\n\n```text\nstable task/operation ID\nstatus\ncreated/updated timestamps\nprogress where meaningful\ncurrent phase\nrecoverable result reference\nstructured error\ncancellation semantics\n```\n\n## 3. Do not occupy model context while waiting\n\nThe agent should not repeatedly reason about an operation that is simply still running.\n\nPrefer:\n\n```text\nstart operation\n→ receive handle\n→ persist task state\n→ resume/check when appropriate\n→ inspect final result\n```\n\n## 4. MCP Tasks\n\nThe MCP 2026-07-28 Tasks extension allows a server to return a task handle from a tool call, with client operations for getting, updating, and cancelling the task. Task creation is server-directed and the task is modeled as durable execution state.\n\nBecause Tasks are an extension and have already evolved across MCP versions, the platform implementations must pin protocol compatibility and include migration tests.\n\n## 5. Cancellation\n\nCancellation must define whether it is:\n\n- guaranteed;\n- best-effort;\n- unsupported after a phase boundary;\n- compensating rather than truly cancelling.\n\nDo not tell a model that a task was cancelled merely because a cancel request was accepted.\n\n## 6. Progress\n\nProgress should represent useful state, not fabricated percentages.\n\nPrefer semantic phases:\n\n```text\nqueued → building → validating → deploying → verifying\n```\n\nunless a true percentage is available.\n\n## 7. Human interaction\n\nIf a running task requires approval or input, persist the pending request explicitly. Long-running state must survive model-context compaction and process restarts.\n\n## 8. Retry and duplicate execution\n\nTask creation should use stable operation IDs or idempotency semantics where duplicate starts would be harmful.\n\n## 9. Guidance\n\nLong-running work belongs in durable execution state. The agent should reason around phase transitions and exceptions, not act as the scheduler or state store.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "AEP-EVAL-009",
+  "title": "Human Evaluation and Judge Calibration",
+  "summary": "Human Evaluation and Judge Calibration. Focus: human evaluation, judge calibration.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "human-evaluation",
+    "judge-calibration"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-009-human-evaluation-and-judge-calibration.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-004"
+  ],
+  "body": "# AEP-EVAL-009 — Human Evaluation and Judge Calibration\n\n## 1. Purpose\nHuman evaluation supplies domain intent and calibrates automated graders. It is especially important when quality is subjective, consequences are high, or the grader itself is being changed.\n\n## 2. Rubric design\nRubrics should:\n- define criteria separately;\n- show examples at important score levels;\n- identify hard-fail conditions;\n- avoid vague labels like “good” without observable meaning;\n- allow “insufficient evidence” when appropriate.\n\n## 3. Agreement\nMeasure reviewer agreement on a calibration subset. Disagreement can indicate ambiguous requirements rather than reviewer error.\n\nUse adjudication for consequential cases and update the rubric when disagreement reveals unclear criteria.\n\n## 4. Calibrating model judges\nBefore scaling an LLM grader:\n1. build a human-labeled reference set;\n2. measure agreement and failure patterns;\n3. test order/verbosity sensitivity;\n4. re-check calibration when the judge model changes;\n5. retain periodic human audit samples.\n\n## 5. Blind comparison\nWhere possible, hide model/provider identity from human judges and randomize candidate order to reduce expectation bias.\n\n## 6. Recommendation\nAutomated judges may replace large volumes of repetitive human scoring only after agreement is demonstrated for the exact rubric/workload. Human review remains the authority for redefining what the rubric should mean.\n\n## References\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- OpenAI, Datasets — https://developers.openai.com/api/docs/guides/evaluation-getting-started"
+}

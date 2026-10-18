@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-005",
+  "title": "Feature Implementation",
+  "summary": "Feature Implementation. Focus: feature implementation, verification.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "feature-implementation",
+    "verification"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-005-feature-implementation.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-001",
+    "AEP-CODE-002",
+    "AEP-CODE-008"
+  ],
+  "body": "# AEP-CODE-005 — Feature Implementation\n\n## 1. Goal\nImplement requested behavior with the smallest coherent change that fits the repository's architecture and conventions.\n\n## 2. Workflow\n1. Clarify the acceptance boundary from existing context.\n2. Inspect nearby implementation, tests, types/contracts, and call sites.\n3. Identify affected surfaces and risk.\n4. Implement in small coherent increments.\n5. Verify locally with the narrowest meaningful checks first.\n6. Expand verification according to blast radius.\n7. Review the diff for accidental changes.\n8. Report what changed and evidence of correctness.\n\n## 3. Tests\nTests should verify meaningful behavior, not merely mirror implementation. Avoid gratuitous test creation for trivial reversible changes while never skipping repository-required checks.\n\n## 4. Scope discipline\nDo not opportunistically redesign unrelated code unless the requested change cannot be made safely without it. Record adjacent issues separately.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "teach-agentic-development",
+  "projectType": "library",
+  "root": "skills/teach-agentic-development",
+  "tags": ["type:skill"],
+  "targets": {
+    "validate": {
+      "command": "node tools/skills/validate-skill.mjs {projectRoot} && node --test {projectRoot}/test/knowledge.test.mjs && node {projectRoot}/scripts/evaluate.mjs"
+    },
+    "package": {
+      "dependsOn": ["validate"],
+      "command": "node tools/skills/package-skill.mjs {projectRoot}",
+      "outputs": ["{workspaceRoot}/dist/skills/teach-agentic-development"]
+    }
+  }
+}

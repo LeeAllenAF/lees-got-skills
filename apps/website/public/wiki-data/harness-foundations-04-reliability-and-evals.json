@@ -1,0 +1,25 @@
+{
+  "id": "HARNESS-FOUNDATIONS-04-RELIABILITY-AND-EVALS",
+  "title": "Guardrails, evaluation, telemetry, and failure handling",
+  "summary": "Guardrails, evaluation, telemetry, and failure handling. Focus: evaluation, observability, reliability, security controls.",
+  "collection": "harness",
+  "topic": "foundations",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "evaluation",
+    "observability",
+    "reliability",
+    "security-controls"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/foundations/04-reliability-and-evals.md",
+  "relatedDocumentIds": [],
+  "body": "# Guardrails, evaluation, telemetry, and failure handling\n\n[← Index](/wiki) · [State](/wiki/harness-foundations-03-context-and-state) · [MCP/hooks](/wiki/harness-codex-plugin-03-mcp-and-hooks)\n\n## Hard vs soft controls\n**[DESIGN]** Skills and prompts establish *behavioral expectations*. Tool code enforces *permissions, schemas, budgets, approvals and transaction safety*. A prompt is not an authorization barrier.\n\n## Threats\nPrompt injection from docs/repo content; leakage of credentials; excessive tool permissions; runaway loops; stale indexed facts; invented relationships; ambiguous entity resolution; duplicate side effects on retries; unavailable backend services.\n\n## Controls\nLeast-privilege credentials, read-only-by-default tools, allowlisted domains/workspaces, structured input validation, approval for sensitive writes, execution budgets, controlled network access, bounded output size, and provenance tagging.\n\n## Evaluation categories\n| Metric | Why |\n|---|---|\n| Completion rate | Did requested work finish? |\n| Precision / recall | Accuracy and coverage of extracted relationships |\n| Evidence validity | Are claims tied to real source content? |\n| Retries and recovery | How often can work resume safely? |\n| Token/cost per accepted result | Operational efficiency |\n| Time to result | End-to-end throughput |\n| Unauthorized action attempts | Policy effectiveness |\n| Human escalation rate | Operational autonomy |\n\nUse fixture-based tests for deterministic parts, replay of captured inputs where permitted, and holdout evaluation datasets for model-generated classifications. A model critiquing itself is not a substitute for external evidence.\n\n## Observability\nLog run_id, work_unit_id, thread_id, model (when provided), tool name, latency, outcome, artifact/evidence references, and usage counters. Avoid logging sensitive raw prompts or responses by default.\n\nRelated: [App Server events](/wiki/harness-app-server-02-lifecycle-and-integration); [architecture](/wiki/harness-architecture-02-reference-design)."
+}

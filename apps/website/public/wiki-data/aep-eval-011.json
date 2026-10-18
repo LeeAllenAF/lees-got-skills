@@ -1,0 +1,25 @@
+{
+  "id": "AEP-EVAL-011",
+  "title": "Evaluation Harness and Reproducibility",
+  "summary": "Evaluation Harness and Reproducibility. Focus: evaluation, repeatability.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "repeatability"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-011-evaluation-harness-and-reproducibility.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-006"
+  ],
+  "body": "# AEP-EVAL-011 — Evaluation Harness and Reproducibility\n\n## 1. Purpose\nEvaluation infrastructure must make comparisons reproducible enough to support engineering decisions without pretending stochastic systems are perfectly deterministic.\n\n## 2. Required run metadata\nRecord at minimum:\n- task/dataset version;\n- agent/harness version;\n- model/provider/version or immutable identifier where available;\n- reasoning/configuration parameters;\n- tool and skill versions;\n- prompt/instruction versions;\n- retrieval/index version;\n- sandbox image/environment;\n- CPU/memory/resource limits;\n- network policy;\n- timestamps;\n- random seeds where meaningful;\n- grader versions.\n\n## 3. Isolation\nEach trial should start from a known state. Coding evals should use reproducible repositories/containers and reset mutated state between trials.\n\n## 4. Provider-neutral core\nthe platform should own canonical task specifications, expected outcomes, run metadata, and result schema. Provider-specific eval products can be adapters rather than the source of truth.\n\nThis is especially important because vendor eval surfaces can change or be deprecated.\n\n## 5. Artifact retention\nRetain enough evidence to reproduce or audit important results:\n- configuration;\n- task fixture hash/version;\n- grader outputs;\n- outcome artifacts;\n- traces where policy permits;\n- aggregated metrics.\n\n## 6. Minimal initial harness\nDo not overbuild. Start with:\n\n```text\ntask loader\nrunner\ntrace recorder\ngrader interface\nresult schema\ncomparison report\n```\n\nAdd distributed execution, dashboards, and advanced scheduling only when workload requires them.\n\n## References\n- Anthropic, Quantifying infrastructure noise in agentic coding evals — https://www.anthropic.com/engineering/infrastructure-noise\n- OpenAI, Evaluate agent workflows — https://developers.openai.com/api/docs/guides/agent-evals"
+}

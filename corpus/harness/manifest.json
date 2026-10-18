@@ -1,0 +1,31 @@
+{
+  "title": "Agentic Harness and Codex Integration Foundations",
+  "version": "0.1.0",
+  "reviewed": "2026-10-14",
+  "entrypoint": "AGENTS.md",
+  "index": "INDEX.md",
+  "format": "markdown-linked",
+  "file_count": 20,
+  "files": [
+    "AGENTS.md",
+    "INDEX.md",
+    "README.md",
+    "app-server/01-app-server-foundations.md",
+    "app-server/02-lifecycle-and-integration.md",
+    "architecture/01-integration-boundaries.md",
+    "architecture/02-reference-design.md",
+    "architecture/03-decisions-and-questions.md",
+    "codex-plugin/01-plugin-foundations.md",
+    "codex-plugin/02-skills.md",
+    "codex-plugin/03-mcp-and-hooks.md",
+    "codex-sdk/01-sdk-foundations.md",
+    "codex-sdk/02-configuration-and-capabilities.md",
+    "codex-sdk/03-orchestration-pattern.md",
+    "foundations/01-harness-concepts.md",
+    "foundations/02-orchestration-patterns.md",
+    "foundations/03-context-and-state.md",
+    "foundations/04-reliability-and-evals.md",
+    "reference/GLOSSARY.md",
+    "reference/SOURCES.md"
+  ]
+}

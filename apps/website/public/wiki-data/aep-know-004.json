@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-004",
+  "title": "Retrieval, Ranking, and Context Packages",
+  "summary": "Retrieval, Ranking, and Context Packages. Focus: context packages, retrieval.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "context-packages",
+    "retrieval"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-004-retrieval-ranking-and-context-packages.md",
+  "relatedDocumentIds": [],
+  "body": "# Retrieval, Ranking, and Context Packages\n\n## Principle\n\nThe knowledge service should return the **smallest sufficient evidence package**, not a dump of the handbook.\n\n## Retrieval portfolio\n\nUse the retrieval architecture already defined in the Context Engineering section:\n\n```text\nexact lookup\nmetadata filtering\nlexical search\nsemantic search\nstructural relationships\nreranking\n```\n\nThe service may route among these methods based on query characteristics.\n\n## Search vs guidance resolution\n\nThese are different operations.\n\n`search` answers:\n\n> What knowledge is relevant to this query?\n\n`resolve` answers:\n\n> Given this task, scope, scope, repository, and policy hierarchy, what guidance is effective?\n\nSearch may return multiple competing documents.\n\nResolution must preserve conflicts and explain precedence.\n\n## Context packages\n\nA task-specific package may include:\n\n```yaml\neffective_guidance:\n  - id: AEP-P-016\n    status: approved\n    provenance: enterprise\n\nrecommended_patterns:\n  - AEP-CTX-007\n\nrequired_checks:\n  - repository-defined test command\n\nrelevant_skills:\n  - react-component\n\nopen_conflicts: []\n\nreferences:\n  - document: AEP-CODE-003\n    sections:\n      - Language specialization\n```\n\n## Bounded output\n\nThe caller should be able to specify or negotiate:\n\n- maximum documents;\n- maximum tokens/bytes;\n- depth;\n- include/exclude evidence;\n- include historical material;\n- minimum status.\n\n## Reranking\n\nReranking may be useful when a broad candidate set exists, but should not be mandatory for exact-ID or highly structured lookups.\n\n## Generated synthesis\n\nIf the service generates a summary, the summary is not the source of truth.\n\nIt must preserve citations/provenance to canonical material.\n\n## Current recommendation\n\nExpose both raw evidence and resolved/context-package operations. Do not hide all retrieval behind one opaque \"ask the handbook\" endpoint."
+}

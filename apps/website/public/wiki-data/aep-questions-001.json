@@ -1,0 +1,23 @@
+{
+  "id": "AEP-QUESTIONS-001",
+  "title": "Open Questions",
+  "summary": "Open Questions. Focus: experimentation, knowledge management.",
+  "collection": "handbook",
+  "topic": "foundations",
+  "type": "reference",
+  "status": "informational",
+  "tags": [
+    "experimentation",
+    "knowledge-management"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/foundations/AEP-QUESTIONS-001-open-questions.md",
+  "relatedDocumentIds": [],
+  "body": "# Open Questions\n\nThis document tracks unresolved questions that can materially change platform guidance.\n\n## Knowledge and retrieval\n\n- What metadata fields materially improve downstream task success?\n- When do embeddings and reranking improve results beyond lexical/structural retrieval?\n- What context-package size maximizes useful outcome per cost?\n- Which freshness labels measurably change agent behavior?\n\n## Permission boundaries\n\n- What scope model is expressive enough for people and service identities without making retrieval brittle?\n- How should caches and indexes isolate restricted scopes?\n- Which authorization decisions require durable audit records?\n\n## Source intelligence\n\n- How should authority, recency, corroboration, and reproducibility combine without becoming an opaque trust score?\n- Which source-discovery techniques achieve acceptable precision?\n\n## Skills\n\n- When does a skill outperform repository guidance?\n- How should skill catalogs scale without activation noise?\n\n## Security assurance\n\n- Which adversarial suites best predict real agent-system failures?\n- How should fintech-grade automated penetration testing remain isolated and governable?\n\n## Future architecture\n\n- Which production policy engine best fits the eventual enterprise authorization model?\n- What lessons from platform operation should drive a future SDLC control-plane redesign?"
+}

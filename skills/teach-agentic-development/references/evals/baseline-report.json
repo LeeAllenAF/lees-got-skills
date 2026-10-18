@@ -1,0 +1,334 @@
+{
+  "kind": "retrieval-smoke-evaluation",
+  "cases": 20,
+  "passed": 20,
+  "failed": 0,
+  "inferenceCalls": 0,
+  "limitations": "Small authored fixture set. Does not measure generated answer accuracy, teaching effectiveness, or general retrieval recall.",
+  "results": [
+    {
+      "id": "multi-agent",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-AGENT-004",
+        "AEP-AGENT-010",
+        "AEP-AGENT-004",
+        "AEP-AGENT-010"
+      ],
+      "expectedAnyOf": [
+        "AEP-AGENT-004",
+        "AEP-AGENT-001"
+      ],
+      "responseBytes": 3221,
+      "milliseconds": 11.42
+    },
+    {
+      "id": "memory-context",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-009",
+        "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE",
+        "AEP-CTX-008"
+      ],
+      "expectedAnyOf": [
+        "AEP-CTX-009",
+        "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE"
+      ],
+      "responseBytes": 5471,
+      "milliseconds": 4.7
+    },
+    {
+      "id": "injection",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-SEC-003",
+        "AEP-ASSURE-003",
+        "AEP-CTX-012",
+        "AEP-SRC-008"
+      ],
+      "expectedAnyOf": [
+        "AEP-SEC-003",
+        "AEP-ASSURE-003"
+      ],
+      "responseBytes": 2970,
+      "milliseconds": 3.8
+    },
+    {
+      "id": "skills-mcp",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-SKILL-005",
+        "HARNESS-CODEX-PLUGIN-03-MCP-AND-HOOKS",
+        "AEP-KNOW-008",
+        "AEP-SKILL-001"
+      ],
+      "expectedAnyOf": [
+        "AEP-SKILL-005",
+        "AEP-SKILL-001"
+      ],
+      "responseBytes": 3125,
+      "milliseconds": 4.92
+    },
+    {
+      "id": "lexical-semantic",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-CTX-005",
+        "AEP-CTX-003",
+        "AEP-CTX-004",
+        "AEP-CTX-005"
+      ],
+      "expectedAnyOf": [
+        "AEP-CTX-005",
+        "AEP-CTX-003"
+      ],
+      "responseBytes": 4295,
+      "milliseconds": 2.7
+    },
+    {
+      "id": "eval-basics",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-EVAL-001",
+        "AEP-INNOV-005",
+        "AEP-SRC-009",
+        "AEP-CODE-014"
+      ],
+      "expectedAnyOf": [
+        "AEP-EVAL-001"
+      ],
+      "responseBytes": 2814,
+      "milliseconds": 1.32
+    },
+    {
+      "id": "app-server",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "HARNESS-APP-SERVER-01-APP-SERVER-FOUNDATIONS",
+        "HARNESS-APP-SERVER-02-LIFECYCLE-AND-INTEGRATION",
+        "HARNESS-ARCHITECTURE-01-INTEGRATION-BOUNDARIES",
+        "HARNESS-REFERENCE-SOURCES"
+      ],
+      "expectedAnyOf": [
+        "HARNESS-APP-SERVER-01-APP-SERVER-FOUNDATIONS"
+      ],
+      "responseBytes": 2825,
+      "milliseconds": 1.65
+    },
+    {
+      "id": "cost",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-COST-001",
+        "AEP-COST-009",
+        "AEP-EVAL-007",
+        "AEP-MODEL-004"
+      ],
+      "expectedAnyOf": [
+        "AEP-COST-001",
+        "AEP-COST-009",
+        "AEP-MODEL-004"
+      ],
+      "responseBytes": 2985,
+      "milliseconds": 2.26
+    },
+    {
+      "id": "idempotency",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-TOOL-005",
+        "AEP-TOOL-006",
+        "AEP-TOOL-008",
+        "AEP-TOOL-005"
+      ],
+      "expectedAnyOf": [
+        "AEP-TOOL-005"
+      ],
+      "responseBytes": 3266,
+      "milliseconds": 3.78
+    },
+    {
+      "id": "model-selection",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-MODEL-009",
+        "AEP-MODEL-001",
+        "AEP-MODEL-003",
+        "AEP-CODE-004"
+      ],
+      "expectedAnyOf": [
+        "AEP-MODEL-001",
+        "AEP-MODEL-009"
+      ],
+      "responseBytes": 3197,
+      "milliseconds": 2.56
+    },
+    {
+      "id": "progressive",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-CTX-001",
+        "AEP-CTX-007",
+        "AEP-SKILL-002",
+        "AEP-CTX-011"
+      ],
+      "expectedAnyOf": [
+        "AEP-CTX-007"
+      ],
+      "responseBytes": 4503,
+      "milliseconds": 1.36
+    },
+    {
+      "id": "crash-recovery",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE",
+        "AEP-AGENT-009",
+        "HARNESS-CODEX-SDK-03-ORCHESTRATION-PATTERN",
+        "AEP-TOOL-008"
+      ],
+      "expectedAnyOf": [
+        "AEP-AGENT-009",
+        "HARNESS-FOUNDATIONS-03-CONTEXT-AND-STATE"
+      ],
+      "responseBytes": 2926,
+      "milliseconds": 2.56
+    },
+    {
+      "id": "reranking",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-CTX-006",
+        "AEP-CTX-003",
+        "AEP-KNOW-004",
+        "AEP-CTX-006"
+      ],
+      "expectedAnyOf": [
+        "AEP-CTX-006"
+      ],
+      "responseBytes": 2839,
+      "milliseconds": 1.07
+    },
+    {
+      "id": "source-authority",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-CTX-002",
+        "AEP-SRC-004",
+        "AEP-SRC-003",
+        "AEP-SEC-002"
+      ],
+      "expectedAnyOf": [
+        "AEP-SRC-004",
+        "AEP-SRC-003",
+        "AEP-CTX-002"
+      ],
+      "responseBytes": 3063,
+      "milliseconds": 2.12
+    },
+    {
+      "id": "authorization",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-PERM-004",
+        "AEP-CTX-003",
+        "AEP-ASSURE-004",
+        "AEP-HBK-000"
+      ],
+      "expectedAnyOf": [
+        "AEP-PERM-004",
+        "AEP-KNOW-007"
+      ],
+      "responseBytes": 2817,
+      "milliseconds": 2.54
+    },
+    {
+      "id": "exact-id",
+      "passed": true,
+      "status": "found",
+      "expectedStatus": "found",
+      "documentIds": [
+        "AEP-AGENT-004",
+        "AEP-AGENT-004",
+        "AEP-AGENT-004",
+        "AEP-AGENT-004"
+      ],
+      "expectedAnyOf": [
+        "AEP-AGENT-004"
+      ],
+      "responseBytes": 2828,
+      "milliseconds": 0.6
+    },
+    {
+      "id": "ambiguous",
+      "passed": true,
+      "status": "ambiguous",
+      "expectedStatus": "ambiguous",
+      "documentIds": [],
+      "expectedAnyOf": [],
+      "responseBytes": 499,
+      "milliseconds": 0.06
+    },
+    {
+      "id": "unknown-physics",
+      "passed": true,
+      "status": "insufficient",
+      "expectedStatus": "insufficient",
+      "documentIds": [],
+      "expectedAnyOf": [],
+      "responseBytes": 339,
+      "milliseconds": 0.04
+    },
+    {
+      "id": "unknown-cooking",
+      "passed": true,
+      "status": "insufficient",
+      "expectedStatus": "insufficient",
+      "documentIds": [],
+      "expectedAnyOf": [],
+      "responseBytes": 339,
+      "milliseconds": 0.04
+    },
+    {
+      "id": "unknown-symbol",
+      "passed": true,
+      "status": "insufficient",
+      "expectedStatus": "insufficient",
+      "documentIds": [],
+      "expectedAnyOf": [],
+      "responseBytes": 339,
+      "milliseconds": 0.03
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-001",
+  "title": "Skill Fundamentals",
+  "summary": "Skill Fundamentals. Focus: knowledge management, skills.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "knowledge-management",
+    "skills"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-001-skill-fundamentals.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Fundamentals\n\n## Purpose\n\nDefine when reusable agent knowledge should become a skill and how skills relate to handbook guidance, tools, agents, and repository context.\n\n## Core model\n\nA skill is a **reusable capability package** that teaches an agent how to perform a recognizable class of work. It is not the canonical owner of company policy, live system state, credentials, or authorization.\n\n```text\nHandbook / standards\n        ↓\napproved guidance\n        ↓\nSkill\n  instructions\n  references\n  examples\n  scripts\n  templates\n  evals\n        ↓\nAgent uses skill\n        ↓\nTools / environment / verification\n```\n\n## Recommended boundary\n\nUse a skill when successful work depends on repeatable procedure, domain conventions, templates, examples, or deterministic helpers.\n\nDo not create a skill merely because a topic exists in the handbook.\n\nA useful skill should answer:\n\n- What recognizable goal does this skill support?\n- When should it activate?\n- What required inputs exist?\n- Which guidance is normative?\n- Which tools or capabilities may it use?\n- What evidence must be collected?\n- What output or postconditions are required?\n- How is success verified?\n- When should it stop or request human input?\n\n## Skills are not tools\n\nA tool exposes a capability or controlled action.\n\nA skill teaches the agent how to accomplish a goal, possibly by combining tools.\n\n```text\ntool  = capability\nskill = reusable procedure\nagent = reasoner / orchestrator\n```\n\nAuthentication, authorization, destructive-action protection, and live state remain outside the skill.\n\n## Skills are not policy stores\n\nCompany standards should remain canonical in the handbook or policy system. Skills may reference and operationalize those standards, but should not silently fork them.\n\n## Default package\n\nA mature skill may contain:\n\n```text\nskill-name/\n├── SKILL.md\n├── references/\n├── examples/\n├── templates/\n├── scripts/\n├── schemas/\n└── evals/\n```\n\nOnly the files that add measurable value should exist.\n\n## Current guidance\n\n1. Keep the skill goal narrow enough to describe clearly.\n2. Prefer one recognizable workflow over broad “expert personas.”\n3. Keep activation metadata concise and discriminative.\n4. Load detailed instructions only when the skill is relevant.\n5. Prefer deterministic scripts for repeatable mechanical operations.\n6. Link to canonical standards rather than duplicating them.\n7. Include verification and failure handling.\n8. Treat skill changes as behavior changes and evaluate them accordingly.\n\n## Sources\n\n- OpenAI, *Skills*: https://developers.openai.com/api/docs/guides/tools-skills\n- OpenAI, *Skills – Plugins*: https://developers.openai.com/plugins/concepts/skills\n- Anthropic, *Introducing Agent Skills*: https://www.anthropic.com/research/skills"
+}

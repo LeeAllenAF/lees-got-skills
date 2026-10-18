@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-CODEX-PLUGIN-02-SKILLS",
+  "title": "Skill design and agent guidance",
+  "summary": "Skill design and agent guidance. Focus: progressive disclosure, skill authoring.",
+  "collection": "harness",
+  "topic": "codex-plugin",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "progressive-disclosure",
+    "skill-authoring"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-plugin/02-skills.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill design and agent guidance\n\n[← Index](/wiki) · [Plugin packaging](/wiki/harness-codex-plugin-01-plugin-foundations) · [MCP/hooks](/wiki/harness-codex-plugin-03-mcp-and-hooks)\n\n## What a skill is\n**[DOCUMENTED]** A skill is a folder containing `SKILL.md`, usually with frontmatter including `name` and `description`, and optionally scripts, references, templates and assets. A skill defines *when to use a workflow* and *how to perform it*; tools implement live reads or controlled actions. [Official skills docs](https://developers.openai.com/plugins/concepts/skills).\n\n## Good skill structure\n```md\n---\nname: verify-relationships\ndescription: Verify reported entity relationships against primary evidence.\n---\n# Objective\nFor each candidate relationship, verify evidence and record verdict.\n# Preconditions\nUse only accessible, approved sources.\n# Procedure\n1. Claim a verification task.\n2. Inspect evidence references.\n3. Confirm source identities and timestamps.\n4. Submit verdict with citations.\n# Completion\nEvery claim is confirmed, rejected or escalated.\n# Failure\nOn insufficient evidence, abstain and record unresolved status.\n```\n\n## Style guidance [DESIGN]\nUse concise, testable instructions rather than metaphorical or theatrical prose. Separate intent from hard permissions. Express success, failure, escalation, and evidence requirements explicitly. Put long technical specifications in linked references so the skill loads minimal default context.\n\n## Testing\nTest direct activation, indirect activation, missing inputs, non-trigger cases and adversarial source content. Measure whether correct tools are selected and whether output contracts are met.\n\n## Relationship to SDK\nAn SDK controller can submit tasks to Codex with skill-oriented instructions; packaging a skill alone does not give that skill authority to create new inference turns.\n\nSources: https://developers.openai.com/plugins/build/skills ; https://developers.openai.com/plugins/concepts/skills"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "AEP-CODE-014",
+  "title": "Coding-Agent Lifecycle, Evaluation, and Freshness",
+  "summary": "Coding-Agent Lifecycle, Evaluation, and Freshness. Focus: evaluation, lifecycle, software engineering.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "lifecycle",
+    "software-engineering"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-014-coding-agent-lifecycle-evaluation-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-010",
+    "AEP-TOOL-010",
+    "AEP-AGENT-010"
+  ],
+  "body": "# AEP-CODE-014 — Coding-Agent Lifecycle, Evaluation, and Freshness\n\n## 1. Purpose\nCoding-agent guidance decays as models, frameworks, repositories, developer tools, and security constraints change. The section must therefore be tested and revalidated continuously.\n\n## 2. Evaluation layers\nEvaluate:\n- task outcome correctness;\n- patch/diff quality;\n- verification behavior;\n- unnecessary edits;\n- repository convention adherence;\n- authority violations;\n- cost, latency, retries, and human intervention;\n- repeated-run reliability.\n\n## 3. Evaluation corpus\nMaintain representative tasks across discovery, implementation, debugging, refactoring, review, upgrades, migrations, and CI. Include multiple languages/frameworks and small as well as large repositories to prevent accidental optimization for the platform's preferred stack.\n\n## 4. Revalidation triggers\nRe-evaluate when:\n- a default model or reasoning policy changes;\n- language/framework major versions change;\n- repository tooling changes;\n- a new failure mode appears;\n- security guidance changes;\n- a skill/harness rule is added or removed;\n- performance/cost shifts materially.\n\n## 5. Promotion and removal\nGuidance should be promoted, revised, deprecated, or rejected from evidence. Model-specific workarounds and language-specific conventions must have removal criteria.\n\n## 6. Anti-overfitting requirement\nA coding-agent benchmark that succeeds only on one monorepo style, language, framework, or build system is insufficient evidence for company-wide guidance.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

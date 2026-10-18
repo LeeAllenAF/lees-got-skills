@@ -1,0 +1,24 @@
+{
+  "id": "AEP-SKILL-008",
+  "title": "Skill Governance, Security, and Trust",
+  "summary": "Skill Governance, Security, and Trust. Focus: governance, skills, supply chain.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "governance",
+    "skills",
+    "supply-chain"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-008-governance-security-and-trust.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Governance, Security, and Trust\n\n## Threat model\n\nSkills can contain instructions, scripts, templates, examples, and references. Installing or updating a skill therefore changes the effective behavior of the agent and may introduce executable content.\n\nTreat skills as software supply-chain artifacts.\n\n## Required controls\n\nFor managed the platform skills, record:\n\n- owner;\n- source;\n- version;\n- status;\n- checksum/signature where infrastructure supports it;\n- review history;\n- required permissions;\n- scripts/executable content;\n- external dependencies;\n- linked standards;\n- eval status.\n\n## Trust tiers\n\nPossible categories:\n\n```text\nthe platform managed\nenterprise managed\nvendor managed\nthird-party reviewed\nuntrusted / experimental\n```\n\nTrust tier affects installation, execution, review, and update policy.\n\n## Executable scripts\n\nScripts should receive normal software security treatment:\n\n- source review;\n- dependency review;\n- least privilege;\n- sandboxing;\n- deterministic invocation;\n- explicit inputs/outputs.\n\nA skill description does not grant its scripts additional authority.\n\n## Remote and third-party skills\n\nDo not automatically execute newly discovered skill content from untrusted sources.\n\nReview before promotion into trusted capability catalogs.\n\n## Update security\n\nAutomatic updates can create silent behavioral changes. Production skill catalogs should use controlled promotion, version pinning where appropriate, and regression evaluation.\n\n## Current guidance\n\nTreat skill installation as a capability change, not as harmless documentation import."
+}

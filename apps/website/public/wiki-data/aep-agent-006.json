@@ -1,0 +1,27 @@
+{
+  "id": "AEP-AGENT-006",
+  "title": "Planning, Decomposition, and Execution",
+  "summary": "Planning, Decomposition, and Execution. Focus: orchestration, planning.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "provisional",
+  "tags": [
+    "orchestration",
+    "planning"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-006-planning-decomposition-and-execution.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-003",
+    "AEP-AGENT-004",
+    "AEP-MODEL-004"
+  ],
+  "body": "# AEP-AGENT-006 — Planning, Decomposition, and Execution\n\n## Purpose\nUse explicit planning only when it improves execution quality or coordination.\n\n## Planning modes\n- implicit planning inside one agent;\n- explicit short plan before action;\n- planner/executor separation;\n- hierarchical task decomposition;\n- rolling plans revised from observations.\n\n## Guidance\nPrefer the lightest planning representation that supports the task. Detailed plans become stale when environments are dynamic. For software work, plans should identify goals, constraints, verification, and dependencies without prematurely specifying every implementation step.\n\nSeparate planner/executor agents only when independence, context isolation, model specialization, or coordination benefits are measurable.\n\n## Risks\n- plan worship after evidence changes;\n- excessive decomposition overhead;\n- planning without action/verification;\n- lost context between planner and executor;\n- recursive decomposition with no progress.\n\n## References\n- Google Cloud, Agentic AI design patterns — https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system"
+}

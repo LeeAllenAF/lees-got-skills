@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-004",
+  "title": "Skill Composition and Dependencies",
+  "summary": "Skill Composition and Dependencies. Focus: dependencies, skill composition.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "pattern",
+  "status": "provisional",
+  "tags": [
+    "dependencies",
+    "skill-composition"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-004-skill-composition-and-dependencies.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Composition and Dependencies\n\n## Problem\n\nReal tasks often require multiple reusable capabilities. Skills must compose without becoming a hidden dependency graph that is harder to reason about than the original task.\n\n## Default rule\n\nPrefer **shallow composition**.\n\n```text\ntask\n ├── repository-analysis\n ├── language-specific guidance\n └── verification\n```\n\nis preferable to:\n\n```text\nskill A\n  → skill B\n    → skill C\n      → skill D\n```\n\nunless deeper dependency chains have measurable benefit.\n\n## Dependency types\n\nDistinguish:\n\n- required capability;\n- optional enhancement;\n- reference-only relationship;\n- ordering dependency;\n- tool dependency;\n- policy dependency.\n\n## Avoid skill-as-agent confusion\n\nSkills should not simulate multiple agents through long internal role chains. If independent execution, isolation, authority, or parallel work is required, use agent architecture deliberately.\n\n## Conflict resolution\n\nIf multiple skills provide conflicting guidance:\n\n1. higher-authority external policy wins;\n2. repository/scope constraints are applied;\n3. the conflict should be surfaced rather than silently merged;\n4. skill-specific advice may not override canonical standards without an explicit allowed override.\n\n## Circular dependencies\n\nSkill packages should not have circular activation requirements.\n\nStatic validation should detect obvious cycles in declared dependencies.\n\n## Current recommendation\n\nComposition should remain understandable from a trace. If an engineer cannot explain why each skill loaded, the skill architecture is too opaque."
+}

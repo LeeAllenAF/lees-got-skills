@@ -1,0 +1,210 @@
+---
+schema_version: '1.0'
+id: PACK-TAXONOMY
+title: Controlled tag vocabulary
+summary: 'Controlled tag vocabulary. Focus: index navigation, metadata.'
+type: reference
+status: informational
+version: 1.0.0
+collection: assembly
+domains:
+- package-navigation
+tags:
+- index-navigation
+- metadata
+scope:
+- portable-reference
+related: []
+review:
+  metadata_reviewed_on: '2026-10-16'
+  method: assistant-content-classification
+  technical_review_performed: false
+  technical_last_reviewed: null
+  technical_review_interval: null
+  owner: null
+provenance:
+  source_archive: null
+  original_path: null
+  original_sha256: null
+  original_metadata_record: null
+  authority: reference-only
+---
+# Controlled tag vocabulary
+
+[Metadata contract](METADATA.md) · [Tag index](TAG-INDEX.md)
+
+Tags classify primary subjects, not every mentioned concept. Broad routing categories are separate `domains`. All terms are lowercase kebab-case; aliases are query aids in [taxonomy.json](metadata/taxonomy.json).
+
+| Tag | Definition |
+| --- | --- |
+| `adversarial-testing` | Evaluating controls using hostile, misleading, or malformed inputs. |
+| `api-design` | Design of programmatic interfaces and their contracts. |
+| `architecture` | System components, boundaries, and structural tradeoffs. |
+| `audit-records` | Durable records of consequential events and decisions. |
+| `authentication` | Establishing authenticated access and supported login mechanisms. |
+| `authorization` | Determining and enforcing permitted resource access or actions. |
+| `backup-recovery` | Backing up canonical state and restoring it after loss. |
+| `batching` | Grouping compatible work to reduce execution overhead. |
+| `behavioral-assurance` | Checking observable agent behavior against explicit invariants. |
+| `benchmark-hygiene` | Preventing evaluation leakage, contamination, saturation, and stale task sets. |
+| `budgets` | Explicit limits on money, tokens, time, or work attempts. |
+| `cache-invalidation` | Invalidating cached results when underlying state or authority changes. |
+| `caching` | Reusing stored computations or results under freshness constraints. |
+| `capacity-planning` | Sizing resources and limits against expected workload. |
+| `change-control` | Review and promotion controls for consequential system changes. |
+| `change-history` | Versioned before-and-after records of artifact changes. |
+| `ci-cd` | Continuous integration and delivery workflows and failures. |
+| `cli` | Command-line interfaces for deterministic capabilities. |
+| `code-intelligence` | Structural code information such as symbols, dependencies, and repository maps. |
+| `code-review` | Reviewing changes for defects, requirement gaps, and maintainability. |
+| `codex-app-server` | Bidirectional Codex App Server protocol and lifecycle integration. |
+| `codex-plugins` | Codex plugin packaging and host integration surfaces. |
+| `codex-sdk` | Programmatic Codex threads, execution, and SDK configuration. |
+| `comparative-evaluation` | Comparing candidates against baselines under comparable conditions. |
+| `concurrency` | Coordinating simultaneous work, parallel execution, and contention. |
+| `conflict-resolution` | Representing and resolving conflicting guidance or evidence. |
+| `consequential-actions` | Actions with material, ambiguous, or irreversible effects. |
+| `context-compaction` | Compressing active context while preserving continuity and evidence. |
+| `context-efficiency` | Reducing low-value context and token consumption. |
+| `context-engineering` | Selecting, structuring, and maintaining information supplied to a model. |
+| `context-failures` | Failures caused by missing, irrelevant, stale, contradictory, or misinterpreted context. |
+| `context-packages` | Bounded, source-linked evidence bundles for a particular task. |
+| `corroboration` | Comparing independent evidence in support of claims. |
+| `cost-accounting` | Attributing model, tool, infrastructure, and human costs to work. |
+| `cost-optimization` | Improving cost per useful outcome under quality constraints. |
+| `credentials` | Scoped authentication material, rotation, and credential lifetime. |
+| `critique` | Review-and-refine patterns using explicit evaluation criteria. |
+| `data-classification` | Classifying information sensitivity and access requirements. |
+| `data-isolation` | Preventing cross-scope leakage across storage, retrieval, caches, and traces. |
+| `data-poisoning` | Malicious contamination of retrieved sources, memory, or derived knowledge. |
+| `data-protection` | Protecting sensitive information and data integrity. |
+| `database-migrations` | Evolving database schemas and data safely across deployments. |
+| `debugging` | Evidence-driven diagnosis and correction of software failures. |
+| `decision-records` | Recording choices, alternatives, rationale, and revisit triggers. |
+| `delegation` | Assigning bounded tasks and authority to separate workers. |
+| `dependencies` | Managing package or capability dependency relationships and upgrades. |
+| `destructive-actions` | Operations that delete, revoke, overwrite, or otherwise destroy state. |
+| `deterministic-control` | Using code and explicit rules to own predictable control flow. |
+| `documentation` | Authoring and maintaining descriptions grounded in actual systems. |
+| `embeddings` | Vector representations used for similarity and semantic retrieval. |
+| `error-handling` | Classifying failures and defining explicit responses and escalation. |
+| `evaluation` | Repeatable measurement of system behavior against requirements. |
+| `evaluation-datasets` | Representative tasks, fixtures, and held-out data for evaluation. |
+| `evidence-lineage` | Traceable relationships among sources, evidence, conclusions, and decisions. |
+| `experiment-discovery` | Identifying candidate experiments from observed gaps and failures. |
+| `experimentation` | Testing hypotheses with bounded experiments and measured outcomes. |
+| `fallbacks` | Alternative execution configurations used when primary paths fail or are unavailable. |
+| `feature-implementation` | Implementing requested product behavior within repository constraints. |
+| `forensics` | Reconstructing historical system behavior and decision state. |
+| `freshness` | Assessing whether knowledge or assumptions remain current. |
+| `glossary` | Definitions and disambiguation of engineering terms. |
+| `governance` | Ownership, review, authority, and promotion rules for knowledge or capabilities. |
+| `graders` | Automated evaluators that determine requirement satisfaction. |
+| `handoffs` | Transferring control or responsibility across agent boundaries. |
+| `harness-design` | Execution controls surrounding a model worker. |
+| `human-approval` | Explicit human authorization before consequential execution. |
+| `human-evaluation` | Human judgment of outputs, requirements, or evaluation rubrics. |
+| `hybrid-search` | Combining lexical and semantic retrieval candidate sets. |
+| `hypotheses` | Falsifiable proposed explanations or expected effects. |
+| `idempotency` | Preventing duplicate effects when an operation is repeated or replayed. |
+| `identifiers` | Stable identities independent of file names and locations. |
+| `identity` | Identifying human or workload principals for access decisions. |
+| `incident-response` | Investigating and responding to security incidents. |
+| `index-navigation` | Indexes, catalogs, and instructions for navigating this package. |
+| `indexing` | Building derived lookup and search representations from canonical content. |
+| `ingestion` | Importing and transforming source material into canonical or derived knowledge. |
+| `instruction-hierarchy` | Distinguishing instruction precedence from retrieved data and relevance. |
+| `judge-calibration` | Comparing evaluator judgments against human or trusted reference decisions. |
+| `knowledge-management` | Maintaining canonical engineering knowledge and exposing it for reuse. |
+| `knowledge-promotion` | Promoting evidence-backed knowledge or capabilities through review states. |
+| `language-specialization` | Adapting coding guidance to specific languages and frameworks. |
+| `latency` | End-to-end response delay and critical-path performance. |
+| `least-privilege` | Restricting capabilities to the minimum necessary authority. |
+| `lexical-search` | Exact, token-based, or sparse retrieval such as BM25. |
+| `lifecycle` | Review, revalidation, promotion, deprecation, and retirement over time. |
+| `lifecycle-hooks` | Host lifecycle callbacks and their scope or execution constraints. |
+| `mcp` | Model Context Protocol interfaces and integration boundaries. |
+| `memory` | Working and persistent information retained across steps or sessions. |
+| `metadata` | Structured descriptive fields for discovery, filtering, and provenance. |
+| `model-capabilities` | Task-specific descriptions of model abilities and constraints. |
+| `model-cascades` | Starting with a cheaper configuration and selectively escalating. |
+| `model-routing` | Selecting a model or configuration for a request or subtask. |
+| `model-selection` | Choosing models based on workload evidence and constraints. |
+| `multi-agent` | Systems with multiple reasoning workers and coordination boundaries. |
+| `network-isolation` | Restricting network destinations and connectivity at runtime. |
+| `observability` | Telemetry that exposes execution behavior, performance, and failures. |
+| `offline-operation` | Operating under disconnected or unavailable service conditions. |
+| `orchestration` | Coordinating control flow, work, and execution state. |
+| `packaging` | Organizing reusable capability bundles and their distribution files. |
+| `pareto-optimization` | Selecting non-dominated quality, cost, and latency configurations. |
+| `penetration-testing` | Authorized testing of exploitable security weaknesses. |
+| `planning` | Decomposing goals into execution steps and revising them using evidence. |
+| `policy-resolution` | Computing applicable rules across scopes and overlays. |
+| `privacy` | Restricting personal or sensitive data exposure and processing. |
+| `progressive-disclosure` | Loading deeper context and capabilities only when needed. |
+| `prompt-caching` | Provider-side reuse of repeated model input prefixes or context. |
+| `prompt-injection` | Attempts to turn untrusted content into controlling instructions. |
+| `prototyping` | Building bounded experimental implementations to test feasibility. |
+| `provenance` | Identifying the origin, version, and transformation history of artifacts. |
+| `provider-portability` | Separating portable domain logic from provider-specific adapters. |
+| `quotas` | Allocation and enforcement of resource usage ceilings. |
+| `rank-fusion` | Combining rankings from different retrieval systems. |
+| `reasoning-effort` | Selecting inference-time reasoning intensity and compute. |
+| `recovery` | Resuming or reconciling work after interruption or failure. |
+| `refactoring` | Changing internal structure while preserving intended behavior. |
+| `regression-testing` | Protecting previously expected behavior against changes. |
+| `release-gates` | Criteria that block or permit promotion into use. |
+| `reliability` | Predictable useful outcomes under normal and failure conditions. |
+| `repeatability` | Recording and controlling conditions needed to reproduce engineering comparisons. |
+| `reporting` | Summarizing evidence and operational trends for review. |
+| `repository-discovery` | Discovering repository structure, conventions, tooling, and relevant code. |
+| `reranking` | Reordering retrieved candidates using a more expensive relevance model. |
+| `research-automation` | Automating bounded source discovery, hypotheses, and research workflows. |
+| `retention` | Rules for preserving and expiring historical data and evidence. |
+| `retries` | Repeating failed operations only under bounded and safe retry policy. |
+| `retrieval` | Selecting relevant source material for a task or reasoning step. |
+| `root-cause-analysis` | Distinguishing causal failures from symptoms using discriminating evidence. |
+| `sandboxing` | Runtime containment of filesystem, process, and capability effects. |
+| `schemas` | Machine-readable contracts and validation of structured data. |
+| `scoring` | Turning evaluation criteria into comparable measurements. |
+| `secrets` | Protecting sensitive authentication and configuration values. |
+| `security-controls` | Externally enforced controls that constrain unsafe or unauthorized behavior. |
+| `security-findings` | Recorded security defects, severity, remediation, and exceptions. |
+| `self-hosted-models` | Inference deployed locally or in controlled infrastructure. |
+| `semantic-search` | Retrieval based on meaning rather than exact token matching. |
+| `service-identity` | Workload identities for service-to-service and unattended access. |
+| `single-agent` | One reasoning worker operating a bounded action loop. |
+| `skill-authoring` | Designing reusable skill instructions, procedures, and references. |
+| `skill-composition` | Combining skills while managing dependencies and conflicts. |
+| `skill-discovery` | Matching lightweight skill metadata to tasks and activation conditions. |
+| `skills` | Reusable procedural knowledge and capability packages for agents. |
+| `small-models` | Smaller or specialized models for bounded tasks. |
+| `software-engineering` | Engineering behavior grounded in existing repositories and executable evidence. |
+| `software-testing` | Executable checks of software correctness and behavior. |
+| `source-authority` | Assessing source authority separately from relevance or apparent confidence. |
+| `source-classification` | Categorizing sources by type, scope, authority, or intended use. |
+| `source-discovery` | Finding potentially relevant external or internal knowledge sources. |
+| `source-intelligence` | Discovering, assessing, and monitoring knowledge sources. |
+| `source-monitoring` | Tracking source changes and prioritizing updates. |
+| `source-snapshots` | Capturing versioned source content for reproducible evidence. |
+| `source-vetting` | Reviewing sources before their use as trusted evidence. |
+| `state-management` | Durable task state, queues, checkpoints, and work ownership. |
+| `statistics` | Quantifying variance, uncertainty, and confidence across repeated trials. |
+| `streaming` | Delivering incremental output or events to reduce perceived delay. |
+| `structured-output` | Validating model outputs against explicit data structures. |
+| `success-criteria` | Observable definitions of task or evaluation success. |
+| `supply-chain` | Trust and security of dependencies, skills, tools, and distributed artifacts. |
+| `tamper-evidence` | Detecting unauthorized alteration without assuming absolute immutability. |
+| `task-design` | Defining representative tasks and workload classes. |
+| `technology-selection` | Choosing tools and frameworks for environmental fit and requirements. |
+| `termination` | Explicit stop conditions and detection of non-progress. |
+| `threat-modeling` | Identifying assets, threats, attack paths, and trust boundaries. |
+| `throughput` | Useful workload completion rate under resource constraints. |
+| `tool-design` | Design of bounded capabilities and tool interfaces. |
+| `tool-use` | Invocation and composition of tools by agents or controllers. |
+| `trace-evaluation` | Evaluating the path and intermediate actions of a run. |
+| `tracing` | Correlating ordered events across execution components. |
+| `trust-boundaries` | Separations between differently trusted actors, inputs, and capabilities. |
+| `untrusted-content` | External or retrieved material treated as data rather than authority. |
+| `verification` | Checking outcomes against independent evidence or executable postconditions. |
+| `versioning` | Identifying compatible artifact revisions and preserving history. |

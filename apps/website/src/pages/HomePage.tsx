@@ -5,8 +5,8 @@ import './HomePage.css';
 
 const homeCards = [
   { icon: '</>', title: 'Agent Skills', text: 'Small, useful, and built to travel.', to: '/skills' },
+  { icon: '⌘', title: 'The Wiki', text: 'Agent engineering, mapped and searchable.', to: '/wiki' },
   { icon: '▤', title: 'The Blog', text: 'Experiments, mistakes, victories.', to: '/blog' },
-  { icon: '◉', title: 'About Me', text: 'The human behind the keyboard.', to: '/about' },
 ] as const;
 
 export function HomePage() {

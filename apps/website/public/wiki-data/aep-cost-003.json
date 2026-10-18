@@ -1,0 +1,28 @@
+{
+  "id": "AEP-COST-003",
+  "title": "Token and Context Efficiency",
+  "summary": "Token and Context Efficiency. Focus: context compaction, context efficiency.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "context-compaction",
+    "context-efficiency"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-003-token-and-context-efficiency.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-001",
+    "AEP-CTX-007",
+    "AEP-CTX-008",
+    "AEP-CTX-011"
+  ],
+  "body": "# AEP-COST-003 — Token and Context Efficiency\n\n## 1. Purpose\nToken reduction is valuable only when it removes low-value work without reducing task success.\n\n## 2. High-signal context first\nUse the smallest sufficient active context. Prefer:\n\n- progressive disclosure;\n- retrieval and reranking;\n- concise tool outputs;\n- structured working state;\n- context compaction;\n- stable reusable prefixes where caching is beneficial.\n\n## 3. Input vs output economics\nInput and output have different cost and latency characteristics. Long generated reasoning or verbose intermediate text can dominate cost even when input is efficient. Measure both.\n\n## 4. Context retention decisions\nFor every large context item ask:\n\n```text\nIs it relevant now?\nMust it be active, or can it remain retrievable?\nIs it reusable across turns?\nIs the source authoritative and fresh?\nDoes removing it increase retries or errors?\n```\n\n## 5. Tool-result reduction\nPrefer structured summaries and pointers for large tool results, while keeping raw evidence recoverable. Do not destroy information needed for debugging, security, or later verification merely to save tokens.\n\n## 6. Avoid token micro-optimization too early\nCurrent provider guidance notes that input-token trimming may have limited impact unless contexts are very large; reducing requests, outputs, or using appropriate models can dominate. Optimize measured bottlenecks first.\n\n## 7. Recommendation\nEvaluate context-efficiency changes against downstream success, retry rate, and cost per success—not token count in isolation.\n\n## References\n- Anthropic, Effective context engineering for AI agents — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents\n- OpenAI, Latency optimization — https://developers.openai.com/api/docs/guides/latency-optimization"
+}

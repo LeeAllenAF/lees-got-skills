@@ -1,0 +1,27 @@
+{
+  "id": "AEP-CODE-006",
+  "title": "Debugging and Root-Cause Analysis",
+  "summary": "Debugging and Root-Cause Analysis. Focus: debugging, root cause analysis.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "debugging",
+    "root-cause-analysis"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-006-debugging-and-root-cause-analysis.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-001",
+    "AEP-AGENT-009",
+    "AEP-CTX-010"
+  ],
+  "body": "# AEP-CODE-006 — Debugging and Root-Cause Analysis\n\n## 1. Principle\nDebugging should reduce uncertainty through evidence, not cycle through plausible edits.\n\n## 2. Workflow\n```text\nreproduce or establish observable failure\n  ↓\ncollect evidence\n  ↓\nform ranked hypotheses\n  ↓\nrun discriminating checks\n  ↓\nidentify root cause\n  ↓\napply minimal fix\n  ↓\nverify failure disappears without regression\n```\n\n## 3. Evidence sources\nPrefer logs, stack traces, failing tests, type errors, runtime state, recent diffs, configuration, dependency changes, metrics, and controlled experiments over speculation.\n\n## 4. Avoid patch churn\nIf successive edits do not reduce the hypothesis space or improve an objective failure signal, stop and reformulate rather than continuing to edit.\n\n## 5. Root cause vs symptom\nA workaround may be appropriate under operational pressure, but the agent should identify when it has mitigated a symptom rather than established the root cause.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

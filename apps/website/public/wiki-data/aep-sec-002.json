@@ -1,0 +1,26 @@
+{
+  "id": "AEP-SEC-002",
+  "title": "Threat Models and Trust Boundaries",
+  "summary": "Threat Models and Trust Boundaries. Focus: threat modeling, trust boundaries.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "threat-modeling",
+    "trust-boundaries"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-002-threat-models-and-trust-boundaries.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-002",
+    "AEP-SEC-001"
+  ],
+  "body": "# AEP-SEC-002 — Threat Models and Trust Boundaries\n\n## 1. Purpose\nAgent systems combine natural-language control, external data, credentials, tools, and persistent state. Threat modeling must identify where these different trust domains meet.\n\n## 2. Identify assets\nExamples include source code, customer data, credentials, production infrastructure, financial authority, user communications, memory stores, model instructions, and proprietary knowledge.\n\n## 3. Identify actors and trust zones\nCommon zones include:\n- user or calling service;\n- trusted application policy;\n- model runtime;\n- retrieved documents and web content;\n- tools/MCP servers;\n- sandbox;\n- internal systems;\n- third-party services;\n- persistent memory;\n- production systems.\n\n## 4. Treat transitions as security boundaries\nWhenever information or authority crosses a boundary, define:\n- authentication;\n- authorization;\n- validation;\n- provenance;\n- confidentiality expectations;\n- logging;\n- failure behavior.\n\n## 5. Threat classes\nAt minimum consider prompt injection, excessive agency, confused deputy behavior, privilege escalation, data exfiltration, credential exposure, memory poisoning, dependency/supply-chain compromise, cross-scope leakage, unsafe tool composition, destructive actions, and denial-of-service/cost amplification.\n\n## 6. Model the confused deputy problem\nAn authorized agent can still be tricked into using its authority on behalf of an unauthorized instruction embedded in data. Authorization must therefore account for the requesting principal and the intended operation, not merely whether the agent possesses a credential.\n\n## 7. Deliverable\nHigh-risk agent systems should maintain a lightweight threat model that is versioned with architecture changes and connected to security evals.\n\n## References\n- OWASP, AI Agent Security Cheat Sheet — https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html\n- OWASP, Excessive Agency — https://genai.owasp.org/llmrisk/llm062025-excessive-agency/"
+}

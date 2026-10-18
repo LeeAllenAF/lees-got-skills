@@ -1,0 +1,26 @@
+{
+  "id": "AEP-AGENT-002",
+  "title": "Deterministic Workflows vs Agent Loops",
+  "summary": "Deterministic Workflows vs Agent Loops. Focus: deterministic control, orchestration.",
+  "collection": "handbook",
+  "topic": "agents",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "deterministic-control",
+    "orchestration"
+  ],
+  "domains": [
+    "agent-architecture"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/agents/AEP-AGENT-002-workflows-vs-agent-loops.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-001",
+    "AEP-TOOL-003"
+  ],
+  "body": "# AEP-AGENT-002 — Deterministic Workflows vs Agent Loops\n\n## Purpose\nChoose the minimum amount of model-controlled orchestration necessary.\n\n## Decision model\nUse deterministic workflow steps for known operations such as validation, transformation, ranking, file movement, CI invocation, policy checks, and fixed approval gates. Use an agent loop when the next action depends on interpreting uncertain evidence or adapting to open-ended results.\n\nA useful hybrid is:\n```text\ndeterministic shell\n  ├─ prepare inputs\n  ├─ enforce policy\n  ├─ invoke agent for uncertain step\n  ├─ verify output\n  └─ continue deterministically\n```\n\n## Failure modes\n- agentifying fixed control flow;\n- hiding business logic inside prompts;\n- letting a model choose whether mandatory checks run;\n- using agents for deterministic joins/filtering/aggregation;\n- using rigid workflows for genuinely open-ended exploration.\n\n## Guidance\nTreat orchestration ownership as a deliberate boundary. Keep compliance, permissions, irreversible transitions, and deterministic validation outside discretionary model control unless there is a measured reason otherwise.\n\n## References\n- OpenAI, A practical guide to building AI agents — https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/\n- OpenAI, Programmatic Tool Calling — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "AEP-SEC-008",
+  "title": "Data Protection, Permission Isolation, and Privacy",
+  "summary": "Data Protection, Permission Isolation, and Privacy. Focus: data isolation, data protection, privacy.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "data-isolation",
+    "data-protection",
+    "privacy"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-008-data-protection-permission-isolation-and-privacy.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-009",
+    "AEP-SEC-004",
+    "AEP-SEC-005"
+  ],
+  "body": "# AEP-SEC-008 — Data Protection, Permission Isolation, and Privacy\n\n## 1. Purpose\nA enterprise engineering knowledge system may eventually operate across many permission scopes. Isolation must therefore be enforced at storage, retrieval, tool, credential, and evaluation layers.\n\n## 2. Tenant isolation\nProject A content must not become retrievable memory, context, examples, traces, or eval fixtures for Project B unless explicit policy and contractual rights permit it.\n\n## 3. Scope before relevance\nRetrieval should filter by authorization/permission scope before ranking for semantic relevance. Highly relevant unauthorized content must remain invisible.\n\n## 4. Data minimization\nSend models only the sensitive information necessary for the task. Prefer redaction, structured extraction, pseudonymization, or local processing where they preserve utility.\n\n## 5. Retention\nDefine retention and deletion independently for prompts, traces, tool logs, embeddings, caches, memories, datasets, and generated artifacts.\n\n## 6. Derived data\nEmbeddings, summaries, and learned memories can still encode sensitive information. Treat derived representations according to the sensitivity of their source unless evidence supports a lower classification.\n\n## 7. Evaluation data\nProduction traces should not be copied into broad eval datasets without authorization, minimization, and retention review.\n\n## 8. Portability\nProvider selection and API configuration should account for contractual data handling, geographic, training, and retention requirements without hard-coding one vendor as universally appropriate."
+}

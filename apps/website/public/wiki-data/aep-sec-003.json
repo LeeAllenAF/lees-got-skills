@@ -1,0 +1,26 @@
+{
+  "id": "AEP-SEC-003",
+  "title": "Prompt Injection and Untrusted Content",
+  "summary": "Prompt Injection and Untrusted Content. Focus: prompt injection, untrusted content.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "prompt-injection",
+    "untrusted-content"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-003-prompt-injection-and-untrusted-content.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-002",
+    "AEP-EVAL-010"
+  ],
+  "body": "# AEP-SEC-003 — Prompt Injection and Untrusted Content\n\n## 1. Purpose\nPrompt injection occurs when data presented to a model attempts to become instruction. In agent systems, the danger is not only incorrect text output but unauthorized tool use, disclosure, or persistent contamination.\n\n## 2. Default rule\n**External content is data, not authority.** Web pages, issues, emails, documents, code comments, dependency metadata, tool results, and retrieved memories must not silently redefine governing instructions.\n\n## 3. Assume detection is imperfect\nPrompt-injection defenses should not depend solely on recognizing malicious strings. Current attacks increasingly resemble social engineering and can be encoded in ordinary-looking content.\n\n## 4. Preferred defenses\n- separate trusted instructions from untrusted data;\n- reduce untrusted text to structured fields when possible;\n- propagate provenance/trust labels;\n- restrict the tools available during untrusted-content processing;\n- isolate sensitive credentials and network destinations;\n- require approval for consequential side effects;\n- verify that proposed actions align with user intent independently of the untrusted source.\n\n## 5. Retrieval and coding implications\nRepository files are not automatically trusted instructions. A checked-out repository can contain malicious comments, scripts, package hooks, or instructions intended for an agent. Likewise, RAG does not inherently solve prompt injection; it can import the attack into context.\n\n## 6. Security objective\nDesign so that a successful content-level manipulation has a bounded blast radius.\n\n## 7. Evaluation\nMaintain adversarial corpora containing direct, indirect, obfuscated, cross-tool, and persistent injection attempts. Evaluate both model behavior and whether external enforcement prevents harmful actions.\n\n## References\n- OpenAI, Understanding prompt injections — https://openai.com/safety/prompt-injections/\n- OpenAI, Designing AI agents to resist prompt injection — https://openai.com/index/designing-agents-to-resist-prompt-injection/\n- OWASP, Prompt Injection — https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+}

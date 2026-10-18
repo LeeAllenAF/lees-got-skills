@@ -1,0 +1,27 @@
+{
+  "id": "AEP-SEC-001",
+  "title": "Security and Authority Fundamentals",
+  "summary": "Security and Authority Fundamentals. Focus: authorization, least privilege, security controls.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "authorization",
+    "least-privilege",
+    "security-controls"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-001-security-and-authority-fundamentals.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-006",
+    "AEP-EVAL-010"
+  ],
+  "body": "# AEP-SEC-001 — Security and Authority Fundamentals\n\n## 1. Purpose\nAgent security must assume that models can misunderstand intent, be manipulated by untrusted content, and produce incorrect tool calls. The security architecture must remain safe even when the model is wrong.\n\n## 2. Core security model\nthe platform should separate four concepts:\n\n```text\nintent       what the user wants\nreasoning    what the model proposes\nauthority    what the principal is allowed to do\nenforcement  what the system actually permits\n```\n\nThe model may interpret intent and propose actions. Authority and enforcement belong to external controls.\n\n## 3. Defense in depth\nNo single defense is sufficient. Prefer overlapping controls:\n- trustworthy instruction hierarchy;\n- explicit trust labels for external content;\n- least-privilege tools and credentials;\n- filesystem/network isolation;\n- structured validation at tool boundaries;\n- human or policy approval for consequential actions;\n- deterministic authorization checks;\n- traceability and security evals;\n- rollback and recovery mechanisms.\n\n## 4. Security invariant\nA successful prompt injection, hallucination, or reasoning error should not automatically imply a successful privilege escalation or destructive action.\n\n## 5. Risk follows capability\nSecurity posture should scale with what the system can access or change. A read-only documentation agent and a production deployment agent should not share the same authority model.\n\n## 6. Recommended default\nBegin with the minimum data, tools, credentials, network reachability, and write capability required for the task. Increase authority only where a demonstrated workflow requires it.\n\n## 7. Living knowledge\nSecurity assumptions must be revalidated when models, tools, protocols, permissions, providers, or deployment environments change. Security incidents and near misses should become regression cases.\n\n## References\n- OpenAI, Designing AI agents to resist prompt injection — https://openai.com/index/designing-agents-to-resist-prompt-injection/\n- Anthropic, Trustworthy agents in practice — https://www.anthropic.com/research/trustworthy-agents\n- OWASP, AI Agent Security Cheat Sheet — https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html"
+}

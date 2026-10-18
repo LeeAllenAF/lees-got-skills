@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-012",
+  "title": "Evaluation Lifecycle, Benchmark Hygiene, and Freshness",
+  "summary": "Evaluation Lifecycle, Benchmark Hygiene, and Freshness. Focus: benchmark hygiene, lifecycle.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "benchmark-hygiene",
+    "lifecycle"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-012-evaluation-lifecycle-benchmark-hygiene-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-003",
+    "AEP-EVAL-008"
+  ],
+  "body": "# AEP-EVAL-012 — Evaluation Lifecycle, Benchmark Hygiene, and Freshness\n\n## 1. Purpose\nEval suites themselves become stale. Models improve, production distributions shift, tools change, tasks leak into training data, and formerly discriminating tests saturate.\n\n## 2. Living-eval lifecycle\nEach suite should track:\n- owner;\n- purpose;\n- source population;\n- last review;\n- expected review interval;\n- task/version history;\n- saturation indicators;\n- known contamination risk;\n- replacement/deprecation criteria.\n\n## 3. Revalidation triggers\nReview a suite when:\n- scores approach ceiling/floor;\n- a major model generation changes;\n- agent architecture changes;\n- production traffic shifts;\n- a benchmark becomes widely optimized against;\n- dependencies/environment materially change;\n- grader-human agreement degrades;\n- new security failure classes emerge.\n\n## 4. Benchmark hygiene\nPublic benchmarks are useful external anchors but should not become the sole basis for internal decisions. Record benchmark version, harness, environment, and whether the tested system could have been explicitly optimized for the benchmark.\n\n## 5. Preventing test overfitting\nMaintain holdouts where useful, rotate tasks, derive fresh cases from production, and distinguish exploratory tuning sets from final comparison sets.\n\n## 6. Knowledge promotion\nExperiment results should update handbook status only when:\n- methodology is documented;\n- evidence is relevant to the stated scope;\n- uncertainty/limitations are preserved;\n- conflicting evidence is recorded;\n- revalidation conditions are defined.\n\n## 7. Vendor-tool freshness\nVendor eval products are implementation choices, not handbook foundations. For example, OpenAI's legacy Evals platform is scheduled for shutdown on November 30, 2026; the platform guidance should therefore describe evaluation concepts and portable artifacts rather than couple organizational knowledge to one product surface.\n\n## References\n- OpenAI, Deprecations — https://developers.openai.com/api/docs/deprecations\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- Anthropic, Designing AI-resistant technical evaluations — https://www.anthropic.com/engineering/AI-resistant-technical-evaluations\n- SWE-bench Verified — https://www.swebench.com/verified.html"
+}

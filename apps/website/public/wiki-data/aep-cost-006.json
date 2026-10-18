@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-006",
+  "title": "Concurrency, Parallelism, and Throughput",
+  "summary": "Concurrency, Parallelism, and Throughput. Focus: concurrency, throughput.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "concurrency",
+    "throughput"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-006-concurrency-parallelism-and-throughput.md",
+  "relatedDocumentIds": [
+    "AEP-AGENT-004",
+    "AEP-TOOL-008",
+    "AEP-COST-005"
+  ],
+  "body": "# AEP-COST-006 — Concurrency, Parallelism, and Throughput\n\n## 1. Purpose\nParallelism is useful when work is independent and resources permit it. It is harmful when it duplicates work, increases contention, or creates coordination debt.\n\n## 2. Parallelization test\nParallelize when:\n\n- tasks are materially independent;\n- dependencies are known;\n- shared-state conflicts are controlled;\n- result synthesis is bounded;\n- provider/tool concurrency limits permit it;\n- wall-time savings exceed coordination overhead.\n\n## 3. Throughput vs latency\nHigh throughput and low single-task latency are different goals. Batch/offline work may maximize throughput while intentionally increasing individual completion time.\n\n## 4. Resource limits\nModel APIs, databases, browsers, sandboxes, package registries, and client systems all have independent quotas. Concurrency policy should protect downstream services rather than merely maximize model utilization.\n\n## 5. Backpressure\nUse queues, concurrency caps, admission control, and cancellation. Do not allow a spike of agent fan-out to create an uncontrolled cost or service cascade.\n\n## 6. Duplicate work\nBefore spawning parallel agents, define ownership and shared findings. Detect overlapping exploration when practical.\n\n## 7. Recommendation\nUse bounded parallelism and measure end-to-end wall time, total cost, duplicate effort, and failure rate together.\n\n## References\n- OpenAI, Latency optimization — https://developers.openai.com/api/docs/guides/latency-optimization\n- Anthropic, Building a C compiler with a team of parallel Claudes — https://www.anthropic.com/engineering/building-c-compiler"
+}

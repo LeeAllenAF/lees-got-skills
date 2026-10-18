@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-APP-SERVER-02-LIFECYCLE-AND-INTEGRATION",
+  "title": "App Server lifecycle and integration decisions",
+  "summary": "App Server lifecycle and integration decisions. Focus: codex app server, human approval, state management.",
+  "collection": "harness",
+  "topic": "app-server",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "codex-app-server",
+    "human-approval",
+    "state-management"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/app-server/02-lifecycle-and-integration.md",
+  "relatedDocumentIds": [],
+  "body": "# App Server lifecycle and integration decisions\n\n[← Index](/wiki) · [App Server basics](/wiki/harness-app-server-01-app-server-foundations) · [Architecture boundaries](/wiki/harness-architecture-01-integration-boundaries)\n\n## Core lifecycle [DOCUMENTED]\n```text\nstart app-server process / connect\n  -> initialize (clientInfo)\n  -> initialized\n  -> thread/start OR thread/resume\n  -> turn/start (input, per-turn settings)\n  -> consume notifications and any server requests\n  -> turn completed / failed / interrupted\n  -> persist external application state\n```\n\n## Example wire messages (schematic)\n```json\n{\"method\":\"initialize\",\"id\":0,\"params\":{\"clientInfo\":{\"name\":\"research_client\",\"title\":\"Research Client\",\"version\":\"0.1.0\"}}}\n```\n```json\n{\"method\":\"initialized\",\"params\":{}}\n```\n```json\n{\"method\":\"thread/start\",\"id\":1,\"params\":{\"cwd\":\"/workspace/research\"}}\n```\n```json\n{\"method\":\"turn/start\",\"id\":2,\"params\":{\"threadId\":\"THREAD_ID\",\"input\":[{\"type\":\"text\",\"text\":\"Analyze evidence bundle 42\"}]}}\n```\nReal integrations must read responses and substitute returned IDs; these are not a complete working client.\n\n## Documented features worth investigating\n- Threads: start, resume, fork, list/read/history functions subject to documented surface.\n- Turns: start, steer, and streaming notifications for items/progress.\n- Fine-grained options for cwd, model, approvals and sandbox policy.\n- Client-side approval / user interaction workflow where supported.\n- Tool-result input paths and skill input items where documented.\n- Experimental endpoints/fields require opt-in and explicit testing.\n\n## Architectural advice [DESIGN]\nFor a queue-driven backend, use the SDK first: smaller integration and maintenance surface. Move to App Server if there is a **specific** requirement for protocol-level session management, bidirectional interaction, steering, or advanced event semantics that SDK does not cover. Avoid implementing two execution interfaces simultaneously without a clear adapter boundary.\n\n## Security notes\nApp Server connections can control code-executing sessions. Bind transports locally, authenticate any exposed transport per docs, and do not publish unsecured network endpoints. Keep user approvals distinct from backend business-policy approvals.\n\nOfficial reference: https://developers.openai.com/codex/app-server"
+}

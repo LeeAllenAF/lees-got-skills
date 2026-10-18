@@ -1,0 +1,26 @@
+{
+  "id": "AEP-MODEL-002",
+  "title": "Capability Profiles and Task Classes",
+  "summary": "Capability Profiles and Task Classes. Focus: model capabilities, task design.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "provisional",
+  "tags": [
+    "model-capabilities",
+    "task-design"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-002-capability-profiles-and-task-classes.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-001",
+    "AEP-TOOL-009"
+  ],
+  "body": "# AEP-MODEL-002 — Capability Profiles and Task Classes\n\n## 1. Purpose\n\nA router needs a useful description of both the task and the candidate models. the platform should maintain workload-specific capability profiles rather than universal labels such as \"smart\", \"fast\", or \"coding model\".\n\n## 2. Task classes\n\nA starting software-engineering taxonomy:\n\n```text\nclassification / routing\nextraction / transformation\nretrieval / ranking\nsmall deterministic edit\nlocalized code generation\nrepository exploration\ndebugging\nmulti-file feature work\narchitecture / design\nreview / verification\nsecurity-sensitive analysis\nlong-horizon autonomous execution\n```\n\nTask classes may include modifiers:\n\n```text\nambiguity\ncontext volume\ntool dependence\nnumber of steps\nreversibility\nrisk\nlatency sensitivity\nrequired modality\nverification strength\n```\n\n## 3. Capability profiles\n\nFor each candidate model/configuration, track observed performance in dimensions that matter to the workload:\n\n- planning;\n- coding/edit quality;\n- tool selection;\n- recovery after failures;\n- schema adherence;\n- long-context behavior;\n- visual reasoning;\n- latency;\n- cost;\n- variance;\n- security/authority adherence.\n\nProfiles are empirical and versioned.\n\n## 4. Avoid static stereotypes\n\nDo not encode permanent assumptions such as:\n\n> Small models cannot use tools.\n\nor:\n\n> Reasoning models are always better at coding.\n\nModel generations can invalidate these assumptions quickly. Capability profiles must be linked to dated eval results.\n\n## 5. Model configuration as a point, not a name\n\nTreat these as potentially different candidates:\n\n```text\nModel A / low effort\nModel A / medium effort\nModel A / high effort\nModel B / medium effort\n```\n\nReasoning effort can move a model along a cost/latency/quality frontier without changing families.\n\n## 6. Task classification should be observable\n\nWhere possible, classify using measurable features rather than subjective labels:\n\n- requested action type;\n- number of files/projects implicated;\n- presence of failing tests;\n- amount of retrieved context;\n- tool requirements;\n- whether requirements conflict;\n- whether the operation has side effects;\n- prior attempt failures.\n\n## 7. Initial platform guidance\n\nMaintain a small task taxonomy only if it changes an actual decision. Do not create an elaborate ontology before routing/evaluation demonstrates a need.\n\nCapability profiles should be regenerated when:\n\n- a model version changes;\n- reasoning defaults change;\n- the harness changes materially;\n- tool contracts change;\n- representative workloads shift.\n\n## References\n\n- OpenAI, Model selection — https://developers.openai.com/api/docs/guides/model-selection\n- OpenAI, Reasoning models — https://developers.openai.com/api/docs/guides/reasoning\n- Anthropic, Quantifying infrastructure noise in agentic coding evals — https://www.anthropic.com/engineering/infrastructure-noise"
+}

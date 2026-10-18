@@ -1,0 +1,24 @@
+{
+  "id": "HARNESS-CODEX-SDK-03-ORCHESTRATION-PATTERN",
+  "title": "Application-managed orchestration using the Codex SDK",
+  "summary": "Application-managed orchestration using the Codex SDK. Focus: codex sdk, orchestration, state management.",
+  "collection": "harness",
+  "topic": "codex-sdk",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "codex-sdk",
+    "orchestration",
+    "state-management"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-sdk/03-orchestration-pattern.md",
+  "relatedDocumentIds": [],
+  "body": "# Application-managed orchestration using the Codex SDK\n\n[← Index](/wiki) · [SDK options](/wiki/harness-codex-sdk-02-configuration-and-capabilities) · [Reference design](/wiki/harness-architecture-02-reference-design)\n\n## Controller architecture [DESIGN]\n```text\nscheduler -> work queue -> controller -> Codex SDK thread\n                                  |         |\n                             policy gate   | run / runStreamed\n                                  |         v\n                            output validator\n                                  |\n                            checkpoint store\n```\n\nTreat the SDK as an **inference worker interface**, not the source of truth for task state. Controller decisions are deterministic where possible. Threads are attached to work units by stable identifiers; outputs must pass schemas and evidence validation before publication.\n\n## Worker routing\nSelect a model and effort by class of task (e.g., simple classification vs. contradictory-source analysis). Validate entitlement, throughput and quality empirically. Multiple thread instances may serve distinct workers; concurrency must obey organization policy and usage limits.\n\n## Pseudocode (illustrative)\n```ts\nasync function processWorkUnit(work: WorkUnit) {\n  const lease = await store.claim(work.id);\n  const thread = codex.startThread({\n    model: routing.choose(work.kind),\n    sandboxMode: 'read-only',\n  });\n  const turn = await thread.run(buildTaskPrompt(lease), {\n    outputSchema: schemas.forKind(work.kind),\n  });\n  const parsed = validateAgainstSchema(turn.finalResponse);\n  await verifyEvidence(parsed);\n  await store.commitResult(lease, parsed);\n}\n```\nThese helper names are **application-defined**, not SDK methods. Error handling, timeouts, renewals, cancellation and retries are omitted.\n\n## Failure handling\n- Failed inference → retry according to a bounded policy, possibly requeue.\n- Invalid structured output → targeted repair or escalation.\n- SDK process crash → persist work status independently; reclaim lease.\n- Side effect succeeds but response fails → reconcile with idempotency identifier.\n- Session context unavailable → reconstruct task from work + evidence refs instead of relying on hidden reasoning history.\n\nSee [state](/wiki/harness-foundations-03-context-and-state), [evals](/wiki/harness-foundations-04-reliability-and-evals), and [App Server](/wiki/harness-app-server-01-app-server-foundations)."
+}

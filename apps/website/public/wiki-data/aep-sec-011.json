@@ -1,0 +1,28 @@
+{
+  "id": "AEP-SEC-011",
+  "title": "Security Observability, Incident Response, and Red Teaming",
+  "summary": "Security Observability, Incident Response, and Red Teaming. Focus: adversarial testing, incident response, observability.",
+  "collection": "handbook",
+  "topic": "security",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "adversarial-testing",
+    "incident-response",
+    "observability"
+  ],
+  "domains": [
+    "security"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/security/AEP-SEC-011-security-observability-incident-response-and-red-teaming.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-010",
+    "AEP-TOOL-009",
+    "AEP-SEC-001"
+  ],
+  "body": "# AEP-SEC-011 — Security Observability, Incident Response, and Red Teaming\n\n## 1. Purpose\nSecurity controls that cannot be observed or tested eventually become assumptions. Agent systems need telemetry sufficient to reconstruct consequential decisions without exposing sensitive chain-of-thought.\n\n## 2. Security trace events\nRecord where appropriate:\n- principal/workload identity;\n- trust/source classification of important inputs;\n- tool requested and arguments;\n- authorization decision;\n- approval decision;\n- credential/capability used (identifier, not secret);\n- side-effect result;\n- denied attempts;\n- network destination/resource target;\n- memory writes;\n- policy/version identifiers.\n\n## 3. Detection\nMonitor for unusual authority requests, repeated denied actions, cross-tenant access attempts, unexpected destinations, mass retrieval/exfiltration patterns, repeated approval requests, and memory writes from untrusted sources.\n\n## 4. Incident response\nMaintain mechanisms to revoke credentials, disable tools, cancel running tasks, quarantine memory/index content, preserve audit evidence, and roll back changes.\n\n## 5. Red teaming\nSecurity evaluation should include adversarial prompt injection, tool misuse, privilege escalation, confused deputy, data exfiltration, cross-scope isolation, memory poisoning, and destructive-action scenarios.\n\n## 6. Convert incidents into living knowledge\nEvery meaningful incident or near miss should be evaluated for promotion into:\n- a regression case;\n- a new threat pattern;\n- a policy change;\n- a tool-contract change;\n- a handbook update.\n\n## References\n- OWASP, Agentic Red Teaming Q2 2026 — https://genai.owasp.org/resource/ai-security-solutions-landscape-for-ai-and-agentic-red-teaming-q2-2026/"
+}

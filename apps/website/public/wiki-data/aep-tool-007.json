@@ -1,0 +1,26 @@
+{
+  "id": "AEP-TOOL-007",
+  "title": "MCP Architecture",
+  "summary": "MCP Architecture. Focus: mcp, provider portability.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "mcp",
+    "provider-portability"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-007-mcp-architecture.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-007",
+    "AEP-TOOL-004"
+  ],
+  "body": "# AEP-TOOL-007 — MCP Architecture\n\n## 1. Purpose\n\nModel Context Protocol (MCP) is an interoperability layer for exposing capabilities and context to compatible AI clients. the platform should use MCP where it improves portability and integration, but should not make MCP the owner of domain logic or organizational knowledge.\n\n## 2. Architectural position\n\n```text\nDomain systems / knowledge / services\n              ↓\n      stable application APIs\n              ↓\n        MCP adapter/server\n              ↓\n Codex / Claude / IDE / other permission scopes\n```\n\nThe MCP layer translates capabilities. Core business logic remains testable and usable without MCP.\n\n## 3. Current protocol direction\n\nThe MCP `2026-07-28` release moves the core toward stateless request/response operation, supports optional discovery, cacheable deterministic list responses, header-based routing, hardened authorization, and an extension mechanism. Long-running Tasks are an extension rather than core protocol state.\n\nthe platform guidance tied to MCP must therefore always record the target specification version.\n\n## 4. Tools, resources, and prompts\n\nUse MCP primitives according to their semantics rather than modeling everything as a tool.\n\nConceptually:\n\n- **tools** expose actions/capabilities;\n- **resources** expose retrievable contextual material;\n- **prompts** expose reusable prompt templates/workflows where supported and appropriate.\n\nThe handbook itself may eventually expose guidance primarily as resources/search capabilities while executable operations remain tools.\n\n## 5. Stateless core favors scalable servers\n\nDo not assume sticky sessions or in-memory client state. Persist durable state in appropriate backing systems and make requests self-describing where protocol semantics require it.\n\n## 6. Gateway architecture\n\nFor enterprise deployments, an MCP gateway may provide:\n\n- authentication;\n- authorization;\n- routing;\n- rate limiting;\n- tenant isolation;\n- telemetry;\n- policy enforcement;\n- tool allowlists;\n- version compatibility.\n\nA gateway should not become a place where every domain concern is reimplemented.\n\n## 7. Discovery and caching\n\nThe 2026 specification allows list responses such as tools/resources/prompts to carry cache hints and deterministic ordering. This supports progressive disclosure and stable prompt caching.\n\nTreat caches as optimization only; authorization and freshness rules still apply.\n\n## 8. Authorization\n\nMCP transport/protocol authorization does not replace resource-level authorization inside domain services.\n\nValidate identity and scope at every consequential call.\n\n## 9. Vendor portability\n\nMCP is preferred when multiple permission scopes benefit from the same capability, but direct native tools may remain appropriate when:\n\n- only one runtime needs the capability;\n- latency is critical;\n- MCP adds no interoperability value;\n- the provider offers stronger native semantics needed by the workload.\n\n## 10. Guidance\n\nUse MCP as an adapter boundary, not as architecture by default. Adopt it where interoperability, capability reuse, or centralized governance justify the additional layer.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

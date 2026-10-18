@@ -1,0 +1,23 @@
+{
+  "id": "AEP-KNOW-001",
+  "title": "Knowledge Service Fundamentals",
+  "summary": "Knowledge Service Fundamentals. Focus: architecture, knowledge management.",
+  "collection": "handbook",
+  "topic": "knowledge",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "architecture",
+    "knowledge-management"
+  ],
+  "domains": [
+    "knowledge-systems"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/knowledge/AEP-KNOW-001-knowledge-service-fundamentals.md",
+  "relatedDocumentIds": [],
+  "body": "# Knowledge Service Fundamentals\n\n## Purpose\n\nDefine the architecture that turns the Agentic Engineering Platform handbook into an operational knowledge system consumable by humans, agents, CLIs, APIs, CI systems, and MCP clients.\n\n## Core principle\n\nThe handbook remains the source of truth.\n\nThe knowledge service is a **compiled, queryable, policy-aware representation** of that knowledge.\n\n```text\nCanonical knowledge\n  handbook\n  standards\n  decisions\n  experiments\n  skills\n      ↓\ningestion / validation\n      ↓\nnormalized knowledge graph + search indexes\n      ↓\nresolution layer\n      ↓\nMCP / API / CLI / IDE / CI\n```\n\nThe service must never become a second undocumented source of policy.\n\n## Responsibilities\n\nThe knowledge service may:\n\n- validate documents and metadata;\n- index content;\n- retrieve relevant knowledge;\n- resolve layered guidance;\n- preserve provenance;\n- expose freshness and status;\n- discover relevant skills;\n- explain conflicts;\n- compose bounded context packages;\n- provide machine-readable references to experiments and decisions.\n\nIt must not:\n\n- invent organizational policy;\n- silently override source documents;\n- collapse unresolved conflicts;\n- treat generated summaries as authoritative replacements;\n- bypass authorization boundaries.\n\n## Read-first architecture\n\nThe initial service should be predominantly read-only.\n\nMutations such as promoting guidance, changing status, publishing skills, or modifying scoped overlays should remain explicit repository/workflow operations until there is a demonstrated need for controlled write APIs.\n\n## Stateless protocol edge\n\nMCP/API requests should be independently interpretable where practical. Durable state should use explicit identifiers, versions, or task handles instead of hidden transport sessions.\n\n## Current recommendation\n\nBuild the knowledge service only after the canonical schema and resolution semantics are stable enough to test. Start with deterministic indexing and resolution before adding LLM-based synthesis."
+}

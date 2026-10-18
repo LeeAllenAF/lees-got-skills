@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-010",
+  "title": "Tool Lifecycle, Versioning, and Freshness",
+  "summary": "Tool Lifecycle, Versioning, and Freshness. Focus: lifecycle, versioning.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "lifecycle",
+    "versioning"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-010-tool-lifecycle-versioning-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-002",
+    "AEP-TOOL-007",
+    "AEP-TOOL-009"
+  ],
+  "body": "# AEP-TOOL-010 — Tool Lifecycle, Versioning, and Freshness\n\n## 1. Purpose\n\nTool systems change continuously. APIs evolve, model tool-use behavior improves, MCP specifications change, security guidance is revised, consumer capabilities differ, and previously necessary scaffolding becomes obsolete.\n\nthe platform therefore treats tool guidance as living knowledge.\n\n> **A tool contract is never \"done\" merely because it works today.**\n\n## 2. Version three things separately\n\nDo not collapse these into one version number:\n\n```text\nDomain capability version\nTool contract/schema version\nProtocol/adapter version\n```\n\nFor MCP, also record the targeted MCP specification and extension versions.\n\n## 3. Compatibility metadata\n\nMaintain machine-readable compatibility where useful:\n\n```yaml\ncontract_version: 2.1.0\nprotocol:\n  mcp: 2026-07-28\nclients_tested:\n  - codex:<range>\n  - claude:<range>\nlast_verified: 2026-09-30\nstatus: supported\n```\n\nExact schema will be standardized later.\n\n## 4. Review triggers\n\nRevalidation should be event-driven as well as scheduled.\n\nTrigger review when:\n\n- the underlying API changes;\n- a provider changes tool-calling behavior;\n- MCP publishes a new stable specification;\n- security advisories affect the capability;\n- production traces reveal repeated misuse;\n- task success regresses;\n- new models make workaround instructions obsolete;\n- latency/cost changes materially.\n\n## 5. Scheduled freshness\n\nSuggested starting review intervals:\n\n```text\nTool-design principles           180 days\nProduction tool contracts         90 days\nMCP/provider-specific guidance    60 days\nSecurity-sensitive guidance       30-60 days\nKnown unstable/experimental APIs  30 days or release-triggered\n```\n\nThese are defaults, not universal policy.\n\n## 6. Automated drift detection\n\nWhere possible, CI should verify:\n\n- schemas still validate;\n- examples compile/run;\n- referenced endpoints/spec versions still exist;\n- permission assumptions still hold;\n- capability discovery snapshots are expected;\n- contract fixtures still pass.\n\nFuture tooling may also flag handbook documents whose `last_reviewed` exceeds `review_interval`.\n\n## 7. Experiment linkage\n\nEvery recommendation that depends on uncertain model behavior should reference relevant experiments/evals.\n\nA new result may:\n\n```text\nconfirm guidance\nnarrow applicability\nlower confidence\ndeprecate guidance\nreplace guidance\n```\n\nHistorical versions and rejected practices remain searchable.\n\n## 8. Deprecation\n\nDeprecation should include:\n\n- reason;\n- replacement;\n- compatibility window;\n- migration instructions;\n- removal date if applicable.\n\nThe MCP project itself now has a formal deprecation policy with a minimum compatibility window, reinforcing the need to design integrations for change rather than assuming protocol permanence.\n\n## 9. Avoid permanent model workarounds\n\nInstructions added because a particular model misunderstood a tool should not silently become permanent architecture.\n\nTag workaround guidance with:\n\n- model/provider scope;\n- date introduced;\n- associated failure/eval;\n- review trigger.\n\nDelete it when it stops earning its complexity.\n\n## 10. Knowledge lifecycle\n\n```text\nObservation\n   ↓\nQuestion\n   ↓\nGuidance / hypothesis\n   ↓\nTool implementation\n   ↓\nTrace + evaluation\n   ↓\nExperiment when needed\n   ↓\nPromotion / revision / rejection\n   ↓\nScheduled + event-driven revalidation\n```\n\nThis is the same living-knowledge model used by the broader handbook, applied specifically to executable capabilities.\n\n## 11. Initial the platform standard\n\nEvery production-grade tool capability should be traceable to:\n\n- an owner;\n- a contract version;\n- a documented authority model;\n- executable contract tests;\n- representative agent-tool evals;\n- a review date or review trigger;\n- deprecation/migration semantics.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-003",
+  "title": "Skill Content and Package Design",
+  "summary": "Skill Content and Package Design. Focus: packaging, skill authoring.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "packaging",
+    "skill-authoring"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-003-skill-content-and-package-design.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Content and Package Design\n\n## Goal\n\nPackage reusable knowledge so agents can apply it consistently without turning the skill into an oversized prompt.\n\n## SKILL.md should contain\n\n- purpose and activation conditions;\n- required inputs;\n- workflow or decision procedure;\n- constraints and non-goals;\n- required tool behavior;\n- verification requirements;\n- stop/escalation conditions;\n- pointers to deeper resources.\n\nIt should not contain every possible example, reference manual, or enterprise standard.\n\n## Supporting material\n\nUse supporting directories by function:\n\n```text\nreferences/  background or canonical supporting knowledge\nexamples/    representative successful inputs/outputs\ntemplates/   reusable artifacts\nscripts/     deterministic helpers\nschemas/     machine-verifiable structures\nevals/       tasks and graders for the capability\n```\n\n## Prefer executable knowledge where appropriate\n\nIf a deterministic operation can be represented reliably in code, prefer a tested script over natural-language instructions telling the model to reproduce the operation manually.\n\nExamples:\n\n- normalize JSON;\n- validate frontmatter;\n- generate a dependency report;\n- check repository policy;\n- transform known formats.\n\n## Example discipline\n\nExamples should demonstrate difficult or representative cases, not merely idealized happy paths.\n\nExamples can also accidentally overfit model behavior. Keep them small, purposeful, and covered by evals.\n\n## Package independence\n\nA skill should document external assumptions:\n\n```text\nrequires:\n  tools:\n  runtime:\n  repository_features:\n  permissions:\n  related_standards:\n```\n\nDo not rely on implicit environment knowledge.\n\n## Current recommendation\n\nThe smallest useful skill package wins. Add a resource when it improves reliability, discoverability, cost, or maintenance—not because the directory structure allows it."
+}

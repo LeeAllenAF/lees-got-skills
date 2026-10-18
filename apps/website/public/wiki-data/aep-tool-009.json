@@ -1,0 +1,27 @@
+{
+  "id": "AEP-TOOL-009",
+  "title": "Tool Observability and Evaluation",
+  "summary": "Tool Observability and Evaluation. Focus: evaluation, observability.",
+  "collection": "handbook",
+  "topic": "tools",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "evaluation",
+    "observability"
+  ],
+  "domains": [
+    "tool-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/tools/AEP-TOOL-009-tool-observability-and-evaluation.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-001",
+    "AEP-TOOL-005",
+    "AEP-CTX-012"
+  ],
+  "body": "# AEP-TOOL-009 — Tool Observability and Evaluation\n\n## 1. Purpose\n\nTool invocation success is not the same as agent success. Tool systems require observability that explains selection, authorization, execution, recovery, cost, and downstream effect.\n\n## 2. Trace model\n\nRecord enough information to reconstruct:\n\n```text\nwhy a capability was available\nwhich tool was selected\narguments produced\nvalidation outcome\nauthorization/approval outcome\nexecution timing\nresult/error\nretry path\ncontext returned to model\nfinal task outcome\n```\n\nRespect privacy and secret-redaction requirements.\n\n## 3. Tool metrics\n\nUseful metrics include:\n\n- selection precision/recall where a gold set exists;\n- unnecessary tool calls;\n- call count per successful task;\n- argument validation failures;\n- permission denials;\n- transient/permanent error rates;\n- retry success;\n- p50/p95 latency;\n- output token/context volume;\n- approval frequency;\n- downstream task success;\n- cost.\n\n## 4. Evaluate negative behavior\n\nA strong eval suite should include cases where the correct behavior is **not** to call a tool.\n\nExamples:\n\n- user asks an explanatory question requiring no external state;\n- requested write exceeds authority;\n- untrusted content instructs the agent to call an unrelated tool;\n- destructive action lacks approval;\n- duplicate request should be recognized as already completed.\n\n## 5. Contract evals vs agent evals\n\nSeparate:\n\n### Tool contract tests\n\nDoes the tool implementation behave correctly for inputs/errors/permissions?\n\n### Agent-tool evals\n\nDoes the model choose and use the tool correctly in realistic tasks?\n\nBoth are necessary.\n\n## 6. Replay and regression\n\nWhere privacy permits, sanitized traces can become eval fixtures. A production failure should ideally become a reproducible test before the fix is considered complete.\n\n## 7. Model changes require re-evaluation\n\nA tool description or granularity optimized for one generation of models may be unnecessary or harmful with newer models.\n\nRe-run representative tool-selection and recovery evals when:\n\n- default models change materially;\n- schema or descriptions change;\n- tool catalog size changes;\n- authorization policy changes;\n- provider/tool-calling semantics change.\n\n## 8. Guidance\n\nObservability is not just logging. It is the evidence system that allows the platform to distinguish model problems from tool-contract, authorization, provider, context, and orchestration problems.\n\n## References\n\nPrimary sources used for this sequence include:\n\n- OpenAI, **Function calling** — https://developers.openai.com/api/docs/guides/function-calling\n- OpenAI, **Programmatic Tool Calling** — https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\n- OpenAI, **Define tools – Plugins** — https://developers.openai.com/plugins/plan/tools\n- Model Context Protocol, **2026-07-28 Specification** — https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- Model Context Protocol, **Tasks Extension** — https://tasks.extensions.modelcontextprotocol.io/specification/draft/tasks"
+}

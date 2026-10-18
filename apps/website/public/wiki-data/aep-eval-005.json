@@ -1,0 +1,27 @@
+{
+  "id": "AEP-EVAL-005",
+  "title": "Trace and Trajectory Evaluation",
+  "summary": "Trace and Trajectory Evaluation. Focus: observability, trace evaluation.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "pattern",
+  "status": "recommended",
+  "tags": [
+    "observability",
+    "trace-evaluation"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-005-traces-and-trajectory-evaluation.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-001",
+    "AEP-TOOL-009",
+    "AEP-AGENT-010"
+  ],
+  "body": "# AEP-EVAL-005 — Trace and Trajectory Evaluation\n\n## 1. Purpose\nEnd-state success is necessary but insufficient for autonomous systems. Trace evaluation examines the path: decisions, model calls, tool calls, handoffs, approvals, retries, and context transitions.\n\n## 2. What traces are for\nUse traces to evaluate behaviors such as:\n- correct tool selection;\n- unnecessary tool/model calls;\n- invalid or circular handoffs;\n- approval bypasses;\n- unsafe retries;\n- context retrieval failures;\n- escalation behavior;\n- non-progress loops;\n- excessive cost or latency.\n\n## 3. Outcome vs trace\nA trace grader should not replace end-state verification. An agent may follow a beautiful process and still fail the task, or succeed while violating authority constraints.\n\n## 4. Trace schema\nAt minimum capture:\n- task and configuration version;\n- model/provider and reasoning settings;\n- context/retrieval references;\n- tool calls and results;\n- timestamps and latency;\n- token/cost accounting;\n- approvals/handoffs;\n- termination reason;\n- final outcome graders.\n\nSensitive raw content should follow privacy and permission-isolation policy.\n\n## 5. Trace mining\nProduction traces should feed the living eval corpus. Recurring behavior clusters, rare failures, and high-cost paths are candidates for new regression tasks.\n\n## References\n- OpenAI, Trace grading — https://developers.openai.com/api/docs/guides/trace-grading\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

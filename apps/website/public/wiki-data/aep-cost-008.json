@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-008",
+  "title": "Budgets, Quotas, and Economic Guardrails",
+  "summary": "Budgets, Quotas, and Economic Guardrails. Focus: budgets, quotas.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "budgets",
+    "quotas"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-008-budgets-quotas-and-economic-guardrails.md",
+  "relatedDocumentIds": [
+    "AEP-COST-002",
+    "AEP-AGENT-009",
+    "AEP-SEC-005"
+  ],
+  "body": "# AEP-COST-008 — Budgets, Quotas, and Economic Guardrails\n\n## 1. Purpose\nAutonomous systems require explicit economic boundaries just as they require authority boundaries.\n\n## 2. Budget dimensions\nBudgets may be expressed as:\n\n```text\ncurrency / task\ncurrency / scope / month\ntokens / task\nmodel calls / task\ntool calls / task\nsubagents / task\nwall time / task\nretry count\nhuman-review minutes\n```\n\n## 3. Soft and hard limits\n### Soft limit\nTrigger adaptation: smaller model, reduced fan-out, delayed enrichment, or explicit user notice where appropriate.\n\n### Hard limit\nStop, checkpoint, or require authorization. Do not silently exceed a configured ceiling.\n\n## 4. Risk-adjusted budgets\nHigher-risk or higher-value work may justify more compute. A trivial formatting task and a production incident should not share identical budgets.\n\n## 5. Runaway prevention\nDetect:\n\n- retry loops;\n- repeated retrieval of the same evidence;\n- oscillating edits;\n- recursive delegation;\n- duplicate parallel work;\n- repeated escalation without new information.\n\n## 6. Tenant/permission isolation\nBudgets and accounting should be separable by scope or business boundary where required. One tenant must not consume another's quota.\n\n## 7. Recommendation\nTreat economic limits as external policy enforced by the harness/platform, not as suggestions encoded only in prompts."
+}

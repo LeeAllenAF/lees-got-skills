@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-009",
+  "title": "Promotion from Handbook Knowledge to Skill",
+  "summary": "Promotion from Handbook Knowledge to Skill. Focus: knowledge promotion, skills.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "knowledge-promotion",
+    "skills"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-009-promotion-from-handbook-to-skill.md",
+  "relatedDocumentIds": [],
+  "body": "# Promotion from Handbook Knowledge to Skill\n\n## Purpose\n\nDefine when mature the platform knowledge should become an executable/reusable skill.\n\n## Promotion lifecycle\n\n```text\nresearch\n   ↓\nhandbook guidance\n   ↓\nexperiment / operational evidence\n   ↓\nstable recurring workflow identified\n   ↓\nskill candidate\n   ↓\nskill implementation\n   ↓\nskill eval\n   ↓\napproved skill\n   ↓\nproduction telemetry\n   ↓\nrevision / deprecation\n```\n\n## Promotion criteria\n\nA handbook topic should not automatically become a skill.\n\nCreate a skill when:\n\n- the workflow recurs;\n- procedural consistency matters;\n- instructions are sufficiently stable;\n- activation conditions can be described;\n- required inputs and outputs are known;\n- success can be evaluated;\n- packaging reduces repeated explanation or errors.\n\n## Do not promote when\n\n- knowledge is primarily explanatory;\n- procedure is too unstable;\n- task remains highly bespoke;\n- live authoritative state is the real requirement;\n- deterministic software would be better;\n- the skill would merely duplicate repository/scope instructions.\n\n## Provenance\n\nEach managed skill should reference the handbook standards, experiments, or decisions that justify its behavior.\n\nExample:\n\n```yaml\nderived_from:\n  - AEP-CODE-006\n  - AEP-EVAL-002\nevidence:\n  - EXP-CODE-007\n```\n\n## Bidirectional learning\n\nSkill failures should feed back into:\n\n```text\ntrace\n→ eval\n→ open question\n→ handbook revision\n→ skill revision\n```\n\nThis prevents skills from becoming detached copies of organizational knowledge."
+}

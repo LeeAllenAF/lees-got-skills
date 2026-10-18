@@ -1,0 +1,27 @@
+{
+  "id": "AEP-EVAL-010",
+  "title": "Safety, Security, and Adversarial Evaluation",
+  "summary": "Safety, Security, and Adversarial Evaluation. Focus: adversarial testing, security controls.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "adversarial-testing",
+    "security-controls"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-010-safety-security-and-adversarial-evaluation.md",
+  "relatedDocumentIds": [
+    "AEP-TOOL-006",
+    "AEP-CTX-012",
+    "AEP-AGENT-008"
+  ],
+  "body": "# AEP-EVAL-010 — Safety, Security, and Adversarial Evaluation\n\n## 1. Purpose\nA system that succeeds on benign tasks but fails under adversarial or malformed inputs is not production-ready for consequential use.\n\n## 2. Security eval classes\nInclude cases for:\n- indirect prompt injection;\n- conflicting instructions;\n- malicious repository/document content;\n- privilege escalation attempts;\n- unauthorized tool use;\n- approval bypass;\n- secret/data exfiltration attempts;\n- unsafe retry/replay;\n- scope/permission isolation;\n- destructive-action confirmation;\n- compromised or misleading tool output.\n\n## 3. Environment containment\nEvaluate both model behavior and enforcement boundaries. The question is not only “does the agent refuse?” but also “can the environment prevent the action if the agent fails to refuse?”\n\n## 4. Negative capability\nEvals should verify that the system can correctly decline, escalate, request approval, or stop when required. Success is sometimes **not acting**.\n\n## 5. Adversarial maintenance\nAdversarial sets decay as attacks and model defenses evolve. Add real incident patterns, vendor advisories, and red-team findings to the living corpus.\n\n## 6. Recommendation\nSecurity-critical release gates should prefer objective state/permission checks over solely model-based safety judgments.\n\n## References\n- OpenAI, Safety in building agents — https://developers.openai.com/api/docs/guides/agent-builder-safety\n- OpenAI, A shared playbook for trustworthy third-party evaluations — https://openai.com/index/trustworthy-third-party-evaluations-foundations/"
+}

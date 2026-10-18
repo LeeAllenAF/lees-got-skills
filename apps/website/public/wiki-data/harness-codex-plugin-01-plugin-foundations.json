@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-CODEX-PLUGIN-01-PLUGIN-FOUNDATIONS",
+  "title": "Codex plugin development foundations",
+  "summary": "Codex plugin development foundations. Focus: codex plugins, packaging.",
+  "collection": "harness",
+  "topic": "codex-plugin",
+  "type": "guidance",
+  "status": "informational",
+  "tags": [
+    "codex-plugins",
+    "packaging"
+  ],
+  "domains": [
+    "codex-integration"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/codex-plugin/01-plugin-foundations.md",
+  "relatedDocumentIds": [],
+  "body": "# Codex plugin development foundations\n\n[← Index](/wiki) · [Skills](/wiki/harness-codex-plugin-02-skills) · [MCP and hooks](/wiki/harness-codex-plugin-03-mcp-and-hooks)\n\n## Scope\n**[DOCUMENTED]** A plugin is a distributable package combining skills and/or MCP server configuration; optional UI and Codex lifecycle hooks depend on the host surface. See [official plugin architecture](https://developers.openai.com/plugins/concepts/plugins) and [packaging](https://developers.openai.com/plugins/build/plugins).\n\n## Portable layout (conceptual)\n```text\nmy-plugin/\n  plugin.json          # portable Agent Plugins manifest\n  mcp.json             # optional, portable MCP server registry\n  skills/\n    research/SKILL.md\n    verify/SKILL.md\n  hooks/               # optional, host-specific and trusted locally\n  assets/              # optional\n```\n\n**[DOCUMENTED]** Current portable packaging uses root `plugin.json`, `skills/` and root `mcp.json`; OpenAI-specific settings go under `extensions.com.openai`. Older `.codex-plugin/plugin.json` compatibility overlay remains supported; `.mcp.json` belongs to the older scaffold and has different schema rules. Do **not** blindly rename it.\n\nMinimal portable manifest illustration (verify schema before publishing):\n```json\n{\n  \"$schema\": \"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json\",\n  \"name\": \"architecture-research\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Research and verification workflows\"\n}\n```\n\n## Plugin versus controller\nA plugin distributes guidance and capabilities into a host environment. It does not inherently own the model inference lifecycle, schedule arbitrary new turns, or guarantee background autonomy. Use [the SDK](/wiki/harness-codex-sdk-01-sdk-foundations) or [App Server](/wiki/harness-app-server-01-app-server-foundations) for application-driven Codex work.\n\n## Distribution caveats\n**[DOCUMENTED]** Bundled hooks require local executable scripts and review/trust; hook-bearing plugins are not eligible for the public plugin directory (as documented on review date). Public, local, and team marketplace support may differ by surface and policy.\n\n## Sources\n- https://developers.openai.com/plugins/build/plugins\n- https://developers.openai.com/plugins/concepts/plugins\n- https://developers.openai.com/plugins/build/skills"
+}

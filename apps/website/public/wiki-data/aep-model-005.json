@@ -1,0 +1,27 @@
+{
+  "id": "AEP-MODEL-005",
+  "title": "Model Routing Architecture",
+  "summary": "Model Routing Architecture. Focus: model routing, model selection.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "provisional",
+  "tags": [
+    "model-routing",
+    "model-selection"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-005-routing-architecture.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-001",
+    "AEP-MODEL-002",
+    "AEP-MODEL-006"
+  ],
+  "body": "# AEP-MODEL-005 — Model Routing Architecture\n\n## 1. Purpose\n\nRouting selects a model/configuration for a request or subtask. It is justified when workloads vary enough that a single configuration is materially inefficient or inadequate.\n\n## 2. Routing signals\n\nPotential signals include:\n\n- deterministic task type;\n- requested modality;\n- context volume;\n- tool requirements;\n- risk class;\n- latency SLO;\n- budget;\n- prior failures;\n- small-model uncertainty;\n- learned predicted quality;\n- expected incremental gain from escalation.\n\n## 3. Router types\n\n```text\nstatic policy\nrules / heuristics\nclassifier\nsmall LLM router\nlearned quality predictor\nuncertainty router\ncascade / rescue router\nhybrid policy\n```\n\nStart with the simplest router whose behavior can be understood and evaluated.\n\n## 4. Route on expected utility, not prestige\n\nA useful conceptual objective:\n\n```text\nutility = expected quality gain\n          - inference cost\n          - latency cost\n          - operational/risk penalty\n```\n\nFor safety-critical work, constraints may dominate the utility function; some tasks may require a minimum model class or human approval regardless of cost.\n\n## 5. Difficulty is an imperfect proxy\n\n\"Hard query\" routing is useful but incomplete. The critical question is whether another model is expected to improve the outcome. Recent research on rescue routing explicitly distinguishes small-model failure from incremental benefit of escalation.\n\n## 6. Routing must be observable\n\nTrace:\n\n- router inputs/features;\n- chosen model/configuration;\n- alternatives considered where available;\n- escalation reason;\n- outcome;\n- cost and latency.\n\nOtherwise routing regressions are difficult to diagnose.\n\n## 7. Initial platform guidance\n\nUse deterministic routing first where task classes are obvious. Introduce learned/uncertainty routing only when workload volume and measurable savings justify it.\n\n## References\n\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Google Cloud, Choose your agentic AI architecture components — https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components\n- Moslem & Kelleher, Dynamic Model Routing and Cascading for Efficient LLM Inference — https://arxiv.org/abs/2603.04445\n- Wang et al., Signed Rescue Routing — https://arxiv.org/abs/2609.07786"
+}

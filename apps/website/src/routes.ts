@@ -4,6 +4,8 @@ import { BlogPage } from './pages/BlogPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { SkillsPage } from './pages/SkillsPage';
+import { WikiDocumentPage } from './pages/WikiDocumentPage';
+import { WikiPage } from './pages/WikiPage';
 
 interface SiteRoute {
   readonly path: string;
@@ -14,6 +16,17 @@ interface SiteRoute {
 
 export const siteRoutes: readonly SiteRoute[] = [
   { path: '/', title: "Lee's Got Skills", Component: HomePage },
+  {
+    path: '/wiki',
+    title: "Wiki // Lee's Got Skills",
+    navigationLabel: 'Wiki',
+    Component: WikiPage,
+  },
+  {
+    path: '/wiki/:documentId',
+    title: "Wiki // Lee's Got Skills",
+    Component: WikiDocumentPage,
+  },
   {
     path: '/skills',
     title: "Skills // Lee's Got Skills",
@@ -46,5 +59,6 @@ export const navigationRoutes = siteRoutes.filter(
 
 export function getDocumentTitle(pathname: string) {
   return siteRoutes.find((route) => route.path === pathname)?.title
+    ?? (pathname.startsWith('/wiki/') ? "Wiki // Lee's Got Skills" : undefined)
     ?? "Not Found // Lee's Got Skills";
 }

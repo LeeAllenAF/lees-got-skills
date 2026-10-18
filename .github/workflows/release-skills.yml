@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "skills/**"
+      - "corpus/**"
       - "tools/skills/**"
       - "nx.json"
       - "pnpm-lock.yaml"

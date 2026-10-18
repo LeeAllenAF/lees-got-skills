@@ -1,0 +1,27 @@
+{
+  "id": "AEP-MODEL-003",
+  "title": "Small and Specialized Models",
+  "summary": "Small and Specialized Models. Focus: model selection, small models.",
+  "collection": "handbook",
+  "topic": "models",
+  "type": "guidance",
+  "status": "recommended",
+  "tags": [
+    "model-selection",
+    "small-models"
+  ],
+  "domains": [
+    "model-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/models/AEP-MODEL-003-small-and-specialized-models.md",
+  "relatedDocumentIds": [
+    "AEP-CTX-004",
+    "AEP-CTX-006",
+    "AEP-MODEL-001"
+  ],
+  "body": "# AEP-MODEL-003 — Small and Specialized Models\n\n## 1. Purpose\n\nSmall and specialized models remain first-class components in modern agent systems. Their value has shifted from compensating for weak general-purpose models toward performing bounded operations more cheaply, quickly, privately, or predictably.\n\n## 2. Strong candidate workloads\n\nSmall models frequently deserve evaluation for:\n\n- intent/task classification;\n- query routing;\n- extraction into strict schemas;\n- metadata generation;\n- ranking and reranking;\n- summarization/compaction;\n- duplicate detection;\n- simple code edits;\n- lightweight subagent work;\n- relevance screening.\n\nSpecialized non-generative models remain especially attractive for embeddings, reranking, classification, and anomaly detection.\n\n## 3. Do not create model zoos without evidence\n\nEvery additional model introduces lifecycle costs:\n\n- provider integration;\n- eval coverage;\n- versioning;\n- fallback behavior;\n- observability;\n- security review;\n- capacity/rate limits;\n- routing complexity.\n\nA specialized model should earn its place through measurable improvement.\n\n## 4. Local/self-hosted small models\n\nSmall models can be attractive for privacy, offline operation, deterministic capacity planning, or high-volume repetitive work. They still require evaluation against hosted alternatives and introduce infrastructure cost and maintenance.\n\n## 5. Specialized model outputs are evidence, not truth\n\nA reranker score, classifier label, or routing score should be treated as a signal with known calibration/accuracy—not as ground truth.\n\n## 6. Initial platform guidance\n\nPrefer specialized machinery when the problem itself is specialized and measurable. Prefer a general model when the task requires broad reasoning, adaptation, or complex tool use and specialization does not show a clear advantage.\n\n## References\n\n- OpenAI, Introducing GPT-5.4 mini and nano — https://openai.com/index/introducing-gpt-5-4-mini-and-nano/\n- OpenAI, A practical guide to building AI agents — https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents"
+}

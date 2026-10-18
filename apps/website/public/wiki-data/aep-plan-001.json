@@ -1,0 +1,23 @@
+{
+  "id": "AEP-PLAN-001",
+  "title": "Platform Development Plan",
+  "summary": "Platform Development Plan. Focus: knowledge management, planning.",
+  "collection": "handbook",
+  "topic": "foundations",
+  "type": "plan",
+  "status": "recommended",
+  "tags": [
+    "knowledge-management",
+    "planning"
+  ],
+  "domains": [
+    "engineering-foundations"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/foundations/AEP-PLAN-001-development-plan.md",
+  "relatedDocumentIds": [],
+  "body": "# Platform Development Plan\n\n## Sequence\n\n1. canonical corpus and schemas;\n2. source intelligence;\n3. permission model;\n4. knowledge audit core;\n5. eval/experiment core;\n6. exact and lexical knowledge retrieval;\n7. deterministic guidance resolver;\n8. CLI;\n9. read-only MCP;\n10. retrieval experiments;\n11. skill registry;\n12. enterprise adapter framework;\n13. security-assurance pilot;\n14. operational pilot;\n15. future SDLC control-plane re-engineering.\n\n## Governing rule\n\nDo not jump ahead because a later subsystem is more interesting. Each stage should create evidence that informs the next."
+}

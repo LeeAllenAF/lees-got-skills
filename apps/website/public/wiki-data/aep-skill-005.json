@@ -1,0 +1,24 @@
+{
+  "id": "AEP-SKILL-005",
+  "title": "Skills, Tools, and MCP",
+  "summary": "Skills, Tools, and MCP. Focus: mcp, skills, tool design.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "mcp",
+    "skills",
+    "tool-design"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-005-skills-tools-and-mcp.md",
+  "relatedDocumentIds": [],
+  "body": "# Skills, Tools, and MCP\n\n## Boundary\n\nSkills and MCP/tools are complementary.\n\n```text\nSkill:\n  how to accomplish a recurring goal\n\nTool / MCP server:\n  live data, controlled actions, authorization boundary\n```\n\nOpenAI's current plugin architecture explicitly separates these roles: MCP servers provide live information, authentication, authorization, and controlled actions, while skills provide repeatable workflow guidance.\n\n## Example\n\nA pull-request review skill might define:\n\n```text\n1. establish repository conventions\n2. inspect changed files\n3. inspect relevant tests\n4. identify risk categories\n5. run deterministic checks\n6. produce findings in required format\n```\n\nIts tools might provide:\n\n```text\nrepository.diff()\nrepository.read()\nci.status()\ntests.run()\ngithub.comment()\n```\n\nThe skill does not own GitHub credentials or decide that it is authorized to publish a comment.\n\n## Avoid tool choreography bloat\n\nDo not encode brittle sequences like:\n\n```text\nalways call tool A\nthen B\nthen C\n```\n\nunless ordering is actually required.\n\nPrefer goals, constraints, decision points, and required postconditions.\n\n## MCP portability\n\nA skill should depend on capability semantics when possible rather than a specific MCP server implementation.\n\nFor example:\n\n```text\nrequires capability:\n  repository.read\n```\n\nis conceptually more portable than:\n\n```text\nrequires:\n  vendor_xyz_repo_server.read_file_v3\n```\n\nAdapters may map the portable capability to concrete provider tools.\n\n## Security\n\nA skill can request a tool action but may not elevate permissions. Tool authorization and approval remain external controls.\n\n## Sources\n\n- OpenAI, *Skills – Plugins*: https://developers.openai.com/plugins/concepts/skills\n- OpenAI, *Build skills*: https://developers.openai.com/plugins/build/skills"
+}

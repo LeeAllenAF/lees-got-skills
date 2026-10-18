@@ -1,0 +1,27 @@
+{
+  "id": "AEP-COST-010",
+  "title": "Capacity, Lifecycle, and Freshness",
+  "summary": "Capacity, Lifecycle, and Freshness. Focus: capacity planning, lifecycle.",
+  "collection": "handbook",
+  "topic": "cost",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "capacity-planning",
+    "lifecycle"
+  ],
+  "domains": [
+    "cost-performance"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/cost/AEP-COST-010-capacity-lifecycle-and-freshness.md",
+  "relatedDocumentIds": [
+    "AEP-MODEL-010",
+    "AEP-TOOL-010",
+    "AEP-COST-002"
+  ],
+  "body": "# AEP-COST-010 — Capacity, Lifecycle, and Freshness\n\n## 1. Purpose\nCost/performance assumptions decay quickly. Model prices, cache rates, rate limits, context behavior, default reasoning effort, batch discounts, and infrastructure characteristics all change.\n\n## 2. What must be versioned\nRecord where applicable:\n\n```text\nprovider\nmodel/version\npricing date\nreasoning configuration\ncache policy\nprocessing tier\nrate-limit tier\nharness version\nretrieval/index version\nsandbox resources\ntool versions\n```\n\n## 3. Review cadence\nInitial guideline:\n\n- provider/model pricing assumptions: 30–45 days;\n- routing/budget thresholds: 30–45 days;\n- cache/batch behavior: 30–60 days;\n- infrastructure-capacity assumptions: 60–90 days;\n- durable economic principles: ~180 days.\n\n## 4. Event-driven revalidation\nRe-evaluate after:\n\n- model or provider upgrades;\n- pricing changes;\n- cache-policy changes;\n- rate-limit changes;\n- altered reasoning defaults;\n- harness/tool topology changes;\n- meaningful workload shifts;\n- unexplained spend or latency regressions.\n\n## 5. Capacity planning\nMonitor demand distributions rather than average volume alone. Plan for:\n\n- peak concurrent users;\n- fan-out/subagent multipliers;\n- evaluation workloads;\n- background indexing;\n- recovery after provider outages;\n- scope-specific quotas.\n\n## 6. Remove obsolete optimizations\nAn optimization introduced for an older model or pricing regime must have explicit revalidation/removal criteria. Cheap cached input, faster models, improved native tool use, or larger reliable contexts can invalidate prior architecture.\n\n## 7. Recommendation\nTreat cost/performance guidance as living operational knowledge backed by telemetry and recurring benchmarks.\n\n## References\n- OpenAI, Cost optimization — https://developers.openai.com/api/docs/guides/cost-optimization\n- OpenAI, Prompt caching — https://developers.openai.com/api/docs/guides/prompt-caching\n- Anthropic, Managed Agents — https://www.anthropic.com/engineering/managed-agents\n- Anthropic, April 23 postmortem — https://www.anthropic.com/engineering/april-23-postmortem"
+}

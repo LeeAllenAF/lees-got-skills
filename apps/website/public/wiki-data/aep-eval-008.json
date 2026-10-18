@@ -1,0 +1,26 @@
+{
+  "id": "AEP-EVAL-008",
+  "title": "Capability, Regression, and Release Gates",
+  "summary": "Capability, Regression, and Release Gates. Focus: regression testing, release gates.",
+  "collection": "handbook",
+  "topic": "evals",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "regression-testing",
+    "release-gates"
+  ],
+  "domains": [
+    "evaluation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/evals/AEP-EVAL-008-capability-regression-and-release-gates.md",
+  "relatedDocumentIds": [
+    "AEP-EVAL-003",
+    "AEP-EVAL-012"
+  ],
+  "body": "# AEP-EVAL-008 — Capability, Regression, and Release Gates\n\n## 1. Purpose\nCapability tests and regression tests serve different purposes.\n\n- **Capability evals** ask what the system can do and may intentionally begin with low pass rates.\n- **Regression evals** protect behavior that is expected to remain stable.\n\n## 2. Promotion path\nA useful lifecycle is:\n\n```text\nnew behavior\n   ↓\ncapability eval\n   ↓\nreliable enough for product use\n   ↓\nselected cases promoted to regression suite\n```\n\n## 3. Release gates\nNot all metrics should block releases. Define:\n- hard blockers (security, authority, critical correctness);\n- bounded regression tolerances;\n- advisory metrics;\n- cost/latency budgets;\n- explicit exception process.\n\n## 4. Change-specific suites\nModel upgrade, prompt change, skill change, retrieval change, and tool schema change may need different targeted suites. Running everything on every commit may be wasteful; use layered CI where appropriate.\n\n## 5. Canary and production monitoring\nOffline evals cannot fully represent production. For consequential changes, combine pre-release evals with controlled rollout, trace monitoring, user feedback, and rollback criteria.\n\n## 6. Recommendation\nEvery recurring production defect should be considered for conversion into a regression case if it can be reproduced safely and without retaining sensitive scoped data.\n\n## References\n- OpenAI, Evaluation best practices — https://developers.openai.com/api/docs/guides/evaluation-best-practices\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

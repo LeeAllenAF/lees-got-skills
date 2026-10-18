@@ -1,0 +1,129 @@
+{
+  "broken_local_links": [],
+  "unresolved_source_references": [
+    {
+      "source": "AEP-CTX-001",
+      "target": "EXP-CTX-002"
+    },
+    {
+      "source": "AEP-CTX-001",
+      "target": "EXP-CTX-003"
+    },
+    {
+      "source": "AEP-CTX-001",
+      "target": "EXP-CTX-007"
+    },
+    {
+      "source": "AEP-CTX-001",
+      "target": "EXP-SKILL-001"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "Q-CTX-003"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "Q-SWE-004"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "Q-KNOW-001"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "Q-KNOW-002"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "Q-SEC-001"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "EXP-CTX-010"
+    },
+    {
+      "source": "AEP-CTX-002",
+      "target": "EXP-SEC-001"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "Q-RET-001"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "Q-RET-002"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "Q-RET-003"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "Q-RET-004"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "Q-RET-005"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "EXP-CTX-001"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "EXP-CTX-004"
+    },
+    {
+      "source": "AEP-CTX-003",
+      "target": "EXP-CTX-006"
+    },
+    {
+      "source": "AEP-CTX-004",
+      "target": "EXP-CTX-004"
+    },
+    {
+      "source": "AEP-CTX-004",
+      "target": "EXP-CTX-012"
+    },
+    {
+      "source": "AEP-CTX-004",
+      "target": "EXP-CTX-013"
+    },
+    {
+      "source": "AEP-CTX-005",
+      "target": "EXP-CTX-004"
+    },
+    {
+      "source": "AEP-CTX-005",
+      "target": "EXP-CTX-011"
+    },
+    {
+      "source": "AEP-CTX-005",
+      "target": "EXP-CTX-014"
+    },
+    {
+      "source": "AEP-CTX-005",
+      "target": "EXP-CTX-015"
+    },
+    {
+      "source": "AEP-CTX-005",
+      "target": "EXP-CTX-016"
+    },
+    {
+      "source": "AEP-CTX-006",
+      "target": "EXP-CTX-001"
+    },
+    {
+      "source": "AEP-CTX-006",
+      "target": "EXP-CTX-017"
+    },
+    {
+      "source": "AEP-CTX-006",
+      "target": "EXP-CTX-018"
+    },
+    {
+      "source": "AEP-CTX-006",
+      "target": "EXP-CTX-019"
+    }
+  ]
+}

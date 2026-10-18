@@ -1,0 +1,23 @@
+{
+  "id": "AEP-INNOV-002",
+  "title": "Hypothesis Generation",
+  "summary": "Hypothesis Generation. Focus: experimentation, hypotheses.",
+  "collection": "handbook",
+  "topic": "innovation",
+  "type": "pattern",
+  "status": "provisional",
+  "tags": [
+    "experimentation",
+    "hypotheses"
+  ],
+  "domains": [
+    "research-innovation"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/innovation/aep-innov-002-hypothesis-generation.md",
+  "relatedDocumentIds": [],
+  "body": "# Hypothesis Generation\n\n## Purpose\n\nHypotheses may originate from production failures, trace analysis, source changes, human proposals, cross-domain analogies, or model-generated ideas.\n\n## Guidance\n\n- State the expected mechanism, not only the desired outcome.\n- Tie each hypothesis to a measurable decision.\n- Avoid generating experiments with no plausible promotion path.\n- Capture assumptions and confounders.\n- Allow humans to propose and refine hypotheses.\n\n## Implementation implications\n\n- Keep canonical state structured and versioned.\n- Prefer deterministic enforcement where the requirement is objective.\n- Preserve provenance through derived artifacts and agent context.\n- Define failure behavior before broad automation.\n- Add representative fixtures and regression tests as the capability becomes relied upon.\n\n## Evaluation\n\nAt minimum, evaluate correctness, security boundary behavior, stale-state handling, downstream task impact, and operational cost where relevant.\n\n## Lifecycle\n\nThis guidance is living knowledge. Revalidate it after relevant model, provider, security, source, identity, or architecture changes."
+}

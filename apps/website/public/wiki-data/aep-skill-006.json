@@ -1,0 +1,23 @@
+{
+  "id": "AEP-SKILL-006",
+  "title": "Skill Portability and Provider Adapters",
+  "summary": "Skill Portability and Provider Adapters. Focus: provider portability, skills.",
+  "collection": "handbook",
+  "topic": "skills",
+  "type": "standard",
+  "status": "recommended",
+  "tags": [
+    "provider-portability",
+    "skills"
+  ],
+  "domains": [
+    "skill-engineering"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/skills/AEP-SKILL-006-portability-and-provider-adapters.md",
+  "relatedDocumentIds": [],
+  "body": "# Skill Portability and Provider Adapters\n\n## Principle\n\nthe platform should own the reusable knowledge; providers should own the adapters.\n\nSkills are increasingly portable across agent surfaces, but loading semantics, authority rules, sandbox behavior, metadata, and invocation mechanisms still differ.\n\n## Canonical vs adapter layers\n\n```text\nthe platform canonical skill\n        ↓\ncapability contract\n        ↓\nprovider adapters\n  ├── OpenAI / Codex\n  ├── Claude / Claude Code\n  ├── other agents\n  └── internal harness\n```\n\n## Canonical content\n\nKeep provider-neutral:\n\n- purpose;\n- activation conditions;\n- workflow logic;\n- standards references;\n- input/output contracts;\n- verification requirements;\n- examples;\n- deterministic scripts where portable;\n- evals.\n\n## Adapter content\n\nProvider-specific behavior may include:\n\n- file location;\n- manifest metadata;\n- invocation syntax;\n- discovery registration;\n- sandbox layout;\n- provider-specific tool names;\n- provider-specific workarounds.\n\n## Avoid lowest-common-denominator design\n\nPortability does not mean suppressing useful provider capabilities.\n\nPrefer a stable canonical core plus optional provider enhancements.\n\n## Drift control\n\nProvider adapters require shorter review intervals than canonical skill logic.\n\nAny workaround for a provider/model limitation should include:\n\n- reason;\n- originating failure/eval;\n- compatibility range if known;\n- removal criteria;\n- review date.\n\n## Current evidence\n\nOpenAI describes Skills as compatible with the open Agent Skills standard, while Anthropic describes its skills as portable across Claude apps, Claude Code, and API. This supports portable skill design but does not imply identical runtime behavior.\n\n## Sources\n\n- OpenAI, *Skills*: https://developers.openai.com/api/docs/guides/tools-skills\n- Anthropic, *Introducing Agent Skills*: https://www.anthropic.com/research/skills"
+}

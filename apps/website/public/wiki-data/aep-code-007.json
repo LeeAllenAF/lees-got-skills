@@ -1,0 +1,25 @@
+{
+  "id": "AEP-CODE-007",
+  "title": "Refactoring",
+  "summary": "Refactoring. Focus: refactoring, verification.",
+  "collection": "handbook",
+  "topic": "coding",
+  "type": "playbook",
+  "status": "recommended",
+  "tags": [
+    "refactoring",
+    "verification"
+  ],
+  "domains": [
+    "software-engineering"
+  ],
+  "scope": [
+    "enterprise-global"
+  ],
+  "sourceReviewDate": "2026-10-01",
+  "sourcePath": "corpus/handbook/coding/AEP-CODE-007-refactoring.md",
+  "relatedDocumentIds": [
+    "AEP-CODE-008"
+  ],
+  "body": "# AEP-CODE-007 — Refactoring\n\n## 1. Principle\nRefactoring changes structure while preserving intended external behavior unless a behavior change is explicitly part of the task.\n\n## 2. Preconditions\nEstablish a verification baseline before broad structural changes. Where coverage is weak, add characterization tests only where they materially reduce risk.\n\n## 3. Strategy\nPrefer a sequence of mechanically understandable changes over a large simultaneous rewrite. Keep semantic changes separate where possible.\n\n## 4. Agent-specific risk\nAgents are prone to opportunistic cleanup and style normalization. Refactoring tasks require especially strict diff review to prevent unrelated behavioral or formatting churn.\n\n## 5. Completion\nCompare behavior and verification before and after. If equivalence cannot be established, report the uncertainty explicitly.\n\n## References\n- OpenAI, Prompt engineering / coding guidance — https://developers.openai.com/api/docs/guides/prompt-engineering\n- OpenAI, Agent evals — https://developers.openai.com/api/docs/guides/agent-evals\n- OpenAI, Rethinking skills and prompts for GPT-6 Astra — https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra\n- Anthropic, Building effective agents — https://www.anthropic.com/engineering/building-effective-agents\n- Anthropic, Harness design for long-running application development — https://www.anthropic.com/engineering/harness-design-long-running-apps\n- Anthropic, Demystifying evals for AI agents — https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+}

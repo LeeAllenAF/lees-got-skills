@@ -1,0 +1,23 @@
+{
+  "id": "HARNESS-REFERENCE-SOURCES",
+  "title": "Source inventory and verification checklist",
+  "summary": "Source inventory and verification checklist. Focus: provenance, source authority.",
+  "collection": "harness",
+  "topic": "reference",
+  "type": "reference",
+  "status": "informational",
+  "tags": [
+    "provenance",
+    "source-authority"
+  ],
+  "domains": [
+    "reference"
+  ],
+  "scope": [
+    "portable-reference"
+  ],
+  "sourceReviewDate": "2026-10-14",
+  "sourcePath": "corpus/harness/reference/SOURCES.md",
+  "relatedDocumentIds": [],
+  "body": "# Source inventory and verification checklist\n\n[← Index](/wiki) · [Decisions](/wiki/harness-architecture-03-decisions-and-questions)\n\n**Reviewed:** 2026-10-14. External source URLs are official documentation or source code; package prose is an authored synthesis. `main`-branch source may change after this date.\n\n## Codex plugin\n- [Plugin architecture](https://developers.openai.com/plugins/concepts/plugins): what packages can contain.\n- [Package your plugin](https://developers.openai.com/plugins/build/plugins): portable root manifest, MCP config, hooks and distribution boundaries.\n- [Build skills](https://developers.openai.com/plugins/build/skills): skill composition and testing.\n- [Skills concepts](https://developers.openai.com/plugins/concepts/skills): role of SKILL.md and supporting resources.\n- [Codex hooks](https://developers.openai.com/codex/hooks): real event names, inputs and trust boundaries.\n- [MCP specification](https://modelcontextprotocol.io/specification): standardized client/server capability semantics.\n\n## Codex SDK\n- [Official Codex SDK guide](https://developers.openai.com/codex/sdk).\n- [TypeScript README](https://github.com/openai/codex/blob/main/sdk/typescript/README.md).\n- [Codex class](https://github.com/openai/codex/blob/main/sdk/typescript/src/codex.ts): startThread and resumeThread.\n- [ThreadOptions](https://github.com/openai/codex/blob/main/sdk/typescript/src/threadOptions.ts): model, reasoning, sandbox and approval configurations.\n- [Thread implementation](https://github.com/openai/codex/blob/main/sdk/typescript/src/thread.ts): turn execution, streaming, inputs.\n- [TurnOptions](https://github.com/openai/codex/blob/main/sdk/typescript/src/turnOptions.ts): structured output and cancellation options.\n- [Events](https://github.com/openai/codex/blob/main/sdk/typescript/src/events.ts) and [items](https://github.com/openai/codex/blob/main/sdk/typescript/src/items.ts): observation types.\n- [Codex config reference](https://developers.openai.com/codex/config-reference): CLI/runtime configuration.\n\n## Codex App Server\n- [App Server documentation](https://developers.openai.com/codex/app-server): protocol handshake, transports, thread methods, turns, steering and event stream.\n\n## Agent harness context\n- [LangGraph durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution): checkpoint-oriented agent workflows.\n- [Temporal](https://docs.temporal.io/): durable workflow execution patterns.\n- [OpenTelemetry](https://opentelemetry.io/docs/): telemetry standard.\n\n## Verification before implementation\n1. Pin Codex and `@openai/codex-sdk` versions and check installed `.d.ts` files.\n2. Confirm current manifest and MCP schema before producing distributable plugins.\n3. Probe model IDs and supported effort levels with an approved login.\n4. Test SDK run, streaming, structured outputs, cancellation and resume.\n5. If using App Server, generate/inspect the current protocol schema and handle version drift.\n6. Obtain enterprise approval for automation, permissions, source access, caching and data retention."
+}

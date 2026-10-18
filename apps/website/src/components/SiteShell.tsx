@@ -70,7 +70,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="site-footer">
-      <span>Est. 2026 // lees-got-skills.com</span>
+      <span>Est. 2026 // Independent Developer Lab // lees-got-skills.com</span>
       <span>[ good software swims here ]</span>
     </footer>
   );

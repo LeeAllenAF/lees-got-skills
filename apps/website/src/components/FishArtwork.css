@@ -1,11 +1,10 @@
 .fish-art {
   position: relative;
   isolation: isolate;
-  display: grid;
-  place-items: center;
-  min-height: 420px;
+  min-height: 440px;
+  overflow: hidden;
   background:
-    linear-gradient(90deg, transparent, rgba(45, 255, 166, 0.035)),
+    linear-gradient(90deg, rgba(0, 8, 5, 0), rgba(45, 255, 166, 0.045)),
     repeating-linear-gradient(90deg, transparent 0 35px, rgba(45, 255, 166, 0.025) 36px),
     repeating-linear-gradient(0deg, transparent 0 35px, rgba(45, 255, 166, 0.025) 36px);
 }
@@ -17,19 +16,22 @@
   border: 1px dashed rgba(45, 255, 166, 0.15);
 }
 
-.fish-art img {
-  position: relative;
+.terminal-fish {
+  position: absolute;
+  top: 1%;
+  left: -3%;
   z-index: 1;
-  width: min(72%, 340px);
-  max-height: 385px;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(85%) sepia(83%) saturate(985%) hue-rotate(88deg) brightness(103%) contrast(112%);
+  width: min(112%, 760px);
+  max-width: none;
+  height: auto;
+  filter: saturate(0.88) brightness(0.92) drop-shadow(0 0 10px rgba(45, 255, 166, 0.24));
+  opacity: 0.92;
 }
 
 .terminal-note {
   position: absolute;
-  top: 21%;
-  right: 6%;
+  top: 8%;
+  right: 5%;
   z-index: 2;
   padding: var(--space-3);
   margin: 0;
@@ -62,15 +64,15 @@
 }
 
 .orb--one {
-  top: 31%;
-  left: 9%;
+  top: 28%;
+  left: 7%;
   width: 18px;
   height: 18px;
 }
 
 .orb--two {
-  top: 52%;
-  left: 17%;
+  top: 55%;
+  left: 14%;
   width: 9px;
   height: 9px;
   box-shadow: 0 0 12px var(--color-accent);
@@ -82,9 +84,10 @@
   mask-image: linear-gradient(90deg, transparent, #000 30%);
 }
 
-.fish-art--compact img {
-  width: min(70%, 220px);
-  max-height: 230px;
+.fish-art--compact .terminal-fish {
+  top: 0;
+  left: -5%;
+  width: min(115%, 540px);
 }
 
 @media (max-width: 680px) {
@@ -92,13 +95,14 @@
     min-height: 320px;
   }
 
-  .fish-art img {
-    width: min(65%, 240px);
-    max-height: 285px;
+  .terminal-fish {
+    top: 5%;
+    left: -7%;
+    width: 118%;
   }
 
   .terminal-note {
-    top: 16%;
+    top: 7%;
     right: 5%;
   }
 
@@ -107,9 +111,10 @@
     mask-image: linear-gradient(180deg, transparent, #000 20%);
   }
 
-  .fish-art--compact img {
-    width: 130px;
-    max-height: 140px;
+  .fish-art--compact .terminal-fish {
+    top: 0;
+    left: -4%;
+    width: 108%;
   }
 }
 

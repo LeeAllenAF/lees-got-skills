@@ -13,14 +13,24 @@ function renderApp(path = '/') {
 }
 
 describe('App', () => {
-  it('navigates to the truthful empty skill catalog', async () => {
+  it('navigates to the released skill catalog', async () => {
     const user = userEvent.setup();
     renderApp();
 
     await user.click(screen.getByRole('link', { name: /explore skills/i }));
 
     expect(screen.getByRole('heading', { name: /skill catalog/i })).toBeInTheDocument();
-    expect(screen.getByText(/no skills are currently available/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'accessibility-check' })).toBeInTheDocument();
+    expect(screen.getByText('v0.1.0')).toBeInTheDocument();
+    expect(screen.getByText(/official release available/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /documentation/i })).toHaveAttribute(
+      'href',
+      'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/accessibility-check',
+    );
+    expect(screen.getByRole('link', { name: /install/i })).toHaveAttribute(
+      'href',
+      'https://github.com/LeeAllenAF/lees-got-skills/releases/download/accessibility-check%400.1.0/accessibility-check-0.1.0.tar.gz',
+    );
     await waitFor(() => expect(document.title).toBe("Skills // Lee's Got Skills"));
   });
 

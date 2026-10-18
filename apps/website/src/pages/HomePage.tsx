@@ -14,8 +14,11 @@ export function HomePage() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">// PORTABLE SKILLS · PRACTICAL NOTES</p>
-          <h1>GOOD SKILLS.<br />BAD PUNS.<br />BETTER SOFTWARE.</h1>
+          <h1>
+            <span>GOOD SKILLS.</span>
+            <span>BAD PUNS.</span>
+            <span>BETTER SOFTWARE.</span>
+          </h1>
           <p className="hero-intro">
             A collection of portable agent skills, engineering experiments, and notes from the command line.
           </p>

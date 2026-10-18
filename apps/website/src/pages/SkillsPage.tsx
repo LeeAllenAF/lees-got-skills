@@ -37,7 +37,7 @@ export function SkillsPage() {
                   </div>
                   <dl className="skill-meta">
                     <div><dt>Version</dt><dd>v{skill.version}</dd></div>
-                    <div><dt>Release</dt><dd>No official release yet</dd></div>
+                    <div><dt>Release</dt><dd>{skill.releaseUrl ? 'Official release available' : 'No official release yet'}</dd></div>
                   </dl>
                   <div className="skill-links">
                     <a href={skill.docsUrl}>Documentation <Arrow /></a>

@@ -27,15 +27,11 @@ Applies to React websites in this directory. Inherits root `CODING_STANDARDS.md`
 - Extract hooks for genuinely reusable stateful behavior, not merely to move code around.
 - Use memoization only when meaningful performance or identity requirements justify it.
 
-## Design, Styling, and Accessibility
+## Design and Styling
 
-- Follow the repository's [Web Accessibility Engineering Policy](../../docs/agents/accessibility.md) for every user-facing change.
 - Preserve the site's branding, design tokens, component language, and established styling approach.
 - Prefer reusable styles and tokens over duplicated or arbitrary values.
 - Build responsive layouts that work across relevant screen sizes and input types.
-- Use semantic HTML, native interactive controls, accessible labels, and visible keyboard focus.
-- Respect reduced-motion preferences; supply meaningful alternative text for informational images.
-- Introduce ARIA only when native semantics are insufficient.
 
 ## Reliability, Security, and Performance
 
@@ -48,5 +44,4 @@ Applies to React websites in this directory. Inherits root `CODING_STANDARDS.md`
 ## Testing and Validation
 
 - Prefer behavior-focused tests over implementation-detail assertions or brittle snapshots.
-- When available, favor accessible UI queries and tests of meaningful interactions.
 - Run focused checks at logical checkpoints, not after every edit; follow the root validation policy.

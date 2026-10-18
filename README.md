@@ -27,8 +27,9 @@ The planned layout looks a little like this:
 ```text
 lees-got-skills/
 ├── skills/          # Portable skills, individually packaged
-├── .agent/          # Canonical, vendor-neutral engineering guidance
-├── tools/agent/     # Deterministic helpers for repository work
+├── .agent/          # Generated indexes, plans, and installation state
+├── skills/repository-guidelines/
+│   └── ...          # Canonical guidance and its supporting tools
 ├── apps/            # Future apps, including a development blog
 ├── packages/        # Shared code as the ecosystem grows
 ├── AGENTS.md        # Agent entrypoint, generated from canonical guidance

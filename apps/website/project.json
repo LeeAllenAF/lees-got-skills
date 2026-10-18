@@ -10,6 +10,9 @@
     "typecheck": {
       "command": "pnpm --filter @alienfish/website typecheck"
     },
+    "test": {
+      "command": "pnpm --filter @alienfish/website test"
+    },
     "build": {
       "command": "pnpm --filter @alienfish/website build",
       "outputs": ["{workspaceRoot}/dist/apps/website"]

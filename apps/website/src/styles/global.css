@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-background);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 77% 15%, rgba(18, 112, 73, 0.13), transparent 28rem),
+    linear-gradient(135deg, var(--color-background-deep), #03100c 55%, #010705);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  content: "";
+  opacity: 0.12;
+  background: repeating-linear-gradient(180deg, transparent 0 3px, rgba(145, 255, 206, 0.1) 4px);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-4);
+  color: var(--color-accent);
+  font-size: 0.73rem;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  color: #71ffc4;
+  font-size: clamp(2.15rem, 5.5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  text-shadow: 0 0 22px rgba(45, 255, 166, 0.18);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: 1.65rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 46px;
+  padding: 0.75rem 1.1rem;
+  color: var(--color-text-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--color-background-control);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-control);
+}
+
+.button:hover {
+  border-color: var(--color-focus);
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  color: var(--color-accent-text);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 24px rgba(45, 255, 166, 0.15);
+}
+
+.content-section {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.section-heading span {
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+}
+
+.empty-state {
+  padding: var(--space-5);
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  background: var(--color-background-raised);
+  border: 1px solid var(--color-line-soft);
+  border-radius: var(--radius-control);
+}
+
+.status {
+  display: inline-flex;
+  padding: 0.25rem 0.42rem;
+  color: var(--color-warning-text);
+  font-size: 0.58rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  background: var(--color-warning);
+  border-radius: var(--radius-control);
+}
+
+.status--released {
+  background: var(--color-accent);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0.2rem 0.36rem;
+  color: #76edba;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 0.125rem;
+}
+
+@media (max-width: 680px) {
+  .button-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button {
+    transition:
+      color var(--duration-fast) ease,
+      border-color var(--duration-fast) ease,
+      background var(--duration-fast) ease,
+      transform var(--duration-fast) ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

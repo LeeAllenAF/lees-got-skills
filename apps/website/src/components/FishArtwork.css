@@ -1,0 +1,124 @@
+.fish-art {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+  background:
+    linear-gradient(90deg, transparent, rgba(45, 255, 166, 0.035)),
+    repeating-linear-gradient(90deg, transparent 0 35px, rgba(45, 255, 166, 0.025) 36px),
+    repeating-linear-gradient(0deg, transparent 0 35px, rgba(45, 255, 166, 0.025) 36px);
+}
+
+.fish-art::after {
+  position: absolute;
+  inset: 7% 4%;
+  content: "";
+  border: 1px dashed rgba(45, 255, 166, 0.15);
+}
+
+.fish-art img {
+  position: relative;
+  z-index: 1;
+  width: min(72%, 340px);
+  max-height: 385px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(83%) saturate(985%) hue-rotate(88deg) brightness(103%) contrast(112%);
+}
+
+.terminal-note {
+  position: absolute;
+  top: 21%;
+  right: 6%;
+  z-index: 2;
+  padding: var(--space-3);
+  margin: 0;
+  color: var(--color-focus);
+  font-size: 0.68rem;
+  line-height: 1.17;
+  background: rgba(1, 12, 8, 0.86);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-control);
+}
+
+.terminal-note::after {
+  position: absolute;
+  bottom: -0.42rem;
+  left: 0.8rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  content: "";
+  background: #04110c;
+  border-bottom: 1px solid var(--color-line);
+  border-left: 1px solid var(--color-line);
+  transform: rotate(-45deg);
+}
+
+.orb {
+  position: absolute;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.orb--one {
+  top: 31%;
+  left: 9%;
+  width: 18px;
+  height: 18px;
+}
+
+.orb--two {
+  top: 52%;
+  left: 17%;
+  width: 9px;
+  height: 9px;
+  box-shadow: 0 0 12px var(--color-accent);
+}
+
+.fish-art--compact {
+  min-height: 250px;
+  opacity: 0.66;
+  mask-image: linear-gradient(90deg, transparent, #000 30%);
+}
+
+.fish-art--compact img {
+  width: min(70%, 220px);
+  max-height: 230px;
+}
+
+@media (max-width: 680px) {
+  .fish-art {
+    min-height: 320px;
+  }
+
+  .fish-art img {
+    width: min(65%, 240px);
+    max-height: 285px;
+  }
+
+  .terminal-note {
+    top: 16%;
+    right: 5%;
+  }
+
+  .fish-art--compact {
+    min-height: 145px;
+    mask-image: linear-gradient(180deg, transparent, #000 20%);
+  }
+
+  .fish-art--compact img {
+    width: 130px;
+    max-height: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .orb--two {
+    animation: blink 3.5s steps(2, end) infinite;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0.15; }
+}

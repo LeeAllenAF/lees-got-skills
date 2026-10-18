@@ -1,0 +1,11 @@
+.not-found {
+  display: grid;
+  place-content: center;
+  justify-items: start;
+  min-height: 520px;
+  padding: 3rem;
+}
+
+.not-found p:not(.eyebrow) {
+  color: var(--color-text);
+}

@@ -1,6 +1,0 @@
-{
-  "name": "@alienfish/repository-bootstrap",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Portable repository agent bootstrap skill"
-}

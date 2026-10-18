@@ -1,1 +1,0 @@
-import {validate} from './core.mjs';const r=validate(process.cwd());console.log(JSON.stringify(r,null,2));if(!r.valid)process.exitCode=1;

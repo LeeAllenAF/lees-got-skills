@@ -1,0 +1,33 @@
+:root {
+  color-scheme: dark;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --color-background: #020806;
+  --color-background-deep: #010504;
+  --color-background-raised: rgba(1, 18, 12, 0.8);
+  --color-background-header: rgba(1, 13, 9, 0.92);
+  --color-background-control: rgba(0, 10, 7, 0.6);
+  --color-background-menu: #02110b;
+  --color-text: #a9ffdc;
+  --color-text-strong: #e6fff5;
+  --color-text-muted: #72caa5;
+  --color-accent: #2dffa6;
+  --color-accent-text: #001d12;
+  --color-focus: #ffffff;
+  --color-warning: #f1b541;
+  --color-warning-text: #00190f;
+  --color-line: rgba(45, 255, 166, 0.66);
+  --color-line-soft: rgba(45, 255, 166, 0.25);
+
+  --radius-frame: 0.875rem;
+  --radius-control: 0.25rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --duration-fast: 150ms;
+}

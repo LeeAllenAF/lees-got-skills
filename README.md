@@ -1,67 +1,112 @@
-# Lee’s Got Skills. Allegedly. 🐟
+<div align="center">
+  <img src="apps/website/src/assets/terminal-anglerfish.png" alt="A glowing terminal anglerfish" width="220">
 
-*An AlienFish experiment in teaching software agents a few good habits before giving them the keys to the keyboard.*
+  <h1>GOOD SKILLS.<br>BAD PUNS.<br>BETTER SOFTWARE.</h1>
 
-Welcome to **lees-got-skills**: part workshop, part laboratory, part ongoing argument with the idea that an AI assistant should need seventeen paragraphs of encouragement to run a linter.
+  <p><strong>Portable agent skills, practical engineering knowledge, and notes from the command line.</strong></p>
 
-We’re building a collection of **portable, independently packaged skills for coding agents**, along with the little bits of engineering infrastructure that make those skills useful beyond a carefully staged demo.
-
-The first experiment is delightfully circular: **a repository-bootstrap skill that helps repositories become better places for agents to work—including this one.** If it succeeds, it should be able to leave the nest and bootstrap another repo without dragging all of AlienFish’s tooling along for the ride.
-
-## The aquarium rules
-
-**Vendor-neutral by design.** Codex, Claude, and whoever shows up next should be able to participate without becoming the source of truth.
-
-**Less guessing, more knowing.** When a script can answer a question deterministically, the agent should use the script instead of conducting a philosophical symposium about `package.json`.
-
-**Small changes deserve small checks.** Fixing a typo should not launch an Nx-wide festival of CPU utilization. Validation matters; proportion matters too.
-
-**A skill should travel light.** Each skill should be discoverable, versioned, testable, and packaged to work independently of its birthplace.
-
-**Humans keep the steering wheel.** Agents can help build things. They do not get to quietly publish, deploy, force-push, or turn a small task into a heroic refactor.
-
-## What lives here?
-
-The planned layout looks a little like this:
-
-```text
-lees-got-skills/
-├── skills/          # Portable skills, individually packaged
-├── .agent/          # Generated indexes, plans, and installation state
-├── skills/repository-guidelines/
-│   └── ...          # Canonical guidance and its supporting tools
-├── apps/            # Future apps, including a development blog
-├── packages/        # Shared code as the ecosystem grows
-├── AGENTS.md        # Agent entrypoint, generated from canonical guidance
-└── CLAUDE.md        # Another entrypoint, same underlying principles
-```
-
-Some of these paths are **design targets**, not a claim that every feature is already live. This repo is being built in public-facing increments, not unveiled from a smoke machine as a finished platform.
-
-## The first fish in the tank
-
-**`repository-bootstrap`** is the first planned distributable skill. Its mission:
-
-1. Look before touching anything.
-2. Explain what it intends to change.
-3. Install a small, portable agent-engineering foundation.
-4. Verify the important things without testing the entire universe.
-5. Leave existing work alone, especially when it belongs to somebody else.
-
-If the skill isn't packaged or released yet, that's not a mystery—it's a milestone we're working toward. Development and publication are separate steps.
-
-## What this isn't
-
-This is not a new universal agent framework, a replacement for Nx, or a shrine to whichever model happens to be fashionable this week. We're interested in boringly reliable mechanics with enough personality to keep the work fun.
-
-## Dispatches from the deep
-
-Eventually, a website inside this repository will publish a development blog documenting the experiments, wrong turns, design decisions, and lessons learned as they happen. The plan is for an agent to help draft those posts from curated, human-reviewed development notes—not invent a triumphant history after the fact.
-
-Until then, consider this README a message in a bottle from the early days.
+  <p>
+    <a href="https://lees-got-skills.com">Visit the site</a>
+    &nbsp;·&nbsp;
+    <a href="https://lees-got-skills.com/wiki">Explore the wiki</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/LeeAllenAF/lees-got-skills/releases">Get a release</a>
+  </p>
+</div>
 
 ---
 
-**Built under the AlienFish flag.** Curious minds welcome. Unnecessary complexity must check its baggage at the dock.
+## `>_ WHAT IS THIS?`
 
-*Go deeper.* 🐟
+**Lee’s Got Skills** is my workshop for making software agents more useful in the real world. It brings together three things that belong in the same tank:
+
+| | Dive in | What you’ll find |
+| --- | --- | --- |
+| `</>` | **[Agent Skills](skills/)** | Small, focused capabilities that are independently packaged and built to travel. |
+| `⌘` | **[The Corpus](corpus/)** | A structured, source-attributed library about agent architecture, context, tools, evaluation, security, operations, and more. |
+| `▤` | **[The Website](apps/website/)** | The public home for the skills catalog, searchable wiki, and dispatches from the experiment. |
+
+The aim is not to invent another universal agent framework. It is to make practical knowledge easier to find, useful behavior easier to install, and agent work a little less dependent on inspired guessing.
+
+## `◇ SKILLS IN THE TANK`
+
+### [`accessibility-check`](skills/accessibility-check/)
+
+Find the rough edges without hauling around 80 pages of instructions. This skill reviews scoped web code and user journeys against a compact WCAG 2.2 AA synopsis, then reaches for authoritative detail when the evidence calls for it.
+
+### [`teach-agentic-development`](skills/teach-agentic-development/)
+
+A local field guide for building agents without summoning a research swarm. It uses deterministic lexical retrieval over the bundled corpus to answer practical questions with a bounded, inspectable evidence set.
+
+Official releases are available from the **[release page](https://github.com/LeeAllenAF/lees-got-skills/releases)**. Each skill is versioned, validated, and packaged independently of the monorepo around it.
+
+## `⌘ THE WIKI HAS A SOURCE`
+
+The top-level [`corpus/`](corpus/) is the source of truth for the wiki—not a pile of content hidden inside the frontend and not an Nx project. It contains the complete agentic-engineering reference package, including its metadata, taxonomy, indexes, provenance, and deterministic maintenance scripts.
+
+The repository-local [`tools/wiki/`](tools/wiki/) generator turns that corpus into deployable website data. The site reads the generated artifact at runtime, so the same material can serve humans in the wiki and agents through the teaching skill without maintaining two competing copies.
+
+```text
+corpus/  ──>  wiki generator  ──>  public/wiki-data/  ──>  /wiki
+   └─────>  skill packaging  ──>  teach-agentic-development release
+```
+
+## `>_ RUN IT LOCALLY`
+
+This workspace uses **Node.js 24**, **pnpm**, and **Nx**.
+
+```bash
+corepack pnpm install --frozen-lockfile
+corepack pnpm dev
+```
+
+Useful checks stay deliberately scoped:
+
+```bash
+corepack pnpm website:typecheck  # Check the React application
+corepack pnpm website:test       # Run website tests
+corepack pnpm website:build      # Build the site with committed wiki data
+corepack pnpm wiki:check         # Confirm generated wiki data is current
+corepack pnpm skills:validate    # Validate every distributable skill
+corepack pnpm skills:package     # Build release-ready skill artifacts
+```
+
+## `↗ HOW THE REPO IS ORGANIZED`
+
+```text
+lees-got-skills/
+├── apps/website/                  # React site: skills, wiki, blog, and about
+├── corpus/                        # Versioned reference data; outside Nx
+├── skills/
+│   ├── accessibility-check/       # Portable accessibility review skill
+│   └── teach-agentic-development/ # Portable corpus-backed teaching skill
+├── tools/
+│   ├── skills/                    # Shared validation and packaging tools
+│   └── wiki/                      # Corpus-to-website data generator
+├── docs/agents/                   # Repository operating guidance
+├── AGENTS.md                      # Canonical entry point for agents
+└── CODING_STANDARDS.md            # Standards for repository changes
+```
+
+## `✦ HOUSE RULES`
+
+- **Curiosity first.** Ask questions, inspect the evidence, and embrace the weird.
+- **Deterministic by default.** If a script can answer the question, let the script answer it.
+- **Small change, small check.** Validation should be meaningful and proportional—not a ceremonial CPU bonfire.
+- **Built to travel.** A released skill should work without dragging this whole repository behind it.
+- **Humans keep the steering wheel.** Agents can help build; consequential actions still belong to people.
+
+## `! LICENSING & SECURITY`
+
+This repository is publicly viewable but **not open source**. Officially published skill and plugin releases are free to install and use under the terms in [`LICENCE.md`](LICENCE.md); the repository source remains proprietary.
+
+Found a vulnerability? Please follow [`SECURITY.md`](SECURITY.md) and use GitHub’s private vulnerability-reporting flow. Do not put exploit details or secrets in a public issue.
+
+---
+
+<div align="center">
+  <strong>Built under the AlienFish flag.</strong><br>
+  <sub>Curious minds welcome. Unnecessary complexity must check its baggage at the dock.</sub>
+  <br><br>
+  <em>Go deeper.</em> 🐟
+</div>

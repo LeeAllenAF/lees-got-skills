@@ -9,8 +9,8 @@
     "test": "vitest run",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy:check": "vite build && wrangler deploy --dry-run",
-    "deploy": "vite build && wrangler deploy",
+    "deploy:check": "vite build && wrangler deploy --env=\"\" --dry-run",
+    "deploy": "vite build && wrangler deploy --env=\"\"",
     "deploy:staging:check": "vite build && wrangler deploy --env staging --dry-run",
     "deploy:staging": "vite build && wrangler deploy --env staging"
   },

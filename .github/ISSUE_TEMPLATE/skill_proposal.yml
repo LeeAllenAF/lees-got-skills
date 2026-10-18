@@ -1,0 +1,43 @@
+name: "Skill Proposal"
+description: "Propose or improve a self-contained, vendor-neutral agent skill"
+title: "[Skill]: "
+labels: ["type:skill", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Do not include secrets or personal data."
+  - type: input
+    id: field-1
+    attributes:
+      label: "Skill name"
+      description: "Use a lowercase kebab-case name."
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: "Problem and expected outcome"
+      description: "What developer problem does it solve? What observable behavior should result?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: "Scope and boundaries"
+      description: "Define in/out of scope, deterministic tooling, and dependencies."
+    validations:
+      required: true
+  - type: textarea
+    id: field-4
+    attributes:
+      label: "Acceptance criteria"
+      description: "List verifiable completion conditions, including README.md and consumer-facing AGENTS.md."
+    validations:
+      required: true
+  - type: textarea
+    id: field-5
+    attributes:
+      label: "References"
+      description: "Links to guidance, standards, related skills, or examples."
+    validations:
+      required: false

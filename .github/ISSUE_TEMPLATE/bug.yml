@@ -1,0 +1,43 @@
+name: "Bug"
+description: "Report reproducible incorrect behavior"
+title: "[Bug]: "
+labels: ["type:bug", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Do not include secrets or personal data."
+  - type: textarea
+    id: field-1
+    attributes:
+      label: "Observed behavior"
+      description: "What happened?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: "Steps to reproduce"
+      description: "Provide minimal reproducible steps."
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: "Expected behavior"
+      description: "What should have happened?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-4
+    attributes:
+      label: "Environment and evidence"
+      description: "Versions, logs, screenshots, relevant links; omit secrets."
+    validations:
+      required: false
+  - type: textarea
+    id: field-5
+    attributes:
+      label: "Impact"
+      description: "Who or what is affected?"
+    validations:
+      required: false

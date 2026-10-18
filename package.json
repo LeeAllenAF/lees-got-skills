@@ -21,6 +21,8 @@
     "website:typecheck": "nx typecheck website",
     "website:test": "nx test website",
     "website:build": "nx build website",
+    "skills:validate": "nx run-many -t validate --projects=tag:type:skill",
+    "skills:package": "nx run-many -t package --projects=tag:type:skill",
     "website:login": "corepack pnpm --filter @alienfish/website exec wrangler login",
     "website:deploy:check": "nx run website:deploy:check",
     "website:deploy": "nx run website:deploy"

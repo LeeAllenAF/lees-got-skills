@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "accessibility-check",
+  "projectType": "library",
+  "root": "skills/accessibility-check",
+  "tags": ["type:skill"],
+  "targets": {
+    "validate": {
+      "command": "node tools/skills/validate-skill.mjs {projectRoot}"
+    },
+    "package": {
+      "dependsOn": ["validate"],
+      "command": "node tools/skills/package-skill.mjs {projectRoot}",
+      "outputs": ["{workspaceRoot}/dist/skills/accessibility-check"]
+    }
+  }
+}

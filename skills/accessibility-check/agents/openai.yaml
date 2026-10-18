@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Check"
+  short_description: "Scoped WCAG reviews without loading the whole standard"
+  default_prompt: "Use $accessibility-check to review the accessibility of the code or user path I specify and report evidence-backed findings."

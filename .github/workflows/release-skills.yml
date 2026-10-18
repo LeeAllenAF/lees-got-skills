@@ -1,0 +1,68 @@
+name: Release skills
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "tools/skills/**"
+      - "nx.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/release-skills.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-skills
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24.22.0"
+          package-manager-cache: false
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate and package skills
+        run: pnpm nx run-many -t package --projects=tag:type:skill
+
+      - name: Create missing skill releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for project_file in skills/*/project.json; do
+            skill_directory="$(dirname "$project_file")"
+            skill_name="$(node -p "require('./${skill_directory}/package.json').name")"
+            skill_version="$(node -p "require('./${skill_directory}/package.json').version")"
+            tag="${skill_name}@${skill_version}"
+            artifact="dist/skills/${skill_name}/${skill_name}-${skill_version}.tar.gz"
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "${tag} already exists; skipping"
+              continue
+            fi
+
+            gh release create "$tag" "$artifact" \
+              --target "$GITHUB_SHA" \
+              --title "${skill_name} ${skill_version}" \
+              --generate-notes
+          done

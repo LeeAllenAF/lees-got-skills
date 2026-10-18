@@ -54,3 +54,10 @@ Place supporting material in local folders such as `scripts/`, `references/`, an
 ## Verification
 
 At a logical completion checkpoint, verify metadata and local paths, check that ignored runtime artifacts are not tracked, and exercise the affected behavior in a standalone skill-directory context when practical. Keep verification targeted and follow the root validation policy; do not introduce separate contract-testing infrastructure.
+
+## Release Metadata
+
+- Every releasable skill MUST include a `package.json` and `project.json` whose names match the skill directory and `SKILL.md` frontmatter name.
+- Store the independently released semantic version in the skill's `package.json`; bump it in the same change that should produce a new release.
+- Tag skill projects with `type:skill` and provide the shared `validate` and `package` targets used by CI.
+- Repository-only release metadata and tooling MUST NOT be included in the portable skill artifact.

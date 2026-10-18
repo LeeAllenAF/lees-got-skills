@@ -8,9 +8,12 @@
   "neverConnectToCloud": true,
   "release": {
     "projects": [
-      "repository-bootstrap"
+      "tag:type:skill"
     ],
-    "projectsRelationship": "independent"
+    "projectsRelationship": "independent",
+    "releaseTag": {
+      "pattern": "{projectName}@{version}"
+    }
   },
   "analytics": true
 }

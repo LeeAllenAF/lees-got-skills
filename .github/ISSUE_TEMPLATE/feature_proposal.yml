@@ -1,0 +1,36 @@
+name: "Feature Proposal"
+description: "Propose platform, tooling, or infrastructure functionality"
+title: "[Feature]: "
+labels: ["type:feature", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Do not include secrets or personal data."
+  - type: textarea
+    id: field-1
+    attributes:
+      label: "Problem"
+      description: "Who needs this and why?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: "Proposed outcome"
+      description: "Expected behavior and boundaries, without presupposing implementation."
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: "Risks and dependencies"
+      description: "Security, cost, compatibility, dependencies."
+    validations:
+      required: false
+  - type: textarea
+    id: field-4
+    attributes:
+      label: "Acceptance criteria"
+      description: "Observable and testable criteria."
+    validations:
+      required: true

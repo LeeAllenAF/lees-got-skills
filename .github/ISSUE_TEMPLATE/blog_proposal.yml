@@ -1,0 +1,43 @@
+name: "Blog Proposal"
+description: "Propose a Field Notes article, series, or editorial improvement"
+title: "[Blog]: "
+labels: ["type:blog", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: "Search for existing articles and proposals first. Don't paste private information, secrets, or copyrighted articles."
+  - type: input
+    id: working-title
+    attributes:
+      label: "Working title or topic"
+      description: "A descriptive title; final editorial title may change."
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: "Audience and reader takeaway"
+      description: "Who is it for, and what should they learn or be able to do?"
+    validations:
+      required: true
+  - type: textarea
+    id: angle
+    attributes:
+      label: "Angle and proposed outline"
+      description: "Main thesis, sections, examples, demonstrations, and differentiation from existing material."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Sources and supporting evidence"
+      description: "Links, original experiments, relevant corpus entries, labs, or skills."
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance criteria"
+      description: "Fact-checking, structure, accessibility, technical review, and publishing requirements."
+    validations:
+      required: true

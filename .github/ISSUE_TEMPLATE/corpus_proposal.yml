@@ -1,0 +1,36 @@
+name: "Corpus Proposal"
+description: "Propose a change to the curated knowledge corpus"
+title: "[Corpus]: "
+labels: ["type:corpus", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Do not include secrets or personal data."
+  - type: input
+    id: field-1
+    attributes:
+      label: "Corpus topic or entry"
+      description: "Which content or knowledge area?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: "Motivation"
+      description: "What is missing, inaccurate, or costly to retrieve?"
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: "Sources and authority"
+      description: "Provide primary references and proposed authority/freshness metadata."
+    validations:
+      required: true
+  - type: textarea
+    id: field-4
+    attributes:
+      label: "Acceptance criteria"
+      description: "Deterministic validation and retrieval expectations."
+    validations:
+      required: true

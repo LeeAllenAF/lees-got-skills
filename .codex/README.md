@@ -4,19 +4,33 @@ These are **repository-scoped Codex subagents**. Each standalone TOML in `.codex
 
 | Agent | Purpose | Model | Reasoning | Gate |
 | --- | --- | --- | --- | --- |
-| `skill-refiner` | Prepare a skill proposal for implementation | `gpt-5.5` | `high` | Open `type:skill` issue |
-| `skill-implementer` | Execute a reviewed skill plan | `gpt-5.5` | `high` | Open, `status:ready`, no `agent:hold`, approved plan |
+| `skill-refiner` | Prepare a skill proposal for implementation | `gpt-6-luna` | `xhigh` | Open `type:skill` with `status:proposed` or `status:refinement`, no hold |
+| `skill-implementer` | Execute a reviewed skill plan | `gpt-6.1-sol` | `medium` | Open, `status:ready`, no `agent:hold`, approved plan |
 
-## Lifecycle
+## Lifecycle and authorization
 
-1. A proposal starts `status:proposed`.
-2. A human begins refinement; use `status:refinement` while evaluating the plan.
-3. The refiner investigates the current repository and proposes an issue comment headed `## Execution plan`. It does **not** move an issue to Ready.
-4. A human reviews the plan and explicitly changes its label to `status:ready` (removing the other `status:*` labels).
-5. The implementer checks the gate, creates a scoped branch, builds and validates the skill, and prepares a PR for human review.
-6. PR merge and issue closure remain human-controlled or governed by existing workflows. `agent:hold` always blocks implementation.
+Every issue must have exactly one `type:*` label and one `status:*` label. Both agents operate on `type:skill` only; `agent:hold` prevents either agent from proceeding. Agents re-read issue state before writes and preserve unrelated labels. Transitions require authorized GitHub issue-write access, with results verified; agents must never claim writes that did not occur.
 
-Status labels are mutually exclusive: `proposed`, `refinement`, `ready`, `in-progress`, `review`, `blocked`. No agent should infer readiness from priority alone.
+| Current state | Responsible party | Transition | Conditions |
+| --- | --- | --- | --- |
+| `status:proposed` | Refiner | `status:refinement` | User authorizes refinement; valid open skill issue |
+| `status:refinement` | Refiner | Remains in refinement | Publishes dated evidence-backed `## Execution plan` comment for human review |
+| `status:refinement` | Human | `status:ready` | Explicitly approves the current plan; old status removed |
+| `status:ready` | Implementer | `status:in-progress` | Approved plan, valid labels, no hold; work can begin |
+| `status:in-progress` | Implementer | `status:review` | Tests/validation complete, changes pushed, PR created |
+| `status:refinement` or `status:in-progress` | Owning agent | `status:blocked` | Material blocker documented and verified |
+| `status:review` | Human / established workflow | Closed | Merge and completion verified |
+
+Only an authorized human may set `status:ready`, clear `agent:hold`, or approve/merge a PR. Neither agent closes issues. A `status:blocked` issue must be reviewed and explicitly restored to the appropriate lifecycle state before work resumes.
+
+**Safety:** Issue-label writes must retain all non-status labels. Re-read the issue and detect concurrent changes immediately before modifying labels. If safe transitions cannot be performed with available tools or permissions, stop/report rather than using stale whole-label replacements. A proposed plan awaiting human approval is not a blocker.
+
+## Model configuration
+
+- Refiner: `gpt-6-luna`, `xhigh`.
+- Implementer: `gpt-6.1-sol`, `medium`.
+
+These are the user's chosen settings. Model availability and effective reasoning configuration must be tested in the specific Codex client; the repository cannot guarantee entitlement.
 
 ## Invocation
 

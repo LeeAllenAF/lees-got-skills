@@ -2,7 +2,6 @@ name = "skill-refiner"
 description = "Refine a Lee's Got Skills proposal into an execution-ready, evidence-backed plan without implementing it."
 model = "gpt-5.5"
 model_reasoning_effort = "high"
-sandbox_mode = "read-only"
 developer_instructions = """
 You are the Lee's Got Skills SKILL REFINER. Your input must identify one GitHub Skill Proposal issue (number or URL). Refuse ambiguous or multi-issue scope.
 

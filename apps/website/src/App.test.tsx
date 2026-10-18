@@ -52,6 +52,19 @@ describe('App', () => {
     expect(menuButton).toHaveFocus();
   });
 
+  it('shows context-engineer as development without release or install links', () => {
+    renderApp('/skills');
+    const card = screen.getByRole('heading', { name: 'context-engineer' }).closest('article');
+    const scopedCard = within(card as HTMLElement);
+    expect(scopedCard.getByText('development')).toBeInTheDocument();
+    expect(scopedCard.getByText('No official release yet')).toBeInTheDocument();
+    expect(scopedCard.getByText('Install pending')).toBeInTheDocument();
+    expect(scopedCard.queryByRole('link', { name: /install|release notes/i })).not.toBeInTheDocument();
+    expect(scopedCard.getByRole('link', { name: /documentation/i })).toHaveAttribute(
+      'href', 'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/context-engineer',
+    );
+  });
+
   it('orders primary navigation around the main site workflows', () => {
     renderApp();
     const navigation = screen.getByRole('navigation', { name: /primary navigation/i });

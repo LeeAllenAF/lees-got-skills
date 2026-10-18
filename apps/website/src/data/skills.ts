@@ -13,6 +13,16 @@ export interface Skill {
 
 export const skills: readonly Skill[] = [
   {
+    name: 'context-engineer',
+    description: 'Gather focused local evidence and package exact excerpts with source fingerprints, provenance, and explicit gaps.',
+    version: '0.1.0',
+    releaseStatus: 'development',
+    agentCompatibility: ['Codex', 'Claude', 'Vendor-neutral'],
+    docsUrl: 'https://github.com/LeeAllenAF/lees-got-skills/tree/main/skills/context-engineer',
+    installUrl: null,
+    releaseUrl: null,
+  },
+  {
     name: 'accessibility-check',
     description: 'Review user-scoped web code and journeys against a compact WCAG 2.2 AA synopsis, with optional verification against the authoritative W3C Recommendation.',
     version: '0.1.0',

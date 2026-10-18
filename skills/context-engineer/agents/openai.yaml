@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Engineer"
+  short_description: "Build bounded context packets with traceable evidence"
+  default_prompt: "Use $context-engineer to gather focused local evidence for my task and report gaps."
